@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  cursor: pointer;
+  margin: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 15px;
+}

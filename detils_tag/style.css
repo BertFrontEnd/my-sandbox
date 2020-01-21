@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -27,7 +27,7 @@ summary {
 
 summary:before {
   content: '';
-  background-image: url("assets/angle-right-solid.svg");
+  background-image: url('assets/angle-right-solid.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -48,6 +48,6 @@ p {
 
 details[open] summary::before {
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 /*# sourceMappingURL=style.css.map */

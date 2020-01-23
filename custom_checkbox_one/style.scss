@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ecf0f1;
+}
+
+.wrapper {
+  width: 470px;
+  margin: 10px auto;
+  padding: 10px 15px;
+  background-color: #fff;
+
+  label {
+    display: block;
+    height: 32px;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+
+    input[type='checkbox'] {
+      display: none;
+
+      &:checked + .custom-checkbox {
+        &:after {
+          background-color: #bdc3c7;
+        }
+      }
+    }
+
+    .custom-checkbox {
+      position: relative;
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin-right: 5px;
+      border: 1px solid black;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        transition: all linear 0.3s;
+      }
+    }
+  }
+}

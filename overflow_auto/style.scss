@@ -1,0 +1,37 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.list {
+  overflow: auto;
+  border: 1px solid #dddddd;
+  display: flex;
+  margin: 0;
+  padding: 15px;
+
+  &:after {
+    content: '';
+    display: flex;
+    flex-shrink: 0;
+    width: 15px;
+  }
+
+  li {
+    margin-right: 15px;
+    list-style-type: none;
+    white-space: nowrap;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}

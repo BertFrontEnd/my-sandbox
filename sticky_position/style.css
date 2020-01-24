@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+}
+
+.sticky {
+  background-color: #34495e;
+  height: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.block-1 {
+  background-color: #ecf0f1;
+}
+
+.block-2 {
+  background-color: #bdc3c7;
+}
+
+p {
+  font-family: 'Arial', sans-serif;
+  line-height: 32px;
+  text-align: justify;
+  padding: 20px;
+}
+/*# sourceMappingURL=style.css.map */

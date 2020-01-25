@@ -1,0 +1,82 @@
+body {
+  background-color: #f1f2f6;
+}
+
+.wrapper {
+  margin: 0 auto;
+  height: 60px;
+  width: 500px;
+  background: #7f8c8d;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.wrapper .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.wrapper .header .block {
+  margin-right: 10px;
+}
+
+.wrapper .header .block:last-child {
+  margin-right: 0;
+}
+
+.wrapper .header .block-1 {
+  background-color: #1abc9c;
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.wrapper .header .block-2 {
+  background-color: #3498db;
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.wrapper .header .block-3 {
+  background-color: #9b59b6;
+  width: 70px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.wrapper .header .block-4 {
+  background-color: #e67e22;
+  width: 240px;
+  height: 40px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.wrapper .header .block-4 > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+.wrapper .header .block-4 .sub-block {
+  background-color: #f1c40f;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 40px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,228 @@
+.wrapper {
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  padding: 10px;
+  width: 1000px;
+  border-radius: 5px;
+}
+
+.wrapper .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.wrapper .container .item {
+  background-color: deepskyblue;
+  border-radius: 5px;
+  border: 1px solid cornflowerblue;
+  height: 100px;
+}
+
+.wrapper .container.grid {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .container.grid-3 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapper .container.bars-v {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 300px;
+}
+
+.wrapper .container.bars-h {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 300px;
+}
+
+.wrapper .container.vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container.masonry {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 690px;
+}
+
+.wrapper .container.masonry::before, .wrapper .container.masonry::after {
+  content: '';
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 0;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.wrapper .stretch .item {
+  width: 100px;
+}
+
+.wrapper .stretch .item.item-center {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.wrapper .stretch .item + .item {
+  margin-left: 2%;
+}
+
+.wrapper .grid .item {
+  margin-bottom: 2%;
+  width: 45%;
+}
+
+.wrapper .grid .item:nth-child(3n) {
+  width: 100%;
+}
+
+.wrapper .grid-3 .item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 32%;
+          flex: 0 32%;
+  margin-bottom: 2%;
+}
+
+.wrapper .bars-v .item {
+  width: 14%;
+}
+
+.wrapper .bars-v .item:nth-child(1) {
+  height: 40%;
+}
+
+.wrapper .bars-v .item:nth-child(2) {
+  height: 50%;
+}
+
+.wrapper .bars-v .item:nth-child(3) {
+  height: 60%;
+}
+
+.wrapper .bars-v .item:nth-child(4) {
+  height: 20%;
+}
+
+.wrapper .bars-v .item:nth-child(5) {
+  height: 30%;
+}
+
+.wrapper .bars-h .item {
+  height: 14%;
+}
+
+.wrapper .bars-h .item:nth-child(1) {
+  width: 40%;
+}
+
+.wrapper .bars-h .item:nth-child(2) {
+  width: 50%;
+}
+
+.wrapper .bars-h .item:nth-child(3) {
+  width: 60%;
+}
+
+.wrapper .bars-h .item:nth-child(4) {
+  width: 20%;
+}
+
+.wrapper .bars-h .item:nth-child(5) {
+  width: 30%;
+}
+
+.wrapper .vertical .item {
+  height: 40px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.wrapper .masonry .item {
+  width: 32%;
+  margin-bottom: 2%;
+}
+
+.wrapper .masonry .item:nth-child(1) {
+  height: 100px;
+}
+
+.wrapper .masonry .item:nth-child(2) {
+  height: 200px;
+}
+
+.wrapper .masonry .item:nth-child(3) {
+  height: 150px;
+}
+
+.wrapper .masonry .item:nth-child(4) {
+  height: 120px;
+}
+
+.wrapper .masonry .item:nth-child(5) {
+  height: 220px;
+}
+
+.wrapper .masonry .item:nth-child(6) {
+  height: 180px;
+}
+
+.wrapper .masonry .item:nth-child(7) {
+  height: 80px;
+}
+
+.wrapper .masonry .item:nth-child(8) {
+  height: 190px;
+}
+
+.wrapper .masonry .item:nth-child(3n + 1) {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.wrapper .masonry .item:nth-child(3n + 2) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.wrapper .masonry .item:nth-child(3n) {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+}
+/*# sourceMappingURL=style.css.map */

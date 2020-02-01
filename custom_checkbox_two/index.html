@@ -9,43 +9,41 @@
   </head>
   <body>
     <div class="wrapper-checkbox">
-      <label class="checkbox">
-        <input type="checkbox" checked />
-        <span class="custom-checkbox"></span>
-        <span class="checkbox-text">Checked checkbox</span>
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        <span class="custom-checkbox"></span>
-        <span class="checkbox-text">Unchecked checkbox</span>
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" disabled />
-        <span class="custom-checkbox"></span>
-        <span class="checkbox-text">Disabled checkbox</span>
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" checked disabled />
-        <span class="custom-checkbox"></span>
-        <span class="checkbox-text">Disabled checked checkbox</span>
-      </label>
+      <ul>
+        <li>
+          <input id="ch-firs" type="checkbox" checked />
+          <label for="ch-firs">Checked checkbox</label>
+        </li>
+        <li>
+          <input id="ch-second" type="checkbox" />
+          <label for="ch-second">Unchecked checkbox</label>
+        </li>
+        <li>
+          <input id="ch-third" type="checkbox" disabled />
+          <label for="ch-third">Disabled checkbox</label>
+        </li>
+        <li>
+          <input id="ch-fours" type="checkbox" checked disabled />
+          <label for="ch-fours">Disabled checked checkbox</label>
+        </li>
+      </ul>
     </div>
+
     <div class="wrapper-radio">
-      <label class="checkbox">
-        <input type="radio" checked />
-        <span class="custom-checkbox"></span>
-        <span class="checkbox-text">Checked radio</span>
-      </label>
-      <label class="checkbox">
-        <input type="radio" />
-        <span class="custom-checkbox"></span>
-        <span class="checkbox-text">Unchecked radio</span>
-      </label>
-      <label class="checkbox">
-        <input type="radio" disabled />
-        <span class="custom-checkbox"></span>
-        <span class="checkbox-text">Disabled radio</span>
-      </label>
+      <ul>
+        <li>
+          <input id="r-firs" type="radio" checked />
+          <label for="r-firs">Checked radio</label>
+        </li>
+        <li>
+          <input id="r-second" type="radio" />
+          <label for="r-second">Unchecked radio</label>
+        </li>
+        <li>
+          <input id="r-third" type="radio" disabled />
+          <label for="r-third">Disabled radio</label>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

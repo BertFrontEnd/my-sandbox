@@ -9,7 +9,7 @@ body {
   padding: 0;
   font-family: 'Lato', sans-serif;
   color: #ffffff;
-  background: #95a5a6 url('assets/bg-image.jpg') repeat-x fixed center/ contain;
+  background: #2b2b2b url('assets/bg-image.jpg') repeat-x fixed center/ contain;
 }
 
 .container {
@@ -18,17 +18,17 @@ body {
   margin: 0 auto;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   flex-direction: column;
 
   .header__photo {
-    padding-top: 50px;
+    padding-top: 45px;
     text-align: center;
 
     img {
-      width: 300px;
+      width: 250px;
       border-radius: 50%;
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
@@ -40,18 +40,67 @@ header {
   }
 }
 
+li {
+  list-style-type: none;
+  line-height: 24px;
+}
+
+a {
+  color: #ffffff;
+  /* text-decoration: none; */
+
+  &:hover {
+    color: #a4b0be;
+  }
+
+  &:active {
+    color: #747d8c;
+  }
+}
+
 .main {
-  margin-top: 50px;
+  margin-top: 25px;
+
+  .main__contact ul {
+    position: relative;
+
+    & li.email::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      background: url('assets/email.svg') no-repeat center / contain;
+      width: 18px;
+      height: 18px;
+      top: 4px;
+      left: 14px;
+    }
+
+    & li.telegram::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      background: url('assets/telegram.svg') no-repeat center / contain;
+      width: 18px;
+      height: 18px;
+      top: 28px;
+      left: 14px;
+    }
+  }
 
   section {
     padding: 15px;
 
     details {
+      position: relative;
       padding-bottom: 10px;
       border-bottom: 1px solid #ffffff;
 
-      summary::-webkit-details-marker {
-        display: none;
+      &[open] {
+        summary {
+          &::after {
+            transform: rotateX(180deg);
+          }
+        }
       }
 
       summary {
@@ -61,7 +110,33 @@ header {
         text-transform: uppercase;
         font-size: 16px;
         outline: none;
+        padding-left: 10px;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        &:after {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          background: url('assets/arrow.svg') no-repeat center / contain;
+          width: 18px;
+          height: 18px;
+          top: 0;
+          right: 10px;
+          transition: all linear 0.3s;
+        }
       }
     }
+  }
+}
+
+.footer {
+  margin-top: 25px;
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

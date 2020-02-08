@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,16 +30,17 @@ body {
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  .header__inner {
+    display: flex;
+    align-items: center;
 
-  .header__photo {
+    justify-content: space-between;
+
     padding-top: 45px;
-    text-align: center;
-
+  }
+  .header__photo {
+    margin: 0 auto;
     img {
-      width: 250px;
       border-radius: 50%;
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
@@ -37,17 +49,19 @@ body {
 
   & .header__intro {
     text-align: center;
+    text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.22);
+    margin: 0 auto;
   }
 }
 
-li {
+ul {
   list-style-type: none;
   line-height: 24px;
 }
 
 a {
   color: #ffffff;
-  /* text-decoration: none; */
 
   &:hover {
     color: #a4b0be;
@@ -58,13 +72,13 @@ a {
   }
 }
 
-.main {
-  margin-top: 25px;
+.main__inner {
+  margin-top: 45px;
 
   .main__contact ul {
     position: relative;
 
-    & li.email::before {
+    li.email::before {
       content: '';
       display: inline-block;
       position: absolute;
@@ -75,7 +89,7 @@ a {
       left: 14px;
     }
 
-    & li.telegram::before {
+    li.telegram::before {
       content: '';
       display: inline-block;
       position: absolute;
@@ -84,6 +98,26 @@ a {
       height: 18px;
       top: 28px;
       left: 14px;
+    }
+
+    li.github::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      background: url('assets/github.svg') no-repeat center / contain;
+      width: 18px;
+      height: 18px;
+      top: 50px;
+      left: 14px;
+    }
+  }
+
+  .main__skills ul {
+    padding-left: 15px;
+
+    li {
+      background: url('assets/skill.svg') no-repeat left / contain;
+      padding-left: 34px;
     }
   }
 
@@ -108,7 +142,7 @@ a {
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
         text-transform: uppercase;
-        font-size: 16px;
+        /* font-size: 16px; */
         outline: none;
         padding-left: 10px;
 
@@ -133,10 +167,37 @@ a {
 }
 
 .footer {
-  margin-top: 25px;
-  p {
+  .footer__inner {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    margin: 30px 15px 20px;
+    font-size: 16px;
+
+    .footer__link a {
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .footer__copyright p {
+      margin: 0;
+    }
+
+    .footer__social ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin: 0;
+
+      li {
+        margin-left: 10px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
   }
 }

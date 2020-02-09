@@ -33,14 +33,15 @@ body {
   .header__inner {
     display: flex;
     align-items: center;
-
     justify-content: space-between;
-
     padding-top: 45px;
   }
   .header__photo {
     margin: 0 auto;
+
     img {
+      width: 250px;
+      height: 250px;
       border-radius: 50%;
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
@@ -197,6 +198,11 @@ a {
         &:first-child {
           margin-left: 0;
         }
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
       }
     }
   }

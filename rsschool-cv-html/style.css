@@ -19,7 +19,7 @@ h1 {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', 'Arial', sans-serif;
   color: #ffffff;
   background: #2b2b2b url("assets/bg-image.jpg") repeat-x fixed center/contain;
 }
@@ -56,14 +56,14 @@ body {
 }
 
 .header .header__intro {
+  margin: 0 auto;
   text-align: center;
   text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  margin: 0 auto;
 }
 
 ul {
-  list-style-type: none;
   line-height: 24px;
+  list-style-type: none;
 }
 
 a {
@@ -88,35 +88,35 @@ a:active {
 
 .main__inner .main__contact ul li.email::before {
   content: '';
-  display: inline-block;
   position: absolute;
-  background: url("assets/email.svg") no-repeat center/contain;
-  width: 18px;
-  height: 18px;
   top: 4px;
   left: 14px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("assets/email.svg") no-repeat center/contain;
 }
 
 .main__inner .main__contact ul li.telegram::before {
   content: '';
-  display: inline-block;
   position: absolute;
-  background: url("assets/telegram.svg") no-repeat center/contain;
-  width: 18px;
-  height: 18px;
   top: 28px;
   left: 14px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("assets/telegram.svg") no-repeat center/contain;
 }
 
 .main__inner .main__contact ul li.github::before {
   content: '';
-  display: inline-block;
   position: absolute;
-  background: url("assets/github.svg") no-repeat center/contain;
-  width: 18px;
-  height: 18px;
   top: 50px;
   left: 14px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("assets/github.svg") no-repeat center/contain;
 }
 
 .main__inner .main__skills ul {
@@ -124,8 +124,8 @@ a:active {
 }
 
 .main__inner .main__skills ul li {
-  background: url("assets/skill.svg") no-repeat left/contain;
   padding-left: 34px;
+  background: url("assets/skill.svg") no-repeat left/contain;
 }
 
 .main__inner section {
@@ -144,13 +144,11 @@ a:active {
 }
 
 .main__inner section details summary {
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  /* font-size: 16px; */
-  outline: none;
   padding-left: 10px;
+  font-family: 'Montserrat', 'Tahoma', sans-serif;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
 }
 
 .main__inner section details summary::-webkit-details-marker {
@@ -159,13 +157,13 @@ a:active {
 
 .main__inner section details summary:after {
   content: '';
-  display: inline-block;
   position: absolute;
-  background: url("assets/arrow.svg") no-repeat center/contain;
-  width: 18px;
-  height: 18px;
   top: 0;
   right: 10px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url("assets/arrow.svg") no-repeat center/contain;
   -webkit-transition: all linear 0.3s;
   transition: all linear 0.3s;
 }

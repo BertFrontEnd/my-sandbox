@@ -44,7 +44,7 @@ console.log(isPalindrome(123456));
 
 //4:
 console.log('4:');
-var isAnagram = function(test, original) {
+let isAnagram = function(test, original) {
   return (
     test
       .toLowerCase()
@@ -65,3 +65,18 @@ console.log(isAnagram('Twoo', 'WooT'));
 console.log(isAnagram('dumble', 'bumble'));
 console.log(isAnagram('ound', 'round'));
 console.log(isAnagram('apple', 'pale'));
+
+//6:
+console.log('4:');
+function even_or_odd(number) {
+  if (number % 2 === 0) {
+    return 'Even';
+  } else {
+    return 'Odd';
+  }
+}
+
+console.log(even_or_odd(2));
+console.log(even_or_odd(0));
+console.log(even_or_odd(7));
+console.log(even_or_odd(1));

@@ -1,0 +1,39 @@
+
+@import url(blocks/visually-hidden/visually-hidden.css);
+@import url(blocks/button/button.css);
+@import url(blocks/clearfix/clearfix.css);
+@import url(blocks/logo/logo.css);
+@import url(blocks/site-menu/site-menu.css);
+@import url(blocks/header/header.css);
+@import url(blocks/body/new-products/new-products.css);
+@import url(blocks/body/advantages/advantages.css);
+@import url(blocks/body/history/history.css);
+@import url(blocks/body/reviews/reviews.css);
+@import url(blocks/body/assortment/assortment.css);
+@import url(blocks/body/feedback/feedback.css);
+@import url(blocks/footer/footer.css);
+
+
+/* * {
+  outline: 1px dashed;
+} */
+
+body {
+  width: 1280px;
+
+  margin: 0 auto;
+  padding: 0;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Arial", sans-serif;
+  color: #555555;
+  
+  background-color: #ffffff;
+}
+
+a {
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}

@@ -1,0 +1,49 @@
+
+.footer-social {
+  position: relative;
+
+  float: left;
+  width: 213px;
+  height: 68px;
+}
+
+.footer-social__link {
+  position: absolute;
+  left: 0;
+  
+  width: 70px;
+  height: 66px;
+  
+  background-color: #1b1b1b;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid rgba(255, 203, 120, 0.1);
+}
+
+.footer-social__link--inst {
+  background-image: url("../../../../img/icon-inst.png"); 
+}
+
+.footer-social__link--fb {
+  left: 71px;
+
+  background-image: url("../../../../img/icon-fb.png"); 
+}
+
+.footer-social__link--vk {
+  left: 141px;
+
+  background-image: url("../../../../img/icon-vk.png"); 
+}
+
+.footer-social__link:hover,
+.footer-social__link:focus {
+  z-index: 10;
+  border: 1px solid rgba(255, 203, 120, 0.3);
+}
+
+.footer-social__link:active {
+  z-index: 10;
+  background-color: rgba(27, 27, 27, 0.5);
+  border: 1px solid rgba(255, 203, 120, 0.1);
+}

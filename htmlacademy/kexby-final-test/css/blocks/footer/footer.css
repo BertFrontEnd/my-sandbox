@@ -1,0 +1,23 @@
+
+@import url(footer-social/footer-social.css);
+@import url(footer-copyright/footer-copyright.css);
+
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 70px;
+  background-color: #000000;
+}
+
+.footer__container {
+  width: 1015px;
+  margin: 0 auto;
+}
+
+.footer__nav {
+  margin-bottom: 47px;
+}
+
+.footer__contacts {
+  min-height: 68px;
+}

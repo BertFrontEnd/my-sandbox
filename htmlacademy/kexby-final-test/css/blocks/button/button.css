@@ -1,0 +1,13 @@
+
+.button {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 50px;
+  padding: 0px 20px;
+  
+  line-height: 46px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}

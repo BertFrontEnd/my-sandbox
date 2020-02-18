@@ -1,0 +1,39 @@
+
+.site-menu__list {
+  display: flex;
+  justify-content: space-between;
+  float: right;
+  width: 600px;
+  min-height: 57px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  
+  text-transform: uppercase;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-menu__list--footer {
+  margin-top: 7px;
+  margin-right: 107px;
+}
+
+.site-menu__link {
+  display: block;
+  height: 57px;
+  
+  line-height: 57px;
+}
+
+.site-menu__link:hover {
+  color: #ffcb78;
+
+  box-shadow: 0 1.5px 1px -1px #ffffff;
+}
+
+.site-menu__link:active {
+  color: rgba(255, 203, 120, 0.3);
+  
+  box-shadow: 0 1.5px 1px -1px #ffffff;
+}

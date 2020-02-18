@@ -1,0 +1,22 @@
+
+@import url(new-product/new-product.css);
+
+
+.new-products {
+  padding-top: 80px;
+  padding-bottom: 110px;
+}
+
+.new-products__container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.new-products__title {
+  margin-bottom: 75px;
+  
+  font-size: 40px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #000000;
+}

@@ -1,0 +1,23 @@
+
+@import url(review/review.css);
+
+
+.reviews {
+  padding-top: 80px;
+  padding-bottom: 90px;
+  background-color: #ede5d8;
+}
+
+.reviews__container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.reviews__title {
+  margin-bottom: 75px;
+
+  font-size: 40px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #000000;
+}

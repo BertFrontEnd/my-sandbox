@@ -1,0 +1,119 @@
+
+.feedback-form {
+  width: 630px;
+}
+
+.feedback-form__group {
+  margin-bottom: 25px;
+
+  line-height: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.feedback-form__group--phone {
+  display: inline-block;
+  width: 290px;
+}
+
+.feedback-form__group--add-number {
+  display: inline-block;
+  float: right;
+  width: 290px;
+}
+
+.feedback-form__group--checkbox {
+  position: relative;
+
+  margin-bottom: 45px;
+  padding-top: 17px;
+  padding-left: 53px;
+}
+
+.feedback-form__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feedback-form__input,
+.feedback-form__select,
+.feedback-form__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 10px 15px;
+
+  font: inherit;
+  text-transform: inherit;
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  resize: none;
+}
+
+.feedback-form__textarea {
+  min-height: 120px;
+}
+
+.feedback-form__input--error {
+  background-color: rgba(255, 0, 0, 0.15);
+}
+
+.feedback-form__input:hover,
+.feedback-form__select:hover,
+.feedback-form__textarea:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.feedback-form__input:focus,
+.feedback-form__select:focus,
+.feedback-form__textarea:focus {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.feedback-form__checkbox + .feedback-form__label::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 35px;
+  height: 35px;
+
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form__checkbox:hover + .feedback-form__label::before,
+.feedback-form__checkbox:focus + .feedback-form__label::before {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.feedback-form__checkbox:checked + .feedback-form__label::before {
+  background-color: rgba(0, 0, 0, 0.15);
+  background-image: url("../../../../../img/check-mark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback-form__button {
+  width: 200px;
+
+  font-size: 16px;
+  color: #ffffff;
+  
+  background-color: #834700; 
+  border: none;
+}
+
+.feedback-form__button:hover,
+.feedback-form__button:focus {
+background-color: #6a3900;
+}
+
+.feedback-form__button:active  { 
+  color: rgba(255, 255, 255, 0.3);
+}

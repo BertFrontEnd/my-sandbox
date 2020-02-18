@@ -1,0 +1,66 @@
+
+.review {
+  position: relative;
+
+  width: 800px;
+  height: 175px;
+  margin: 0;
+}
+
+.review::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -105px;
+
+  width: 70px;
+  height: 70px;
+
+  background: url("../../../../../img/quotes.png") no-repeat;
+  background-position: 0 0;
+}
+
+.review__text {
+  width: 690px;
+  margin-bottom: 35px;
+  margin-right: 110px;
+
+  line-height: 30px;
+  color: #404040;
+}
+
+.review__author {
+  float: right;
+  margin-top: 10px;
+
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: right;
+  color: #000000;
+}
+
+.review__button {
+  float: left;
+  min-width: 168px;
+
+  color: #bcb6ab;
+
+  border: 2px solid #a5a097;
+}
+
+.review__button:hover,
+.review__button:focus {
+  color: #ffffff;
+
+  background-color: #a5a097;
+}
+
+.review__button:active  {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #8f8a81;
+  border: 2px solid #8f8a81;
+}

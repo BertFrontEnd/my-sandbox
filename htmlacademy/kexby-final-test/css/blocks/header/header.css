@@ -1,0 +1,31 @@
+
+.header {
+  min-height: 340px;
+  padding-top: 60px;
+  padding-bottom: 150px;
+
+  color: #ffffff;
+  
+  background-color: #673f09;
+  background: url("../../../img/wheat-back.jpg"); 
+  background-position: bottom; 
+  background-size: cover;
+}
+
+.header__container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.header__nav {
+  margin-bottom: 120px;
+}
+
+.header__promo {
+  margin-bottom: 0;
+
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 70px;
+  text-align: center;
+}

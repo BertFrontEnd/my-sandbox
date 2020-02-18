@@ -1,0 +1,32 @@
+
+@import url(feedback-form/feedback-form.css);
+
+
+.feedback {
+  padding-top: 80px;
+  padding-bottom: 110px;
+
+  background-color: #ffcb78;
+}
+
+.feedback__container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.feedback__title {
+  margin-bottom: 75px;
+
+  font-size: 40px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.feedback__tip {
+  width: 660px;
+  margin-bottom: 70px;
+
+  line-height: 30px;
+  color: #404040;
+}

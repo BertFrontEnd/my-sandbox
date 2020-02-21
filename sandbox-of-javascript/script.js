@@ -66,6 +66,39 @@ console.log(isAnagram('dumble', 'bumble'));
 console.log(isAnagram('ound', 'round'));
 console.log(isAnagram('apple', 'pale'));
 
+//5:
+console.log('5:');
+function cake(x, y) {
+  let alphabetEven = 0;
+  let indexEven = 0;
+  let sum = 0;
+  for (let i = 0; i <= y.length - 1; i++) {
+    if (i % 2 != 0) {
+      alphabetEven = i + 1;
+      console.log(alphabetEven);
+    } else {
+      indexEven = indexEven + y.charCodeAt(i);
+      console.log(indexEven);
+    }
+    sum = alphabetEven + indexEven;
+  }
+  let result = sum * 0.7;
+  if (result >= x) {
+    console.log(`На полу свечей: ${result}, сумма свечей на торте ${x}`);
+    return 'Fire!';
+  } else {
+    console.log(`На полу свечей: ${result}, сумма свечей на торте ${x}`);
+    return 'That was close!';
+  }
+}
+
+console.log(cake(900, 'abc'));
+console.log(cake(900, 'abcdef'));
+console.log(cake(56, 'ifkhchlhfd'));
+console.log(cake(256, 'aaaaaddddr'));
+console.log(cake(155, 'and tc'));
+console.log(cake(753, 'ukmxwwjsv'));
+
 //6:
 console.log('6:');
 function even_or_odd(number) {

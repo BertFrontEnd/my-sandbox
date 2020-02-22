@@ -72,32 +72,24 @@ function cake(x, y) {
   let alphabetEven = 0;
   let indexEven = 0;
   let sum = 0;
-  for (let i = 0; i <= y.length - 1; i++) {
-    if (i % 2 != 0) {
-      alphabetEven = i + 1;
-      console.log(alphabetEven);
-    } else {
+  for (let i = 0; i < y.length; i++) {
+    if (i % 2 === 0) {
       indexEven = indexEven + y.charCodeAt(i);
-      console.log(indexEven);
+    } else {
+      alphabetEven = alphabetEven + (y.charCodeAt(i) - 96);
     }
     sum = alphabetEven + indexEven;
   }
-  let result = sum * 0.7;
-  if (result >= x) {
-    console.log(`На полу свечей: ${result}, сумма свечей на торте ${x}`);
+  if (sum > x * 0.7) {
     return 'Fire!';
   } else {
-    console.log(`На полу свечей: ${result}, сумма свечей на торте ${x}`);
     return 'That was close!';
   }
 }
 
-console.log(cake(900, 'abc'));
 console.log(cake(900, 'abcdef'));
 console.log(cake(56, 'ifkhchlhfd'));
 console.log(cake(256, 'aaaaaddddr'));
-console.log(cake(155, 'and tc'));
-console.log(cake(753, 'ukmxwwjsv'));
 
 //6:
 console.log('6:');
@@ -144,26 +136,23 @@ console.log(mygcd(8, 9));
 console.log(mygcd(1, 1));
 console.log(mygcd(680, 612));
 
-/* function NOD() {
-  for (var x = arguments[0], i = 1; i < arguments.length; i++) {
-    var y = arguments[i];
-    while (x && y) {
-      x > y ? (x %= y) : (y %= x);
+//9:
+console.log('9:');
+function factorial(n) {
+  if (n < 0 || n > 12) {
+    throw RangeError;
+  } else if (n === 0) {
+    return 1;
+  } else {
+    let fn = 1;
+    for (let i = 1; i <= n; i++) {
+      fn *= i;
     }
-    x += y;
+    return fn;
   }
-  return x;
 }
 
-console.log(
-  [
-    NOD(10, 15),
-    NOD(30, 12),
-    NOD(111, 555, 407),
-    NOD(100, 200, 300, 400, 2225, 175, 19873625),
-  ].join('\n')
-); */
-
-/* function mygcd(x, y) {
-  return y == 0 ? x : mygcd(y, x % y);
-} */
+console.log(factorial(0));
+console.log(factorial(1));
+console.log(factorial(2));
+console.log(factorial(3));

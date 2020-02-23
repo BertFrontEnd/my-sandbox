@@ -66,6 +66,31 @@ console.log(isAnagram('dumble', 'bumble'));
 console.log(isAnagram('ound', 'round'));
 console.log(isAnagram('apple', 'pale'));
 
+//5:
+console.log('5:');
+function cake(x, y) {
+  let alphabetEven = 0;
+  let indexEven = 0;
+  let sum = 0;
+  for (let i = 0; i < y.length; i++) {
+    if (i % 2 === 0) {
+      indexEven = indexEven + y.charCodeAt(i);
+    } else {
+      alphabetEven = alphabetEven + (y.charCodeAt(i) - 96);
+    }
+    sum = alphabetEven + indexEven;
+  }
+  if (sum > x * 0.7) {
+    return 'Fire!';
+  } else {
+    return 'That was close!';
+  }
+}
+
+console.log(cake(900, 'abcdef'));
+console.log(cake(56, 'ifkhchlhfd'));
+console.log(cake(256, 'aaaaaddddr'));
+
 //6:
 console.log('6:');
 function even_or_odd(number) {
@@ -111,26 +136,47 @@ console.log(mygcd(8, 9));
 console.log(mygcd(1, 1));
 console.log(mygcd(680, 612));
 
-/* function NOD() {
-  for (var x = arguments[0], i = 1; i < arguments.length; i++) {
-    var y = arguments[i];
-    while (x && y) {
-      x > y ? (x %= y) : (y %= x);
+//9:
+console.log('9:');
+function factorial(n) {
+  if (n < 0 || n > 12) {
+    throw RangeError;
+  } else if (n === 0) {
+    return 1;
+  } else {
+    let fn = 1;
+    for (let i = 1; i <= n; i++) {
+      fn *= i;
     }
-    x += y;
+    return fn;
   }
-  return x;
 }
 
-console.log(
-  [
-    NOD(10, 15),
-    NOD(30, 12),
-    NOD(111, 555, 407),
-    NOD(100, 200, 300, 400, 2225, 175, 19873625),
-  ].join('\n')
-); */
+console.log(factorial(0));
+console.log(factorial(1));
+console.log(factorial(2));
+console.log(factorial(3));
 
-/* function mygcd(x, y) {
-  return y == 0 ? x : mygcd(y, x % y);
-} */
+//10:
+console.log('10:');
+function findDup(arr) {
+  return duplicateValue;
+}
+
+/* let numbers1 = [1, 2, 2, 3];
+let numbers2 = [1, 3, 2, 5, 4, 5, 7, 6];
+
+numbers2.sort(function(a, b) {
+  // return положительное число, если элементы надо поменять местами
+  // return отрицательное число, если элементы менять менятами не надо
+  // if (a > b) {
+  //   return 1;
+  // } else {
+  //   return -1;
+  // }
+  // или
+  return a - b;
+});
+
+console.log(numbers1);
+console.log(numbers2); */

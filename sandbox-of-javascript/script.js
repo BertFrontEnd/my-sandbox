@@ -160,23 +160,83 @@ console.log(factorial(3));
 //10:
 console.log('10:');
 function findDup(arr) {
-  return duplicateValue;
+  arr.sort(function(a, b) {
+    return a - b;
+  });
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === arr[i + 1]) {
+      return arr[i];
+    }
+  }
 }
 
-/* let numbers1 = [1, 2, 2, 3];
-let numbers2 = [1, 3, 2, 5, 4, 5, 7, 6];
+console.log(findDup([1, 3, 2, 5, 4, 5, 7, 6]));
 
-numbers2.sort(function(a, b) {
-  // return положительное число, если элементы надо поменять местами
-  // return отрицательное число, если элементы менять местами не надо
-  // if (a > b) {
-  //   return 1;
-  // } else {
-  //   return -1;
-  // }
-  // или
-  return a - b;
-});
+//11:
+console.log('11:');
+function isPrime(num) {
+  for (let i = 2; i < num + 1; i++) {
+    if (num % i === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
 
-console.log(numbers1);
-console.log(numbers2); */
+console.log(isPrime(0));
+console.log(isPrime(1));
+console.log(isPrime(2));
+console.log(isPrime(73));
+console.log(isPrime(75));
+console.log(isPrime(-1));
+
+/* function isPrime(num) {
+  if (num < 0 && num === 1 && num % 2 != 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+
+function isPrime(num) {
+  for (let i = 3; i <= num; i +=2) {
+    return true;
+  } else {
+    return false;
+  }
+
+function isPrime(num) {
+  if (num > 1 && num % num === 0 && num % 1 === 0 && !(num % (num - 1) === 1)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+let n = 10;
+
+nextPrime: for (let i = 2; i <= n; i++) {
+  // Для всех i...
+
+  for (let j = 2; j < i; j++) {
+    // проверить, делится ли число..
+    if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+  }
+
+  alert(i); // простое число
+} */
+
+/* function isPrime(num) {
+  nextNum: for (let i = 2; i < num; i++) {
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) {
+        return false;
+        continue nextNum;
+      } else {
+        return true;
+      }
+    }
+  }
+} */

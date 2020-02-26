@@ -175,13 +175,20 @@ console.log(findDup([1, 3, 2, 5, 4, 5, 7, 6]));
 //11:
 console.log('11:');
 function isPrime(num) {
-  for (let i = 2; i < num + 1; i++) {
-    if (num % i === 0) {
-      return true;
-    } else {
-      return false;
-    }
-  }
+  if (num < 2) {
+    return false;
+  } else if (num === 2 || num === 5) {
+           return true;
+         }
+ let i = 3;
+ const limit = Math.sqrt(num);
+ while (i < limit) {
+   if ( num % i === 0 || num % 5 === 0) {
+     return false;
+   }
+   i += 2;
+ }
+ return true;
 }
 
 console.log(isPrime(0));
@@ -190,6 +197,23 @@ console.log(isPrime(2));
 console.log(isPrime(73));
 console.log(isPrime(75));
 console.log(isPrime(-1));
+
+/* function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) return false;
+  }
+  return num > 1;
+}
+ */
+/* function isPrime(num) {
+  for (let i = 2; i < num + 1; i++) {
+    if (num % i === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+} */
 
 /* function isPrime(num) {
   if (num < 0 && num === 1 && num % 2 != 0) {
@@ -240,3 +264,12 @@ nextPrime: for (let i = 2; i <= n; i++) {
     }
   }
 } */
+
+/* exports.min = function min(array) {
+  let minimal = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] < minimal) minimal = array[i];
+  }
+  console.log(minimal);
+  return minimal;
+}; */

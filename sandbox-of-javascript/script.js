@@ -197,3 +197,41 @@ console.log(isPrime(2));
 console.log(isPrime(73));
 console.log(isPrime(75));
 console.log(isPrime(-1));
+
+//12:
+console.log('12:');
+function distinct(a) {
+  const result = new Set(a);
+    return Array.from(result);
+  }
+
+/* function distinct2(a) {
+  return a.filter(function (item, index) {
+    return a.indexOf(item) === index;
+  })
+} */
+
+console.log(distinct([1]));
+console.log(distinct([1, 2]));
+console.log(distinct([1, 1, 2]));
+
+//13:
+console.log('13:');
+function positiveSum(arr) {
+  let tempArr = [];
+  arr.filter(function(item) {
+    if (item > 0) {
+      tempArr.push(item);
+    }
+  });
+  let result = tempArr.reduce(function(acc, num) {
+    return acc + num;
+  }, 0);
+  return result;
+}
+
+console.log(positiveSum([1, 2, 3, 4, 5]));
+console.log(positiveSum([1, -2, 3, 4, 5]));
+console.log(positiveSum([]));
+console.log(positiveSum([-1, -2, -3, -4, -5]));
+console.log(positiveSum([-1, 2, 3, 4, -5]));

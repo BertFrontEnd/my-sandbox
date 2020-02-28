@@ -202,8 +202,8 @@ console.log(isPrime(-1));
 console.log('12:');
 function distinct(a) {
   const result = new Set(a);
-    return Array.from(result);
-  }
+  return Array.from(result);
+}
 
 /* function distinct2(a) {
   return a.filter(function (item, index) {
@@ -236,7 +236,6 @@ console.log(positiveSum([]));
 console.log(positiveSum([-1, -2, -3, -4, -5]));
 console.log(positiveSum([-1, 2, 3, 4, -5]));
 
-
 //14:
 console.log('14:');
 function fizzbuzz(n) {
@@ -255,8 +254,7 @@ function fizzbuzz(n) {
     } else {
       resultArr.push(item);
     }
-  }
-  );
+  });
   return resultArr;
 }
 
@@ -266,8 +264,12 @@ console.log(fizzbuzz(15));
 console.log('15:');
 function multiplyAll(arr) {
   return function(n) {
-
-  }
+    let returnArr = [];
+    arr.filter(function(item) {
+      returnArr.push(item * n);
+    });
+    return returnArr;
+  };
 }
 
 console.log(multiplyAll([1, 2, 3])(1));
@@ -275,11 +277,38 @@ console.log(multiplyAll([1, 2, 3])(2));
 console.log(multiplyAll([1, 2, 3])(0));
 console.log(multiplyAll([])(10));
 
-/* function multiplyAll(a) {
-  return function(b) {
-    for (let i = 0; i < a.length; i++) {
-      a[i] *= b;
+//16:
+console.log('16:');
+function findShort(s) {
+  let arr = s.split(' '); /* .toLowerCase() */
+  let minLenArr = [];
+  arr.filter(function(item) {
+    return minLenArr.push(item.length);
+  });
+  minLenArr.sort(function(a, b) {
+    return a - b;
+  });
+  for (let i = 0; i < minLenArr.length; i++) {
+    if (
+      minLenArr[i] < minLenArr[i + 1] ||
+      minLenArr[i] === minLenArr[i + 1] ||
+      minLenArr.length === 1
+    ) {
+      return minLenArr[i];
     }
-    return a;
-  };
-} */
+  }
+}
+
+console.log(findShort('bitcoin take over the world maybe who knows perhaps'));
+console.log(
+  findShort(
+    'turns out random test cases are easier than writing out basic oness'
+  )
+);
+console.log(
+  findShort(
+    'LiteCoin Ripple Ripple Bitcoin Bitcoin Dash Dogecoin MadeSafeCoin Dash 21inc BTC DarkCoin Bitcoin LiteCoin Lisk'
+  )
+);
+console.log(findShort('Dash Mine'));
+console.log(findShort('MadeSafeCoin'));

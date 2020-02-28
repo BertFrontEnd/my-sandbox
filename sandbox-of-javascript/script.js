@@ -235,3 +235,51 @@ console.log(positiveSum([1, -2, 3, 4, 5]));
 console.log(positiveSum([]));
 console.log(positiveSum([-1, -2, -3, -4, -5]));
 console.log(positiveSum([-1, 2, 3, 4, -5]));
+
+
+//14:
+console.log('14:');
+function fizzbuzz(n) {
+  arr = [];
+  for (let i = 1; i <= n; i++) {
+    arr.push(i);
+  }
+  resultArr = [];
+  arr.filter(function(item) {
+    if (item % 3 === 0 && item % 5 === 0) {
+      resultArr.push('FizzBuzz');
+    } else if (item % 5 === 0) {
+      resultArr.push('Buzz');
+    } else if (item % 3 === 0) {
+      resultArr.push('Fizz');
+    } else {
+      resultArr.push(item);
+    }
+  }
+  );
+  return resultArr;
+}
+
+console.log(fizzbuzz(15));
+
+//15:
+console.log('15:');
+function multiplyAll(arr) {
+  return function(n) {
+
+  }
+}
+
+console.log(multiplyAll([1, 2, 3])(1));
+console.log(multiplyAll([1, 2, 3])(2));
+console.log(multiplyAll([1, 2, 3])(0));
+console.log(multiplyAll([])(10));
+
+/* function multiplyAll(a) {
+  return function(b) {
+    for (let i = 0; i < a.length; i++) {
+      a[i] *= b;
+    }
+    return a;
+  };
+} */

@@ -312,3 +312,16 @@ console.log(
 );
 console.log(findShort('Dash Mine'));
 console.log(findShort('MadeSafeCoin'));
+
+//17:
+console.log('17:');
+function squareDigits(num) {
+  let numArr = num.toString().split('');
+  let newArr = [];
+  numArr.filter(function(item) {
+    return newArr.push(Math.pow(item, 2));
+  });
+  return parseInt(newArr.join(''), 10);
+}
+
+console.log(squareDigits(9119));

@@ -325,3 +325,26 @@ function squareDigits(num) {
 }
 
 console.log(squareDigits(9119));
+
+//18:
+console.log('18');
+function processArray(arr, callback) {
+  return arr.map(callback);
+}
+
+let myCallback = function(a) {
+  return a + 0;
+};
+
+console.log(processArray([8, 16, 4, 14, 10], myCallback));
+console.log(processArray([12, 13, 14, 6, 7], myCallback));
+console.log(processArray([-1, 1, 8, 27, 64, 125], myCallback));
+
+/* function doHomework(subject, callback) {
+  console.log(`Starting my ${subject} homework`);
+  callback();
+}
+function alertFinished() {
+  console.log('Finish my homework');
+}
+doHomework('math', alertFinished); */

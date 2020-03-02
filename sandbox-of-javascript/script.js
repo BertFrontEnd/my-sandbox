@@ -352,7 +352,7 @@ doHomework('math', alertFinished); */
 //19:
 console.log('19:');
 function count(string) {
-  let arr = string.toLowerCase().split("");
+  let arr = string.toLowerCase().split('');
   let obj = {};
   arr.filter(function(item) {
     obj[item] = obj[item] + 1 || 1;
@@ -361,8 +361,8 @@ function count(string) {
   return obj;
 }
 
-console.log(count("aba"));
-console.log(count(""));
+console.log(count('aba'));
+console.log(count(''));
 
 //20:
 console.log('20:');
@@ -383,4 +383,14 @@ console.log(validateUsr('asd43_34'));
 
 //21:
 console.log('21:');
-String.prototype.isLetter = function() {};
+String.prototype.isLetter = function() {
+  return /^[a-z]$/i.test(this);
+};
+
+console.log(''.isLetter());
+console.log('a'.isLetter());
+console.log('X'.isLetter());
+console.log('7'.isLetter());
+console.log('*'.isLetter());
+console.log('ab'.isLetter());
+console.log('a/n'.isLetter());

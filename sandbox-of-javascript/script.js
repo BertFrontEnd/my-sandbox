@@ -394,3 +394,16 @@ console.log('7'.isLetter());
 console.log('*'.isLetter());
 console.log('ab'.isLetter());
 console.log('a/n'.isLetter());
+
+//22:
+console.log('22:');
+String.prototype.vowel = function() {
+  return /^[aeiou]{1}$/i.test(this);
+};
+
+console.log(''.vowel());
+console.log('a'.vowel());
+console.log('E'.vowel());
+console.log('ou'.vowel());
+console.log('z'.vowel());
+console.log('lol'.vowel());

@@ -348,3 +348,39 @@ function alertFinished() {
   console.log('Finish my homework');
 }
 doHomework('math', alertFinished); */
+
+//19:
+console.log('19:');
+function count(string) {
+  let arr = string.toLowerCase().split("");
+  let obj = {};
+  arr.filter(function(item) {
+    obj[item] = obj[item] + 1 || 1;
+    return obj[item];
+  });
+  return obj;
+}
+
+console.log(count("aba"));
+console.log(count(""));
+
+//20:
+console.log('20:');
+function validateUsr(username) {
+  res = /^[a-z0-9-_]{4,16}$/.test(username);
+  return res;
+}
+
+console.log(validateUsr('asddsa'));
+console.log(validateUsr('a'));
+console.log(validateUsr('Hass'));
+console.log(validateUsr('Hasd_12assssssasasasasasaasasasasas'));
+console.log(validateUsr('____'));
+console.log(validateUsr('012'));
+console.log(validateUsr('p1pp1'));
+console.log(validateUsr('asd43 34'));
+console.log(validateUsr('asd43_34'));
+
+//21:
+console.log('21:');
+String.prototype.isLetter = function() {};

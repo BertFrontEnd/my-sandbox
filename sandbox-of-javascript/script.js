@@ -417,9 +417,9 @@ function reverse(n) {
       .toString()
       .split('')
       .reverse()
-      .join("")
+      .join('')
   );
-};
+}
 
 console.log(reverse(123));
 console.log(reverse(233));
@@ -429,46 +429,74 @@ console.log(reverse(95034));
 //Towel Sort:
 console.log('Towel Sort:');
 function towelSort(matrix) {
+  return (
+    (matrix &&
+      matrix
+        .map(function(item, index) {
+          return index % 2 === 0
+            ? item.sort(function(a, b) {
+                return a - b;
+              })
+            : item.sort(function(a, b) {
+                return b - a;
+              });
+        })
+        .reduce(function(acc, index) {
+          return acc.concat(...index);
+        }, [])) ||
+    []
+  );
+}
+
+console.log(
+  towelSort([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ])
+);
+
+console.log(towelSort([]));
+
+/* function towelSort(matrix) {
   let newMatrix = [];
   let itemMatrix = [];
   for (let i = 0; i < matrix.length; i++) {
     newMatrix.push(matrix[i].join(','));
   }
   let string = newMatrix.join(',');
-  let arr = string.split(",");
+  let arr = string.split(',');
   arr.filter(function(item) {
     return itemMatrix.push(parseInt(item));
   });
-return itemMatrix;
-};
-
-console.log(
-  towelSort([
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-  ])
-);
+  return itemMatrix;
+} */
 
 //Typical Arrays Problems:
 console.log('Typical Arrays Problems:');
 function min(array) {
-  return Math.min(...Array.from(arguments));
-};
+  return Math.min(...Array.from(arguments)) || [];
+}
 
 function max(array) {
-  return Math.max(...Array.from(arguments));
-};
+  return Math.max(...Array.from(arguments)) || [];
+}
 
 function avg(array) {
-    let sum = 0;
-    let arr = Array.from(arguments);
-    arr.reduce(function(acc, item) {
-      return sum = acc + item;
-    }, 0);
-    return sum / arr.length;
-};
+  let sum = 0;
+  let arr = Array.from(arguments);
+  arr.reduce(function(acc, item) {
+    return (sum = acc + item);
+  }, 0);
+  return sum / arr.length || [];
+}
 
-console.log(min(1, 2, 3, 4)) // returns 1;
-console.log(max(1, 2, 3, 4)) // returns 4;
-console.log(avg(1, 2, 3, 4)) // returns 2.5;
+console.log(min(1, 2, 3, 4)); // returns 1;
+console.log(min([])); // [];
+console.log(min()); // [];
+console.log(max(1, 2, 3, 4)); // returns 4;
+console.log(max([])); // [];
+console.log(max()); // [];
+console.log(avg(1, 2, 3, 4)); // returns 2.5;
+console.log(avg([])); // returns 2.5;
+console.log(avg()); // returns 2.5;

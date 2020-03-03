@@ -407,3 +407,68 @@ console.log('E'.vowel());
 console.log('ou'.vowel());
 console.log('z'.vowel());
 console.log('lol'.vowel());
+
+//Reverse Int:
+console.log('Reverse Int:');
+
+function reverse(n) {
+  return parseInt(
+    n
+      .toString()
+      .split('')
+      .reverse()
+      .join("")
+  );
+};
+
+console.log(reverse(123));
+console.log(reverse(233));
+console.log(reverse(535));
+console.log(reverse(95034));
+
+//Towel Sort:
+console.log('Towel Sort:');
+function towelSort(matrix) {
+  let newMatrix = [];
+  let itemMatrix = [];
+  for (let i = 0; i < matrix.length; i++) {
+    newMatrix.push(matrix[i].join(','));
+  }
+  let string = newMatrix.join(',');
+  let arr = string.split(",");
+  arr.filter(function(item) {
+    return itemMatrix.push(parseInt(item));
+  });
+return itemMatrix;
+};
+
+console.log(
+  towelSort([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ])
+);
+
+//Typical Arrays Problems:
+console.log('Typical Arrays Problems:');
+function min(array) {
+  return Math.min(...Array.from(arguments));
+};
+
+function max(array) {
+  return Math.max(...Array.from(arguments));
+};
+
+function avg(array) {
+    let sum = 0;
+    let arr = Array.from(arguments);
+    arr.reduce(function(acc, item) {
+      return sum = acc + item;
+    }, 0);
+    return sum / arr.length;
+};
+
+console.log(min(1, 2, 3, 4)) // returns 1;
+console.log(max(1, 2, 3, 4)) // returns 4;
+console.log(avg(1, 2, 3, 4)) // returns 2.5;

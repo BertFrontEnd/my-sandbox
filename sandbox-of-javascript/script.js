@@ -475,28 +475,39 @@ console.log(towelSort([]));
 //Typical Arrays Problems:
 console.log('Typical Arrays Problems:');
 function min(array) {
-  return Math.min(...Array.from(arguments)) || [];
+  if (!array || array.length <= 0) {
+    return 0;
+  } else {
+    return Math.min(...array) || [];
+  }
 }
 
 function max(array) {
-  return Math.max(...Array.from(arguments)) || [];
+  if (!array || array.length <= 0) {
+    return 0;
+  } else {
+    return Math.max(...array) || [];
+  }
 }
 
 function avg(array) {
   let sum = 0;
-  let arr = Array.from(arguments);
-  arr.reduce(function(acc, item) {
-    return (sum = acc + item);
-  }, 0);
-  return sum / arr.length || [];
+  if (!array || array.length <= 0) {
+    return 0;
+  } else {
+    array.reduce(function(acc, item) {
+      return (sum = acc + item);
+    }, 0);
+    return sum / array.length || [];
+  }
 }
 
-console.log(min(1, 2, 3, 4)); // returns 1;
+console.log(min([1, 2, 3, 4])); // returns 1;
 console.log(min([])); // [];
 console.log(min()); // [];
-console.log(max(1, 2, 3, 4)); // returns 4;
+console.log(max([1, 2, 3, 4])); // returns 4;
 console.log(max([])); // [];
 console.log(max()); // [];
-console.log(avg(1, 2, 3, 4)); // returns 2.5;
+console.log(avg([1, 2, 3, 4])); // returns 2.5;
 console.log(avg([])); // returns 2.5;
 console.log(avg()); // returns 2.5;

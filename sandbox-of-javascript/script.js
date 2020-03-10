@@ -545,18 +545,68 @@ function toReadable(number) {
     70: 'seventy',
     80: 'eighty',
     90: 'ninety',
-    100: 'hundred',
-
-    999: 'nine hundred ninety nine',
+    hundred: 'hundred',
   };
-  for (key in objOfNum) {
-    return objOfNum[number];
+
+  let str = String(number);
+  let lengthOfStr = str.length;
+  let res = [];
+
+  if (lengthOfStr === 3) {
+    res.push(objOfNum[str[0]]);
+    res.push(objOfNum.hundred);
+
+    if (number % 100) {
+      number = number % 100;
+      str = String(number);
+      lengthOfStr = str.length;
+    }
   }
+
+  if (lengthOfStr === 2 && number > 20) {
+    res.push(objOfNum[str[0] + '0']);
+
+    if (number % 10) {
+      res.push(objOfNum[str[1]]);
+    }
+  }
+
+  if (lengthOfStr === 1 || number <= 20) {
+    res.push(objOfNum[number]);
+  }
+
+  return res.join(' ');
 }
 
 console.log(toReadable(1));
+console.log(toReadable(51));
+console.log(toReadable(50));
 console.log(toReadable(5));
 console.log(toReadable(4));
 console.log(toReadable(999));
 console.log(toReadable(0));
 console.log(toReadable(13));
+
+/*   if (
+    number.length ===
+    2  &&
+    number > 20 &&
+    (number !== 30 ||
+      number !== 40 ||
+      number !== 50 ||
+      number !== 60 ||
+      number !== 70 ||
+      number !== 80 ||
+      number !== 90)
+  ) {
+    console.log(number);
+    return number / 10;
+  } */
+
+/*   if (number >= 0 || number <= 20) {
+    for (key in objOfNum) {
+      return objOfNum[number];
+    }
+  } */
+
+/*  if (key.length === 2) return key.split(''); */

@@ -515,7 +515,6 @@ console.log(avg()); // returns 2.5;
 //Human Readable Number:
 console.log('Human Readable Number:');
 function toReadable(number) {
-  let key = toString(number);
   let objOfNum = {
     0: 'zero',
     1: 'one',
@@ -586,27 +585,3 @@ console.log(toReadable(4));
 console.log(toReadable(999));
 console.log(toReadable(0));
 console.log(toReadable(13));
-
-/*   if (
-    number.length ===
-    2  &&
-    number > 20 &&
-    (number !== 30 ||
-      number !== 40 ||
-      number !== 50 ||
-      number !== 60 ||
-      number !== 70 ||
-      number !== 80 ||
-      number !== 90)
-  ) {
-    console.log(number);
-    return number / 10;
-  } */
-
-/*   if (number >= 0 || number <= 20) {
-    for (key in objOfNum) {
-      return objOfNum[number];
-    }
-  } */
-
-/*  if (key.length === 2) return key.split(''); */

@@ -586,6 +586,69 @@ console.log(toReadable(999));
 console.log(toReadable(0));
 console.log(toReadable(13));
 
+//Count cats:
+console.log('Count cats:');
+function countCats(matrix) {
+  if (matrix === []) return 0;
+  console.log(matrix);
+  let simpleMatrix = matrix.toString().split(',');
+  console.log(simpleMatrix);
+  let count = 0;
+  simpleMatrix.forEach(el => {
+    if (el === '^^') {
+      count += count + 1;
+    }
+  });
+  return count;
+}
+
+console.log(
+  countCats([
+    ['##', 'dd', '00'],
+    ['^^', '..', 'ss'],
+    ['AA', 'dd', 'Oo'],
+  ])
+);
+
+console.log(
+  countCats([
+    ['##', 'dd', '00'],
+    ['^ ^', '..', 'ss'],
+    ['AA', 'dd', 'Oo'],
+  ])
+);
+
+console.log(
+  countCats([
+    ['##', 'dd', '00'],
+    [' ^^ ', '..', 'ss'],
+    ['AA', 'dd', 'Oo'],
+  ])
+);
+
+console.log(
+  countCats([
+    ['##', 'dd', '00'],
+    ['^', '^', 'ss'],
+    ['AA', 'dd', 'Oo'],
+  ])
+);
+
+console.log(countCats([]));
+
+console.log(
+  countCats([
+    ['^^', '.', null, 0, false, '', NaN, '^^', 2, true, 'dasdas', 1],
+    [2, null, 0, 1, '.', 'dasdas', true, NaN, '', false, '^^', '^^'],
+    [false, '.', 1, 0, '^^', null, '', 2, 'dasdas', '^^', NaN, true],
+    ['.', false, 1, null, NaN, 2, 0, 'dasdas', true, '^^', '', '^^'],
+    [false, '.', 1, 0, '^^', true, null, '^^', '', NaN, 2, 'dasdas'],
+    [false, NaN, 1, 0, '.', '^^', null, true, 'dasdas', '^^', 2, ''],
+    [null, 1, NaN, true, '.', '^^', '^^', 2, '', false, 'dasdas', 0],
+    [null, NaN, '', false, '.', 1, 0, '^^', 'dasdas', true, 2, '^^'],
+  ])
+);
+
 //01
 console.log('01:');
 function opposite(number) {

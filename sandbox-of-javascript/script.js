@@ -585,3 +585,16 @@ console.log(toReadable(4));
 console.log(toReadable(999));
 console.log(toReadable(0));
 console.log(toReadable(13));
+
+//01
+console.log('01:');
+function opposite(number) {
+  return number * -1;
+}
+
+console.log(opposite(1));
+console.log(opposite(4.25));
+console.log(opposite(0));
+console.log(opposite(3.3333333));
+console.log(opposite(-12525220.3325));
+console.log(opposite(5));

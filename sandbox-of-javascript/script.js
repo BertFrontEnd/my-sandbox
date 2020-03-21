@@ -590,13 +590,13 @@ console.log(toReadable(13));
 console.log('Count cats:');
 function countCats(matrix) {
   if (matrix === []) return 0;
-  console.log(matrix);
-  let simpleMatrix = matrix.toString().split(',');
-  console.log(simpleMatrix);
   let count = 0;
+  /*   console.log(matrix); */
+  let simpleMatrix = matrix.toString().split(',');
+  /* console.log(simpleMatrix); */
   simpleMatrix.forEach(el => {
     if (el === '^^') {
-      count += count + 1;
+      count++;
     }
   });
   return count;
@@ -635,7 +635,6 @@ console.log(
 );
 
 console.log(countCats([]));
-
 console.log(
   countCats([
     ['^^', '.', null, 0, false, '', NaN, '^^', 2, true, 'dasdas', 1],
@@ -647,6 +646,21 @@ console.log(
     [null, 1, NaN, true, '.', '^^', '^^', 2, '', false, 'dasdas', 0],
     [null, NaN, '', false, '.', 1, 0, '^^', 'dasdas', true, 2, '^^'],
   ])
+);
+console.log(
+  countCats([
+    ['^^', '.', null, 0, false, '', NaN, 2, true, 'dasdas', 1],
+    [2, NaN, '', false, '^^', '^^'],
+    [false, '.', 1, 0, '^^', null, '', 2, 'dasdas', '^^', NaN, true],
+    ['.'],
+    [false, '.', 1, 0, '^^', true, null, '^^', '', NaN, 2, 'dasdas'],
+    [false, NaN, 1, 0, '.', '^^'],
+    [null, 1, NaN],
+    [],
+  ])
+);
+console.log(
+  countCats(['aa', '##', false, NaN, 2, 3, '^ ^', undefined, 54, ' ^^'])
 );
 
 //01

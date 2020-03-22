@@ -663,6 +663,71 @@ console.log(
   countCats(['aa', '##', false, NaN, 2, 3, '^ ^', undefined, 54, ' ^^'])
 );
 
+//Brackets:
+console.log('Brackets:');
+function check(str, bracketsConfig) {
+  let arr = str.split('');
+  if (arr.length % 2 !== 0) return false;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < bracketsConfig.length; j++) {
+      if (
+        arr[i] === bracketsConfig[j][0] &&
+        arr[i + 1] === bracketsConfig[j][1]
+      ) {
+        arr.splice(i, 2);
+        i = -1;
+      } else {
+        continue;
+      }
+    }
+  }
+  return arr.length === 0 ? true : false;
+}
+
+const config1 = [['(', ')']];
+const config2 = [
+  ['(', ')'],
+  ['[', ']'],
+];
+const config3 = [
+  ['(', ')'],
+  ['[', ']'],
+  ['{', '}'],
+];
+const config4 = [['|', '|']];
+const config5 = [
+  ['(', ')'],
+  ['|', '|'],
+];
+const config6 = [
+  ['1', '2'],
+  ['3', '4'],
+  ['5', '6'],
+  ['7', '7'],
+  ['8', '8'],
+];
+const config7 = [
+  ['(', ')'],
+  ['[', ']'],
+  ['{', '}'],
+  ['|', '|'],
+];
+
+console.log(check('()', config1));
+console.log(check('((()))()', config1));
+console.log(
+  check(
+    '111115611111111222288888822225577877778775555666677777777776622222',
+    config6
+  )
+);
+console.log(
+  check(
+    '([[[[(({{{}}}(([](((((((())))||||||))))[[{{|{{}}|}}[[[[]]]]{{{{{}}}}}]]))))]]]]))()',
+    config7
+  )
+);
+
 //01
 console.log('01:');
 function opposite(number) {

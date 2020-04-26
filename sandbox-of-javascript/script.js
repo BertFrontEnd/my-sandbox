@@ -1,10 +1,7 @@
 //1:
 console.log('1:');
 function solution(str) {
-  return str
-    .split('')
-    .reverse()
-    .join('');
+  return str.split('').reverse().join('');
 }
 
 console.log(solution('JavaScript'));
@@ -44,18 +41,10 @@ console.log(isPalindrome(123456));
 
 //4:
 console.log('4:');
-let isAnagram = function(test, original) {
+let isAnagram = function (test, original) {
   return (
-    test
-      .toLowerCase()
-      .split('')
-      .sort()
-      .join('') ===
-    original
-      .toLowerCase()
-      .split('')
-      .sort()
-      .join('')
+    test.toLowerCase().split('').sort().join('') ===
+    original.toLowerCase().split('').sort().join('')
   );
 };
 
@@ -160,7 +149,7 @@ console.log(factorial(3));
 //10:
 console.log('10:');
 function findDup(arr) {
-  arr.sort(function(a, b) {
+  arr.sort(function (a, b) {
     return a - b;
   });
   for (let i = 0; i < arr.length; i++) {
@@ -219,12 +208,12 @@ console.log(distinct([1, 1, 2]));
 console.log('13:');
 function positiveSum(arr) {
   let tempArr = [];
-  arr.filter(function(item) {
+  arr.filter(function (item) {
     if (item > 0) {
       tempArr.push(item);
     }
   });
-  let result = tempArr.reduce(function(acc, num) {
+  let result = tempArr.reduce(function (acc, num) {
     return acc + num;
   }, 0);
   return result;
@@ -244,7 +233,7 @@ function fizzbuzz(n) {
     arr.push(i);
   }
   resultArr = [];
-  arr.filter(function(item) {
+  arr.filter(function (item) {
     if (item % 3 === 0 && item % 5 === 0) {
       resultArr.push('FizzBuzz');
     } else if (item % 5 === 0) {
@@ -263,9 +252,9 @@ console.log(fizzbuzz(15));
 //15:
 console.log('15:');
 function multiplyAll(arr) {
-  return function(n) {
+  return function (n) {
     let returnArr = [];
-    arr.filter(function(item) {
+    arr.filter(function (item) {
       returnArr.push(item * n);
     });
     return returnArr;
@@ -282,10 +271,10 @@ console.log('16:');
 function findShort(s) {
   let arr = s.split(' '); /* .toLowerCase() */
   let minLenArr = [];
-  arr.filter(function(item) {
+  arr.filter(function (item) {
     return minLenArr.push(item.length);
   });
-  minLenArr.sort(function(a, b) {
+  minLenArr.sort(function (a, b) {
     return a - b;
   });
   for (let i = 0; i < minLenArr.length; i++) {
@@ -302,13 +291,13 @@ function findShort(s) {
 console.log(findShort('bitcoin take over the world maybe who knows perhaps'));
 console.log(
   findShort(
-    'turns out random test cases are easier than writing out basic oness'
-  )
+    'turns out random test cases are easier than writing out basic oness',
+  ),
 );
 console.log(
   findShort(
-    'LiteCoin Ripple Ripple Bitcoin Bitcoin Dash Dogecoin MadeSafeCoin Dash 21inc BTC DarkCoin Bitcoin LiteCoin Lisk'
-  )
+    'LiteCoin Ripple Ripple Bitcoin Bitcoin Dash Dogecoin MadeSafeCoin Dash 21inc BTC DarkCoin Bitcoin LiteCoin Lisk',
+  ),
 );
 console.log(findShort('Dash Mine'));
 console.log(findShort('MadeSafeCoin'));
@@ -318,7 +307,7 @@ console.log('17:');
 function squareDigits(num) {
   let numArr = num.toString().split('');
   let newArr = [];
-  numArr.filter(function(item) {
+  numArr.filter(function (item) {
     return newArr.push(Math.pow(item, 2));
   });
   return parseInt(newArr.join(''), 10);
@@ -332,7 +321,7 @@ function processArray(arr, callback) {
   return arr.map(callback);
 }
 
-let myCallback = function(a) {
+let myCallback = function (a) {
   return a + 0;
 };
 
@@ -354,7 +343,7 @@ console.log('19:');
 function count(string) {
   let arr = string.toLowerCase().split('');
   let obj = {};
-  arr.filter(function(item) {
+  arr.filter(function (item) {
     obj[item] = obj[item] + 1 || 1;
     return obj[item];
   });
@@ -383,7 +372,7 @@ console.log(validateUsr('asd43_34'));
 
 //21:
 console.log('21:');
-String.prototype.isLetter = function() {
+String.prototype.isLetter = function () {
   return /^[a-z]$/i.test(this);
 };
 
@@ -397,7 +386,7 @@ console.log('a/n'.isLetter());
 
 //22:
 console.log('22:');
-String.prototype.vowel = function() {
+String.prototype.vowel = function () {
   return /^[aeiou]{1}$/i.test(this);
 };
 
@@ -412,13 +401,7 @@ console.log('lol'.vowel());
 console.log('Reverse Int:');
 
 function reverse(n) {
-  return parseInt(
-    n
-      .toString()
-      .split('')
-      .reverse()
-      .join('')
-  );
+  return parseInt(n.toString().split('').reverse().join(''));
 }
 
 console.log(reverse(123));
@@ -432,16 +415,16 @@ function towelSort(matrix) {
   return (
     (matrix &&
       matrix
-        .map(function(item, index) {
+        .map(function (item, index) {
           return index % 2 === 0
-            ? item.sort(function(a, b) {
+            ? item.sort(function (a, b) {
                 return a - b;
               })
-            : item.sort(function(a, b) {
+            : item.sort(function (a, b) {
                 return b - a;
               });
         })
-        .reduce(function(acc, index) {
+        .reduce(function (acc, index) {
           return acc.concat(...index);
         }, [])) ||
     []
@@ -453,7 +436,7 @@ console.log(
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9],
-  ])
+  ]),
 );
 
 console.log(towelSort([]));
@@ -495,7 +478,7 @@ function avg(array) {
   if (!array || array.length <= 0) {
     return 0;
   } else {
-    array.reduce(function(acc, item) {
+    array.reduce(function (acc, item) {
       return (sum = acc + item);
     }, 0);
     return sum / array.length || [];
@@ -594,7 +577,7 @@ function countCats(matrix) {
   /*   console.log(matrix); */
   let simpleMatrix = matrix.toString().split(',');
   /* console.log(simpleMatrix); */
-  simpleMatrix.forEach(el => {
+  simpleMatrix.forEach((el) => {
     if (el === '^^') {
       count++;
     }
@@ -607,7 +590,7 @@ console.log(
     ['##', 'dd', '00'],
     ['^^', '..', 'ss'],
     ['AA', 'dd', 'Oo'],
-  ])
+  ]),
 );
 
 console.log(
@@ -615,7 +598,7 @@ console.log(
     ['##', 'dd', '00'],
     ['^ ^', '..', 'ss'],
     ['AA', 'dd', 'Oo'],
-  ])
+  ]),
 );
 
 console.log(
@@ -623,7 +606,7 @@ console.log(
     ['##', 'dd', '00'],
     [' ^^ ', '..', 'ss'],
     ['AA', 'dd', 'Oo'],
-  ])
+  ]),
 );
 
 console.log(
@@ -631,7 +614,7 @@ console.log(
     ['##', 'dd', '00'],
     ['^', '^', 'ss'],
     ['AA', 'dd', 'Oo'],
-  ])
+  ]),
 );
 
 console.log(countCats([]));
@@ -645,7 +628,7 @@ console.log(
     [false, NaN, 1, 0, '.', '^^', null, true, 'dasdas', '^^', 2, ''],
     [null, 1, NaN, true, '.', '^^', '^^', 2, '', false, 'dasdas', 0],
     [null, NaN, '', false, '.', 1, 0, '^^', 'dasdas', true, 2, '^^'],
-  ])
+  ]),
 );
 console.log(
   countCats([
@@ -657,10 +640,10 @@ console.log(
     [false, NaN, 1, 0, '.', '^^'],
     [null, 1, NaN],
     [],
-  ])
+  ]),
 );
 console.log(
-  countCats(['aa', '##', false, NaN, 2, 3, '^ ^', undefined, 54, ' ^^'])
+  countCats(['aa', '##', false, NaN, 2, 3, '^ ^', undefined, 54, ' ^^']),
 );
 
 //Brackets:
@@ -718,14 +701,14 @@ console.log(check('((()))()', config1));
 console.log(
   check(
     '111115611111111222288888822225577877778775555666677777777776622222',
-    config6
-  )
+    config6,
+  ),
 );
 console.log(
   check(
     '([[[[(({{{}}}(([](((((((())))||||||))))[[{{|{{}}|}}[[[[]]]]{{{{{}}}}}]]))))]]]]))()',
-    config7
-  )
+    config7,
+  ),
 );
 
 //01
@@ -740,3 +723,124 @@ console.log(opposite(0));
 console.log(opposite(3.3333333));
 console.log(opposite(-12525220.3325));
 console.log(opposite(5));
+
+//02
+console.log('02:');
+function basicOp(operation, value1, value2) {
+  const basicOperation = {
+    '+': function (a, b) {
+      return a + b;
+    },
+    '-': function (a, b) {
+      return a - b;
+    },
+    '*': function (a, b) {
+      return a * b;
+    },
+    '/': function (a, b) {
+      return a / b;
+    },
+  };
+  return basicOperation[operation](value1, value2);
+}
+
+console.log(basicOp('+', 4, 7));
+console.log(basicOp('-', 15, 18));
+console.log(basicOp('*', 5, 5));
+console.log(basicOp('/', 49, 7));
+
+//03
+console.log('03:');
+function printArray(array) {
+  return array.join();
+}
+
+console.log(printArray([2, 4, 5, 2]));
+
+//04
+console.log('04:');
+function rentalCarCost(d) {
+  let dCount = 40;
+  let discount = 0;
+  if (d >= 3) {
+    discount += 20;
+  }
+  if (d >= 7) {
+    discount += 30;
+  }
+  return dCount * d - discount;
+}
+
+console.log(rentalCarCost(1));
+console.log(rentalCarCost(2));
+console.log(rentalCarCost(3));
+console.log(rentalCarCost(4));
+console.log(rentalCarCost(5));
+console.log(rentalCarCost(6));
+console.log(rentalCarCost(7));
+console.log(rentalCarCost(8));
+console.log(rentalCarCost(9));
+console.log(rentalCarCost(10));
+
+//05
+console.log('05:');
+function getMiddle(s) {
+  const middleOdd = s.length / 2;
+  console.log(middleOdd);
+  const middleEven = (s.length + 1) % 2;
+  console.log(middleEven);
+  return s.substring(middleOdd - middleEven, middleOdd + 1);
+}
+
+console.log(getMiddle('test'));
+console.log(getMiddle('testing'));
+console.log(getMiddle('middle'));
+console.log(getMiddle('A'));
+
+//07
+console.log('07:');
+function countWords(str) {
+  str = str.trim();
+  if (str === '') {
+    return 0;
+  }
+  return str.split(/\s+/).length;
+}
+
+console.log(countWords('Hello'));
+console.log(countWords('Hello, World!'));
+console.log(countWords(''));
+console.log(countWords(' Arthur '));
+console.log(countWords('﻿Hello﻿World'));
+
+//08
+console.log('08:');
+function array(arr) {
+  let str = arr.split(',');
+  str.pop();
+  str.shift();
+  if (str.length) {
+    return str.join(' ');
+  } else {
+    return null;
+  }
+}
+
+console.log(array(''));
+console.log(array('1'));
+console.log(array('1,2'));
+console.log(array('1,2,3'));
+
+//09
+console.log('08:');
+Array.prototype.filter = function(num) {
+  const arr = [];
+  for (let i = 0; i < this.length; i++) {
+    if (num (this[i])) {
+      arr.push(this[i]);
+    }
+  }
+  return arr
+}
+
+console.log('Next');

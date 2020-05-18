@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Tomorrow', sans-serif;
+}
+
+body .clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #dde1e7;
+}
+
+body .clock .mid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+}
+
+body .clock span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  -webkit-box-reflect: below 30px linear-gradient(transparent, rgba(230, 221, 221, 0.267));
+  font-size: 5rem;
+  color: #ffffff;
+  margin: 10px 10px 10px 10px;
+}
+
+body .clock #Hours,
+body .clock #Minutes,
+body .clock #Seconds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 100px;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(230, 221, 221, 0.267));
+  padding: 20px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  -webkit-box-shadow: -3px -3px 7px #ffffff73, 3px 3px 7px rgba(94, 104, 121, 0.288);
+          box-shadow: -3px -3px 7px #ffffff73, 3px 3px 7px rgba(94, 104, 121, 0.288);
+  cursor: pointer;
+}
+
+body .clock #Hours:hover,
+body .clock #Minutes:hover,
+body .clock #Seconds:hover {
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 250, 250, 0.267));
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset -2px 5px #ffffff, inset 2px 2px 5px #ffffff;
+          box-shadow: inset -2px 5px #ffffff, inset 2px 2px 5px #ffffff;
+  -webkit-box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 7px rgba(94, 104, 121, 0.288);
+          box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 7px rgba(94, 104, 121, 0.288);
+}
+/*# sourceMappingURL=style.css.map */

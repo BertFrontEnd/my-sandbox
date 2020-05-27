@@ -1,0 +1,66 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main .search-box {
+  position: relative;
+  width: 250px;
+  height: 40px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.main .search-box input {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  -webkit-box-shadow: -1px -1px 5px #b1b1b1, 0.5px 0.5px 5px #b1b1b1;
+          box-shadow: -1px -1px 5px #b1b1b1, 0.5px 0.5px 5px #b1b1b1;
+}
+
+.main .search-box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.main .search-box .search {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 1px;
+  right: 1px;
+  padding: 7.5px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 23px;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.main .search-box .search:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+/*# sourceMappingURL=style.css.map */

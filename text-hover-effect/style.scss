@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 3rem;
+  font-family: cursive;
+  letter-spacing: 3rem;
+
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      animation: move 1.2s infinite;
+      animation-play-state: paused;
+    }
+
+    .C {
+      animation-delay: 0.2s;
+    }
+    .O {
+      animation-delay: 0.4s;
+    }
+    .D {
+      animation-delay: 0.6s;
+    }
+    .I {
+      animation-delay: 0.8s;
+    }
+    .N {
+      animation-delay: 1s;
+    }
+    .G {
+      animation-delay: 1.2s;
+    }
+
+    &:hover span {
+      animation-play-state: running;
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  0% {
+    transform: translateY(0);
+  }
+}

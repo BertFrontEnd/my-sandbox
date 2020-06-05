@@ -39,12 +39,12 @@ body {
           rgba(255, 255, 0, 0.774)
         );
         transform: scale(1.2);
-        animation: animate 2s linear infinite;
+        animation: animate 4s linear infinite;
         animation-play-state: paused;
+      }
 
-        &:hover::before {
-          animation-play-state: running;
-        }
+      &:hover::before {
+        animation-play-state: running;
       }
 
       &::after {
@@ -64,7 +64,7 @@ body {
           rgba(255, 255, 0, 0.774)
         );
         transform: scale(1.2);
-        animation: animate 2s linear infinite;
+        animation: animate 4s linear infinite;
         animation-play-state: paused;
         filter: blur(10px);
       }

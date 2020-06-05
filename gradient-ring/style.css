@@ -44,13 +44,13 @@ body .main .box:before {
   background: linear-gradient(45deg, rgba(250, 31, 31, 0.87), rgba(25, 25, 255, 0.836), rgba(20, 255, 255, 0.849), rgba(255, 255, 0, 0.774));
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-animation: animate 2s linear infinite;
-          animation: animate 2s linear infinite;
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
 
-body .main .box:before:hover::before {
+body .main .box:hover::before {
   -webkit-animation-play-state: running;
           animation-play-state: running;
 }
@@ -67,8 +67,8 @@ body .main .box::after {
   background: linear-gradient(45deg, rgba(250, 31, 31, 0.87), rgba(25, 25, 255, 0.836), rgba(20, 255, 255, 0.849), rgba(255, 255, 0, 0.774));
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-animation: animate 2s linear infinite;
-          animation: animate 2s linear infinite;
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   -webkit-filter: blur(10px);

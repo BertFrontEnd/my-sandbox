@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #131313f5;
+}
+
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+body .main .box {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #131313f5;
+  border-radius: 50%;
+  -webkit-box-shadow: inset -5px -5px 10px #3333338c, inset 5px 5px 10px #3333338c;
+          box-shadow: inset -5px -5px 10px #3333338c, inset 5px 5px 10px #3333338c;
+  cursor: pointer;
+}
+
+body .main .box:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: -1;
+  background: linear-gradient(45deg, rgba(250, 31, 31, 0.87), rgba(25, 25, 255, 0.836), rgba(20, 255, 255, 0.849), rgba(255, 255, 0, 0.774));
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+body .main .box:before:hover::before {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+body .main .box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: -2;
+  background: linear-gradient(45deg, rgba(250, 31, 31, 0.87), rgba(25, 25, 255, 0.836), rgba(20, 255, 255, 0.849), rgba(255, 255, 0, 0.774));
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+body .main .box:hover::after {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0) scale(1.2);
+            transform: rotate(0) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1.2);
+            transform: rotate(360deg) scale(1.2);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0) scale(1.2);
+            transform: rotate(0) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1.2);
+            transform: rotate(360deg) scale(1.2);
+  }
+}
+/*# sourceMappingURL=style.css.map */

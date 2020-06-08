@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+  font-family: 'Montserrat Regular', sans-serif;
+}
+
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: #fcf5ef;
+}
+
+body .main .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background-color: #86e3cdbe;
+  letter-spacing: 0.1rem;
+  -webkit-box-shadow: 0 0 8px #b1b1b1;
+          box-shadow: 0 0 8px #b1b1b1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+body .main .list:hover {
+  background-color: #86e3cd;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  font-weight: 900;
+}
+/*# sourceMappingURL=style.css.map */

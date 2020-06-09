@@ -1,0 +1,121 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*   margin: 0;
+  padding: 0; */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 3rem;
+  background-color: #dcdde1;
+}
+
+body .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (17rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 17rem);
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .grid .item {
+  position: relative;
+  height: 19rem;
+  border-radius: 5px;
+  background-color: lightGrey;
+  -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  /* overflow-y: hidden; */
+}
+
+body .grid .item h3 {
+  margin: 0;
+  display: block;
+  background-color: deeppink;
+  padding: 1rem;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+body .grid .item a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+body .grid .item a:focus {
+  outline: none;
+}
+
+body .grid .item a:hover ~ .item__overlay, body .grid .item a:focus ~ .item__overlay {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+body .grid .item a:hover ~ .item__overlay h3, body .grid .item a:focus ~ .item__overlay h3 {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+body .grid .item a:hover ~ .item__overlay .item__body, body .grid .item a:focus ~ .item__overlay .item__body {
+  opacity: 1;
+}
+
+body .grid .item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .grid .item .item__overlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  background-color: #ff61b6;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+}
+
+body .grid .item .item__overlay .item__body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 1rem;
+  opacity: 0;
+  -webkit-transition: opacity 500ms 100ms;
+  transition: opacity 500ms 100ms;
+}
+
+body .grid .item .item__overlay .item__body p {
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */

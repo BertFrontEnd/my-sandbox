@@ -30,7 +30,7 @@ body .grid .item {
   background-color: lightGrey;
   -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 }
 
 body .grid .item h3 {

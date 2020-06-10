@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #dcdde1;
+}
+
+.main .box {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  background-color: #5c5c5c;
+  border: 6px solid #5c5c5c;
+  border-radius: 50%;
+  -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.main .box:before {
+  content: 'BertFrontEnd';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-family: cursive;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.main .box:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
+  border-radius: 30%;
+  -webkit-animation: animate 15s ease-in infinite;
+          animation: animate 15s ease-in infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) rotate(0) scale(1.6);
+            transform: translateY(0) rotate(0) scale(1.6);
+  }
+  50% {
+    -webkit-transform: translateY(-150%) rotate(500deg) scale(1.6);
+            transform: translateY(-150%) rotate(500deg) scale(1.6);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0) scale(1.6);
+            transform: translateY(0) rotate(0) scale(1.6);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(0) rotate(0) scale(1.6);
+            transform: translateY(0) rotate(0) scale(1.6);
+  }
+  50% {
+    -webkit-transform: translateY(-150%) rotate(500deg) scale(1.6);
+            transform: translateY(-150%) rotate(500deg) scale(1.6);
+  }
+  100% {
+    -webkit-transform: translateY(0) rotate(0) scale(1.6);
+            transform: translateY(0) rotate(0) scale(1.6);
+  }
+}
+/*# sourceMappingURL=style.css.map */

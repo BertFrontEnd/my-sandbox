@@ -22,11 +22,12 @@ body .main {
 }
 
 body .main .box {
+  position: relative;
   width: 100px;
   height: 100px;
   background-color: #c300ff;
   border-radius: 50%;
-  position: relative;
+  cursor: pointer;
 }
 
 body .main .box:hover:before {

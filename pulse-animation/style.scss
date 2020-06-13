@@ -14,11 +14,12 @@ body {
     height: 100vh;
 
     .box {
+      position: relative;
       width: 100px;
       height: 100px;
       background-color: rgb(195, 0, 255);
       border-radius: 50%;
-      position: relative;
+      cursor: pointer;
 
       &:hover:before {
         animation-play-state: paused;

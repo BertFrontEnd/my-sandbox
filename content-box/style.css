@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  font-family: cursive;
+  background-color: #ecf0f1;
+}
+
+body .main {
+  width: 100%;
+  height: 100vh;
+}
+
+body .main .box {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  height: 250px;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 10px #838383;
+          box-shadow: 10px 10px 10px #838383;
+  background-color: #ff3f3f;
+  color: #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+body .main .box i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 250px;
+  background-color: #ff0000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body .main .box i svg {
+  width: 46px;
+  height: 46px;
+  fill: #ffffff;
+}
+
+body .main .box:hover i {
+  top: 10px;
+  left: 40%;
+  border-radius: 50px;
+  width: 75px;
+  height: 74px;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body .main .box h2 {
+  margin: 15px 0 0 0;
+  text-align: center;
+  -webkit-transform: translateY(205px);
+          transform: translateY(205px);
+  -webkit-transition: all 1.1s;
+  transition: all 1.1s;
+}
+
+body .main .box:hover h2,
+body .main .box:hover p {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .main .box p {
+  margin: 15px 30px 0 30px;
+  text-align: center;
+  -webkit-transform: translateY(205px);
+          transform: translateY(205px);
+  -webkit-transition: all 1.3s;
+  transition: all 1.3s;
+}
+/*# sourceMappingURL=style.css.map */

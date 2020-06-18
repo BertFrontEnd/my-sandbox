@@ -27,7 +27,7 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: #e07768;
+          background-color: #0e76a8;
           z-index: 1;
           transform: translateY(100px);
         }
@@ -37,7 +37,6 @@ body {
         &.face1 {
           transform: translateY(0px);
           border-radius: 10px 10px 0 0;
-          box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
         }
       }
 
@@ -58,7 +57,6 @@ body {
         &.face2 {
           transform: translateY(0);
           border-radius: 0 0 10px 10px;
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
         }
       }
 
@@ -112,18 +110,3 @@ body {
     }
   }
 }
-
-/* .container {
-}
-.card {
-}
-.face {
-}
-.face1 {
-}
-.content {
-}
-.icon {
-}
-.face2 {
-} */

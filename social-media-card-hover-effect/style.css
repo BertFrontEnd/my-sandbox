@@ -47,7 +47,7 @@ body .container .card .face.face1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #e07768;
+  background-color: #0e76a8;
   z-index: 1;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
@@ -57,8 +57,6 @@ body .container .card:hover .face.face1 {
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   border-radius: 10px 10px 0 0;
-  -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
-          box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
 }
 
 body .container .card .face.face2 {
@@ -84,8 +82,6 @@ body .container .card:hover .face.face2 {
   -webkit-transform: translateY(0);
           transform: translateY(0);
   border-radius: 0 0 10px 10px;
-  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
-          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.7);
 }
 
 body .container .card:hover svg {
@@ -142,19 +138,4 @@ body .container .card .second .content p {
   text-align: center;
   color: #414141;
 }
-
-/* .container {
-}
-.card {
-}
-.face {
-}
-.face1 {
-}
-.content {
-}
-.icon {
-}
-.face2 {
-} */
 /*# sourceMappingURL=style.css.map */

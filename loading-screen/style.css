@@ -1,0 +1,124 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1f1f1f;
+}
+
+body .loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .loader .bar {
+  width: 6px;
+  height: 80px;
+  margin-right: 4px;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-animation: loader 1.5s infinite ease-in-out;
+          animation: loader 1.5s infinite ease-in-out;
+}
+
+body .loader .bar:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+body .loader .bar:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+body .loader .bar:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+body .loader .bar:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+body .loader .bar:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+body .loader .bar:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+body .loader .bar:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+body .loader .bar:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+body .loader .bar:nth-child(9) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+body .loader .bar:nth-child(10) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: scaleY(-0.1);
+            transform: scaleY(-0.1);
+    opacity: 1;
+  }
+  50% {
+    background-color: #066dcc;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(-0.1);
+            transform: scaleY(-0.1);
+    opacity: 1;
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: scaleY(-0.1);
+            transform: scaleY(-0.1);
+    opacity: 1;
+  }
+  50% {
+    background-color: #066dcc;
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(-0.1);
+            transform: scaleY(-0.1);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */

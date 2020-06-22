@@ -1,0 +1,80 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+}
+
+body .logo .netflix {
+  position: relative;
+  width: 360px;
+  height: 520px;
+  overflow: hidden;
+}
+
+body .logo .netflix::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: -100px;
+  width: 100%;
+  height: 120px;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  -webkit-transform: scaleX(1.5);
+          transform: scaleX(1.5);
+  background-color: #000000;
+  z-index: 2;
+}
+
+body .logo .netflix span {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+body .logo .netflix span:nth-child(1) {
+  background-color: #b00612;
+  left: 0;
+}
+
+body .logo .netflix span:nth-child(2) {
+  background-color: #e50815;
+  z-index: 1;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: skewX(25deg);
+          transform: skewX(25deg);
+  -webkit-box-shadow: 0 0 40px black;
+          box-shadow: 0 0 40px black;
+}
+
+body .logo .netflix span:nth-child(3) {
+  background-color: #b00612;
+  right: 0;
+}
+
+body .logo h3 {
+  position: absolute;
+  color: #ffffff;
+  font-family: arial;
+  letter-spacing: 11px;
+  font-size: 70px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/*# sourceMappingURL=style.css.map */

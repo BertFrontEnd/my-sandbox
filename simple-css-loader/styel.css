@@ -1,0 +1,68 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #1f1f1f;
+}
+
+.main .loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 108px;
+  height: 108px;
+}
+
+.main .loader .box {
+  margin: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.main .loader .red-box {
+  background-color: crimson;
+  -webkit-animation: animate 2s 0.5s linear infinite;
+          animation: animate 2s 0.5s linear infinite;
+}
+
+.main .loader .blue-box {
+  background-color: cornflowerblue;
+  -webkit-animation: animate 2s 1s linear infinite;
+          animation: animate 2s 1s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0%,
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(-180deg);
+            transform: rotateX(-180deg);
+  }
+}
+/*# sourceMappingURL=styel.css.map */

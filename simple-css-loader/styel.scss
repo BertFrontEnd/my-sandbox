@@ -1,0 +1,42 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #1f1f1f;
+
+  .loader {
+    display: flex;
+    flex-wrap: wrap;
+    width: 108px;
+    height: 108px;
+
+    .box {
+      margin: 2px;
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    .red-box {
+      background-color: crimson;
+      animation: animate 2s 0.5s linear infinite;
+    }
+
+    .blue-box {
+      background-color: cornflowerblue;
+      animation: animate 2s 1s linear infinite;
+    }
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(-180deg);
+  }
+}

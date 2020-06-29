@@ -1,4 +1,4 @@
-// Создается объект через new Object; созданный person - инстанс класса Object
+// Создается объект через new Object; созданный person - инстанс (экземпляр) класса Object
 const person = new Object({
   name: 'Berton',
   age: 33,

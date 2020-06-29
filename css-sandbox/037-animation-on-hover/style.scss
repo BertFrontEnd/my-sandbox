@@ -1,0 +1,142 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  background-color: #1f1f1f;
+}
+
+.container {
+  a {
+    margin: 20px;
+
+    color: #00aeff;
+    text-decoration: none;
+
+    transition: 0.5s ease all;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      outline: none;
+    }
+  }
+
+  .button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    width: 250px;
+    padding: 15px;
+    border: 2px solid #00aeff;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .button-center,
+  .button-left,
+  .button-right,
+  .button-top,
+  .button-bottom {
+    &::before {
+      position: absolute;
+      z-index: -1;
+
+      content: '';
+
+      background-color: #00aeff;
+
+      transition: 0.3s all ease;
+
+      opacity: 0;
+    }
+  }
+
+  .button-center {
+    &::before {
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      right: 50%;
+    }
+
+    &:hover {
+      &::before {
+        left: 0;
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .button-left {
+    &::before {
+      top: 0;
+      left: 100%;
+      bottom: 0;
+      right: 0%;
+    }
+
+    &:hover {
+      &::before {
+        left: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .button-right {
+    &::before {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 100%;
+    }
+
+    &:hover {
+      &::before {
+        right: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .button-top {
+    &::before {
+      top: 100%;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    &:hover {
+      &::before {
+        top: 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  .button-bottom {
+    &::before {
+      top: 0;
+      left: 0;
+      bottom: 100%;
+      right: 0;
+    }
+
+    &:hover {
+      &::before {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

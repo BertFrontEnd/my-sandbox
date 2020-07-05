@@ -1,0 +1,17 @@
+body {
+  background-color: #111111;
+}
+
+body h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 150px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */

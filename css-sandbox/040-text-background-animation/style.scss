@@ -7,12 +7,26 @@ body {
     left: 50%;
 
     font-family: 'Tomorrow', sans-serif;
-    font-size: 150px;
+    font-size: 50px;
+    color: transparent;
     white-space: nowrap;
     text-transform: uppercase;
 
-    background-color: #fff;
+    background: url('./assets/img/strip.jpg') no-repeat;
+    -webkit-background-clip: text;
 
     transform: translate(-50%, -50%);
+
+    animation: change 10s linear infinite;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
   }
 }

@@ -70,8 +70,4 @@ body .main .card:hover .back {
   -webkit-transform: perspective(600px) rotateY(0deg);
           transform: perspective(600px) rotateY(0deg);
 }
-
-body .main .card:hover #bg {
-  background-color: #c0392b;
-}
 /*# sourceMappingURL=style.css.map */

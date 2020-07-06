@@ -1,0 +1,77 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #002842;
+}
+
+body .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body .main {
+  width: 100%;
+  height: 100vh;
+}
+
+body .main .card {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+body .main .card .front,
+body .main .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+body .main .card .front {
+  background-color: #c85000;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: perspective(600px) rotateY(0deg);
+          transform: perspective(600px) rotateY(0deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body .main .card .back {
+  background-color: #c80014;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: perspective(600px) rotateY(180deg);
+          transform: perspective(600px) rotateY(180deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body .main .card:hover .front {
+  -webkit-transform: perspective(600px) rotateY(-180deg);
+          transform: perspective(600px) rotateY(-180deg);
+}
+
+body .main .card:hover .back {
+  -webkit-transform: perspective(600px) rotateY(0deg);
+          transform: perspective(600px) rotateY(0deg);
+}
+
+body .main .card:hover #bg {
+  background-color: #c0392b;
+}
+/*# sourceMappingURL=style.css.map */

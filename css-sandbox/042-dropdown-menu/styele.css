@@ -1,0 +1,139 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #e6e3df;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main .box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #56b0ff;
+  color: #ffffff;
+}
+
+.main .box input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.main .box input:hover ~ span {
+  -webkit-box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5), -2px -2px 5px rgba(154, 147, 140, 0.5);
+          box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5), -2px -2px 5px rgba(154, 147, 140, 0.5);
+}
+
+.main .box input:checked ~ .content {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.main .box input:checked ~ .content a {
+  -webkit-box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5), -2px -2px 5px rgba(154, 147, 140, 0.5);
+          box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5), -2px -2px 5px rgba(154, 147, 140, 0.5);
+}
+
+.main .box input:checked ~ i svg {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.main .box input:checked ~ span {
+  -webkit-box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5), -2px -2px 5px rgba(154, 147, 140, 0.5);
+          box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5), -2px -2px 5px rgba(154, 147, 140, 0.5);
+}
+
+.main .box span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 5px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  pointer-events: none;
+}
+
+.main .box i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .box i svg {
+  width: 14px;
+  height: 14px;
+  fill: #ffffff;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  pointer-events: none;
+}
+
+.main .box .content {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 140px;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.main .box .content a {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #56b0ff;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+}
+
+.main .box .content a:hover {
+  background-color: #1b95ff;
+}
+/*# sourceMappingURL=styele.css.map */

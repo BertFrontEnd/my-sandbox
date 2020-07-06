@@ -1,0 +1,139 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #e6e3df;
+
+  font-family: 'Montserrat', sans-serif;
+
+  .box {
+    position: relative;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 140px;
+    height: 40px;
+
+    border-radius: 5px;
+
+    background-color: rgb(86, 176, 255);
+
+    color: #ffffff;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      opacity: 0;
+
+      cursor: pointer;
+
+      &:hover {
+        ~ span {
+          box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5),
+            -2px -2px 5px rgba(154, 147, 140, 0.5);
+        }
+      }
+
+      &:checked {
+        ~ .content {
+          transform: scale(1);
+
+          a {
+            box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5),
+              -2px -2px 5px rgba(154, 147, 140, 0.5);
+          }
+        }
+
+        ~ i {
+          svg {
+            transform: rotateX(180deg);
+          }
+        }
+
+        ~ span {
+          box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5),
+            -2px -2px 5px rgba(154, 147, 140, 0.5);
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      border-radius: 5px;
+
+      transition: all 0.4s;
+
+      pointer-events: none;
+    }
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: 14px;
+        height: 14px;
+
+        fill: #ffffff;
+
+        transform: rotateX(0);
+        transition: all 0.4s;
+
+        pointer-events: none;
+      }
+    }
+
+    .content {
+      position: absolute;
+      top: 50px;
+      left: 10px;
+
+      display: flex;
+      flex-direction: column;
+
+      width: 140px;
+
+      transform-origin: top;
+      transform: scale(0);
+      transition: all 0.4s;
+
+      a {
+        width: 100%;
+        height: 40px;
+
+        margin-bottom: 10px;
+
+        border-radius: 5px;
+
+        background-color: rgb(86, 176, 255);
+
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+        line-height: 40px;
+
+        &:hover {
+          background-color: rgb(27, 149, 255);
+        }
+      }
+    }
+  }
+}

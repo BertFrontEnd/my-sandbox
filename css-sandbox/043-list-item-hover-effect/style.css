@@ -1,0 +1,77 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #1f1f1f;
+  font-family: 'Poppins', sans-serif;
+}
+
+body .list {
+  position: relative;
+}
+
+body .list h2 {
+  position: relative;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+body .list ul {
+  position: relative;
+}
+
+body .list ul li {
+  position: relative;
+  left: 0;
+  margin: 4px 0;
+  border-left: 2px solid #24ff0b;
+  color: #999999;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+body .list ul li span {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 8px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .list ul li span:hover {
+  color: #1f1f1f;
+}
+
+body .list ul li:hover {
+  left: 10px;
+}
+
+body .list ul li:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+body .list ul li::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #24ff0b;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/*# sourceMappingURL=style.css.map */

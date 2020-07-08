@@ -1,0 +1,50 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-color: #1f1f1f;
+}
+
+body .box {
+  position: relative;
+  width: 96px;
+  height: 45px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+}
+
+body .box input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+body .box input:checked ~ span {
+  border-color: #1651ff;
+  background-color: #1651ff;
+  -webkit-transform: translateX(145%) scale(1);
+          transform: translateX(145%) scale(1);
+}
+
+body .box span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: -1;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  background-color: white;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+/*# sourceMappingURL=style.css.map */

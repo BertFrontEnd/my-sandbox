@@ -30,15 +30,15 @@ body .box input {
 body .box input:checked ~ span {
   border-color: #1651ff;
   background-color: #1651ff;
-  -webkit-transform: translateX(145%) scale(1);
-          transform: translateX(145%) scale(1);
+  -webkit-transform: translateX(145%);
+          transform: translateX(145%);
 }
 
 body .box span {
   position: absolute;
   top: 3px;
   left: 3px;
-  z-index: -1;
+  z-index: 1;
   width: 35px;
   height: 35px;
   border: 2px solid #ffffff;
@@ -46,5 +46,6 @@ body .box span {
   background-color: white;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

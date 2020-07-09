@@ -1,0 +1,42 @@
+body {
+  background-color: #1f1f1f;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+body .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .container span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 50px;
+  color: #ffffff;
+  letter-spacing: 4px;
+  text-shadow: 0 5px 10px #000000;
+}
+
+body .container .colorBtn {
+  padding: 16px 32px;
+  border: 2px solid #ffffff;
+  outline: none;
+  background-color: transparent;
+  -webkit-box-shadow: 0 5px 10px #000000;
+          box-shadow: 0 5px 10px #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+body .container .colorBtn:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
+/*# sourceMappingURL=style.css.map */

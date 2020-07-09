@@ -1,0 +1,46 @@
+body {
+  background-color: #1f1f1f;
+
+  font-family: 'Tomorrow', sans-serif;
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+
+    span {
+      display: block;
+
+      margin-bottom: 20px;
+
+      font-size: 50px;
+      color: #ffffff;
+      letter-spacing: 4px;
+      text-shadow: 0 5px 10px #000000;
+    }
+
+    .colorBtn {
+      padding: 16px 32px;
+      border: 2px solid #ffffff;
+      outline: none;
+
+      background-color: transparent;
+      box-shadow: 0 5px 10px #000000;
+
+      color: #ffffff;
+      text-transform: uppercase;
+
+      transition: all 0.1s;
+
+      cursor: pointer;
+
+      &:active {
+        transform: scale(0.99);
+      }
+    }
+  }
+}

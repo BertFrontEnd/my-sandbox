@@ -1,0 +1,132 @@
+body {
+  background-color: #ecf0f3;
+  .container {
+    .login-div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 330px;
+      /* height: 100vh; */
+      padding: 50px 35px 35px;
+      border-radius: 40px;
+
+      background-color: #ecf0f3;
+      box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+
+      transform: translate(-50%, -50%);
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        border-radius: 50%;
+
+        box-shadow: 0 0 2px #5f5f5f, 0 0 0 5px #ecf0f3, 8px 8px 15px #a7aaaf,
+          -8px -8px 15px #ffffff;
+
+        /* img {
+          width: 100%;
+          height: 100%;
+          margin: 0 auto;
+          border-radius: 50%;
+        } */
+      }
+
+      .title {
+        padding-top: 24px;
+
+        font-family: 'Billabong', serif;
+        font-size: 38px;
+        letter-spacing: 0.5px;
+        text-align: center;
+      }
+
+      .sub-title {
+        padding-top: 7px;
+
+        font-family: 'Billabong', serif;
+        font-size: 16px;
+        letter-spacing: 3px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      label {
+        width: 100%;
+        padding: 45px 5px 5px;
+
+        .username,
+        .password {
+          width: 100%;
+          margin-bottom: 30px;
+          padding: 0 15px;
+          border-radius: 25px;
+
+          box-shadow: inset 8px 8px 8px #cbced1;
+
+          input {
+            height: 45px;
+            border: none;
+            outline: none;
+
+            background: none;
+
+            font-family: 'ProximaNova', sans-serif;
+            font-size: 18px;
+            color: #555555;
+
+            &::placeholder {
+              color: #55555575;
+            }
+          }
+        }
+      }
+
+      .button {
+        width: 100%;
+        padding: 10px 0;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+
+        background-color: #5f27cd;
+
+        font-family: 'ProximaNova', sans-serif;
+        font-size: 20px;
+        color: #ffffff;
+
+        transition: all 0.1s;
+
+        cursor: pointer;
+
+        &:active {
+          background-color: #341f97;
+        }
+      }
+
+      .link {
+        width: 100%;
+        padding-top: 20px;
+
+        font-family: 'ProximaNova', sans-serif;
+        font-size: 16px;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+
+          transition: all 0.1s;
+
+          &:visited {
+            color: #5f27cd;
+          }
+
+          &:active {
+            color: #341f97;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Billabong';
+  src: url('./font/Billabong.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('./font/ProximaNova-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

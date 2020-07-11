@@ -1,0 +1,46 @@
+body {
+  background-color: #1f1f1ff1;
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: #111111;
+
+      &::before {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        bottom: -10px;
+        right: -10px;
+        z-index: -1;
+
+        content: '';
+
+        background-image: linear-gradient(45deg, orangered, violet, slateblue, red, green, yellow, brown, pink);
+        background-size: 300%;
+
+        animation: gradient 3s linear infinite;
+        animation-duration: alternate;
+      }
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}

@@ -73,7 +73,7 @@ body .main-color {
   background-color: #deeaf825;
 }
 
-body .main-color:hover:not(.text) {
+body .main-color:hover:not(.screen) {
   background-color: #deeaf8;
 }
 

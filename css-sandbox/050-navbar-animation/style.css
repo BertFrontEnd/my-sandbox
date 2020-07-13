@@ -1,0 +1,63 @@
+body {
+  background-color: #1f1f1f;
+}
+
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+body .main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 1.2rem;
+}
+
+body .main ul li {
+  position: relative;
+  margin: 0 20px;
+  padding: 10px 20px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  /* cursor: pointer; */
+}
+
+body .main ul li::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background-color: #ffffff;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body .main ul li:hover {
+  background-color: #ff3e3f;
+}
+
+body .main ul li:hover::before {
+  bottom: calc(100% - 2px);
+  background-color: #ff3e3f;
+}
+
+body .main ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

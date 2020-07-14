@@ -15,9 +15,9 @@ aElement.addEventListener('mousemove', (e) => {
   /* console.log('yc:', yc); */
 
   const dx = x - xc;
-  console.log('dx:', dx);
+  /* console.log('dx:', dx); */
   const dy = y - yc;
-  console.log('dy:', dy);
+  /* console.log('dy:', dy); */
 
   docStyle.setProperty('--rx', `${dy / -1}deg`);
   docStyle.setProperty('--ry', `${dx / 10}deg`);

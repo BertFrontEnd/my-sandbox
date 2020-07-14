@@ -1,0 +1,76 @@
+// позиция - position
+// блочная модель - block model
+// типографика - typography
+// оформление - decor
+// анимация - animation
+// другое - other
+
+body {
+  // block model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  // typography
+  font-family: 'Tomorrow', sans-serif;
+  // animation
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+
+  a {
+    // position
+    position: relative;
+    // block model
+    display: inline-block;
+    padding: 1.2em 3em;
+    // typography
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    //other
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      // position
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      // block model
+      content: '';
+      //decor
+      border-radius: 4px;
+      background: linear-gradient(135deg, #f6086e, #ff133a);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      // animation
+      will-change: transform;
+      transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+      transition: box-shadow 0.5s ease, transform 0.2s ease;
+    }
+
+    &::after {
+      // position
+      position: relative;
+      // block model
+      display: inline-block;
+      content: attr(data-title);
+      // typography
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      // animation
+      will-change: transform;
+      transform: translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      &::before {
+        //decor
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}

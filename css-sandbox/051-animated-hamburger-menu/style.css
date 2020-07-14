@@ -1,0 +1,75 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: linear-gradient(#264fad, rgba(0, 0, 0, 0) 90%), linear-gradient(45deg, #c2553c, #000000 75%);
+}
+
+body input {
+  -webkit-appearance: none;
+}
+
+body input:checked + label {
+  width: 0;
+}
+
+body input:checked + label::before {
+  -webkit-transform: rotate(45deg) translate(0);
+          transform: rotate(45deg) translate(0);
+}
+
+body input:checked + label::after {
+  -webkit-transform: rotate(-45deg) translate(0);
+          transform: rotate(-45deg) translate(0);
+}
+
+body label {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 15px;
+  margin-left: -50px;
+  margin-top: -8px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+
+body label::before {
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  border-radius: 5px;
+  content: '';
+  background-color: #ffffff;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+body label:after {
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  border-radius: 5px;
+  content: '';
+  background-color: #ffffff;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+/*# sourceMappingURL=style.css.map */

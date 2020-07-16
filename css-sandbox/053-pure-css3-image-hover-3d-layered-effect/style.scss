@@ -1,0 +1,77 @@
+// position
+// block model
+// typography
+// decor
+// animation
+// other
+
+body {
+  // block model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  // decor
+  background-color: #2f2f2f;
+
+  section {
+    // position
+    position: relative;
+    // block model
+    width: 300px;
+    height: 300px;
+    margin-top: 140px;
+    // decor
+    border-radius: 10px;
+    background-color: rgba((0), 0, 0, 0.1);
+    box-shadow: 0 0 30px #000000;
+    // animation
+    transform: rotate(-30deg) skew(25deg) scale(0.7);
+    transition: 0.5s;
+
+    img {
+      // position
+      position: absolute;
+      // block model
+      width: 100%;
+      height: auto;
+      // decor
+      border-radius: 10px;
+      // animation
+      transition: 0.5s;
+      //other
+      cursor: pointer;
+    }
+
+    &:hover {
+      box-shadow: 0 0 transparent;
+      img:nth-child(4) {
+        // animation
+        transform: translate(150px, -150px);
+        // other
+        opacity: 1;
+      }
+
+      img:nth-child(3) {
+        // animation
+        transform: translate(110px, -110px);
+        // other
+        opacity: 0.8;
+      }
+
+      img:nth-child(2) {
+        // animation
+        transform: translate(70px, -70px);
+        // other
+        opacity: 0.6;
+      }
+
+      img:nth-child(1) {
+        // animation
+        transform: translate(30px, -30px);
+        // other
+        opacity: 0.4;
+      }
+    }
+  }
+}

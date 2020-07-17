@@ -1,0 +1,140 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  background-color: #ecf0f1;
+
+  #checkbox {
+    -webkit-appearance: none;
+
+    &:checked {
+      + label {
+        // decor
+        background-color: #5e17e9;
+        box-shadow: 0 7px 10px #5e17e9;
+
+        &::before {
+          // box-model
+          width: 0;
+          height: 0;
+        }
+
+        #tick-mark {
+          &::before,
+          &::after {
+            // decor
+            opacity: 1;
+            // transition
+            transform: translate(0);
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    //position
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    // box-model
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    // decor
+    background-color: #5e17e9;
+    border-radius: 20px;
+    // transition
+    transform: translateY(-50%);
+    transition: transform 0.2s ease, background-color 0.2s ease,
+      box-shadow 0.2s ease;
+    // other
+    overflow: hidden;
+    cursor: pointer;
+
+    &:before {
+      // position
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      // box-model
+      content: '';
+      width: 70px;
+      height: 70px;
+      margin: 0 auto;
+      // decor
+      background-color: #ecf0f1;
+      border-radius: 5px;
+      // transition
+      transform: translateY(-50%);
+      transition: width 0.2s ease, height 0.2s ease;
+    }
+
+    &:active {
+      transform: translateY(-50%) scale(0.9);
+    }
+
+    #tick-mark {
+      // position
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      // box-model
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      margin-left: 14px;
+      // transition
+      transform: rotateZ(-40deg);
+
+      &::before,
+      &::after {
+        // position
+        position: absolute;
+        // box-model
+        content: '';
+        // decor
+        background-color: #ffffff;
+        border-radius: 2px;
+        opacity: 0;
+        // transition
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      &::before {
+        // position
+        left: 0;
+        bottom: 0;
+        // box-model
+        width: 10px;
+        height: 30px;
+        // decor
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.23);
+        // transition
+        transform: translateY(-68px);
+      }
+
+      &::after {
+        // position
+        left: 0;
+        bottom: 0;
+        // box-model
+        width: 100%;
+        height: 10px;
+        // decor
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.23);
+        // transition
+        transform: translateX(78px);
+      }
+    }
+  }
+}

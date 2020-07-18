@@ -9,7 +9,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background-color: #bbbbbb;
+  background-color: #ffc658;
   overflow: hidden;
 }
 
@@ -17,7 +17,7 @@ body .letter {
   display: inline-block;
   font-family: 'Tomorrow', sans-serif;
   font-size: 5rem;
-  color: #acacac;
+  color: #15a3d3;
   letter-spacing: 10px;
   text-transform: uppercase;
   -webkit-transition: all 0.25s ease-in-out;
@@ -25,13 +25,14 @@ body .letter {
 }
 
 body .letter.active {
-  color: #2ecc71;
-  -webkit-filter: drop-shadow(0 0 2px #2ecc71);
-          filter: drop-shadow(0 0 2px #2ecc71);
+  color: #007dba;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
+
+/* 2ecc71 */
+/* 22b6ff */
 /*# sourceMappingURL=style.css.map */

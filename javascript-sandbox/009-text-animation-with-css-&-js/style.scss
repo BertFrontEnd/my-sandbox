@@ -1,0 +1,45 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+$font-size: 5rem;
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  //decor
+  background-color: #bbbbbb;
+  // other
+  overflow: hidden;
+
+  .letter {
+    // box-model
+    display: inline-block;
+    // typography
+    font-family: 'Tomorrow', sans-serif;
+    font-size: $font-size;
+    color: #acacac;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    // transition
+    transition: all 0.25s ease-in-out;
+
+    &.active {
+      // typography
+      color: #2ecc71;
+      //decor
+      filter: drop-shadow(0 0 2px #2ecc71);
+      // transition
+      transform: scale(1.5);
+      transition: all 0.1s ease-in-out;
+      // other
+      cursor: pointer;
+    }
+  }
+}

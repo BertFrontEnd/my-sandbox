@@ -1,0 +1,73 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-color: #18191f;
+}
+
+body ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+body ul li {
+  position: relative;
+}
+
+body ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  border-radius: 15px;
+  background-color: #18191f;
+  -webkit-box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.05), 3px 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.05), 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+body ul li a svg {
+  width: 48px;
+  height: 48px;
+  fill: #555555;
+}
+
+body ul:nth-of-type(1) li a:hover svg {
+  fill: #00f3ff;
+  -webkit-filter: drop-shadow(0 0 15px #00f3ff);
+          filter: drop-shadow(0 0 15px #00f3ff);
+}
+
+body ul:nth-of-type(2) li a:hover svg {
+  fill: #f00;
+  -webkit-filter: drop-shadow(0 0 15px #f00);
+          filter: drop-shadow(0 0 15px #f00);
+}
+
+body ul:nth-of-type(3) li a:hover svg {
+  fill: #0f0;
+  -webkit-filter: drop-shadow(0 0 15px #0f0);
+          filter: drop-shadow(0 0 15px #0f0);
+}
+/*# sourceMappingURL=style.css.map */

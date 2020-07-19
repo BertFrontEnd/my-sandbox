@@ -1,0 +1,88 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  // decor
+  background-color: #18191f;
+
+  ul {
+    // position
+    position: relative;
+    //box-model
+    display: flex;
+    margin: 10px 0;
+
+    li {
+      // position
+      position: relative;
+
+      a {
+        // box-model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        margin: 0 10px;
+        // decor
+        border-radius: 15px;
+        background-color: #18191f;
+        box-shadow: -2px -2px 3px rgba(255, 255, 255, 0.05), 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+        svg {
+          // box-model
+          width: 48px;
+          height: 48px;
+          fill: #555555;
+        }
+      }
+    }
+
+    &:nth-of-type(1) {
+      li {
+        a:hover {
+          svg {
+            // decor
+            fill: #00f3ff;
+            filter: drop-shadow(0 0 15px #00f3ff);
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(2) {
+      li {
+        a:hover {
+          svg {
+            // decor
+            fill: #f00;
+            filter: drop-shadow(0 0 15px #f00);
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      li {
+        a:hover {
+          svg {
+            // decor
+            fill: #0f0;
+            filter: drop-shadow(0 0 15px #0f0);
+          }
+        }
+      }
+    }
+  }
+}

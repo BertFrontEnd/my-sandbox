@@ -11,3 +11,10 @@
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./font/Poppins-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

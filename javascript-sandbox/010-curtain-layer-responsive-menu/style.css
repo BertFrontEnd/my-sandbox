@@ -77,7 +77,7 @@ body #curtain .toggle {
 
 body #curtain.active .toggle {
   z-index: 10;
-  background: #cecece url("./assets/img/close.svg");
+  background: url("./assets/img/close.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

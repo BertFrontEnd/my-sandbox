@@ -1,18 +1,4 @@
 @font-face {
-  font-family: 'Tomorrow';
-  src: url('./font/Tomorrow-Regular.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('./font/Montserrat-Regular.ttf') format('truetype');
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
   font-family: 'Poppins';
   src: url('./font/Poppins-Regular.ttf') format('truetype');
   font-style: normal;

@@ -1,0 +1,94 @@
+body {
+  background: linear-gradient(45deg, #3effff, #15ff9e);
+}
+
+body .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+body .main .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  background: #ffffff;
+}
+
+body .main .menu input {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+body .main .menu input:checked ~ span:nth-child(2) {
+  opacity: 0;
+}
+
+body .main .menu input:checked ~ span:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .main .menu input:checked ~ span:nth-child(4) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body .main .menu input:checked ~ span:nth-child(5) {
+  opacity: 0;
+}
+
+body .main .menu span {
+  position: absolute;
+  width: 45px;
+  height: 4px;
+  background: #505050;
+}
+
+body .main .menu span:nth-child(2) {
+  -webkit-transform: translateY(-12px);
+          transform: translateY(-12px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body .main .menu span:nth-child(3) {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+body .main .menu span:nth-child(4) {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+body .main .menu span:nth-child(5) {
+  -webkit-transform: translateY(12px);
+          transform: translateY(12px);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/*# sourceMappingURL=style.css.map */

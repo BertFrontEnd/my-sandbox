@@ -1,0 +1,98 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // decor
+  background: linear-gradient(45deg, #3effff, #15ff9e);
+
+  .main {
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .menu {
+      // box-model
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      // decor
+      border-radius: 15px;
+      background: #ffffff;
+
+      input {
+        // position
+        z-index: 1;
+        // box-model
+        width: 100%;
+        height: 100%;
+        // other
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked {
+          ~ span:nth-child(2) {
+            // other
+            opacity: 0;
+          }
+
+          ~ span:nth-child(3) {
+            // transition
+            transform: rotate(45deg);
+          }
+
+          ~ span:nth-child(4) {
+            // transition
+            transform: rotate(-45deg);
+          }
+
+          ~ span:nth-child(5) {
+            // other
+            opacity: 0;
+          }
+        }
+      }
+
+      span {
+        // position
+        position: absolute;
+        // box-model
+        width: 45px;
+        height: 4px;
+        background: rgb(80, 80, 80);
+
+        &:nth-child(2) {
+          // transition
+          transform: translateY(-12px);
+          transition: all 0.2s;
+        }
+
+        &:nth-child(3) {
+          // transition
+          transform: rotate(0);
+          transition: all 0.4s;
+        }
+
+        &:nth-child(4) {
+          // transition
+          transform: rotate(0);
+          transition: all 0.4s;
+        }
+
+        &:nth-child(5) {
+          // transition
+          transform: translateY(12px);
+          transition: all 0.2s;
+        }
+      }
+    }
+  }
+}

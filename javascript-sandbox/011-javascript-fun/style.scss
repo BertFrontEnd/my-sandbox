@@ -1,0 +1,41 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  height: 100vh;
+  // other
+  overflow: hidden;
+
+  span {
+    // position
+    position: absolute;
+    // box-model
+    background: url(./assets/assets/img/TheGlitchMob.jpg);
+    background-size: cover;
+    // decor
+    border-radius: 50%;
+    // transition
+    transform: translate(-50%, -50%);
+    // animation
+    animation: animate 4s linear infinite;
+    // other
+    pointer-events: none;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -1000%);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,43 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body span {
+  position: absolute;
+  background: url(./assets/assets/img/TheGlitchMob.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
+  pointer-events: none;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -1000%);
+            transform: translate(-50%, -1000%);
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -1000%);
+            transform: translate(-50%, -1000%);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,71 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  background-color: #252525;
+
+  .loader {
+    // position
+    position: fixed;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    z-index: 1;
+    // box-model
+    width: 20px;
+    height: 20px;
+    // decor
+    border: 2px solid transparent;
+    border-radius: 50%;
+    border-right-color: #09f;
+    border-top-color: #09f;
+    // animation
+    animation: animate 1s infinite linear;
+
+    &::before {
+      // position
+      position: absolute;
+      left: 0;
+      top: 0;
+      // box-model
+      content: '';
+      width: 16px;
+      height: 16px;
+      // decor
+      border: 2px solid transparent;
+      border-radius: 50%;
+      border-right-color: #3cf;
+      border-top-color: #3cf;
+      // animation
+      animation: animate 2s infinite linear;
+    }
+
+    &::after {
+      // position
+      position: absolute;
+      left: 2px;
+      top: 2px;
+      // box-model
+      content: '';
+      width: 12px;
+      height: 12px;
+      // decor
+      border: 2px solid transparent;
+      border-radius: 50%;
+      border-right-color: #6ff;
+      border-top-color: #6ff;
+      // animation
+      animation: animate 3s infinite linear;
+    }
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

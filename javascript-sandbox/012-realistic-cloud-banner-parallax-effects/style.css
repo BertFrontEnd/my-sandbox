@@ -1,0 +1,99 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body .banner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/img/castle.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
+
+body .banner #text {
+  position: relative;
+  font-size: 12em;
+  color: #ffffff;
+}
+
+body .banner .clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+body .banner .clouds img {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  -webkit-animation: animate calc(3s * var(--i)) linear infinite;
+          animation: animate calc(3s * var(--i)) linear infinite;
+}
+
+body section {
+  position: relative;
+  padding: 75px 100px;
+}
+
+body section h2 {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+body section p {
+  text-align: justify;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+}
+/*# sourceMappingURL=style.css.map */

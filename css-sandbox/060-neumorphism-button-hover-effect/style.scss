@@ -1,0 +1,49 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-position
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // decor
+  background-color: #f2f3f7;
+
+  a {
+    // position
+    position: relative;
+    // box-model
+    display: inline-block;
+    padding: 10px 30px;
+    // decor
+    border-radius: 40px;
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1), -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+      2px 2px 8px rgba(0, 0, 0, 0.15);
+    // typography
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #5a84a2;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &:hover {
+      box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1), inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+        inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+
+      span {
+        // box-model
+        display: inline-block;
+        // transition
+        transform: scale(0.98);
+      }
+    }
+  }
+}

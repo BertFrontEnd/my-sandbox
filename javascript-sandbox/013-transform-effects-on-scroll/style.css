@@ -1,0 +1,45 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f3f7;
+}
+
+body h1 {
+  position: relative;
+  top: 250px;
+  z-index: 1;
+  width: 100%;
+  text-shadow: 0 5px 10px #00000050;
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/img/mountain.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-clip-path: circle(0 at center);
+          clip-path: circle(0 at center);
+}
+
+body .container {
+  position: relative;
+  margin-top: 200vh;
+  padding: 100px;
+  background-color: #f2f3f7;
+}
+
+body .container h2 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+body .container p {
+  text-align: justify;
+}
+/*# sourceMappingURL=style.css.map */

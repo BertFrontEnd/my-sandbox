@@ -1,0 +1,27 @@
+body {
+  height: 200vh;
+  background-color: #ffffff;
+}
+
+body section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/img/mountain.jpg), linear-gradient(230deg, #f533d4, #2461bb);
+  background-blend-mode: luminosity;
+  background-size: cover;
+}
+
+body section .skewed {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+/*# sourceMappingURL=style.css.map */

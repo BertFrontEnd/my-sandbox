@@ -1,0 +1,40 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  height: 200vh;
+  background-color: #ffffff;
+
+  section {
+    // position
+    position: absolute;
+    // box-model
+    width: 100%;
+    height: 100vh;
+    // decor
+    background: url(./assets/img/mountain.jpg), linear-gradient(230deg, #f533d4, #2461bb);
+    background-blend-mode: luminosity;
+    background-size: cover;
+
+    .skewed {
+      // position
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      // box-model
+      width: 100%;
+      height: 100%;
+      // decor
+      background-color: #ffffff;
+      // transition
+      transform: skewY(-10deg);
+      transform-origin: top left;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // decor
+  background-color: #ebf5fc;
+  // typography
+  font-family: 'Poppins', sans-serif;
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1100px;
+
+    .card {
+      // box-model
+      width: 320px;
+      margin: 20px;
+      padding: 40px 30px;
+      // decor
+      border-radius: 40px;
+      background-color: #ebf5fc;
+      box-shadow: -6px -6px 20px rgba(255, 255, 255, 1), 6px 6px 20px rgba(0, 0, 0, 0.1);
+
+      .box {
+        // position
+        position: relative;
+
+        img {
+          // box-model
+          margin: 0 auto;
+          max-width: 120px;
+        }
+      }
+
+      .content-box {
+        // position
+        position: relative;
+        // box-model
+        margin-top: 20px;
+        text-align: center;
+
+        h2 {
+          // typography
+          font-weight: 900;
+          font-size: 1.4em;
+          color: #32a3b1;
+          letter-spacing: 2px;
+        }
+
+        p {
+          // typography
+          color: #32a3b1;
+        }
+
+        a {
+          // box-model
+          display: inline-block;
+          margin-top: 15px;
+          padding: 10px 20px;
+          // decor
+          border-radius: 40px;
+          box-shadow: -6px -6px 20px rgba(255, 255, 255, 1);
+          // typography
+          font-size: 1em;
+          color: #32a3b1;
+          text-decoration: none;
+
+          &:hover {
+            box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.1);
+
+            span {
+              // box-model
+              display: block;
+              // transition
+              transform: scale(0.98);
+            }
+          }
+        }
+      }
+
+      &:hover {
+        // decor
+        box-shadow: inset -4px -4px 15px rgba(255, 255, 255, 1), inset 4px 4px 15px rgba(0, 0, 0, 0.1);
+
+        .box {
+          // transition
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+}

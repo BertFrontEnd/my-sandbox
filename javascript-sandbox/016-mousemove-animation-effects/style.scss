@@ -20,6 +20,20 @@
   // other
   overflow: hidden;
 
+  &:active {
+    .rocket::before,
+    .rocket::after {
+      // position
+      bottom: -300px;
+      // box-model
+      height: 300px;
+      width: 12px;
+      // decor
+      background: linear-gradient(#ff12d7, transparent);
+      filter: blur(2px);
+    }
+  }
+
   i {
     // position
     position: absolute;
@@ -30,9 +44,13 @@
 
   .rocket {
     // position
-    position: relative;
+    position: absolute;
+    // transition
+    transition: 0.1s;
     // animation
     animation: rocket 0.2s ease infinite;
+    // other
+    pointer-events: none;
 
     &::before {
       // position
@@ -71,14 +89,14 @@
 @keyframes rocket {
   0% {
     // transition
-    transform: translateY(-2px);
+    transform: translate(-50%, -52px);
   }
   50% {
     // transition
-    transform: translateY(2px);
+    transform: translate(-50%, -48px);
   }
   100% {
     // transition
-    transform: translateY(-2px);
+    transform: translate(-50%, -52px);
   }
 }

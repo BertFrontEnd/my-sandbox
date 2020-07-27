@@ -1,0 +1,83 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+.scene {
+  // position
+  position: relative;
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  // decor
+  background-color: #01010a;
+  // other
+  overflow: hidden;
+
+  i {
+    // position
+    position: absolute;
+    top: -250px;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: stars linear infinite;
+  }
+
+  .rocket {
+    // position
+    position: relative;
+    // animation
+    animation: rocket 0.2s ease infinite;
+
+    &::before {
+      // position
+      position: absolute;
+      bottom: -200px;
+      left: 50%;
+      // box-model
+      content: '';
+      width: 10px;
+      height: 200px;
+      // decor
+      background: linear-gradient(#00d0ff, transparent);
+      // transition
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      @extend .rocket::before;
+      // decor
+      filter: blur(20px);
+    }
+  }
+}
+
+@keyframes stars {
+  0% {
+    // transition
+    transform: translateY(0);
+  }
+  100% {
+    // transition
+    transform: translateY(200vh);
+  }
+}
+
+@keyframes rocket {
+  0% {
+    // transition
+    transform: translateY(-2px);
+  }
+  50% {
+    // transition
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}

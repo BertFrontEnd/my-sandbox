@@ -3,18 +3,20 @@
 console.log('Request data...');
 
 setTimeout(() => {
-  console.log('Preparing data...');
-  const backendData = {
+  console.log('Preparing data 01...');
+  const backendData01 = {
     server: 'aws',
     port: 2000,
     status: 'working...',
   };
 
   setTimeout(() => {
-    backendData.modified = true;
-    console.log('Data received', backendData);
+    backendData01.modified = true;
+    console.log('Data received 01', backendData01);
   }, 2000);
 }, 2000);
+
+// Выше получаем вложенность callback'ов
 
 // Создания инстанса (копии) от глобального класса Promise
 // Глобальный класс Promise принимает функцию callback
@@ -27,10 +29,10 @@ setTimeout(() => {
 
 // Функция resolve вызывается
 // Когда асинхронная функция выполнена успешно
-const p = new Promise((resolve, reject) => {
+const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    console.log('Preparing data...');
-    const backendData = {
+    console.log('Preparing data 02...');
+    const backendData02 = {
       server: 'aws',
       port: 2000,
       status: 'working...',
@@ -40,7 +42,7 @@ const p = new Promise((resolve, reject) => {
     // Говорим, что Promise завершил свое выполнение
     // Для передачи данных дальше их можно передавать в качестве параметра функции resolve
     // Данный параметр будет получен дальше по цепочке в методе then
-    resolve(backendData);
+    resolve(backendData02);
 
     // Задержка в 6 секунд эмулирует выполнение асинхронной функции
     // После чего вызывается функция resolve
@@ -54,15 +56,52 @@ const p = new Promise((resolve, reject) => {
 // Приметается параметр переданный на предыдущем этапе
 // В качестве параметра функции resolve
 // Имя параметра может отличаться
-p.then((data) => {
+p1.then((data02) => {
   const p2 = new Promise((resolve, reject) => {
     setTimeout(() => {
-      data.modified = true;
-      resolve(data);
+      data02.modified = true;
+      resolve(data02);
     }, 8000);
   });
 
-  p2.then((clientData) => {
-    console.log('Data received', clientData);
+  p2.then((clientData02) => {
+    console.log('Data received 02', clientData02);
   });
 });
+
+// Выше получаем вложенность promise'ов
+
+// Для того, что бы избавиться от вложенности
+// Promise можно возвращать
+// А затем "чейнить", от слова цепь - chain, методы then
+// На каждом этапе можно производить операции и возвращать результат
+
+const p01 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log('Preparing data 03...');
+    const backendData03 = {
+      server: 'aws',
+      port: 2000,
+      status: 'working...',
+    };
+    resolve(backendData03);
+  }, 10000);
+});
+
+p01
+  .then((data03) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        data03.modified = true;
+        resolve(data03);
+      }, 12000);
+    });
+  })
+  .then((clientData03) => {
+    console.log('Data received 03', clientData03);
+    clientData03.fromPromise = true;
+    return clientData03;
+  })
+  .then((data) => {
+    console.log('Modified', data);
+  });

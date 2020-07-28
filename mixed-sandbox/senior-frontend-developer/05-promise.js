@@ -46,6 +46,8 @@ const p1 = new Promise((resolve, reject) => {
 
     // Задержка в 6 секунд эмулирует выполнение асинхронной функции
     // После чего вызывается функция resolve
+    // В случе успешного выполнения кода
+    // И reject - в случае какой-либо ошибки
   }, 6000);
 });
 
@@ -73,7 +75,7 @@ p1.then((data02) => {
 
 // Для того, что бы избавиться от вложенности
 // Promise можно возвращать
-// А затем "чейнить", от слова цепь - chain, методы then
+// А затем "чейнить", от слова chain - цепь, методы then
 // На каждом этапе можно производить операции и возвращать результат
 
 const p01 = new Promise((resolve, reject) => {
@@ -102,6 +104,58 @@ p01
     clientData03.fromPromise = true;
     return clientData03;
   })
+
   .then((data) => {
     console.log('Modified', data);
+  })
+
+  // Метод catch используется для обработки ошибок
+  // Для описания ошибки используется функция callback
+  .catch((err) => console.error('Error:', err))
+
+  // Методы finally вызывается в любом случае
+  // Сработал promise с ошибкой или без ошибки
+  // В методе используется функция callback
+  .finally(() => console.log('Finally'));
+
+const sleep = (ms) => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(), ms);
+  });
+};
+
+sleep(3000).then(() => console.log('After 3 sec'));
+sleep(5000).then(() => console.log('After 5 sec'));
+
+// Метод all позволяет передавать массив
+// promis'ов в качестве своего параметра
+// У самого метода all имеются методы
+// Что и у самого promise
+
+sleep(7000).then(() => console.log('After 7 sec'));
+sleep(9000).then(() => console.log('After 9 sec'));
+
+Promise.all([sleep(7000), sleep(9000)])
+
+  // then отработает только после всех promise
+  // Метода all, переданных в массиве, как параметр данного метода
+  .then(() => {
+    console.log('All promises');
+  });
+
+// Метод race позволяет передавать массив
+// promis'ов в качестве своего параметра
+// У самого метода all имеются методы
+// Что и у самого promise
+
+sleep(11000).then(() => console.log('After 11 sec'));
+sleep(13000).then(() => console.log('After 13 sec'));
+
+Promise.all([sleep(11000), sleep(13000)])
+
+  // then отработает после возвращения самого первого promise,
+  // Который сработал быстрее других promise,
+  // Метода race, переданных в массиве, как параметр данного метода
+  .then(() => {
+    console.log('Race promises');
   });

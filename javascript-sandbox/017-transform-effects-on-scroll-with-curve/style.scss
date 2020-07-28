@@ -1,0 +1,57 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  height: 200vh;
+  // decor
+  background-color: #111111;
+
+  section {
+    // position
+    position: absolute;
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 200px);
+    background-color: #2abbff;
+
+    p {
+      // position
+      position: fixed;
+      z-index: 1;
+      // decor
+      text-shadow: 0 2px 5px #111111;
+      // typography
+      font-family: 'Poppins', sans-serif;
+      font-size: 54px;
+      font-weight: 900;
+      color: #111111;
+      text-transform: uppercase;
+    }
+
+    .curve {
+      // position
+      position: absolute;
+      bottom: -200px;
+      // box-model
+      height: 200px;
+      width: 100%;
+      // transition
+      transform-origin: top;
+
+      img {
+        // box-model
+        height: 200px;
+        width: 100%;
+      }
+    }
+  }
+}

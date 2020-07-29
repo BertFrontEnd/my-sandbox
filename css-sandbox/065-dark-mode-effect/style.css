@@ -1,0 +1,60 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body input {
+  position: fixed;
+  top: 20px;
+  right: 100px;
+  z-index: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body input::before {
+  position: absolute;
+  content: 'Dark';
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body input:checked::before {
+  content: 'Light';
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body input:checked ~ * {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+body section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  padding: 80px 100px;
+  background-color: #ffffff;
+}
+
+body section h2 {
+  margin-bottom: 10px;
+}
+
+body section p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+body section img {
+  float: left;
+  max-width: 500px;
+  margin: 10px 20px 10px 0;
+  -webkit-filter: inherit;
+          filter: inherit;
+}
+/*# sourceMappingURL=style.css.map */

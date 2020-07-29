@@ -1,0 +1,48 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+.container {
+  // position
+  position: absolute;
+  top: 0;
+  left: 0;
+  // box-model
+  width: 100%;
+  height: 100%;
+  // other
+  overflow: hidden;
+
+  .image1,
+  .image2 {
+    // position
+    position: absolute;
+    top: 0;
+    left: 0;
+    // box-model
+    width: 100%;
+    height: 100%;
+    // typography
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .image1 {
+    // decor
+    background-image: url(./assets/img/image1.png);
+  }
+
+  .image2 {
+    // position
+    left: 50%;
+    // decor
+    border-left: 3px solid #111111;
+    background-image: url(./assets/img/image2.png);
+    background-attachment: fixed;
+  }
+}

@@ -1,0 +1,88 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100hv;
+  padding: 50px 0;
+}
+
+body section .content {
+  text-align: center;
+}
+
+body section .content h2 {
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: 24vw;
+  font-weight: 900;
+  line-height: 1em;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-attachment: fixed;
+}
+
+body section .content p {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body section .content a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 2px solid #000000;
+  color: #000000;
+  text-decoration: none;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+body section:nth-child(1) .content h2 {
+  background-image: url(./assets/img/fire.jpg);
+}
+
+body section:nth-child(1) .content a:hover {
+  color: #ffffff;
+  background-color: #ff4618;
+}
+
+body section:nth-child(2) .content h2 {
+  background-image: url(./assets/img/ice.jpg);
+}
+
+body section:nth-child(2) .content a:hover {
+  color: #ffffff;
+  background-color: #45aaf2;
+}
+
+body section:nth-child(3) .content h2 {
+  background-image: url(./assets/img/water.jpg);
+  background-position: 100% 100%;
+}
+
+body section:nth-child(3) .content a:hover {
+  color: #ffffff;
+  background-color: #2bcbba;
+}
+
+body section:nth-child(4) .content h2 {
+  background-image: url(./assets/img/desert.jpg);
+  background-position: 100% 100%;
+}
+
+body section:nth-child(4) .content a:hover {
+  color: #ffffff;
+  background-color: #fd9644;
+}
+/*# sourceMappingURL=style.css.map */

@@ -13,17 +13,20 @@ body .banner {
   background-position: center;
 }
 
-body section:nth-child(2n + 1) {
+body section {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: auto;
+  background-color: #fafafa;
+}
+
+body section:nth-child(2n + 1) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  height: auto;
-  background-color: #fafafa;
 }
 
 body section:nth-child(2n + 1) .content {
@@ -32,12 +35,10 @@ body section:nth-child(2n + 1) .content {
 }
 
 body section:nth-child(2n + 2) {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: auto;
-  background-color: #fafafa;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 body section:nth-child(2n + 2) .content {

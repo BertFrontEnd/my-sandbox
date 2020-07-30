@@ -25,15 +25,17 @@ body {
   }
 
   section {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    height: auto;
+    // decor
+    background-color: #fafafa;
+
     &:nth-child(2n + 1) {
-      // position
-      position: relative;
       // box-model
-      display: flex;
       flex-direction: row-reverse;
-      height: auto;
-      // decor
-      background-color: #fafafa;
 
       .content {
         // box-model
@@ -44,13 +46,8 @@ body {
     }
 
     &:nth-child(2n + 2) {
-      // position
-      position: relative;
       // box-model
-      display: flex;
-      height: auto;
-      // decor
-      background-color: #fafafa;
+      flex-direction: row;
 
       .content {
         // box-model

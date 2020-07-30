@@ -13,7 +13,7 @@ body {
   align-items: center;
   min-height: 100vh;
   // decor
-  background-color: #131419;
+  background-color: #ebf5fc;
   // typography
   font-family: 'Poppins', sans-serif;
 
@@ -25,14 +25,14 @@ body {
     padding: 40px 40px 60px;
     // decor
     border-radius: 10px;
-    background-color: #131419;
-    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
-      5px 5px 15px rgba(0, 0, 0, 0.5);
+    background-color: #ebf5fc;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.8),
+      5px 5px 10px rgba(0, 0, 0, 0.1);
 
     h2 {
       // typography
       font-weight: 500;
-      color: #c7c7c7;
+      color: #32a3b1;
       text-transform: uppercase;
       letter-spacing: 4px;
       text-align: center;
@@ -66,16 +66,16 @@ body {
           border: none;
           outline: none;
           border-radius: 40px;
-          background-color: #131419;
-          box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
-            inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+          background-color: #ebf5fc;
+          box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+            inset 2px 2px 6px rgba(0, 0, 0, 0.1);
           // typography
           font-size: 18px;
-          color: #03a9f4;
+          color: #32a3b1;
 
           &::placeholder {
             // typography
-            color: #555;
+            color: #bdcada;
             font-size: 18px;
           }
         }
@@ -84,8 +84,8 @@ body {
           // box-model
           margin-top: 20px;
           // decor
-          box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1),
-            2px 2px 6px rgba(0, 0, 0, 0.8);
+          box-shadow: -2px -2px 6px rgba(255, 255, 255, 1),
+            2px 2px 6px rgba(0, 0, 0, 0.1);
           // other
           cursor: pointer;
 
@@ -94,8 +94,8 @@ body {
             font-size: 17.5px;
             color: #006c9c;
             // decor
-            box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
-              inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+            box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+              inset 2px 2px 6px rgba(0, 0, 0, 0.1);
           }
         }
       }

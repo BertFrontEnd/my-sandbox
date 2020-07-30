@@ -9,7 +9,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  background-color: #131419;
+  background-color: #ebf5fc;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -18,14 +18,14 @@ body form {
   width: 350px;
   padding: 40px 40px 60px;
   border-radius: 10px;
-  background-color: #131419;
-  -webkit-box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
-          box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05), 5px 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: #ebf5fc;
+  -webkit-box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.8), 5px 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.8), 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 body form h2 {
   font-weight: 500;
-  color: #c7c7c7;
+  color: #32a3b1;
   text-transform: uppercase;
   letter-spacing: 4px;
   text-align: center;
@@ -54,45 +54,45 @@ body form .input .input-box input {
   border: none;
   outline: none;
   border-radius: 40px;
-  background-color: #131419;
-  -webkit-box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
-          box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+  background-color: #ebf5fc;
+  -webkit-box-shadow: inset -2px -2px 6px white, inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -2px -2px 6px white, inset 2px 2px 6px rgba(0, 0, 0, 0.1);
   font-size: 18px;
-  color: #03a9f4;
+  color: #32a3b1;
 }
 
 body form .input .input-box input::-webkit-input-placeholder {
-  color: #555;
+  color: #bdcada;
   font-size: 18px;
 }
 
 body form .input .input-box input:-ms-input-placeholder {
-  color: #555;
+  color: #bdcada;
   font-size: 18px;
 }
 
 body form .input .input-box input::-ms-input-placeholder {
-  color: #555;
+  color: #bdcada;
   font-size: 18px;
 }
 
 body form .input .input-box input::placeholder {
-  color: #555;
+  color: #bdcada;
   font-size: 18px;
 }
 
 body form .input .input-box input[type='submit'] {
   margin-top: 20px;
-  -webkit-box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
-          box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1), 2px 2px 6px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: -2px -2px 6px white, 2px 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px -2px 6px white, 2px 2px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 body form .input .input-box input[type='submit']:active {
   font-size: 17.5px;
   color: #006c9c;
-  -webkit-box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
-          box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1), inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: inset -2px -2px 6px white, inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -2px -2px 6px white, inset 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 body form .forget {

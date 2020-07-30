@@ -1,0 +1,98 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // typography
+  font-family: 'Montserrat', sans-serif;
+
+  .banner {
+    // position
+    position: relative;
+    // box-model
+    width: 100%;
+    height: 100vh;
+    // decor
+    background: url(./assets/img/background.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  section {
+    &:nth-child(2n + 1) {
+      // position
+      position: relative;
+      // box-model
+      display: flex;
+      flex-direction: row-reverse;
+      height: auto;
+      // decor
+      background-color: #fafafa;
+
+      .content {
+        // box-model
+        padding: 100px 0 100px 100px;
+        // typography
+        text-align: right;
+      }
+    }
+
+    &:nth-child(2n + 2) {
+      // position
+      position: relative;
+      // box-model
+      display: flex;
+      height: auto;
+      // decor
+      background-color: #fafafa;
+
+      .content {
+        // box-model
+        padding: 100px 100px 100px 0;
+        // typography
+        text-align: left;
+      }
+    }
+
+    .img-box {
+      // position
+      position: sticky;
+      top: 0;
+      // box-model
+      min-width: 50%;
+      height: 100vh;
+
+      img {
+        // position
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // box-model
+        max-width: 400px;
+        // transition
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .content {
+      h2 {
+        // box-model
+        margin: 0 0 20px;
+        // typography
+        font-size: 60px;
+      }
+
+      p {
+        // typography
+        font-size: 18px;
+        color: #777777;
+      }
+    }
+  }
+}

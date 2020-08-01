@@ -1,0 +1,51 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Tomorrow', sans-serif;
+  // decor
+  background-color: #111111;
+
+  ul {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    flex-direction: row;
+    // typography
+    text-align: center;
+
+    a {
+      // position
+      position: relative;
+      // box-model
+      display: inline-block;
+      padding: 8px 15px;
+      // typography
+      font-size: 20px;
+      font-weight: 500;
+      color: #dadada;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      &.active {
+        // decor
+        background-color: #00b5de;
+        // typography
+        color: #ffffff;
+      }
+    }
+  }
+}

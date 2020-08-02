@@ -106,7 +106,6 @@ button.btn::before {
 button.btn::after {
   top: 3.5rem;
   left: 13rem;
-  /* margin: 10px; */
   background-color: #e74c3c;
   -webkit-animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
           animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;

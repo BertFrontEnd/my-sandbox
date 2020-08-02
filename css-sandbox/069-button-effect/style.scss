@@ -1,0 +1,146 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+$white: #ececec;
+$black: #111111;
+$red1: #e74c3c;
+$red2: #c92918;
+$colorPrimary: $red1;
+$colorSecondary: $red2;
+$cubic-bezier: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+@mixin btn__split($foregroundColor, $backgroundColor, $textColor) {
+  button {
+    &.btn {
+      // position
+      position: relative;
+      // box-model
+      margin: 0 auto;
+      padding: 1rem 2.5rem;
+      // typography
+      font-size: 28px;
+      font-weight: 900;
+      color: $textColor;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.15rem;
+      // decor
+      border: 0;
+      outline: none;
+      background: transparent;
+      // transition
+      transition: all 0.5s $cubic-bezier 0.15s;
+      // other
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        // position
+        position: absolute;
+        z-index: -2;
+        // box-model
+        height: 34%;
+        width: 10%;
+        content: '';
+        // decor
+        border: 0;
+        border-radius: 50%;
+        // transition
+        transition: all 0.5s $cubic-bezier;
+      }
+
+      &::before {
+        // position
+        top: -0.75rem;
+        left: 0.5rem;
+        // decor
+        border: 0;
+        background-color: $backgroundColor;
+        // animation
+        animation: topAnimation 2s $cubic-bezier 0.25s infinite alternate;
+      }
+
+      &::after {
+        // position
+        top: 3.5rem;
+        left: 13rem;
+        // box-model
+        /* margin: 10px; */
+        // decor
+        background-color: $foregroundColor;
+        // animation
+        animation: bottomAnimation 2s $cubic-bezier 0.5s infinite alternate;
+      }
+
+      &:hover {
+        color: white;
+        &::before,
+        &::after {
+          // position
+          top: 0;
+          // box-model
+          height: 100%;
+          width: 100%;
+          // decor
+          border-radius: 0;
+          // animation
+          animation: none;
+        }
+        &::after {
+          // box-model
+          left: 0rem;
+        }
+        &::before {
+          top: 0.5rem;
+          left: 0.35rem;
+        }
+      }
+    }
+  }
+}
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  // typography
+  font-family: 'Lato', sans-serif;
+  color: $black;
+
+  .container {
+    width: auto;
+    margin: auto;
+  }
+}
+
+@keyframes topAnimation {
+  from {
+    // transition
+    transform: translate(0rem, 0);
+  }
+  to {
+    // transition
+    transform: translate(0rem, 3.5rem);
+  }
+}
+
+@keyframes bottomAnimation {
+  from {
+    // transition
+    transform: translate(-11.5rem, 0);
+  }
+  to {
+    // transition
+    transform: translate(0rem, 0rem);
+  }
+}
+
+@include btn__split($colorPrimary, $colorSecondary, $black);

@@ -1,0 +1,34 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Poppins Bold', sans-serif;
+  // decor
+  background-color: #00fff3;
+
+  #text {
+    // position
+    position: relative;
+    // box-model
+    width: 100%;
+    // typography
+    font-weight: 700;
+    font-size: 10em;
+    color: #ffffff;
+    text-align: center;
+    // decor
+    outline: none;
+    text-shadow: 1px 1px 0 #01ded3;
+  }
+}

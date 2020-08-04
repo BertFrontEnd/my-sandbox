@@ -1,0 +1,99 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+section {
+  // position
+  position: fixed;
+  top: 0;
+  left: 0;
+  // box-model
+  width: 100%;
+  height: 100vh;
+  // other
+  overflow: hidden;
+
+  .pattern {
+    // position
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: animate-bg 10s ease-in-out infinite;
+
+    .face {
+      // position
+      position: relative;
+      // box-model
+      width: 100%;
+      height: 50vh;
+      background-image: url(./assets/img/check.jpg);
+      background-size: 100px 100px;
+      animation: animate 1s linear infinite;
+
+      &.face2 {
+        // box-model
+        height: 100vh;
+        // transition
+        transform-origin: top;
+        transform: rotateX(65deg);
+      }
+    }
+
+    .face1 {
+      &::before {
+        // position
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        // box-model
+        width: 100%;
+        height: 125px;
+        content: '';
+        // decor
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
+      }
+    }
+
+    .face2 {
+      &::before {
+        // position
+        position: absolute;
+        bottom: top;
+        left: 0;
+        // box-model
+        width: 100%;
+        height: 125px;
+        content: '';
+        // decor
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    // decor
+    background-position: 0;
+  }
+  100% {
+    // decor
+    background-position: 100px;
+  }
+}
+
+@keyframes animate-bg {
+  0%,
+  100% {
+    // transition
+    transform: scale(1.3) rotate(-15deg);
+  }
+  50% {
+    // transition
+    transform: scale(1.6) rotate(15deg);
+  }
+}

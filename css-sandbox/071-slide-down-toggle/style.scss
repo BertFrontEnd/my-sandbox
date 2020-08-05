@@ -1,0 +1,150 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+%font-h1 {
+  // typography
+  font-size: 40px;
+  font-weight: bold;
+  color: #191919;
+  // other
+  -webkit-font-smoothing: antialiased;
+}
+
+%font-h2 {
+  // box-model
+  padding: 5px 0;
+  // typography
+  font-weight: normal;
+  font-size: 20px;
+  color: #888888;
+}
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  // typography
+  font-family: 'Tomorrow', sans-serif;
+
+  #toggle {
+    // position
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    // box-model
+    appearance: none;
+    // other
+    cursor: pointer;
+
+    &:checked {
+      ~ .message {
+        // position
+        top: 0;
+      }
+
+      ~ .container {
+        // box-model
+        margin-top: 250px;
+      }
+
+      + label {
+        // position
+        top: 250px;
+        // decor
+        background-color: #dd6149;
+        // transition
+        /*  transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94); */
+
+        &::after {
+          // box-model
+          content: 'Close';
+        }
+      }
+    }
+
+    + label {
+      // position
+      position: absolute;
+      top: 0px;
+      // box-model
+      width: 100px;
+      margin: 20px 50px;
+      padding: 10px;
+      // typography
+      font-size: 12px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 20px;
+      // decor
+      border-radius: 3px;
+      background-color: #26ae90;
+      // transition
+      transition: all 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+      // other
+      -webkit-font-smoothing: antialiased;
+      cursor: pointer;
+
+      &::after {
+        content: 'Open';
+      }
+    }
+  }
+
+  .container {
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5em 3em;
+    // transition
+    transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+
+    h1 {
+      @extend %font-h1;
+    }
+
+    h2 {
+      @extend %font-h2;
+    }
+  }
+
+  .message {
+    // position
+    position: absolute;
+    top: -250px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // box-model
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    // typography
+    color: #ffffff;
+    // decor
+    background-color: #181818;
+    // transition
+    transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+    // other
+    overflow: hidden;
+
+    h1 {
+      @extend %font-h1;
+      // typography
+      color: #ffffff;
+    }
+
+    h2 {
+      @extend %font-h2;
+    }
+  }
+}

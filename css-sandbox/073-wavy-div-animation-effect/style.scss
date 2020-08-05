@@ -1,0 +1,117 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // decor
+  background-color: #1f1f1f;
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .box {
+      // position
+      position: relative;
+      // box-model
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 400px;
+      // typography
+      color: #ffffff;
+      // decor
+      -webkit-box-reflect: below 15px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
+      // other
+      cursor: pointer;
+
+      &::before {
+        // position
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        // box-model
+        width: 100%;
+        height: 100%;
+        content: '';
+        // decor
+        border: 4px solid #ffffff;
+        background-color: #000000;
+        filter: url(#wavy);
+        // transition
+        transition: 0.5s;
+      }
+
+      &::after {
+        // position
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        // box-model
+        width: 50%;
+        height: 100%;
+        content: '';
+        // decor
+        border: 4px solid #ffffff;
+        border-right: none;
+        background-color: rgba(255, 255, 255, 0.1);
+        filter: url(#wavy);
+      }
+
+      &:hover {
+        // typography
+        color: #000000;
+
+        &::before {
+          // decor
+          background-color: #ffffff;
+        }
+      }
+
+      .content {
+        // position
+        position: absolute;
+        // box-model
+        padding: 20px;
+        // typography
+        text-align: center;
+        // transition
+        transition: 0.5s;
+        // other
+        user-select: none;
+
+        h2 {
+          // box-model
+          margin-bottom: 10px;
+        }
+
+        p {
+          // box-model
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  svg {
+    // box-model
+    width: 0;
+    height: 0;
+  }
+}

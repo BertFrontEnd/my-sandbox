@@ -1,0 +1,127 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+$radius: 10px;
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // decor
+  background-color: #1f1f1f;
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 1000px;
+    // transition
+    transform-style: preserve-3d;
+
+    .box {
+      // position
+      position: relative;
+      perspective: 1000px;
+      // box-model
+      width: 300px;
+      height: 400px;
+      margin: 10px;
+      // decor
+      border-radius: $radius;
+      // transition
+      transform-style: preserve-3d;
+      // other
+      overflow: hidden;
+      cursor: pointer;
+
+      .img-box {
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        // box-model
+        width: 100%;
+        height: 100%;
+        // decor
+        border-radius: $radius;
+        // transition
+        transform-origin: top;
+        transform-style: preserve-3d;
+        transition: 0.5s;
+        transition-delay: 0.2s;
+
+        img {
+          // position
+          position: absolute;
+          top: 0;
+          left: 0;
+          // box-model
+          width: 100%;
+          height: 100%;
+          // decor
+          border-radius: $radius;
+          object-fit: cover;
+        }
+      }
+
+      &:hover {
+        .img-box {
+          // transition
+          transform: rotateX(-90deg);
+          transition-delay: 0s;
+          opacity: 0;
+        }
+
+        .content-box {
+          // transition
+          transform: rotateX(0deg);
+          transition-delay: 0.2s;
+          // other
+          opacity: 1;
+        }
+      }
+
+      .content-box {
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        // box-model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        // typography
+        color: #ffffff;
+        // decor
+        border-radius: $radius;
+        background-color: #333333;
+        // transition
+        transform-origin: bottom;
+        transform-style: preserve-3d;
+        transform: rotateX(90deg);
+        transition: 0.5s;
+        // other
+        opacity: 0;
+
+        h2 {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}

@@ -32,3 +32,17 @@
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'Teko';
+  src: url('./font/Teko-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Teko Bold';
+  src: url('./font/Teko-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

@@ -7,20 +7,34 @@
 const person = Object.create(
   {},
   {
-    // Создаваемое поле является объекта
+    // Создаваемое поле является объектом
     // В отличии от обычного объекта
+    // Эти поля настраиваемые
+    // В них можно передавать параметры
+    // Параметр - это Property Descriptor - PD
 
     // name - ключ
     name: {
       // value - значение ключа
       value: 'Berton',
+      enumerable: true,
+      writable: true,
+      // Позволяет изменять поле объекта
+      configurable: true,
     },
 
     birthYear: {
       value: 1986,
+      enumerable: false,
+      writable: false,
+      configurable: false,
     },
   },
 );
+
+// Поле объекта не изменится, если не задан PD {writable: true,}
+// Значение по умолчанию {writable: false,}
+person.name = 'BertFrontEnd';
 
 console.log(person);
 
@@ -28,8 +42,11 @@ console.log(person);
 // В цикле for-in создаваемая переменная
 // Соответствует ключу/полю в объекте
 for (let key in person) {
-  // Ничего не выводит
-  console.log('Key:', key);
+  // Ничего не выводит, если не задан PD {enumerable: true,}
+  // Значение по умолчанию {enumerable: false,}
+
+  // Вывод поля объекта и его значение
+  console.log('Key of person:', key, person[key]);
 }
 
 // Для сравнения, обычный объект и цикл for-in
@@ -40,5 +57,5 @@ const newPerson = {
 
 for (let key in newPerson) {
   // Все выводит
-  console.log('Key:', key);
+  console.log('Key of newPerson:', key);
 }

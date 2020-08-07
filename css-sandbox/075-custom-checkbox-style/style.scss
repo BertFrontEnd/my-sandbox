@@ -1,0 +1,119 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  // decor
+  background-color: #111111;
+
+  ul {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 240px;
+    padding: 20px 0;
+    // decor
+    border: 3px solid #000000;
+    border-radius: 10px;
+    background: linear-gradient(0deg, #000000, #0c0c0c);
+    // other
+    overflow: hidden;
+
+    &::before {
+      // position
+      position: absolute;
+      bottom: -50%;
+      z-index: 1;
+      // box-model
+      width: 100%;
+      height: 100%;
+      content: '';
+      // decor
+      background: rgba(255, 255, 255, 0.05);
+      // other
+      pointer-events: none;
+    }
+
+    li {
+      // position
+      position: relative;
+      // box-model
+      margin: 15px;
+      // typography
+      text-align: center;
+
+      label {
+        // position
+        position: relative;
+        // other
+        cursor: pointer;
+
+        input {
+          // position
+          position: absolute;
+          // decor
+          opacity: 0;
+
+          &:checked {
+            ~ .icon-box {
+              // decor
+              border: 3px solid #ffffff;
+              background-color: #000000;
+              box-shadow: 0 0 5px rgba(33, 156, 243, 0.5),
+                0 0 10px rgba(33, 156, 243, 0.5),
+                0 0 15px rgba(33, 156, 243, 0.5),
+                inset 0 0 10px rgba(33, 156, 243, 1);
+
+              .icon {
+                // decor
+                fill: #ffffff;
+                filter: drop-shadow(0 0 10px rgba(33, 156, 243, 1)),
+                  drop-shadow(0 0 10px rgba(33, 156, 243, 1));
+              }
+            }
+          }
+        }
+
+        .icon-box {
+          // box-model
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60px;
+          height: 60px;
+          // decor
+          border: 3px solid #000000;
+          border-radius: 10px;
+          background: #101010;
+          // transition
+          transition: 0.5s;
+
+          .icon {
+            // box-model
+            width: 30px;
+            height: 30px;
+            // decor
+            fill: #222222;
+            // transition
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+body .container h1, body .message h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #191919;
+  -webkit-font-smoothing: antialiased;
+}
+
+body .container h2, body .message h2 {
+  padding: 5px 0;
+  font-weight: normal;
+  font-size: 20px;
+  color: #888888;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+body #toggle {
+  position: absolute;
+  left: -100%;
+  top: -100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+}
+
+body #toggle:checked ~ .message {
+  top: 0;
+}
+
+body #toggle:checked ~ .container {
+  margin-top: 250px;
+}
+
+body #toggle:checked + label {
+  /* top: 250px; */
+  background-color: #dd6149;
+  /* transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94); */
+}
+
+body #toggle:checked + label::after {
+  content: 'Close';
+}
+
+body #toggle + label {
+  position: absolute;
+  width: 100px;
+  margin: 20px 50px;
+  padding: 10px;
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 3px;
+  background-color: #26ae90;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+}
+
+body #toggle + label::after {
+  content: 'Open';
+}
+
+body .container {
+  padding: 5em 3em;
+  -webkit-transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  transition: margin 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+body .message {
+  position: absolute;
+  top: -250px;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  padding: 20px;
+  color: #ffffff;
+  background-color: #181818;
+  -webkit-transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  transition: top 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  overflow: hidden;
+}
+
+body .message h1 {
+  color: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */

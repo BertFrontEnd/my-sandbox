@@ -1,0 +1,58 @@
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section .navigator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+section .navigator li {
+  margin: 0 10px;
+  padding: 3px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  opacity: 0.7;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section .navigator li:hover {
+  z-index: 10;
+  opacity: 1;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+section .navigator li img {
+  width: 120px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,146 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // position
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #1f1f1f, #111111);
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 1000px;
+
+    .box {
+      // position
+      position: relative;
+      width: 300px;
+      height: 400px;
+      // box-model
+      overflow: hidden;
+      // other
+      cursor: pointer;
+
+      .img-box {
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        // box-model
+        width: 100%;
+        height: auto;
+        // transition
+        transition: 1.5s ease-in-out;
+
+        img {
+          // position
+          position: relative;
+          top: 0;
+          left: 0;
+          // box-model
+          width: 100%;
+          height: 100%;
+          // decor
+          object-fit: contain;
+        }
+      }
+
+      .layer {
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // transition
+        transition: 1.5s ease-in-out;
+
+        &.layer1 {
+          // decor
+          background-color: #0096ff;
+          // transition
+          transform: translateY(100%);
+        }
+
+        &.layer2 {
+          // decor
+          background-color: #90ff00;
+          // transition
+          transform: translateY(200%);
+        }
+      }
+
+      &:hover {
+        .img-box {
+          // transition
+          transform: translateY(-100%);
+        }
+
+        .layer {
+          &.layer1 {
+            // transition
+            transform: translateY(-100%);
+          }
+
+          &.layer2 {
+            // transition
+            transform: translateY(-100%);
+          }
+        }
+
+        .content-box {
+          // transition
+          transform: translateY(0);
+        }
+
+        .content-box {
+          div {
+            // transition
+            transform: translateY(0);
+          }
+        }
+      }
+
+      .content-box {
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        // box-model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+        // typography
+        color: #ffffff;
+        // decor
+        background-color: #111111;
+        // transition
+        transition: 1.5s ease-in-out;
+        transform: translateY(300%);
+
+        div {
+          // transition
+          transition: 2s ease-in-out;
+          transform: translateY(400%);
+        }
+      }
+    }
+  }
+}

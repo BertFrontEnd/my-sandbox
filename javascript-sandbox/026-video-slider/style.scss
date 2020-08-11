@@ -1,0 +1,69 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+section {
+  // position
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  video {
+    // position
+    position: absolute;
+    top: 0;
+    left: 0;
+    // box-model
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .navigator {
+    // position
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    z-index: 1;
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // transition
+    transform: translateX(-50%);
+
+    li {
+      // box-model
+      margin: 0 10px;
+      padding: 3px;
+      // decor
+      border-radius: 4px;
+      background-color: #ffffff;
+      opacity: 0.7;
+      //other
+      cursor: pointer;
+      // transition
+      transition: 0.5s;
+
+      &:hover {
+        // position
+        z-index: 10;
+        // decor
+        opacity: 1;
+        // transition
+        transform: scale(1.4);
+      }
+
+      img {
+        // box-model
+        width: 120px;
+        // transition
+        transition: 0.5s;
+      }
+    }
+  }
+}

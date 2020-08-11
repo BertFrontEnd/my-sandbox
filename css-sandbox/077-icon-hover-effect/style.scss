@@ -1,0 +1,67 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+.banner {
+  // position
+  position: absolute;
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  video {
+    // position
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  section {
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    svg {
+      // position
+      position: relative;
+      // box-model
+      width: 100%;
+      height: 100%;
+      padding: 10%;
+      // decor
+      background-color: #ffffff;
+      mix-blend-mode: screen;
+      // typography
+      text-align: center;
+      // decor
+      fill: #000000;
+
+      &:hover {
+        // typography
+        fill: #ffffff;
+        background-color: #000000;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    // box-model
+    flex-direction: column;
+  }
+}

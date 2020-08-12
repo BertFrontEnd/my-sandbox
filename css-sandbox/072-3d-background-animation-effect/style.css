@@ -1,0 +1,101 @@
+section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section .pattern {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-animation: animate-bg 10s ease-in-out infinite;
+          animation: animate-bg 10s ease-in-out infinite;
+}
+
+section .pattern .face {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-image: url(./assets/img/check.jpg);
+  background-size: 100px 100px;
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+}
+
+section .pattern .face.face2 {
+  height: 100vh;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transform: rotateX(65deg);
+          transform: rotateX(65deg);
+}
+
+section .pattern .face1::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  content: '';
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
+}
+
+section .pattern .face2::before {
+  position: absolute;
+  bottom: top;
+  left: 0;
+  width: 100%;
+  height: 125px;
+  content: '';
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100px;
+  }
+}
+
+@-webkit-keyframes animate-bg {
+  0%,
+  100% {
+    -webkit-transform: scale(1.3) rotate(-15deg);
+            transform: scale(1.3) rotate(-15deg);
+  }
+  50% {
+    -webkit-transform: scale(1.6) rotate(15deg);
+            transform: scale(1.6) rotate(15deg);
+  }
+}
+
+@keyframes animate-bg {
+  0%,
+  100% {
+    -webkit-transform: scale(1.3) rotate(-15deg);
+            transform: scale(1.3) rotate(-15deg);
+  }
+  50% {
+    -webkit-transform: scale(1.6) rotate(15deg);
+            transform: scale(1.6) rotate(15deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

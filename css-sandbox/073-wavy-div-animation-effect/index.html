@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/font.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wavy Div Animation Effect</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="content">
+          <h2>Water Wave Div</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet atque, architecto provident, nihil, quia repudiandae earum reiciendis excepturi
+            voluptas hic. Aliquid cumque corrupti sapiente nisi a soluta quam facilis!Tempore dolore commodi, qui provident totam, ducimus error eligendi vitae
+            accusamus ratione eius, quod consequatur.
+          </p>
+        </div>
+      </div>
+    </div>
+    <svg>
+      <filter id="wavy">
+        <feTurbulence x="0" y="0" baseFrequency="0.02" numOctaves="5" seed="2">
+          <animate attributeName="baseFrequency" dur="60s" values="0.02; 0.05; 0.02" repeatCount="indefinite" />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" scale="30" />
+      </filter>
+    </svg>
+  </body>
+</html>

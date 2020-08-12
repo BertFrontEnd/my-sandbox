@@ -1,0 +1,108 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1f1f1f;
+}
+
+body .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 400px;
+  color: #ffffff;
+  -webkit-box-reflect: below 15px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.2));
+  cursor: pointer;
+}
+
+body .container .box::before {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border: 4px solid #ffffff;
+  background-color: #000000;
+  -webkit-filter: url(#wavy);
+          filter: url(#wavy);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .container .box::after {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 50%;
+  height: 100%;
+  content: '';
+  border: 4px solid #ffffff;
+  border-right: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-filter: url(#wavy);
+          filter: url(#wavy);
+}
+
+body .container .box:hover {
+  color: #000000;
+}
+
+body .container .box:hover::before {
+  background-color: #ffffff;
+}
+
+body .container .box .content {
+  position: absolute;
+  padding: 20px;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .container .box .content h2 {
+  margin-bottom: 10px;
+}
+
+body .container .box .content p {
+  margin-bottom: 10px;
+}
+
+body svg {
+  width: 0;
+  height: 0;
+}
+/*# sourceMappingURL=style.css.map */

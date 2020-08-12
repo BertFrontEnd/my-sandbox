@@ -1,0 +1,50 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+.banner {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  // box-model
+  overflow: hidden;
+
+  video {
+    // position
+    position: absolute;
+    top: 0;
+    left: 0;
+    // box-model
+    width: 100%;
+    height: 100%;
+    // decor
+    object-fit: cover;
+  }
+
+  h2 {
+    // position
+    position: absolute;
+    top: 0;
+    left: 0;
+    // box-model
+    width: 100%;
+    height: 100%;
+    // typography
+    font-family: 'Poppins Bold', sans-serif;
+    font-size: 30vw;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    line-height: 100vh;
+    // decor
+    background-color: #ffffff;
+    mix-blend-mode: screen;
+  }
+}

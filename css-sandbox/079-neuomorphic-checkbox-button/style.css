@@ -1,0 +1,85 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #ebf5fc;
+}
+
+body ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 240px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ebf5fc;
+  -webkit-box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+body ul li {
+  position: relative;
+  margin: 15px;
+}
+
+body ul li label {
+  position: relative;
+  cursor: pointer;
+}
+
+body ul li label input {
+  position: absolute;
+  opacity: 0;
+}
+
+body ul li label input:checked ~ .icon-box {
+  -webkit-box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+body ul li label input:checked ~ .icon-box .icon {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+body ul li label .icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #ebf5fc;
+  -webkit-box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+body ul li label .icon-box .icon {
+  width: 30px;
+  height: 30px;
+  fill: #6a9bd8;
+}
+/*# sourceMappingURL=style.css.map */

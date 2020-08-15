@@ -1,0 +1,54 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1f1f1f;
+}
+
+body span {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-image: url(./assets/img/heart.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+  pointer-events: none;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -1000%);
+            transform: translate(-50%, -1000%);
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -1000%);
+            transform: translate(-50%, -1000%);
+    -webkit-filter: hue-rotate(720deg);
+            filter: hue-rotate(720deg);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

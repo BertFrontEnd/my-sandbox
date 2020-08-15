@@ -1,0 +1,50 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  height: 100vh;
+  overflow: hidden;
+  // decor
+  background-color: #1f1f1f;
+
+  span {
+    // position
+    position: absolute;
+    // box-model
+    width: 100px;
+    height: 100px;
+    // decor
+    background-image: url(./assets/img/heart.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    // transition
+    transform: translate(-50%, -50%);
+    // animation
+    animation: animate 2s linear infinite;
+    // other
+    pointer-events: none;
+  }
+}
+
+@keyframes animate {
+  0% {
+    // transition
+    transform: translate(-50%, -50%);
+    // decor
+    filter: hue-rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    // transition
+    transform: translate(-50%, -1000%);
+    // decor
+    filter: hue-rotate(720deg);
+    opacity: 0;
+  }
+}

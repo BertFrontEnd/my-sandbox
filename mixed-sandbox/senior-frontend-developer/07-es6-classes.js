@@ -86,6 +86,16 @@ class Cat extends Animal {
     super.voice();
     console.log('No! I am Catwoman');
   }
+
+  // Создание геттера
+  get ageInfoGet() {
+    return this.age * 7;
+  }
+
+  // Создание сеттера
+  set ageInfoSet(newAge) {
+    this.age = newAge;
+  }
 }
 
 // Создание объекта
@@ -112,3 +122,15 @@ console.log(Cat.type);
 
 // Обращение к новому полю объекта cat от класса Cat
 console.log(cat.color);
+
+// Вызов геттера
+console.log(cat.ageInfoGet);
+
+// Использование сеттера
+cat.ageInfoSet = 8;
+
+// Обращение к объекту c новым значением поля age
+console.log(cat);
+
+// Вызов геттера c новым значением поля age у объекта
+console.log(cat.ageInfoGet);

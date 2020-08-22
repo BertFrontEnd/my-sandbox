@@ -1,0 +1,54 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // other
+  cursor: ew-resize;
+
+  section {
+    // box-model
+    height: 100vh;
+    // decor
+    background-color: #000000;
+
+    p {
+      // position
+      position: fixed;
+      top: 0;
+      left: 0;
+      // box-model
+      overflow: hidden;
+      // typography
+      font-size: 24px;
+      color: transparent;
+      line-height: 0.6em;
+      letter-spacing: -1px;
+      text-align: justify;
+      // decor
+      background-image: url(./assets/img/bg.jpg);
+      -webkit-background-clip: text;
+      filter: contrast(1);
+    }
+
+    #bg {
+      // position
+      position: absolute;
+      top: 0;
+      right: 0;
+      // box-model
+      width: 100%;
+      height: 100%;
+      // decor
+      background-image: url(./assets/img/bg.jpg);
+      background-attachment: fixed;
+      filter: contrast(2);
+    }
+  }
+}

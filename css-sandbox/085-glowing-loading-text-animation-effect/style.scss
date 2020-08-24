@@ -1,0 +1,101 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Tomorrow', sans-serif;
+  // decor
+  background-color: #000000;
+
+  h2 {
+    // box-model
+    display: flex;
+    // typography
+    font-size: 6em;
+    color: #000000;
+
+    span {
+      // animation
+      animation: animate 4s linear infinite;
+
+      &:nth-child(1) {
+        // animation
+        animation-delay: 0s;
+      }
+
+      &:nth-child(2) {
+        // animation
+        animation-delay: 0.1s;
+      }
+
+      &:nth-child(3) {
+        // animation
+        animation-delay: 0.2s;
+      }
+
+      &:nth-child(4) {
+        // animation
+        animation-delay: 0.3s;
+      }
+
+      &:nth-child(5) {
+        // animation
+        animation-delay: 0.4s;
+      }
+
+      &:nth-child(6) {
+        // animation
+        animation-delay: 0.5s;
+      }
+
+      &:nth-child(7) {
+        // animation
+        animation-delay: 0.6s;
+      }
+
+      &:nth-child(8) {
+        // animation
+        animation-delay: 0.7s;
+      }
+
+      &:nth-child(9) {
+        // animation
+        animation-delay: 0.8s;
+      }
+
+      &:nth-child(10) {
+        // animation
+        animation-delay: 0.9s;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    // typography
+    color: #ffffff;
+    // decor
+    filter: blur(2px);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff;
+  }
+  25%,
+  75% {
+    // typography
+    color: #000000;
+    // decor
+    filter: blur(0px);
+    text-shadow: none;
+  }
+}

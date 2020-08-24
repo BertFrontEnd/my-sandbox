@@ -1,0 +1,108 @@
+body {
+  font-family: 'Poppins Bold', sans-serif;
+  background-color: #f1f1f1;
+}
+
+body .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+body .navigation ul {
+  position: relative;
+}
+
+body .navigation ul:hover li a {
+  color: #0002;
+}
+
+body .navigation ul li {
+  text-align: center;
+}
+
+body .navigation ul li:hover a {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+body .navigation ul li:hover:nth-child(6n + 1) a::before {
+  background-color: #81ecec;
+}
+
+body .navigation ul li:hover:nth-child(6n + 2) a::before {
+  background-color: #ff7675;
+}
+
+body .navigation ul li:hover:nth-child(6n + 3) a::before {
+  background-color: #55fec4;
+}
+
+body .navigation ul li:hover:nth-child(6n + 4) a::before {
+  background-color: #a29bfe;
+}
+
+body .navigation ul li:hover:nth-child(6n + 5) a::before {
+  background-color: #fd79a8;
+}
+
+body .navigation ul li:hover:nth-child(6n + 6) a::before {
+  background-color: #ffeaa7;
+}
+
+body .navigation ul li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 5px 20px;
+  font-size: 3em;
+  color: #333333;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .navigation ul li a::before {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: '';
+  opacity: 0;
+  font-size: 5em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: letter-spacing 0.5s, left 0.5s;
+  transition: letter-spacing 0.5s, left 0.5s;
+}
+
+body .navigation ul li a:hover::before {
+  left: 50%;
+  width: 3000px;
+  height: 2000px;
+  content: attr(data-text);
+  opacity: 1;
+  letter-spacing: 10px;
+}
+/*# sourceMappingURL=style.css.map */

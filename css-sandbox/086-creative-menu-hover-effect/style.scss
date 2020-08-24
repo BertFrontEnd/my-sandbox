@@ -1,0 +1,148 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // typography
+  font-family: 'Poppins Bold', sans-serif;
+  // decor
+  background-color: #f1f1f1;
+
+  .navigation {
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+    ul {
+      // position
+      position: relative;
+
+      &:hover {
+        li {
+          a {
+            // typography
+            color: #0002;
+          }
+        }
+      }
+
+      li {
+        // typography
+        text-align: center;
+
+        &:hover {
+          a {
+            // typography
+            color: #000000;
+            // decor
+            background-color: #ffffff;
+          }
+
+          &:nth-child(6n + 1) {
+            a {
+              &::before {
+                background-color: #81ecec;
+              }
+            }
+          }
+
+          &:nth-child(6n + 2) {
+            a {
+              &::before {
+                background-color: #ff7675;
+              }
+            }
+          }
+
+          &:nth-child(6n + 3) {
+            a {
+              &::before {
+                background-color: #55fec4;
+              }
+            }
+          }
+
+          &:nth-child(6n + 4) {
+            a {
+              &::before {
+                background-color: #a29bfe;
+              }
+            }
+          }
+
+          &:nth-child(6n + 5) {
+            a {
+              &::before {
+                background-color: #fd79a8;
+              }
+            }
+          }
+
+          &:nth-child(6n + 6) {
+            a {
+              &::before {
+                background-color: #ffeaa7;
+              }
+            }
+          }
+        }
+
+        a {
+          // box-model
+          display: inline-flex;
+          padding: 5px 20px;
+          // typography
+          font-size: 3em;
+          color: #333333;
+          text-decoration: none;
+          // transition
+          transition: 0.5s;
+
+          &::before {
+            // position
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            z-index: -1;
+            // box-model
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: '';
+            opacity: 0;
+            // typography
+            font-size: 5em;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 500px;
+            // transition
+            transform: translate(-50%, -50%);
+            transition: letter-spacing 0.5s, left 0.5s;
+          }
+
+          &:hover {
+            &::before {
+              // position
+              left: 50%;
+              // box-model
+              width: 3000px;
+              height: 2000px;
+              content: attr(data-text);
+              opacity: 1;
+              // typography
+              letter-spacing: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

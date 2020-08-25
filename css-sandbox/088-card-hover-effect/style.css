@@ -1,0 +1,122 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: consolas;
+  background-color: #333333;
+}
+
+body .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1000px;
+}
+
+body .container .card {
+  position: relative;
+}
+
+body .container .card:hover .face.face1 {
+  background-color: #ff0057;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+body .container .card:hover .face.face2 {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+body .container .card .face {
+  width: 300px;
+  height: 200px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .container .card .face.face1 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  background-color: #333333;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  cursor: pointer;
+}
+
+body .container .card .face.face1 .content {
+  opacity: 0.2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .container .card .face.face1 .content img {
+  width: 100px;
+}
+
+body .container .card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #ffffff;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+body .container .card .face.face2 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+body .container .card .face a {
+  display: inline-block;
+  margin: 15px 0 0;
+  padding: 5px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: 900;
+  border: 1px solid #333333;
+}
+
+body .container .card .face a:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */

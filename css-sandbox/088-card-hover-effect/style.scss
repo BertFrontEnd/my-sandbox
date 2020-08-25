@@ -1,0 +1,135 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: consolas;
+  // decor
+  background-color: #333333;
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+
+    .card {
+      // position
+      position: relative;
+
+      &:hover {
+        .face {
+          &.face1 {
+            //decor
+            background-color: #ff0057;
+            // transition
+            transform: translateY(0);
+
+            .content {
+              // box-model
+              opacity: 1;
+            }
+          }
+
+          &.face2 {
+            // transition
+            transform: translateY(0);
+          }
+        }
+      }
+
+      .face {
+        // box-model
+        width: 300px;
+        height: 200px;
+        // transition
+        transition: 0.5s;
+
+        &.face1 {
+          // position
+          position: relative;
+          // box-model
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+          // decor
+          background-color: #333333;
+          // transition
+          transform: translateY(100px);
+          // other
+          cursor: pointer;
+
+          .content {
+            // box-model
+            opacity: 0.2;
+            // transition
+            transition: 0.5s;
+
+            img {
+              // box-model
+              width: 100px;
+            }
+
+            h3 {
+              // box-model
+              margin: 10px 0 0;
+              padding: 0;
+              // typography
+              color: #ffffff;
+              font-size: 1.5em;
+              text-align: center;
+            }
+          }
+        }
+
+        &.face2 {
+          // position
+          position: relative;
+          // box-model
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          // decor
+          background-color: #ffffff;
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+          // transition
+          transform: translateY(-100px);
+        }
+
+        a {
+          // box-model
+          display: inline-block;
+          margin: 15px 0 0;
+          padding: 5px;
+          // typography
+          color: #333333;
+          text-decoration: none;
+          font-weight: 900;
+          // decor
+          border: 1px solid #333333;
+
+          &:hover {
+            // decor
+            background-color: #333333;
+            // typography
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

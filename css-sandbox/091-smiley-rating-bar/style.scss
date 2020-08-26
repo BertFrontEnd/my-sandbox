@@ -1,0 +1,115 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // decor
+  background-color: #20152d;
+
+  .rating {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+    input {
+      // box-model
+      display: none;
+
+      &:hover,
+      &:checked {
+        + label {
+          h4 {
+            // box-model
+            opacity: 1;
+            // transition
+            transform: translateY(0) scale(1);
+          }
+          // decor
+          filter: grayscale(0);
+          opacity: 1;
+          width: 160px;
+        }
+      }
+    }
+
+    label {
+      // position
+      position: relative;
+      // box-model
+      width: 0;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      opacity: 0;
+      // typography
+      text-align: center;
+      // decor
+      filter: grayscale(1);
+      // transition
+      transition: 0.5s;
+      // other
+      cursor: pointer;
+
+      img {
+        // box-model
+        width: 80%;
+      }
+
+      h4 {
+        // box-model
+        padding-top: 10px;
+        font-weight: 500;
+        opacity: 0;
+        // typography
+        font-size: 24px;
+        color: #ffffff;
+        white-space: nowrap;
+        // transition
+        transform: translateY(-50px) scale(0);
+        transition: 0.5s;
+      }
+    }
+
+    &:hover {
+      label {
+        width: 160px;
+        opacity: 0.2;
+      }
+    }
+
+    .text {
+      // position
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      // box-model
+      width: 500px;
+      // transition
+      transform: translateX(-50%);
+      // typography
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+  }
+}

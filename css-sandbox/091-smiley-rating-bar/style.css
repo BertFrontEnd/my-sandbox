@@ -1,0 +1,112 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #20152d;
+}
+
+body .rating {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .rating input {
+  display: none;
+}
+
+body .rating input:hover + label, body .rating input:checked + label {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+  width: 160px;
+}
+
+body .rating input:hover + label h4, body .rating input:checked + label h4 {
+  opacity: 1;
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+}
+
+body .rating label {
+  position: relative;
+  width: 0;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  text-align: center;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+body .rating label img {
+  width: 80%;
+}
+
+body .rating label h4 {
+  padding-top: 10px;
+  font-weight: 500;
+  opacity: 0;
+  font-size: 24px;
+  color: #ffffff;
+  white-space: nowrap;
+  -webkit-transform: translateY(-50px) scale(0);
+          transform: translateY(-50px) scale(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .rating:hover label {
+  width: 160px;
+  opacity: 0.2;
+}
+
+body .rating .text {
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  width: 500px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,119 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box--model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // decor
+  background-color: #111111;
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    margin-top: 250px;
+    max-width: 800px;
+    // transition
+    transform: skewY(-20deg);
+
+    .img-box {
+      // position
+      position: relative;
+      // box-model
+      width: 100%;
+      height: 180px;
+      // transition
+      transform-origin: bottom;
+      transform: skewX(45deg);
+
+      &:hover {
+        img {
+          &:nth-child(3) {
+            transform: translate(100px, -100px);
+          }
+          &:nth-child(2) {
+            transform: translate(50px, -50px);
+            opacity: 0.5;
+          }
+          &:nth-child(1) {
+            transform: translate(0px, -0px);
+            opacity: 0.1;
+          }
+        }
+      }
+
+      img {
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        // box-model
+        max-width: 100%;
+        // decor
+        filter: grayscale(1);
+        // transition
+        transition: 0.5s;
+        // other
+        cursor: pointer;
+      }
+    }
+
+    h2 {
+      // position
+      position: relative;
+      // typography
+      color: #ffffff;
+      font-size: 4em;
+    }
+
+    .skew {
+      // transition
+      transform-origin: top;
+      transform: skewX(45deg);
+
+      p {
+        //  typography
+        font-size: 1.2em;
+        color: #ffffff;
+      }
+
+      a {
+        // position
+        position: relative;
+        // box-model
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 30px;
+        // typography
+        font-size: 20px;
+        color: #ffffff;
+        letter-spacing: 2px;
+        text-decoration: none;
+        // decor
+        border: 2px solid #ffffff;
+        background-color: transparent;
+        // transition
+        transform-origin: top;
+        transform: skewX(-45deg);
+        transition: 0.5s;
+
+        &:hover {
+          // typography
+          color: #000000;
+          // decor
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}

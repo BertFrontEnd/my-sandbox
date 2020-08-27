@@ -1,0 +1,66 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // decor
+  background-color: #1f1f1f;
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+
+    .pixel {
+      // position
+      position: relative;
+      // box-model
+      width: 240px;
+      height: 330px;
+      // decor
+      background-color: #000000;
+
+      img {
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        // box-model
+        width: 100%;
+        height: 100%;
+        // decor
+        border-radius: 15px;
+        image-rendering: pixelated;
+        // other
+        cursor: pointer;
+
+        &:last-child {
+          // transition
+          transition: 2s;
+        }
+      }
+
+      &:hover {
+        img {
+          &:last-child {
+            // decor
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}

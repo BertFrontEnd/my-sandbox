@@ -1,0 +1,81 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body #progress-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#008aff), to(#00ffe7));
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+}
+
+body #progress-bar::before, body #progress-bar::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+  content: '';
+  background: -webkit-gradient(linear, left bottom, left top, from(#008aff), to(#00ffe7));
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+}
+
+body #scroll-path {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body section {
+  padding: 50px;
+  text-align: justify;
+  background-color: #1f1f1f;
+}
+
+body section h2 {
+  font-size: 2.5em;
+  color: #ffffff;
+}
+
+body section p {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+@-webkit-keyframes animate {
+  0%,
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

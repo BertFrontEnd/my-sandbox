@@ -1,0 +1,126 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+%line {
+  // box-model
+  display: flex;
+  justify-content: center;
+  // decor
+  border-radius: 50%;
+}
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // decor
+  background-color: #091921;
+
+  .clock {
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    // decor
+    background-image: url(./assets/img/clock.png);
+    background-size: cover;
+    border: 4px solid #091921;
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05), inset 0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.3),
+      inset 0 15px 15px rgba(0, 0, 0, 0.3);
+
+    &::before {
+      // position
+      position: absolute;
+      z-index: 100;
+      // box-model
+      width: 15px;
+      height: 15px;
+      content: '';
+      // decor
+      border-radius: 50%;
+      background-color: #ffffff;
+      box-shadow: inset 0 0 2px #091921;
+    }
+
+    .hour,
+    .min,
+    .sec {
+      // position
+      position: absolute;
+    }
+
+    .hour {
+      .hr {
+        // box-model
+        width: 160px;
+        height: 160px;
+        @extend %line;
+
+        &::before {
+          // position
+          position: absolute;
+          z-index: 10;
+          // box-model
+          width: 8px;
+          height: 80px;
+          content: '';
+          // decor
+          border-radius: 6px 6px 0 0;
+          background-color: #ff105e;
+        }
+      }
+    }
+
+    .min {
+      .mn {
+        width: 190px;
+        height: 190px;
+        @extend %line;
+
+        &::before {
+          // position
+          position: absolute;
+          z-index: 11;
+          // box-model
+          width: 4px;
+          height: 90px;
+          content: '';
+          // decor
+          border-radius: 6px 6px 0 0;
+          background-color: #ffffff;
+        }
+      }
+    }
+
+    .sec {
+      .sc {
+        width: 230px;
+        height: 230px;
+        @extend %line;
+
+        &::before {
+          // position
+          position: absolute;
+          z-index: 12;
+          // box-model
+          width: 2px;
+          height: 150px;
+          content: '';
+          // decor
+          border-radius: 6px 6px 0 0;
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}

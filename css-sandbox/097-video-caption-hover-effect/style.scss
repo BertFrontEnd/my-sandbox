@@ -1,0 +1,117 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Poppins', sans-serif;
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+    // other
+    cursor: pointer;
+
+    .box {
+      // position
+      position: relative;
+      width: 450px;
+      height: 320px;
+      // decor
+      background-color: #000000;
+
+      .video-box {
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        video {
+          // position
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          // decor
+          object-fit: cover;
+        }
+      }
+
+      .content-box {
+        // position
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        right: 40px;
+        // box-model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        // decor
+        background-color: rgba(0, 0, 0, 0.95);
+        // transition
+        transform: scaleX(0);
+        transition: transform 0.5s;
+        transform-origin: right;
+        // other
+        cursor: text;
+
+        .content {
+          // position
+          position: relative;
+          padding: 20px 60px;
+          // decor
+          opacity: 0;
+
+          h2 {
+            // box-model
+            margin-bottom: 10px;
+            // typography
+            font-family: 'Poppins Bold', sans-serif;
+            color: #ffffff;
+          }
+
+          p {
+            // typography
+            color: #ffffff;
+          }
+        }
+      }
+
+      &:hover {
+        .content-box {
+          // transition
+          transform: scaleX(1);
+          transition: transform 0.5s;
+          transform-origin: left;
+        }
+
+        .content {
+          // decor
+          opacity: 1;
+          // transition
+          transition: 0.5s;
+          transition-delay: 0.5s;
+        }
+      }
+    }
+  }
+}

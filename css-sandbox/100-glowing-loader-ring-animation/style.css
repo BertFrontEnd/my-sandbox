@@ -30,8 +30,8 @@ body .ring::before {
   position: absolute;
   top: -3px;
   left: -3px;
-  width: 153px;
-  height: 153px;
+  width: 150px;
+  height: 150px;
   content: '';
   border: 3px solid transparent;
   border-top: 3px solid #fff000;
@@ -44,7 +44,7 @@ body .ring::before {
 body .ring span {
   position: absolute;
   top: calc(50% - 2px);
-  left: 50%;
+  left: 73px;
   display: block;
   width: 50%;
   height: 4px;

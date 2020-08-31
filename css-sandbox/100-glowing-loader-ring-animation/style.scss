@@ -41,8 +41,8 @@ body {
       top: -3px;
       left: -3px;
       // box-model
-      width: 153px;
-      height: 153px;
+      width: 150px;
+      height: 150px;
       content: '';
       // decor
       border: 3px solid transparent;
@@ -57,7 +57,7 @@ body {
       // position
       position: absolute;
       top: calc(50% - 2px);
-      left: 50%;
+      left: 73px;
       // box-model
       display: block;
       width: 50%;

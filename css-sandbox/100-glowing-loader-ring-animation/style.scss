@@ -50,7 +50,7 @@ body {
       border-right: 3px solid #fff000;
       border-radius: 50%;
       // animation
-      animation: animate-c 2s linear infinite;
+      animation: animate-c 1s linear infinite;
     }
 
     span {
@@ -62,12 +62,10 @@ body {
       display: block;
       width: 50%;
       height: 4px;
-      // decor
-      background: transparent;
       // transition
       transform-origin: left;
       // animation
-      animation: animate 2s linear infinite;
+      animation: animate 1s linear infinite;
 
       &::before {
         // position

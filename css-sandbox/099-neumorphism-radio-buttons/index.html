@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/font.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Neumorphism Radio Buttons</title>
+  </head>
+  <body>
+    <svg style="display: none">
+      <symbol id="checkmark" viewBox="0 0 70 70">
+        <g>
+          <path
+            d="M26.474,70c-2.176,0-4.234-1.018-5.557-2.764L3.049,43.639C0.725,40.57,1.33,36.2,4.399,33.875
+				c3.074-2.326,7.441-1.717,9.766,1.35l11.752,15.518L55.474,3.285c2.035-3.265,6.332-4.264,9.604-2.232
+				c3.268,2.034,4.266,6.334,2.23,9.602l-34.916,56.06c-1.213,1.949-3.307,3.175-5.6,3.279C26.685,69.998,26.58,70,26.474,70z"
+          />
+        </g>
+      </symbol>
+
+      <symbol id="letterx" viewBox="0 0 52 52">
+        <g>
+          <path
+            d="M47.743,41.758L33.955,26.001l13.788-15.758c2.343-2.344,2.343-6.143,0-8.486
+			c-2.345-2.343-6.144-2.342-8.486,0.001L26,16.91L12.743,1.758C10.4-0.584,6.602-0.585,4.257,1.757
+			c-2.343,2.344-2.343,6.143,0,8.486l13.788,15.758L4.257,41.758c-2.343,2.343-2.343,6.142-0.001,8.485
+			c2.344,2.344,6.143,2.344,8.487,0L26,35.091l13.257,15.152c2.345,2.344,6.144,2.344,8.487,0
+			C50.086,47.9,50.086,44.101,47.743,41.758z"
+          />
+        </g>
+      </symbol>
+    </svg>
+
+    <div class="container">
+      <p>Are You 18 Years Old?</p>
+      <div>
+        <label>
+          <input type="radio" name="age" />
+          <svg class="icon">
+            <use xlink:href="#checkmark"></use>
+          </svg>
+        </label>
+        <label>
+          <input type="radio" name="age" />
+          <svg class="icon">
+            <use xlink:href="#letterx"></use>
+          </svg>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>

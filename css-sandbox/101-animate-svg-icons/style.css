@@ -1,0 +1,194 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #06151f;
+}
+
+body .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 800px;
+}
+
+body .container .icon {
+  width: 200px;
+}
+
+body .container .icon path {
+  fill: transparent;
+  stroke: #31e8ff;
+  cursor: pointer;
+}
+
+body .container .icon.plane path {
+  stroke-dasharray: 1850;
+  stroke-dashoffset: 0;
+  -webkit-animation: animate 0.5s linear;
+          animation: animate 0.5s linear;
+}
+
+body .container .icon.plane:hover path {
+  -webkit-animation: animate-plane 2s linear forwards;
+          animation: animate-plane 2s linear forwards;
+}
+
+body .container .icon.star path {
+  stroke-dasharray: 1850;
+  stroke-dashoffset: 0;
+  -webkit-animation: animate 0.5s linear;
+          animation: animate 0.5s linear;
+}
+
+body .container .icon.star:hover path {
+  -webkit-animation: animate-star 2s linear forwards;
+          animation: animate-star 2s linear forwards;
+}
+
+body .container .icon.moon path {
+  stroke-dasharray: 2515;
+  stroke-dashoffset: 0;
+  -webkit-animation: animate 0.5s linear;
+          animation: animate 0.5s linear;
+}
+
+body .container .icon.moon:hover path {
+  -webkit-animation: animate-moon 2s linear forwards;
+          animation: animate-moon 2s linear forwards;
+}
+
+@-webkit-keyframes animate-plane {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1850;
+  }
+  80% {
+    stroke-dashoffset: 3700;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 3700;
+    fill: #31e8ff;
+  }
+}
+
+@keyframes animate-plane {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1850;
+  }
+  80% {
+    stroke-dashoffset: 3700;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 3700;
+    fill: #31e8ff;
+  }
+}
+
+@-webkit-keyframes animate-star {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1850;
+  }
+  80% {
+    stroke-dashoffset: 3700;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 3700;
+    fill: #31e8ff;
+  }
+}
+
+@keyframes animate-star {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 1850;
+  }
+  80% {
+    stroke-dashoffset: 3700;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 3700;
+    fill: #31e8ff;
+  }
+}
+
+@-webkit-keyframes animate-moon {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 2515;
+  }
+  80% {
+    stroke-dashoffset: 5030;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 5030;
+    fill: #31e8ff;
+  }
+}
+
+@keyframes animate-moon {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 2515;
+  }
+  80% {
+    stroke-dashoffset: 5030;
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 5030;
+    fill: #31e8ff;
+  }
+}
+
+@-webkit-keyframes animate {
+  0% {
+    fill: #31e8ff;
+  }
+  100% {
+    fill: transparent;
+  }
+}
+
+@keyframes animate {
+  0% {
+    fill: #31e8ff;
+  }
+  100% {
+    fill: transparent;
+  }
+}
+/*# sourceMappingURL=style.css.map */

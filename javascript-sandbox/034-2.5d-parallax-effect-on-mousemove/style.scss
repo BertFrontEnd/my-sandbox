@@ -1,0 +1,56 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+section {
+  // position
+  position: relative;
+  // box-model
+  height: 100vh;
+  overflow: hidden;
+  // typography
+  font-family: 'Poppins', sans-serif;
+
+  #bg {
+    // position
+    position: absolute;
+    top: 0;
+    left: 0;
+    // box-model
+    width: 100%;
+    height: 100%;
+    // decor
+    background-image: url(./assets/img/bg.jpg);
+    background-size: calc(100% + var(--x) / 2);
+    background-position: center;
+  }
+
+  h2 {
+    // position
+    position: absolute;
+    top: 50%;
+    // position
+    width: 100%;
+    // typography
+    font-size: 8em;
+    color: #ffffff;
+    word-spacing: nowrap;
+    // decor
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    // transition
+    transform: translate(calc(100% - var(--x) * 2), -50%);
+  }
+
+  .girl {
+    // position
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 400px;
+    max-width: calc(100% - var(--x) / 50);
+  }
+}

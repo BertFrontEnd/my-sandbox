@@ -1,0 +1,105 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0d0f1b;
+}
+
+body ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body ul:hover li a {
+  opacity: 0;
+}
+
+body ul li {
+  text-align: center;
+}
+
+body ul li::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  content: attr(data-text);
+  font-size: 6em;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 60px;
+  word-spacing: nowrap;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+body ul li:hover::before {
+  opacity: 0.05;
+  letter-spacing: 10px;
+}
+
+body ul li a {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 170px;
+  padding: 8px 15px;
+  overflow: hidden;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #2196f3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body ul li a::before {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 80px;
+  height: 100%;
+  content: '';
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(255, 255, 255, 0.8)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  -webkit-transform: skewX(35deg);
+          transform: skewX(35deg);
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+
+body ul li a:hover {
+  z-index: 10;
+  background-color: #ff3f81;
+  opacity: 1;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+body ul li a:hover::before {
+  left: calc(100% + 100px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,131 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  // typography
+  font-family: 'Montserrat', sans-serif;
+  // decor
+  background-color: #0d0f1b;
+
+  ul {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      li {
+        a {
+          // box-model
+          opacity: 0;
+        }
+      }
+    }
+
+    li {
+      // typography
+      text-align: center;
+
+      &::before {
+        // position
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // box-model
+        opacity: 0;
+        content: attr(data-text);
+        // typography
+        font-size: 6em;
+        color: #ffffff;
+        font-weight: 900;
+        letter-spacing: 60px;
+        word-spacing: nowrap;
+        // transition
+        transform: translate(-50%, -50%);
+        transition: 0.5s;
+        // other
+        pointer-events: none;
+      }
+
+      &:hover {
+        &::before {
+          // box-model
+          opacity: 0.05;
+          // typography
+          letter-spacing: 10px;
+        }
+      }
+
+      a {
+        // position
+        position: relative;
+        z-index: 1;
+        // box-model
+        display: inline-block;
+        width: 170px;
+        padding: 8px 15px;
+        overflow: hidden;
+        // typography
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        // decor
+        background-color: #2196f3;
+        // transition
+        transition: 0.5s;
+
+        &::before {
+          // position
+          position: absolute;
+          top: 0;
+          left: -100px;
+          // box-model
+          width: 80px;
+          height: 100%;
+          content: '';
+          // decor
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.8),
+            transparent
+          );
+          // transition
+          transform: skewX(35deg);
+          transition: 0s;
+        }
+
+        &:hover {
+          // position
+          z-index: 10;
+          // decor
+          background-color: #ff3f81;
+          opacity: 1;
+          // transition
+          transform: scale(1.4);
+
+          &::before {
+            // position
+            left: calc(100% + 100px);
+            // transition
+            transition: 0.5s;
+            transition-delay: 0.2s;
+          }
+        }
+      }
+    }
+  }
+}

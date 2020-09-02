@@ -1,0 +1,83 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // decor
+  background-color: #333333;
+
+  .container {
+    // box-model
+    width: 1200px;
+    margin: 20px auto;
+    columns: 4;
+    column-gap: 40px;
+
+    .box {
+      // box-model
+      width: 100%;
+      margin: 0 0 20px;
+      padding: 10px;
+      break-inside: avoid;
+      overflow: hidden;
+      // decor
+      background-color: #ffffff;
+
+      img {
+        // box-model
+        max-width: 100%;
+      }
+
+      h2 {
+        // box-model
+        margin: 10px 0 0;
+        padding: 0;
+        // typography
+        font-size: 20px;
+      }
+
+      p {
+        // box-model
+        margin: 0;
+        padding: 0 0 10px;
+        // typography
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    .container {
+      // box-model
+      columns: 3;
+      width: calc(100% - 40px);
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    .container {
+      // box-model
+      columns: 2;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    .container {
+      // box-model
+      columns: 1;
+    }
+  }
+}

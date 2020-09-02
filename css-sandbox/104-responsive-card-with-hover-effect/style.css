@@ -1,0 +1,135 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #010615;
+}
+
+body .box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+  background-color: #060c21;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+body .box::before {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  content: '';
+  background-color: #ffffff;
+}
+
+body .box::after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -2;
+  content: '';
+  background-color: #ffffff;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+}
+
+body .box:nth-child(1)::before, body .box:nth-child(1)::after {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+body .box:nth-child(2)::before, body .box:nth-child(2)::after {
+  background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+body .box:nth-child(3)::before, body .box:nth-child(3)::after {
+  background: linear-gradient(235deg, #772aff, #010615, #2196f3);
+}
+
+body .box:hover {
+  height: 400px;
+}
+
+body .box:hover .img-box img {
+  opacity: 1;
+}
+
+body .box:hover .content {
+  opacity: 1;
+}
+
+body .box .img-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+body .box .img-box img {
+  opacity: 0.1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .box .content {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000000));
+  background: linear-gradient(180deg, transparent, #000000);
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .box .content h2 {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+body .box .content span {
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+/*# sourceMappingURL=style.css.map */

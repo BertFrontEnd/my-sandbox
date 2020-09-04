@@ -1,0 +1,51 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  min-height: 200vh;
+
+  .banner {
+    // position
+    position: fixed;
+    top: 0;
+    left: 0;
+    // box-model
+    width: 100%;
+    height: 100vh;
+
+    video {
+      // position
+      position: absolute;
+      top: 0;
+      left: 0;
+      // box-model
+      width: 100%;
+      height: 100%;
+      // decor
+      object-fit: cover;
+    }
+
+    #background {
+      // position
+      position: absolute;
+      // box-model
+      width: 100%;
+      height: 100%;
+      // decor
+      background: #ffffff url(./assets/img/heart.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100px;
+      mix-blend-mode: screen;
+    }
+  }
+}

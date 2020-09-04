@@ -1,0 +1,92 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  // box-model
+  min-height: 1500px;
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // decor
+  background-color: #0a2a43;
+
+  section {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    // typography
+    text-align: center;
+
+    &::before {
+      // position
+      position: absolute;
+      bottom: 0;
+      z-index: 10;
+      // box-model
+      width: 100%;
+      height: 100px;
+      content: '';
+      // decor
+      background: linear-gradient(to top, #0a2a43, transparent);
+    }
+
+    &::after {
+      // position
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      // box-model
+      width: 100%;
+      height: 100%;
+      content: '';
+      // decor
+      background-color: #0a2a43;
+      mix-blend-mode: color;
+    }
+
+    img {
+      // position
+      position: absolute;
+      top: 0;
+      left: 0;
+      // box-model
+      width: 100%;
+      height: 100%;
+      // decor
+      object-fit: cover;
+      // other
+      pointer-events: none;
+    }
+
+    #road {
+      // position
+      z-index: 2;
+    }
+
+    #text {
+      // position
+      position: relative;
+      z-index: 1;
+      // typography
+      font-size: 8em;
+      color: #ffffff;
+      // decor
+      text-shadow: 0 0 15px #000;
+    }
+  }
+}

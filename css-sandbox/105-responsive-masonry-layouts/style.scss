@@ -1,0 +1,108 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // decor
+  background-color: #222222;
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+    max-width: 1400px;
+    margin: 40px;
+
+    .box {
+      // box-model
+      display: grid;
+      place-items: center;
+      padding: 50px;
+      // typography
+      font-size: 20px;
+      text-align: center;
+      color: #ffffff;
+      // decor
+      background-color: #333333;
+      // transition
+      transition: 0.5s;
+
+      &:hover {
+        // decor
+        background-color: #e91e63;
+        // other
+        cursor: pointer;
+      }
+
+      &:nth-child(1) {
+        // box-model
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      &:nth-child(2) {
+        // box-model
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      &:nth-child(4) {
+        // box-model
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      &:nth-child(5) {
+        // box-model
+        grid-column: span 3;
+        grid-row: span 1;
+      }
+
+      .content {
+        // box-model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+          //position
+          position: relative;
+          // box-model
+          max-width: 100px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    .container {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+      grid-template-rows: minmax(auto, auto);
+
+      .box {
+        grid-column: unset !important;
+        grid-row: unset !important;
+      }
+    }
+  }
+}

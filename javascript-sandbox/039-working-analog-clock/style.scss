@@ -1,0 +1,138 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+%center {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%line {
+  // box-model
+  display: flex;
+  justify-content: center;
+  // decor
+  border-radius: 50%;
+}
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // decor
+  background-color: #68a4ff;
+
+  .clock {
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    height: 350px;
+    // decor
+    border-radius: 50%;
+    border: 20px solid #ffffff;
+    background: #ffffff url(./assets/img/clock.png);
+
+    background-size: cover;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.2), 0 0 4px rgba(255, 255, 255, 1);
+
+    &::before {
+      // position
+      position: absolute;
+      z-index: 100;
+      // box-model
+      width: 15px;
+      height: 15px;
+      content: '';
+      // box-model
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      background-color: #848484;
+    }
+
+    .hour {
+      // position
+      position: absolute;
+
+      .hr {
+        // box-model
+        width: 160px;
+        height: 160px;
+        @extend %line;
+
+        &::before {
+          // position
+          position: absolute;
+          z-index: 10;
+          // box-model
+          width: 8px;
+          height: 80px;
+          content: '';
+          // decor
+          border-radius: 6px 6px 0 0;
+          background-color: #848484;
+        }
+      }
+    }
+
+    .min {
+      // position
+      position: absolute;
+      @extend %center;
+
+      .mn {
+        // box-model
+        width: 190px;
+        height: 190px;
+        @extend %line;
+
+        &::before {
+          // position
+          position: absolute;
+          z-index: 11;
+          // box-model
+          width: 4px;
+          height: 90px;
+          content: '';
+          // decor
+          border-radius: 6px 6px 0 0;
+          background-color: #d6d6d6;
+        }
+      }
+    }
+
+    .sec {
+      // position
+      position: absolute;
+
+      .sc {
+        // box-model
+        width: 230px;
+        height: 230px;
+        @extend %line;
+
+        &::before {
+          // position
+          position: absolute;
+          z-index: 12;
+          // box-model
+          width: 2px;
+          height: 150px;
+          content: '';
+          // decor
+          border-radius: 6px 6px 0 0;
+          background-color: #ff6767;
+        }
+      }
+    }
+  }
+}

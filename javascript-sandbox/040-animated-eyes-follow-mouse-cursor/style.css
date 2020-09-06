@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   background-color: #251801;
-  cursor: url(./assets/img/covid-19.png), pointer;
+  cursor: url(./assets/img/covid-19-small.png), pointer;
 }
 
 body .container {

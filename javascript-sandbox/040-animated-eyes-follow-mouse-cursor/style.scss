@@ -1,0 +1,133 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // decor
+  background-color: #251801;
+  // other
+  cursor: url(./assets/img/covid-19.png), pointer;
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    h2 {
+      // position
+      position: absolute;
+      top: 75px;
+      // typography
+      font-size: 3em;
+      color: #ffffff;
+
+      &:last-child {
+        // position
+        top: initial;
+        bottom: 75px;
+        // typography
+        font-size: 3em;
+        color: #ffffff;
+      }
+    }
+
+    .face {
+      // position
+      position: relative;
+      // box-model
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 300px;
+      margin: 0 20px;
+      // decor
+      border-radius: 50%;
+      background-color: #ffcd00;
+
+      &::before {
+        // position
+        position: absolute;
+        top: 180px;
+        // box-model
+        width: 150px;
+        height: 70px;
+        content: '';
+        // decor
+        border-bottom-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+        background-color: #b57700;
+        // transition
+        transition: 0.5s;
+      }
+
+      &:hover {
+        /// decor
+        background: linear-gradient(180deg, #f44336, #f44336, #ffcd00);
+
+        &::before {
+          // position
+          top: 210px;
+          width: 150px;
+          height: 20px;
+          // decor
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+          background-color: #9d0b00;
+        }
+      }
+
+      .eyes {
+        // position
+        position: relative;
+        top: -40px;
+        // box-model
+        display: flex;
+
+        .eye {
+          // position
+          position: relative;
+          // box-model
+          display: block;
+          width: 80px;
+          height: 80px;
+          margin: 0 15px;
+          // decor
+          border-radius: 50%;
+          background-color: #ffffff;
+
+          &::before {
+            // position
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            // box-model
+            width: 40px;
+            height: 40px;
+            content: '';
+            // decor
+            border-radius: 50%;
+            background-color: #333333;
+            // transition
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #251801;
+  cursor: url(./assets/img/covid-19.png), pointer;
+}
+
+body .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+body .container h2 {
+  position: absolute;
+  top: 75px;
+  font-size: 3em;
+  color: #ffffff;
+}
+
+body .container h2:last-child {
+  top: initial;
+  bottom: 75px;
+  font-size: 3em;
+  color: #ffffff;
+}
+
+body .container .face {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 300px;
+  margin: 0 20px;
+  border-radius: 50%;
+  background-color: #ffcd00;
+}
+
+body .container .face::before {
+  position: absolute;
+  top: 180px;
+  width: 150px;
+  height: 70px;
+  content: '';
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background-color: #b57700;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .container .face:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f44336), color-stop(#f44336), to(#ffcd00));
+  background: linear-gradient(180deg, #f44336, #f44336, #ffcd00);
+}
+
+body .container .face:hover::before {
+  top: 210px;
+  width: 150px;
+  height: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #9d0b00;
+}
+
+body .container .face .eyes {
+  position: relative;
+  top: -40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .container .face .eyes .eye {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+body .container .face .eyes .eye::before {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  width: 40px;
+  height: 40px;
+  content: '';
+  border-radius: 50%;
+  background-color: #333333;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=style.css.map */

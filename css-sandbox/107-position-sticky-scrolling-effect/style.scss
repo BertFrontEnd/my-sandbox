@@ -1,0 +1,74 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // typography
+  font-family: 'Montserrat', sans-serif;
+
+  section {
+    // box-model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    // typography
+    font-size: 8em;
+    font-weight: 900;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #ffffff;
+    // decor
+    background-color: #000000;
+  }
+
+  .container {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    // decor
+    background-color: #000000;
+
+    span {
+      // position
+      position: sticky;
+      top: 0;
+      // box-model
+      width: 10%;
+      height: 100vh;
+      margin-top: calc(100vh * var(--i));
+      // decor
+      background-color: #00f;
+    }
+  }
+
+  h2 {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+    justify-content: center;
+    // typography
+    font-weight: 900;
+    // decor
+    background: linear-gradient(0deg, #ff0076, #cc00ff, #ffae00, #1fae99, #00f);
+
+    span {
+      // position
+      position: sticky;
+      top: 0;
+      // box-model
+      height: 100vh;
+      margin-top: calc(100vh * var(--i));
+      // typography
+      font-size: 6em;
+      line-height: 100vh;
+      color: #ffffff;
+    }
+  }
+}

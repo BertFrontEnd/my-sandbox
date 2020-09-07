@@ -1,0 +1,65 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-size: 8em;
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+body .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #000000;
+}
+
+body .container span {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 10%;
+  height: 100vh;
+  margin-top: calc(100vh * var(--i));
+  background-color: #00f;
+}
+
+body h2 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 900;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff0076), color-stop(#cc00ff), color-stop(#ffae00), color-stop(#1fae99), to(#00f));
+  background: linear-gradient(0deg, #ff0076, #cc00ff, #ffae00, #1fae99, #00f);
+}
+
+body h2 span {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  margin-top: calc(100vh * var(--i));
+  font-size: 6em;
+  line-height: 100vh;
+  color: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */

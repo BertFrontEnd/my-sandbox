@@ -1,0 +1,59 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ff005c;
+}
+
+body .box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 600px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+body .box:hover {
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+body .box .img-box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 150px;
+          flex: 0 0 150px;
+  width: 150px;
+}
+
+body .box .img-box img {
+  max-width: 100%;
+}
+
+body .box .content {
+  padding-left: 20px;
+}
+
+body .box .content h2 {
+  margin: 0;
+  padding-left: 0;
+  font-size: 22px;
+  color: #ff005c;
+}
+
+body .box .content p {
+  margin: 0;
+  padding: 10px 0 0;
+  text-align: justify;
+}
+/*# sourceMappingURL=style.css.map */

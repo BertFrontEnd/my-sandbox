@@ -1,0 +1,143 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  // decor
+  background-color: #ccc;
+
+  ul {
+    // position
+    position: relative;
+    // box-model
+    display: flex;
+
+    li {
+      // position
+      position: relative;
+      // box-model
+      width: 60px;
+      height: 60px;
+      margin: 0 30px;
+      // transition
+      transform: rotate(-30deg) skew(25deg);
+
+      &:nth-child(1) {
+        span {
+          // decor
+          background-color: #e4405f;
+        }
+      }
+
+      &:nth-child(2) {
+        span {
+          // decor
+          background-color: #24292e;
+        }
+      }
+
+      &:nth-child(3) {
+        span {
+          // decor
+          background-color: #55acee;
+        }
+      }
+
+      &:nth-child(4) {
+        span {
+          // decor
+          background-color: #3d5999;
+        }
+      }
+
+      &:nth-child(5) {
+        span {
+          // decor
+          background-color: #0077b5;
+        }
+      }
+
+      &:hover {
+        span {
+          // decor
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        span:nth-child(5) {
+          // decor
+          opacity: 1;
+          // transition
+          transform: translate(40px, -40px);
+        }
+
+        span:nth-child(4) {
+          // decor
+          opacity: 0.8;
+          // transition
+          transform: translate(30px, -30px);
+        }
+
+        span:nth-child(3) {
+          // decor
+          opacity: 0.6;
+          // transition
+          transform: translate(20px, -20px);
+        }
+
+        span:nth-child(2) {
+          // decor
+          opacity: 0.4;
+          // transition
+          transform: translate(10px, -10px);
+        }
+
+        span:nth-child(1) {
+          // decor
+          opacity: 0.2;
+          // transition
+          transform: translate(0, 0);
+        }
+      }
+
+      span {
+        // position
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        // box-model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // decor
+        border-radius: 5px;
+        background-color: #000000;
+        // transition
+        transition: 0.5s;
+
+        &:nth-child(1) {
+          // decor
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        svg {
+          // box-model
+          width: 35px;
+          height: 35px;
+          // decor
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 100vh;
+  background-color: #ccc;
+}
+
+body ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body ul li {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 30px;
+  -webkit-transform: rotate(-30deg) skew(25deg);
+          transform: rotate(-30deg) skew(25deg);
+}
+
+body ul li:nth-child(1) span {
+  background-color: #e4405f;
+}
+
+body ul li:nth-child(2) span {
+  background-color: #24292e;
+}
+
+body ul li:nth-child(3) span {
+  background-color: #55acee;
+}
+
+body ul li:nth-child(4) span {
+  background-color: #3d5999;
+}
+
+body ul li:nth-child(5) span {
+  background-color: #0077b5;
+}
+
+body ul li:hover span {
+  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+body ul li:hover span:nth-child(5) {
+  opacity: 1;
+  -webkit-transform: translate(40px, -40px);
+          transform: translate(40px, -40px);
+}
+
+body ul li:hover span:nth-child(4) {
+  opacity: 0.8;
+  -webkit-transform: translate(30px, -30px);
+          transform: translate(30px, -30px);
+}
+
+body ul li:hover span:nth-child(3) {
+  opacity: 0.6;
+  -webkit-transform: translate(20px, -20px);
+          transform: translate(20px, -20px);
+}
+
+body ul li:hover span:nth-child(2) {
+  opacity: 0.4;
+  -webkit-transform: translate(10px, -10px);
+          transform: translate(10px, -10px);
+}
+
+body ul li:hover span:nth-child(1) {
+  opacity: 0.2;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+body ul li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  background-color: #000000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body ul li span:nth-child(1) {
+  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+body ul li span svg {
+  width: 35px;
+  height: 35px;
+  fill: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */

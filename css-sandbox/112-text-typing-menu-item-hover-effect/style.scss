@@ -1,0 +1,101 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Tomorrow', sans-serif;
+  // decor
+  background-color: #1c234a;
+
+  ul {
+    // position
+    position: relative;
+
+    &:hover {
+      a:before {
+        // animation
+        animation: animate-one 0.5s steps(11) forwards;
+      }
+    }
+
+    li {
+      // box-model
+      margin: 0 20px;
+      // typography
+      font-size: 4em;
+
+      span {
+        // position
+        position: relative;
+        top: -2px;
+        left: -10px;
+        // typography
+        color: transparent;
+      }
+
+      &:hover {
+        a::before {
+          // animation
+          animation: animate-two 0.5s steps(11) forwards;
+        }
+
+        span {
+          // typography
+          color: #ef0448;
+        }
+      }
+
+      a {
+        // position
+        position: relative;
+        // typography
+        font-weight: 900;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.1);
+
+        &::before {
+          // position
+          position: absolute;
+          // box-model
+          content: attr(data-text);
+          overflow: hidden;
+          // typography
+          color: #1bfaad;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+@keyframes animate-one {
+  0% {
+    // box-model
+    width: 100%;
+  }
+  100% {
+    // box-model
+    width: 0;
+  }
+}
+
+@keyframes animate-two {
+  0% {
+    // box-model
+    width: 0;
+  }
+  100% {
+    // box-mode
+    width: 100%;
+  }
+}

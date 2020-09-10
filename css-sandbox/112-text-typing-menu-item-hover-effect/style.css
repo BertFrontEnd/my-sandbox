@@ -1,0 +1,96 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Tomorrow', sans-serif;
+  background-color: #1c234a;
+}
+
+body ul {
+  position: relative;
+}
+
+body ul:hover a:before {
+  -webkit-animation: animate-one 0.5s steps(11) forwards;
+          animation: animate-one 0.5s steps(11) forwards;
+}
+
+body ul li {
+  margin: 0 20px;
+  font-size: 4em;
+}
+
+body ul li span {
+  position: relative;
+  top: -2px;
+  left: -10px;
+  color: transparent;
+}
+
+body ul li:hover a::before {
+  -webkit-animation: animate-two 0.5s steps(11) forwards;
+          animation: animate-two 0.5s steps(11) forwards;
+}
+
+body ul li:hover span {
+  color: #ef0448;
+}
+
+body ul li a {
+  position: relative;
+  font-weight: 900;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+body ul li a::before {
+  position: absolute;
+  content: attr(data-text);
+  overflow: hidden;
+  color: #1bfaad;
+  white-space: nowrap;
+}
+
+@-webkit-keyframes animate-one {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes animate-one {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@-webkit-keyframes animate-two {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animate-two {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,61 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Tomorrow', sans-serif;
+  // decor
+  background-color: #1f1f1f;
+
+  .loader {
+    // position
+    position: relative;
+    // other
+    cursor: pointer;
+
+    &:hover {
+      span {
+        // animation
+        animation-play-state: running;
+      }
+    }
+
+    span {
+      // position
+      position: relative;
+      // decor
+      display: inline-block;
+      // typography
+      font-size: 2em;
+      text-transform: uppercase;
+      color: #ffffff;
+      // animation
+      animation: animate 2s ease-in-out infinite;
+      animation-delay: calc(0.1s * var(--i));
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes animate {
+  0%,
+  40%,
+  100% {
+    // transition
+    transform: translateY(0);
+  }
+  20% {
+    // transition
+    transform: translateY(-50px);
+  }
+}

@@ -1,0 +1,65 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Tomorrow', sans-serif;
+  background-color: #1f1f1f;
+}
+
+body .loader {
+  position: relative;
+  cursor: pointer;
+}
+
+body .loader:hover span {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+body .loader span {
+  position: relative;
+  display: inline-block;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-animation: animate 2s ease-in-out infinite;
+          animation: animate 2s ease-in-out infinite;
+  -webkit-animation-delay: calc(0.1s * var(--i));
+          animation-delay: calc(0.1s * var(--i));
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes animate {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+
+@keyframes animate {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  20% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

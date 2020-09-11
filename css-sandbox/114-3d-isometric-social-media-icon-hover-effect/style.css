@@ -58,6 +58,11 @@ body ul li:hover svg {
   fill: #ffffff;
 }
 
+body ul li:hover span {
+  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
 body ul li:hover span:nth-child(5) {
   -webkit-transform: translate(40px, -40px);
           transform: translate(40px, -40px);
@@ -142,11 +147,6 @@ body ul li span svg {
   fill: rgba(255, 255, 255, 0.2);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-body ul li span:hover {
-  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
-          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 body ul li a {

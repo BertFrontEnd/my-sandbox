@@ -86,6 +86,11 @@ body {
           fill: #ffffff;
         }
 
+        span {
+          // decor
+          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
+        }
+
         span:nth-child(5) {
           // transition
           transform: translate(40px, -40px);
@@ -173,11 +178,6 @@ body {
           fill: rgba(255, 255, 255, 0.2);
           // transition
           transition: 0.5s;
-        }
-
-        &:hover {
-          // decor
-          box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
         }
       }
 

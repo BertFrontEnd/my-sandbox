@@ -1,0 +1,89 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  // decor
+  background-color: #240229;
+
+  .loader {
+    // position
+    position: relative;
+    // box-model
+    width: 200px;
+    height: 200px;
+    // decor
+    border-radius: 50%;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    // animation
+    animation: animate 0.5s linear infinite;
+
+    &:after {
+      // position
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      // box-model
+      content: '';
+      // decor
+      border-radius: 50%;
+      background-color: #240229;
+      box-shadow: 0 0 5px #000;
+    }
+
+    span {
+      // position
+      position: absolute;
+      // box-model
+      width: 200px;
+      height: 200px;
+      // decor
+      border-radius: 50%;
+      background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+      // animation
+      animation: animate 0.5s linear infinite;
+
+      &:nth-child(1) {
+        // decor
+        filter: blur(5px);
+      }
+
+      &:nth-child(2) {
+        // decor
+        filter: blur(10px);
+      }
+
+      &:nth-child(3) {
+        // decor
+        filter: blur(25px);
+      }
+
+      &:nth-child(4) {
+        // decor
+        filter: blur(50px);
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    // transition
+    transform: rotate(0deg);
+  }
+  100% {
+    // transition
+    transform: rotate(360deg);
+  }
+}

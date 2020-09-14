@@ -1,0 +1,68 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // typography
+  font-family: 'Poppins', sans-serif;
+
+  .banner {
+    // position
+    position: relative;
+    // box-model
+    width: 100%;
+    height: 100vh;
+    // decor
+    background: url(./assets/img/bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+
+    .clouds {
+      // position
+      position: absolute;
+      top: 0;
+      left: 0;
+      // box-model
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        // position
+        position: absolute;
+        bottom: 0;
+        // box-model
+        max-width: 100%;
+        // animation
+        animation: animate calc(8s * var(--i)) linear infinite;
+      }
+    }
+  }
+
+  section {
+    // position
+    position: relative;
+    // box-model
+    padding: 75px 100px;
+
+    h2 {
+      // typography
+      font-size: 2.5em;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    // transition
+    transform: translateX(-100%);
+  }
+  100% {
+    // transition
+    transform: translateX(100%);
+  }
+}

@@ -1,0 +1,107 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // typography
+  font-family: 'Tomorrow', sans-serif;
+  // decor
+  background-color: #1f1f1f;
+
+  .loader {
+    // box-model
+    display: flex;
+    align-items: flex-end;
+
+    span {
+      // box-model
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 20px;
+      height: calc(20px * var(--i));
+      margin: 0 10px;
+      // decor
+      background-color: #111111;
+      // animation
+      animation: animate 2s linear infinite;
+      animation-delay: calc(0.15s * var(--i));
+
+      i {
+        // box-model
+        display: block;
+        // typography
+        font-size: 50px;
+        font-style: normal;
+        font-weight: bold;
+        color: #ffffff;
+        // transition
+        transform: translateY(70px);
+        // animation
+        animation: animate-2 2s linear infinite;
+        animation-delay: calc(0.15s * var(--i));
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    // decor
+    background-color: #ffffff;
+    filter: blur(2px);
+    box-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff,
+      0 0 400px #00b3ff;
+  }
+
+  25%,
+  75% {
+    // decor
+    background-color: #111111;
+    filter: blur(0px);
+    box-shadow: none;
+  }
+
+  100% {
+    // decor
+    background-color: #ffffff;
+    filter: blur(2px);
+    box-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff,
+      0 0 400px #00b3ff;
+  }
+}
+
+@keyframes animate-2 {
+  0% {
+    // decor
+    color: #ffffff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff,
+      0 0 400px #00b3ff;
+  }
+
+  25%,
+  75% {
+    // decor
+    color: #111111;
+    filter: blur(0px);
+    text-shadow: none;
+  }
+
+  100% {
+    // decor
+    color: #ffffff;
+    filter: blur(2px);
+    text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff, 0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff, 0 0 300px #00b3ff,
+      0 0 400px #00b3ff;
+  }
+}

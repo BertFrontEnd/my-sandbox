@@ -1,0 +1,66 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // decor
+  background-color: #040d15;
+
+  a {
+    // position
+    position: relative;
+    // box-model
+    display: inline-block;
+    margin: 20px;
+    padding: 16px 54px;
+    overflow: hidden;
+    // typography
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    text-decoration: none;
+    letter-spacing: 4px;
+    color: #ffffff;
+    // decor
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    span {
+      // position
+      position: absolute;
+      // decor
+      border-radius: 50%;
+      background-color: #ffffff;
+      // transition
+      transform: translate(-50%, -50%);
+      // animation
+      animation: animate 1s linear infinite;
+      // other
+      pointer-events: none;
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    // box-model
+    width: 0;
+    height: 0;
+    opacity: 0.2;
+  }
+
+  100% {
+    // box-model
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}

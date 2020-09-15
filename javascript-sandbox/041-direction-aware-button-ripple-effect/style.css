@@ -1,0 +1,69 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #040d15;
+}
+
+body a {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  padding: 16px 54px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  text-decoration: none;
+  letter-spacing: 4px;
+  color: #ffffff;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body a span {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffffff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+  pointer-events: none;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.2;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.2;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

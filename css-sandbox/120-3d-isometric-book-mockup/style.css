@@ -1,0 +1,108 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins Bold', sans-serif;
+  background: url("./assets/img/floor.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body .book {
+  position: relative;
+  top: 0;
+  width: 400px;
+  height: 600px;
+  background-color: #ffffff;
+  -webkit-box-shadow: -35px 35px 50px black;
+          box-shadow: -35px 35px 50px black;
+  -webkit-transform: rotate(-37.5deg) skewX(10deg);
+          transform: rotate(-37.5deg) skewX(10deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+body .book::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  content: '';
+  background: url(./assets/img/bg.jpg);
+  background-color: #8a0e0e;
+  -webkit-box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: skewY(-45deg) translate(-30px, -15px);
+          transform: skewY(-45deg) translate(-30px, -15px);
+}
+
+body .book::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  content: '';
+  background-color: #cccccc;
+  -webkit-transform: skewX(-45deg) translate(15px, 30px);
+          transform: skewX(-45deg) translate(15px, 30px);
+}
+
+body .book:hover {
+  -webkit-transform: rotate(-37.5deg) skewX(10deg) translate(20px, -20px);
+          transform: rotate(-37.5deg) skewX(10deg) translate(20px, -20px);
+  -webkit-box-shadow: -50px 50px 100px black;
+          box-shadow: -50px 50px 100px black;
+}
+
+body .book .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: url(./assets/img/bg.jpg);
+  background-size: cover;
+}
+
+body .book h2 {
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+  font-size: 5em;
+  line-height: 1em;
+  color: #ffffff;
+}
+
+body .book h2 span {
+  background: url(./assets/img/bg.jpg);
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body .book .writer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.6em;
+  font-weight: 500;
+  color: #262626;
+  border-top-left-radius: 1px solid #262626;
+}
+
+body .book .writer i {
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */

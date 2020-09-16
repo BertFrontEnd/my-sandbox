@@ -1,0 +1,52 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100vh;
+  overflow: hidden;
+  // typography
+  font-family: 'Poppins', sans-serif;
+  // decor
+  background-color: #f1f1f1;
+
+  #text {
+    // position
+    position: relative;
+    // box-model
+    text-align: center;
+    // typography
+    font-size: 15em;
+    font-weight: 700;
+    line-height: 0.9em;
+    letter-spacing: 2px;
+    color: #ffffff;
+    // transition
+    transform: rotate(-28deg) skew(25deg);
+    // other
+    cursor: pointer;
+
+    &::before {
+      // position
+      position: absolute;
+      top: 30px;
+      left: -30px;
+      z-index: -1;
+      // box-model
+      content: attr(data-text);
+      // typography
+      color: rgba(0, 0, 0, 0.3);
+      // decor
+      text-shadow: none;
+      filter: blur(8px);
+    }
+  }
+}

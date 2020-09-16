@@ -1,0 +1,41 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 100vh;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f1f1f1;
+}
+
+body #text {
+  position: relative;
+  text-align: center;
+  font-size: 15em;
+  font-weight: 700;
+  line-height: 0.9em;
+  letter-spacing: 2px;
+  color: #ffffff;
+  -webkit-transform: rotate(-28deg) skew(25deg);
+          transform: rotate(-28deg) skew(25deg);
+  cursor: pointer;
+}
+
+body #text::before {
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  z-index: -1;
+  content: attr(data-text);
+  color: rgba(0, 0, 0, 0.3);
+  text-shadow: none;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+/*# sourceMappingURL=style.css.map */

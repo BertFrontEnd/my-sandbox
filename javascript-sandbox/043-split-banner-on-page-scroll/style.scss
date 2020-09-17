@@ -1,0 +1,104 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // box-model
+  min-height: 200vh;
+  // typography
+  font-family: 'Poppins', sans-serif;
+
+  section {
+    // position
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    // box-model
+    width: 100%;
+    height: 100vh;
+    // other
+    pointer-events: none;
+
+    .side {
+      // position
+      position: absolute;
+      top: 0;
+      left: 0;
+      // box-model
+      width: 100%;
+      height: 100%;
+      // decor
+      background-image: url(./assets/img/space-09.jpg);
+      background-size: cover;
+      background-position: center;
+
+      &#side-1 {
+        // decor
+        clip-path: polygon(
+          0% 0%,
+          50% 0%,
+          45% 10%,
+          50% 20%,
+          45% 30%,
+          50% 40%,
+          45% 50%,
+          50% 60%,
+          45% 70%,
+          50% 80%,
+          45% 90%,
+          50% 100%,
+          0% 100%
+        );
+      }
+
+      &#side-2 {
+        // decor
+        clip-path: polygon(
+          100% 0%,
+          50% 0%,
+          45% 10%,
+          50% 20%,
+          45% 30%,
+          50% 40%,
+          45% 50%,
+          50% 60%,
+          45% 70%,
+          50% 80%,
+          45% 90%,
+          50% 100%,
+          100% 100%
+        );
+      }
+    }
+  }
+
+  .content-box {
+    // box-model
+    height: 225vh;
+    padding: 100px;
+    padding-top: 150vh;
+    // typography
+    color: #ffffff;
+    // decor
+    background-color: #000000;
+
+    h2 {
+      // position
+      position: relative;
+      // typography
+      font-size: 4em;
+    }
+
+    p {
+      // position
+      position: relative;
+      // typography
+      font-size: 1.2em;
+    }
+  }
+}

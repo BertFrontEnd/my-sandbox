@@ -1,0 +1,173 @@
+// position
+// box-model
+// typography
+// decor
+// transition
+// animation
+// other
+
+body {
+  // decor
+  background-color: #cccccc;
+
+  ul {
+    // position
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // box-model
+    display: flex;
+    margin: 0;
+    padding: 0;
+    // transition
+    transform: translate(-50%, -50%);
+
+    li {
+      // box-model
+      margin: 0 40px;
+
+      a {
+        // position
+        position: relative;
+        // box-model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        // decor
+        background-color: #ffffff;
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+        // transition
+        transform: perspective(1000px) rotate(-30deg) skew(25deg)
+          translate(0, 0);
+        transition: 0.5s;
+
+        &::before {
+          // position
+          position: absolute;
+          top: 10px;
+          left: -20px;
+          // box-model
+          height: 100%;
+          width: 20px;
+          content: '';
+          // decor
+          background-color: #b1b1b1;
+          // transition
+          transition: 0.5s;
+          transform: rotate(0deg) skewY(-45deg);
+        }
+
+        &::after {
+          // position
+          position: absolute;
+          bottom: -20px;
+          left: -10px;
+          // box-model
+          height: 20px;
+          width: 100%;
+          content: '';
+          // decor
+          background-color: #b1b1b1;
+          // transition
+          transition: 0.5s;
+          transform: rotate(0deg) skewX(-45deg);
+        }
+
+        .icon {
+          // box-model
+          width: 32px;
+          height: 32px;
+          // decor
+          fill: #262626;
+          // transition
+          transition: 0.5s;
+        }
+
+        &:hover {
+          // transition
+          transform: perspective(1000px) rotate(-30deg) skew(25deg)
+            translate(20px, -20px);
+          box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      &:nth-child(1) {
+        a:hover {
+          background-color: #e4405f;
+
+          &::before {
+            background-color: #dd3857;
+          }
+
+          &::after {
+            background-color: #dd4e69;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        a:hover {
+          background-color: #800080;
+
+          &:before {
+            background-color: #7c027c;
+          }
+
+          &:after {
+            background-color: #940194;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        a:hover {
+          background-color: #55acee;
+
+          &::before {
+            background-color: #3a9fec;
+          }
+
+          &::after {
+            background-color: #71b2e4;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        a:hover {
+          background-color: #3b5999;
+
+          &::before {
+            background-color: #2e4f96;
+          }
+
+          &::after {
+            background-color: #4e6aa5;
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        a:hover {
+          background-color: #0077b5;
+
+          &::before {
+            background-color: #046599;
+          }
+
+          &::after {
+            background-color: #0184ca;
+          }
+        }
+      }
+
+      &:hover {
+        .icon {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+}

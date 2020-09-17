@@ -1,0 +1,150 @@
+body {
+  background-color: #cccccc;
+}
+
+body ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body ul li {
+  margin: 0 40px;
+}
+
+body ul li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  -webkit-box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+          transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body ul li a::before {
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  content: '';
+  background-color: #b1b1b1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: rotate(0deg) skewY(-45deg);
+          transform: rotate(0deg) skewY(-45deg);
+}
+
+body ul li a::after {
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  content: '';
+  background-color: #b1b1b1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: rotate(0deg) skewX(-45deg);
+          transform: rotate(0deg) skewX(-45deg);
+}
+
+body ul li a .icon {
+  width: 32px;
+  height: 32px;
+  fill: #262626;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body ul li a:hover {
+  -webkit-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+          transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+  -webkit-box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+          box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+body ul li:nth-child(1) a:hover {
+  background-color: #e4405f;
+}
+
+body ul li:nth-child(1) a:hover::before {
+  background-color: #dd3857;
+}
+
+body ul li:nth-child(1) a:hover::after {
+  background-color: #dd4e69;
+}
+
+body ul li:nth-child(2) a:hover {
+  background-color: #800080;
+}
+
+body ul li:nth-child(2) a:hover:before {
+  background-color: #7c027c;
+}
+
+body ul li:nth-child(2) a:hover:after {
+  background-color: #940194;
+}
+
+body ul li:nth-child(3) a:hover {
+  background-color: #55acee;
+}
+
+body ul li:nth-child(3) a:hover::before {
+  background-color: #3a9fec;
+}
+
+body ul li:nth-child(3) a:hover::after {
+  background-color: #71b2e4;
+}
+
+body ul li:nth-child(4) a:hover {
+  background-color: #3b5999;
+}
+
+body ul li:nth-child(4) a:hover::before {
+  background-color: #2e4f96;
+}
+
+body ul li:nth-child(4) a:hover::after {
+  background-color: #4e6aa5;
+}
+
+body ul li:nth-child(5) a:hover {
+  background-color: #0077b5;
+}
+
+body ul li:nth-child(5) a:hover::before {
+  background-color: #046599;
+}
+
+body ul li:nth-child(5) a:hover::after {
+  background-color: #0184ca;
+}
+
+body ul li:hover .icon {
+  fill: #ffffff;
+}
+/*# sourceMappingURL=style.css.map */

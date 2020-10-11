@@ -116,6 +116,105 @@ console.log(adults); */
 });
 console.log(adults); */
 
+/* ---------------- */
+
 // Reduce
 
+// Сумма значения полей циклом For
+/* let amount = 0;
+for (let i = 0; i < people.length; i++) {
+  amount += people[i].budget;
+}
+console.log(amount); */
+
+// Исходный массив не мутирует
+// Можно задать условия
+// Создать новый массив
+// Принимает два параметра:
+// Функцию callback и current
+// Функция callback состоит из параметров:
+// accumulator - параметр, который хранит общее значение
+// person - элемент массива
+// index - индекс массива
+// arr - исходны массив
+// Все параметры callback функции, кроме перового и второго, элемента массива - не обязательные
+
+/* let amount = people.reduce((accumulator, person) => {
+  return accumulator + person.budget;
+}, 0);
+
+console.log(amount); */
+
+/* ---------------- */
+
 // Find
+
+// Исходный массив не мутирует
+// Можно задать условия
+// Создать новый массив
+// Принимает в качестве параметра функцию callback
+// Функция callback состоит из параметров:
+// person - элемент массива
+// index - индекс массива
+// arr - исходны массив
+// Все параметры callback функции, кроме перового и второго, элемента массива - не обязательные
+
+/* const igorName = people.find((person) => {
+  return person.name === 'Игорь';
+});
+
+console.log(igorName); */
+
+/* ---------------- */
+
+// FindIndex
+
+// Исходный массив не мутирует
+// Можно задать условия
+// Создать новый массив
+// Принимает в качестве параметра функцию callback
+// Функция callback состоит из параметров:
+// person - элемент массива
+// index - индекс массива
+// arr - исходны массив
+// Все параметры callback функции, кроме перового и второго, элемента массива - не обязательные
+
+/* const igorName = people.findIndex((person) => {
+  return person.name === 'Игорь';
+});
+
+console.log(igorName); */
+
+/* ---------------- */
+
+// Применение методов в связке
+// Чейнить - связывать в цепь (chain)
+
+const newPeople = people
+  .filter((person) => {
+    return person.budget > 3000;
+  })
+  .map((person) => {
+    return {
+      info: `${person.name} ${person.age}`,
+      budget: person.budget,
+    };
+  });
+
+console.log(newPeople);
+
+const amount = people
+  .filter((person) => {
+    return person.budget > 3000;
+  })
+  .map((person) => {
+    return {
+      info: `${person.name} ${person.age}`,
+      budget: Math.sqrt(person.budget),
+    };
+  })
+  .reduce((acc, person) => {
+    return acc + person.budget;
+  }, 0);
+
+console.log(amount);

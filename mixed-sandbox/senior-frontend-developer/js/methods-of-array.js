@@ -81,10 +81,10 @@ while (i < people.length) {
 // arr - исходны массив
 // Все параметры, кроме перового, элемента массива - не обязательные
 
-/* const peopleNew = people.map((person) => {
+const peopleNew = people.map((person) => {
   return `${person.name}, возраст умноженный на 3: ${person.age * 3}`;
 });
-console.log(peopleNew); */
+console.log(peopleNew);
 
 /* ---------------- */
 
@@ -190,7 +190,7 @@ console.log(igorName); */
 // Применение методов в связке
 // Чейнить - связывать в цепь (chain)
 
-const newPeople = people
+/* const newPeople = people
   .filter((person) => {
     return person.budget > 3000;
   })
@@ -217,4 +217,4 @@ const amount = people
     return acc + person.budget;
   }, 0);
 
-console.log(amount);
+console.log(amount); */

@@ -62,12 +62,6 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
-img {
-  max-width: 100%;
-  display: block;
-}
-
 /* Natural flow and rhythm in articles by default */
 article > * + * {
   margin-top: 1em;

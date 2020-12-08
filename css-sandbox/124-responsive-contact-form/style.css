@@ -61,7 +61,7 @@ body .container .form-content form h2 {
 
 body .container .form-content form .input-box {
   position: relative;
-  margin-bottom: 4px;
+  margin-bottom: 40px;
 }
 
 body .container .form-content form .input-box:last-child {
@@ -83,6 +83,21 @@ body .container .form-content form .input-box textarea {
   resize: none;
 }
 
+body .container .form-content form .input-box input:focus, body .container .form-content form .input-box input:valid,
+body .container .form-content form .input-box textarea:focus,
+body .container .form-content form .input-box textarea:valid {
+  border-bottom-color: #ffffff;
+}
+
+body .container .form-content form .input-box input:focus ~ span, body .container .form-content form .input-box input:valid ~ span,
+body .container .form-content form .input-box textarea:focus ~ span,
+body .container .form-content form .input-box textarea:valid ~ span {
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+  color: #1bfaad;
+  font-size: 0.8em;
+}
+
 body .container .form-content form .input-box textarea {
   height: 100px;
 }
@@ -98,5 +113,64 @@ body .container .form-content form .input-box input[type='submit'] {
   border: none;
   background-color: #ff5064;
   cursor: pointer;
+}
+
+body .container .form-content form .input-box input[type='submit']:focus {
+  background-color: #1bfaad;
+  color: #111111;
+}
+
+body .container .form-content form .input-box span {
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+  display: inline-block;
+  pointer-events: none;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body .container .img-box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body .container .img-box img {
+  position: absolute;
+  bottom: 0;
+  max-height: 95%;
+}
+
+body .container .img-box::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #ff5064;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: skewX(-25deg) translateX(10%);
+          transform: skewX(-25deg) translateX(10%);
+}
+
+@media (max-width: 991px) {
+  body .container .form-content {
+    width: 100%;
+    padding: 0 50px;
+  }
+  body .container .form-content form {
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+  }
+  body .container .img-box {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

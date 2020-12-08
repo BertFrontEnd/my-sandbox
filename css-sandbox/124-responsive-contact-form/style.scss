@@ -39,7 +39,7 @@ body {
 
         .input-box {
           position: relative;
-          margin-bottom: 4px;
+          margin-bottom: 40px;
 
           &:last-child {
             margin-bottom: 0;
@@ -58,6 +58,17 @@ body {
             background-color: transparent;
             color: #ffffff;
             resize: none;
+
+            &:focus,
+            &:valid {
+              border-bottom-color: #ffffff;
+
+              ~ span {
+                transform: translateY(-24px);
+                color: #1bfaad;
+                font-size: 0.8em;
+              }
+            }
           }
 
           textarea {
@@ -75,8 +86,70 @@ body {
             border: none;
             background-color: #ff5064;
             cursor: pointer;
+
+            &:focus {
+              background-color: #1bfaad;
+              color: #111111;
+            }
+          }
+
+          span {
+            position: absolute;
+            left: 0;
+            font-size: 1em;
+            display: inline-block;
+            pointer-events: none;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.5);
+            transition: all 0.2s;
           }
         }
+      }
+    }
+
+    .img-box {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        bottom: 0;
+        max-height: 95%;
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-color: #ff5064;
+        transform-origin: bottom;
+        transform: skewX(-25deg) translateX(10%);
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  body {
+    .container {
+      .form-content {
+        width: 100%;
+        padding: 0 50px;
+
+        form {
+          width: 100%;
+          max-width: 500px;
+          padding: 0;
+        }
+      }
+
+      .img-box {
+        display: none;
       }
     }
   }

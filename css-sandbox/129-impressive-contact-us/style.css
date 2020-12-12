@@ -1,0 +1,250 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #112d42;
+}
+
+body section::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  content: '';
+  background-color: #03a9f4;
+}
+
+body section .container {
+  position: relative;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 1100px;
+  min-height: 550px;
+}
+
+body section .container .contact-info {
+  position: absolute;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  padding: 40px;
+  background-color: #0f3659;
+  -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+body section .container .contact-info h2 {
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+body section .container .contact-info .info {
+  position: relative;
+  margin: 20px 0;
+}
+
+body section .container .contact-info .info li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+body section .container .contact-info .info li span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 48px;
+}
+
+body section .container .contact-info .info li span:nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+}
+
+body section .container .contact-info .info li span:nth-child(1) img {
+  max-width: 100%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  opacity: 0.5;
+}
+
+body section .container .contact-info .info li span:nth-child(2) {
+  margin-left: 10px;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+body section .container .contact-info .info li:hover span:nth-child(1) img, body section .container .contact-info .info li:hover span:nth-child(2) {
+  opacity: 1;
+}
+
+body section .container .contact-info .sci {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body section .container .contact-info .sci li {
+  margin-right: 15px;
+}
+
+body section .container .contact-info .sci li a {
+  text-decoration: none;
+}
+
+body section .container .contact-info .sci li a img {
+  width: 30px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  opacity: 0.5;
+}
+
+body section .container .contact-info .sci li:hover img {
+  opacity: 1;
+}
+
+body section .container .contact-form {
+  position: absolute;
+  padding: 70px 50px;
+  background-color: #ffffff;
+  margin-left: 150px;
+  padding-left: 250px;
+  height: 100%;
+  width: calc(100% - 150px);
+  -webkit-box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+}
+
+body section .container .contact-form h2 {
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: 24px;
+  color: #0f3659;
+}
+
+body section .container .contact-form .form-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+body section .container .contact-form .form-box .input-box {
+  position: relative;
+  margin: 0 0 35px 0;
+}
+
+body section .container .contact-form .form-box .input-box.w50 {
+  width: 47%;
+}
+
+body section .container .contact-form .form-box .input-box.w100 {
+  width: 100%;
+}
+
+body section .container .contact-form .form-box .input-box input,
+body section .container .contact-form .form-box .input-box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 18px;
+  color: #333333;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #777777;
+  resize: none;
+}
+
+body section .container .contact-form .form-box .input-box input:focus ~ span, body section .container .contact-form .form-box .input-box input:valid ~ span,
+body section .container .contact-form .form-box .input-box textarea:focus ~ span,
+body section .container .contact-form .form-box .input-box textarea:valid ~ span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #ff568c;
+  letter-spacing: 1px;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+body section .container .contact-form .form-box .input-box textarea {
+  min-height: 120px;
+}
+
+body section .container .contact-form .form-box .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 18px;
+  color: #333333;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+body section .container .contact-form .form-box .input-box input[type='submit'] {
+  position: relative;
+  max-width: 150px;
+  padding: 12px;
+  color: #ffffff;
+  border: none;
+  background-color: #0f3659;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+body section .container .contact-form .form-box .input-box input[type='submit']:hover {
+  background-color: #ff568c;
+}
+
+body section .container .contact-form .form-box .input-box input[type='submit']:active {
+  background-color: #fa407b;
+}
+/*# sourceMappingURL=style.css.map */

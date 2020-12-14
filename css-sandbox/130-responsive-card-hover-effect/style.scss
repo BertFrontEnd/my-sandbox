@@ -12,7 +12,6 @@ body {
     align-items: center;
     flex-wrap: wrap;
     width: 1100px;
-    padding: 30px;
 
     .card {
       position: relative;
@@ -22,9 +21,10 @@ body {
       height: 215px;
       margin: 30px 10px;
       padding: 20px 15px;
-      background-color: #ffffff;
+      background-color: #ececec;
       box-shadow: 0 5px 202px rgba(0, 0, 0, 0.5);
       transition: 0.3s ease-in-out;
+      cursor: pointer;
 
       &:hover {
         height: 420px;

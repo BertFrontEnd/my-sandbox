@@ -1,0 +1,103 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #000000 url("./assets/img/bg.jpg");
+  background-attachment: fixed;
+  background-blend-mode: hard-light;
+  background-size: cover;
+  background-position: bottom center;
+}
+
+body .container {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  right: 100px;
+  bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("./assets/img/bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom center;
+  -webkit-box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5), 0 0 100px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5), 0 0 100px rgba(0, 0, 0, 0.1);
+}
+
+body .container h2 {
+  margin-top: -80px;
+  font-size: 10em;
+  text-align: center;
+  line-height: 0.7em;
+  color: #ffffff;
+  /* color: #333333; */
+  text-shadow: 1px 1px #000000;
+}
+
+body .container h2 span {
+  display: block;
+  letter-spacing: 6px;
+  font-size: 0.2em;
+}
+
+body .countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
+body .countdown div {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 15px;
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: 3em;
+  line-height: 100px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #333333;
+}
+
+body .countdown div::before {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  content: '';
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.35em;
+  line-height: 35px;
+  color: #333333;
+  background-color: #cf4310;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+body .countdown #day::before {
+  content: 'Days';
+}
+
+body .countdown #hour::before {
+  content: 'Hours';
+}
+
+body .countdown #minute::before {
+  content: 'Minutes';
+}
+
+body .countdown #second::before {
+  content: 'Seconds';
+}
+/*# sourceMappingURL=style.css.map */

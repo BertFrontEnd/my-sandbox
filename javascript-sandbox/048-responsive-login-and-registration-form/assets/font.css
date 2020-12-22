@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Tomorrow';
+  src: url('./font/Tomorrow-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./font/Montserrat-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./font/Poppins-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Poppins Bold';
+  src: url('./font/Poppins-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./font/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Teko';
+  src: url('./font/Teko-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Teko Bold';
+  src: url('./font/Teko-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

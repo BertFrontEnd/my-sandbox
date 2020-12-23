@@ -1,0 +1,49 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #15212d;
+
+  .container {
+    position: relative;
+    padding: 100px 150px;
+
+    h2 {
+      margin: 40px 0;
+      font-family: 'Poppins Bold', sans-serif;
+      font-size: 4em;
+      line-height: 1.1em;
+      color: #767f88;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+      line-height: 1.8em;
+      color: #767f88;
+    }
+  }
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 800px;
+    right: 40px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    background: #ffffff url('./assets/img/arrow-back.svg');
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    opacity: 0;
+    transform: rotate(90deg);
+    transition: 0.5s;
+    cursor: pointer;
+
+    &.active {
+      bottom: 40px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

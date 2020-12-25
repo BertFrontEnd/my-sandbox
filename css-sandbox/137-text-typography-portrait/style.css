@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container img:nth-child(2) {
+  mix-blend-mode: multiply;
+}
+/*# sourceMappingURL=style.css.map */

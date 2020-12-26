@@ -1,0 +1,34 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #cecece;
+
+  .box {
+    position: relative;
+    width: 50%;
+    height: 90vh;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &:nth-child(2) {
+      img {
+        filter: grayscale(1) contrast(5);
+
+        &:nth-child(2) {
+          filter: grayscale(1) contrast(1) brightness(1);
+          mix-blend-mode: hard-light;
+        }
+      }
+    }
+  }
+}

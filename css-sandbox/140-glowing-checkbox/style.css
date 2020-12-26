@@ -1,0 +1,113 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  background-color: #18191f;
+}
+
+body ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body ul li {
+  position: relative;
+}
+
+body ul li label {
+  position: relative;
+}
+
+body ul li label input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+}
+
+body ul li label input[type='checkbox']:checked ~ .icon {
+  -webkit-box-shadow: inset -2px -2px 2px rgba(255, 255, 255, 0.05), inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: inset -2px -2px 2px rgba(255, 255, 255, 0.05), inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+body ul li label input[type='checkbox']:checked ~ .icon svg {
+  fill: #00f3ff;
+  -webkit-filter: drop-shadow(0 0 15px #00f3ff) drop-shadow(0 0 25px #00f3ff);
+          filter: drop-shadow(0 0 15px #00f3ff) drop-shadow(0 0 25px #00f3ff);
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+}
+
+body ul li label .icon {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #18191f;
+  -webkit-box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05), 4px 4px 6px rgba(0, 0, 0, 0.2), inset -1px -1px 4px rgba(255, 255, 255, 0.05), inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05), 4px 4px 6px rgba(0, 0, 0, 0.2), inset -1px -1px 4px rgba(255, 255, 255, 0.05), inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+body ul li label .icon svg {
+  width: 48px;
+  height: 48px;
+  fill: #555555;
+}
+
+body ul li label .icon::before {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 5px);
+  height: calc(50% - 2px);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  content: '';
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -18,6 +18,7 @@
     "инстанс",
     "инстанса"
   ],
-  "terminal.integrated.shell.windows": "C:\\Users\\bsk\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+  /* "terminal.integrated.shell.windows": "C:\\Users\\Berton\\AppData\\Local\\Programs\\Git\\bin\\bash.exe", */
+  "terminal.integrated.shell.windows": "c:\\Program Files\\Git\\bin\\bash.exe",
   "liveServer.settings.port": 5501
 }

@@ -1,0 +1,153 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+body .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 800px;
+  -webkit-filter: url("#gooey");
+          filter: url("#gooey");
+}
+
+body .container .circle {
+  position: relative;
+  min-width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+body .container .circle.circle-1 {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#00ffff));
+  background: linear-gradient(90deg, #ff0000, #00ffff);
+  -webkit-animation: animate-1 5s linear infinite;
+          animation: animate-1 5s linear infinite;
+}
+
+body .container .circle.circle-1::before {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0000), to(#00ffff));
+  background: linear-gradient(90deg, #ff0000, #00ffff);
+}
+
+body .container .circle.circle-2 {
+  background: -webkit-gradient(linear, left top, right top, from(#ffeb3b), to(#da00ff));
+  background: linear-gradient(90deg, #ffeb3b, #da00ff);
+  -webkit-animation: animate-2 5s linear infinite;
+          animation: animate-2 5s linear infinite;
+}
+
+body .container .circle.circle-2::before {
+  background: -webkit-gradient(linear, left top, right top, from(#ffeb3b), to(#da00ff));
+  background: linear-gradient(90deg, #ffeb3b, #da00ff);
+}
+
+body .container .circle::before {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+  z-index: -1;
+  border-radius: 50%;
+  background-color: #ffffff;
+  content: '';
+}
+
+body svg {
+  width: 0;
+  height: 0;
+}
+
+@-webkit-keyframes animate-1 {
+  0% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+  }
+  30% {
+    -webkit-transform: translateX(250px) rotate(240deg);
+            transform: translateX(250px) rotate(240deg);
+  }
+  60% {
+    -webkit-transform: translateX(250px) rotate(480deg);
+            transform: translateX(250px) rotate(480deg);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(720deg);
+            transform: translateX(0) rotate(720deg);
+  }
+}
+
+@keyframes animate-1 {
+  0% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+  }
+  30% {
+    -webkit-transform: translateX(250px) rotate(240deg);
+            transform: translateX(250px) rotate(240deg);
+  }
+  60% {
+    -webkit-transform: translateX(250px) rotate(480deg);
+            transform: translateX(250px) rotate(480deg);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(720deg);
+            transform: translateX(0) rotate(720deg);
+  }
+}
+
+@-webkit-keyframes animate-2 {
+  0% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+  }
+  30% {
+    -webkit-transform: translateX(-250px) rotate(-240deg);
+            transform: translateX(-250px) rotate(-240deg);
+  }
+  60% {
+    -webkit-transform: translateX(-250px) rotate(-480deg);
+            transform: translateX(-250px) rotate(-480deg);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(-720deg);
+            transform: translateX(0) rotate(-720deg);
+  }
+}
+
+@keyframes animate-2 {
+  0% {
+    -webkit-transform: translateX(0) rotate(0deg);
+            transform: translateX(0) rotate(0deg);
+  }
+  30% {
+    -webkit-transform: translateX(-250px) rotate(-240deg);
+            transform: translateX(-250px) rotate(-240deg);
+  }
+  60% {
+    -webkit-transform: translateX(-250px) rotate(-480deg);
+            transform: translateX(-250px) rotate(-480deg);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(-720deg);
+            transform: translateX(0) rotate(-720deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

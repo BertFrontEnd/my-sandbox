@@ -1,0 +1,119 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000000;
+}
+
+body a {
+  position: relative;
+  width: 160px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 48px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #000000;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #000400);
+}
+
+body a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: animate 20s linear infinite;
+          animation: animate 20s linear infinite;
+}
+
+body a::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+  background-size: 400%;
+  opacity: 0;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation: animate 20s linear infinite;
+          animation: animate 20s linear infinite;
+}
+
+body a:hover::before, body a:hover::after {
+  opacity: 1;
+}
+
+body a:hover span {
+  color: white;
+}
+
+body a span {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  z-index: 1;
+  display: block;
+  text-align: center;
+  background-color: #0c0c0c;
+  color: rgba(25, 255, 255, 0.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  content: '';
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

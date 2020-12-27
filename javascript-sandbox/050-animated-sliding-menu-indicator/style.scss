@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: consolas;
+  background-color: #cecece;
+
+  nav {
+    position: relative;
+    display: flex;
+
+    #marker {
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 4px;
+      border: 4px;
+      background-color: #000000;
+      transition: 0.5s;
+    }
+
+    a {
+      position: relative;
+      margin: 0 20px;
+      font-size: 2em;
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+}

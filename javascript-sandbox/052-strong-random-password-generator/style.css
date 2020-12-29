@@ -1,0 +1,106 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: consolas;
+  background-color: #f8f8f8;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body .input-box {
+  position: relative;
+  width: 470px;
+}
+
+body .input-box h2 {
+  font-size: 38px;
+  color: #333333;
+}
+
+body .input-box input {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  border: none;
+  margin: 15px 0 20px;
+  padding: 0 20px;
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: #333333;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  -webkit-box-shadow: -4px -4px 10px white, inset 4px 4px 10px rgba(0, 0, 0, 0.05), inset -4px -4px 10px white, 4px 4px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: -4px -4px 10px white, inset 4px 4px 10px rgba(0, 0, 0, 0.05), inset -4px -4px 10px white, 4px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+body .input-box input::-webkit-input-placeholder {
+  letter-spacing: 0;
+}
+
+body .input-box input:-ms-input-placeholder {
+  letter-spacing: 0;
+}
+
+body .input-box input::-ms-input-placeholder {
+  letter-spacing: 0;
+}
+
+body .input-box input::placeholder {
+  letter-spacing: 0;
+}
+
+body .input-box .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .input-box .buttons #generate,
+body .input-box .buttons #copy {
+  padding: 10px 15px;
+  font-size: 24px;
+  color: #ffffff;
+  border-radius: 8px;
+  background-color: #333333;
+  cursor: pointer;
+}
+
+body .input-box .buttons #generate:active,
+body .input-box .buttons #copy:active {
+  background-color: #9c27b0;
+}
+
+body .input-box .buttons .done {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 10px;
+  color: #33333375;
+  border-radius: 4px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+  -webkit-box-shadow: -4px -4px 10px white, inset 4px 4px 10px rgba(0, 0, 0, 0.05), inset -4px -4px 10px white, 4px 4px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: -4px -4px 10px white, inset 4px 4px 10px rgba(0, 0, 0, 0.05), inset -4px -4px 10px white, 4px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+body .input-box .buttons .done-message {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=style.css.map */

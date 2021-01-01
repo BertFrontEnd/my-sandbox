@@ -1,0 +1,49 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: consolas;
+  background-color: #080b1f;
+}
+
+body nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body nav #marker {
+  position: absolute;
+  top: 0;
+  height: 48px;
+  border-radius: 2px;
+  background-color: #2196f3;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body nav a {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 0 20px;
+  font-size: 2em;
+  color: #ffffff;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

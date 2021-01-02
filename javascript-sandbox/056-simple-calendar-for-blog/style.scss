@@ -1,0 +1,61 @@
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./assets/img/other-07.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+  }
+
+  .calendar {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #ffffff;
+    -webkit-box-reflect: below 1px
+      linear-gradient(transparent, transparent, #00040075);
+
+    #month-name {
+      position: relative;
+      padding: 5px 10px;
+      font-size: 30px;
+      font-weight: 900;
+      color: #ffffff;
+      background: #ff6331;
+    }
+
+    #day-name {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: 300;
+      color: #999999;
+    }
+
+    #day-number {
+      line-height: 1em;
+      font-size: 80px;
+      font-weight: 900;
+      color: #333333;
+    }
+
+    #year {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #999999;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./assets/img/other-07.jpg");
+  background-size: cover;
+  background-position: center;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+body .calendar {
+  position: relative;
+  width: 200px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #ffffff;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #00040075);
+}
+
+body .calendar #month-name {
+  position: relative;
+  padding: 5px 10px;
+  font-size: 30px;
+  font-weight: 900;
+  color: #ffffff;
+  background: #ff6331;
+}
+
+body .calendar #day-name {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #999999;
+}
+
+body .calendar #day-number {
+  line-height: 1em;
+  font-size: 80px;
+  font-weight: 900;
+  color: #333333;
+}
+
+body .calendar #year {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #999999;
+}
+/*# sourceMappingURL=style.css.map */

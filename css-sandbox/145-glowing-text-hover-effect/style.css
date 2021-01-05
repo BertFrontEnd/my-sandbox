@@ -1,0 +1,46 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+body h2 {
+  font-size: 6rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #222222;
+  cursor: pointer;
+}
+
+body h2:hover span {
+  color: #ffffff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff, 0 0 120px #ffffff;
+}
+
+body h2:hover span:nth-child(1) {
+  margin-right: 10px;
+}
+
+body h2:hover span:nth-child(1)::after {
+  content: "'";
+  /*  transition: 0.5s; */
+}
+
+body h2:hover span:nth-child(2) {
+  margin-left: 40px;
+}
+
+body h2 span {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,104 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(45deg, #ffaf00, #bb02ff);
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1150px;
+    padding: 20px;
+    user-select: none;
+
+    &:hover {
+      .card {
+        opacity: 0.9;
+        filter: blur(20px);
+        transform: scale(0.9);
+      }
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 420px;
+      margin: 20px;
+      overflow: hidden;
+      border-radius: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+      transition: 0.5s;
+
+      .circle {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        clip-path: circle(180px at center 0);
+        text-align: center;
+
+        h2 {
+          padding: 30px 0;
+          font-size: 4.5rem;
+          color: #ffffff;
+        }
+      }
+
+      .content {
+        position: absolute;
+        bottom: 10px;
+        padding: 20px;
+        text-align: center;
+
+        p {
+          color: #666666;
+        }
+
+        a {
+          position: relative;
+          display: inline-block;
+          margin-top: 20px;
+          padding: 10px 20px;
+          background-color: #000000;
+          text-decoration: none;
+          color: #ffffff;
+          border-radius: 40px;
+          background-color: #000000;
+        }
+      }
+
+      &:nth-child(1) {
+        .circle,
+        a {
+          background-color: #ffaf00;
+        }
+      }
+
+      &:nth-child(2) {
+        .circle,
+        a {
+          background-color: #da2268;
+        }
+      }
+
+      &:nth-child(3) {
+        .circle,
+        a {
+          background-color: #bb02ff;
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1.1);
+      }
+    }
+  }
+}

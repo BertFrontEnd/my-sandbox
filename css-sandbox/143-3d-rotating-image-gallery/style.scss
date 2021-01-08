@@ -11,8 +11,7 @@ body {
     height: 200px;
     transform-style: preserve-3d;
     animation: animate 20s linear infinite;
-    -webkit-box-reflect: below 0px
-      linear-gradient(transparent, transparent, #0004);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
 
     span {
       position: absolute;

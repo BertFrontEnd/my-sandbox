@@ -1,0 +1,182 @@
+body {
+  background-color: #2f2f2f;
+}
+
+body .scene {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border: 20px solid #ffffff;
+  border-radius: 50%;
+  background-color: #3b93ff;
+  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: animate-scene 5s linear infinite;
+          animation: animate-scene 5s linear infinite;
+}
+
+body .scene::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+body .scene .cloud {
+  position: absolute;
+  -webkit-animation: animate-cloud 1.6s linear infinite;
+          animation: animate-cloud 1.6s linear infinite;
+}
+
+body .scene .cloud-1 {
+  left: 10%;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+body .scene .cloud-1 img {
+  width: 100px;
+  height: 100px;
+}
+
+body .scene .cloud-2 {
+  right: 10%;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+body .scene .cloud-2 img {
+  width: 150px;
+  height: 150px;
+}
+
+body .scene .cloud-3 {
+  right: 20%;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+
+body .scene .cloud-3 img {
+  width: 160px;
+  height: 160px;
+}
+
+body .scene .cloud-4 {
+  left: 20%;
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+}
+
+body .scene .cloud-4 img {
+  width: 140px;
+  height: 140px;
+}
+
+body .rocket {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-filter: drop-shadow(15px 10px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(15px 10px rgba(0, 0, 0, 0.2));
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: animate-rocket 0.2s linear infinite;
+          animation: animate-rocket 0.2s linear infinite;
+}
+
+body .rocket img {
+  width: 240px;
+  height: 240px;
+}
+
+@-webkit-keyframes animate-rocket {
+  0% {
+    -webkit-transform: translate(-50%, -50%) translate(0, 0);
+            transform: translate(-50%, -50%) translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) translate(0, 5px);
+            transform: translate(-50%, -50%) translate(0, 5px);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) translate(0, 0);
+            transform: translate(-50%, -50%) translate(0, 0);
+  }
+}
+
+@keyframes animate-rocket {
+  0% {
+    -webkit-transform: translate(-50%, -50%) translate(0, 0);
+            transform: translate(-50%, -50%) translate(0, 0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) translate(0, 5px);
+            transform: translate(-50%, -50%) translate(0, 5px);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) translate(0, 0);
+            transform: translate(-50%, -50%) translate(0, 0);
+  }
+}
+
+@-webkit-keyframes animate-cloud {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(1000%);
+            transform: translateY(1000%);
+  }
+}
+
+@keyframes animate-cloud {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(1000%);
+            transform: translateY(1000%);
+  }
+}
+
+@-webkit-keyframes animate-scene {
+  0% {
+    background-color: #b339ff;
+  }
+  30% {
+    background-color: #3b96ff;
+  }
+  70% {
+    background-color: #3b93ff;
+  }
+  100% {
+    background-color: #b339ff;
+  }
+}
+
+@keyframes animate-scene {
+  0% {
+    background-color: #b339ff;
+  }
+  30% {
+    background-color: #3b96ff;
+  }
+  70% {
+    background-color: #3b93ff;
+  }
+  100% {
+    background-color: #b339ff;
+  }
+}
+/*# sourceMappingURL=style.css.map */

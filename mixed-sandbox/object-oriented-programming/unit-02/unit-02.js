@@ -21,4 +21,8 @@ const memory = {
   __proto__: cpu,
 };
 
-export { cpu, memory };
+console.log(cpu);
+console.log(memory);
+
+console.log(cpu.getAmount());
+console.log(memory.getAmount());

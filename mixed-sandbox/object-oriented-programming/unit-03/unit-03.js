@@ -1,4 +1,4 @@
-export class Button {
+class Button {
   constructor(width, height, background, value) {
     this.width = width;
     this.height = height;
@@ -17,3 +17,19 @@ export class Button {
     return body;
   }
 }
+
+class ModernButton extends Button {
+  constructor(width, height, background, value, border) {
+    super(width, height, background, value);
+    this.border = border;
+  }
+
+  render() {
+    super.render();
+    const myButtonWithRadius = document.querySelector('button');
+    myButtonWithRadius.style.borderRadius = this.border + 'px';
+    return myButtonWithRadius;
+  }
+}
+
+const button = new ModernButton(100, 40, 'lightgrey', 'Button', 5).render();

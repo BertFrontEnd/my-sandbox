@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #00415a;
+
+  .box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border: 10px solid #ffffff;
+    border-radius: 50%;
+    background: linear-gradient(#6ab9ff, #0090d2);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+
+    .cloud {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+
+        &:nth-child(1) {
+          top: 80px;
+          animation-delay: -2s;
+          animation: animate-cloud 2.25s linear infinite;
+        }
+
+        &:nth-child(2) {
+          top: 180px;
+          animation-delay: -1s;
+          animation: animate-cloud 2s linear infinite;
+        }
+
+        &:nth-child(3) {
+          top: 100px;
+          z-index: 2;
+          animation-delay: -2.5s;
+          animation: animate-cloud 1.75s linear infinite;
+        }
+      }
+    }
+
+    .plane {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: animate-plane 1s linear infinite;
+
+      /* img {
+        z-index: 1;
+      } */
+    }
+  }
+}
+
+@keyframes animate-cloud {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(-400px);
+  }
+}
+
+@keyframes animate-plane {
+  0% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(2px, 2px);
+  }
+}

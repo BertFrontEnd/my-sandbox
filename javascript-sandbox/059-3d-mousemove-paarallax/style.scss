@@ -1,0 +1,34 @@
+body {
+  section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .background {
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      right: -50px;
+      bottom: -50px;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    img {
+      position: absolute;
+      max-width: 100%;
+
+      &.girl {
+        bottom: -40px;
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+body section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body section .background {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  right: -50px;
+  bottom: -50px;
+}
+
+body section .background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body section img {
+  position: absolute;
+  max-width: 100%;
+}
+
+body section img.girl {
+  bottom: -40px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -20,9 +20,7 @@ body {
       height: 100%;
       transform-origin: center;
       transform-style: preserve-3d;
-      transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-      -webkit-box-reflect: below 0px
-        linear-gradient(transparent, transparent, #0004);
+      transform: rotateX(calc(var(--i) * 45deg)) translateZ(400px);
 
       img {
         position: absolute;
@@ -38,9 +36,9 @@ body {
 
 @keyframes animate {
   0% {
-    transform: perspective(1000px) rotateY(0deg);
+    transform: perspective(1500px) rotateX(0deg) rotateY(35deg);
   }
   100% {
-    transform: perspective(1000px) rotateY(360deg);
+    transform: perspective(1500px) rotateX(360deg) rotateY(35deg);
   }
 }

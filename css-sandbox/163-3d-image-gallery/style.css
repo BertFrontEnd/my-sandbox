@@ -32,9 +32,8 @@ body .box span {
           transform-origin: center;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-          transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+  -webkit-transform: rotateX(calc(var(--i) * 45deg)) translateZ(400px);
+          transform: rotateX(calc(var(--i) * 45deg)) translateZ(400px);
 }
 
 body .box span img {
@@ -49,23 +48,23 @@ body .box span img {
 
 @-webkit-keyframes animate {
   0% {
-    -webkit-transform: perspective(1000px) rotateY(0deg);
-            transform: perspective(1000px) rotateY(0deg);
+    -webkit-transform: perspective(1500px) rotateX(0deg) rotateY(35deg);
+            transform: perspective(1500px) rotateX(0deg) rotateY(35deg);
   }
   100% {
-    -webkit-transform: perspective(1000px) rotateY(360deg);
-            transform: perspective(1000px) rotateY(360deg);
+    -webkit-transform: perspective(1500px) rotateX(360deg) rotateY(35deg);
+            transform: perspective(1500px) rotateX(360deg) rotateY(35deg);
   }
 }
 
 @keyframes animate {
   0% {
-    -webkit-transform: perspective(1000px) rotateY(0deg);
-            transform: perspective(1000px) rotateY(0deg);
+    -webkit-transform: perspective(1500px) rotateX(0deg) rotateY(35deg);
+            transform: perspective(1500px) rotateX(0deg) rotateY(35deg);
   }
   100% {
-    -webkit-transform: perspective(1000px) rotateY(360deg);
-            transform: perspective(1000px) rotateY(360deg);
+    -webkit-transform: perspective(1500px) rotateX(360deg) rotateY(35deg);
+            transform: perspective(1500px) rotateX(360deg) rotateY(35deg);
   }
 }
 /*# sourceMappingURL=style.css.map */

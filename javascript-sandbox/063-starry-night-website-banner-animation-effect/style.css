@@ -1,0 +1,174 @@
+body .scene {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, left bottom, from(#111424), to(#3751e0));
+  background: linear-gradient(#111424, #3751e0);
+  background-attachment: fixed;
+}
+
+body .scene .moon {
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  z-index: 999;
+  width: 100px;
+  height: 100px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+body .scene .moon::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#111425), to(#3751e0));
+  background: linear-gradient(#111425, #3751e0);
+  background-attachment: fixed;
+}
+
+body .scene .cloud1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 600px;
+  z-index: 9999;
+  -webkit-animation: animate-cloud 50s linear infinite;
+          animation: animate-cloud 50s linear infinite;
+}
+
+body .scene .cloud2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 500px;
+  z-index: 9999;
+  -webkit-animation: animate-cloud 35s linear infinite;
+          animation: animate-cloud 35s linear infinite;
+}
+
+body .scene .cloud3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 600px;
+  z-index: 9999;
+  -webkit-animation: animate-cloud 80s linear infinite;
+          animation: animate-cloud 80s linear infinite;
+}
+
+body .scene .cloud4 {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  max-width: 300px;
+  z-index: 9999;
+  -webkit-animation: animate-cloud 70s linear infinite;
+          animation: animate-cloud 70s linear infinite;
+  -webkit-animation-delay: -20s;
+          animation-delay: -20s;
+}
+
+body .scene .cloud5 {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  max-width: 500px;
+  z-index: 9999;
+  -webkit-animation: animate-cloud 40s linear infinite;
+          animation: animate-cloud 40s linear infinite;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+}
+
+body .scene .cloud6 {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  max-width: 400px;
+  z-index: 9999;
+  -webkit-animation: animate-cloud 30s linear infinite;
+          animation: animate-cloud 30s linear infinite;
+  -webkit-animation-delay: -10s;
+          animation-delay: -10s;
+}
+
+body .scene .forest {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body .scene i {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  -webkit-animation: animate linear infinite;
+          animation: animate linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transition: translateY(0);
+    transition: translateY(0);
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transition: translateY(0);
+    transition: translateY(0);
+  }
+  10%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+}
+
+@-webkit-keyframes animate-cloud {
+  0% {
+    -webkit-transform: translateX(-100%) scale(1);
+            transform: translateX(-100%) scale(1);
+  }
+  100% {
+    -webkit-transform: translateX(400%) scale(1.5);
+            transform: translateX(400%) scale(1.5);
+  }
+}
+
+@keyframes animate-cloud {
+  0% {
+    -webkit-transform: translateX(-100%) scale(1);
+            transform: translateX(-100%) scale(1);
+  }
+  100% {
+    -webkit-transform: translateX(400%) scale(1.5);
+            transform: translateX(400%) scale(1.5);
+  }
+}
+/*# sourceMappingURL=style.css.map */

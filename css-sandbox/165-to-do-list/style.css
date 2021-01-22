@@ -1,0 +1,118 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111111;
+}
+
+body .list {
+  position: relative;
+  width: 350px;
+  background-color: #ffffff;
+}
+
+body .list h2 {
+  padding: 10px 20px;
+  font-family: 'Poppins Bold', sans-serif;
+  color: #ffffff;
+  background-color: #03a9f4;
+}
+
+body .list ul {
+  position: relative;
+  padding: 20px;
+}
+
+body .list ul li {
+  position: relative;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body .list ul li:last-child {
+  border-bottom: none;
+}
+
+body .list ul li label {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body .list ul li label input {
+  visibility: hidden;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+body .list ul li label input:checked ~ p {
+  text-decoration: line-through;
+  color: #cccccc;
+}
+
+body .list ul li label input:checked ~ span {
+  background: #03a9f4;
+  border: 1px solid #03a9f4;
+}
+
+body .list ul li label input:checked ~ span::before {
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+body .list ul li label p {
+  position: absolute;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .list ul li label span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .list ul li label span::before {
+  position: absolute;
+  top: 5px;
+  width: 10px;
+  height: 5px;
+  content: '';
+  border-left: 2px solid #cccccc;
+  border-bottom: 2px solid #cccccc;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=style.css.map */

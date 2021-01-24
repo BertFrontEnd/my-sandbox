@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #2b2b2b;
+
+  label {
+    position: relative;
+    margin: 5px 0;
+    cursor: pointer;
+
+    input {
+      display: none;
+      appearance: none;
+
+      &:checked {
+        ~ .indicator {
+          left: 40px;
+
+          &::before {
+            background-color: #00ff00;
+            box-shadow: 0 0 2px #00ff00, 0 0 2px #00ff00, 0 0 5px #00ff00,
+              0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00,
+              0 0 25px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+            transform: translate(-50%, -50%);
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+
+    span {
+      position: relative;
+      display: block;
+      width: 80px;
+      height: 40px;
+      border-radius: 40px;
+      background-color: #222222;
+      box-shadow: inset 0 2px 15px rgba(0, 0, 0, 0.2),
+        inset 0 2px 2px rgba(0, 0, 0, 0.2), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, #444444, #222222);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      transition: 0.5s;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        content: '';
+        border-radius: 50%;
+        background-color: #ff0000;
+        box-shadow: 0 0 2px #ff0000, 0 0 2px #ff0000, 0 0 5px #ff0000,
+          0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #ff0000,
+          0 0 30px #ff0000, 0 0 40px #ff0000;
+        transform: translate(-50%, -50%);
+        transition: 0.5s;
+      }
+    }
+  }
+}

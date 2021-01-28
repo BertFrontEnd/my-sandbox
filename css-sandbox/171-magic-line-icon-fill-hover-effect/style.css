@@ -1,0 +1,66 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+body ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body ul li {
+  position: relative;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+body ul li .fa {
+  font-size: 6rem;
+  color: #222222;
+}
+
+body ul li::before {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+  font-family: 'fontAwesome';
+  font-size: 6rem;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+body ul li:nth-child(1)::before {
+  content: '\f099';
+  color: #1da1f2;
+  border-bottom: 4px solid #1da1f2;
+}
+
+body ul li:nth-child(2)::before {
+  content: '\f232';
+  color: #25d366;
+  border-bottom: 4px solid #25d366;
+}
+
+body ul li:nth-child(3)::before {
+  content: '\f16a';
+  color: #ff0000;
+  border-bottom: 4px solid #ff0000;
+}
+
+body ul li:hover::before {
+  height: calc(100% + 50px);
+}
+/*# sourceMappingURL=style.css.map */

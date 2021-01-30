@@ -1,0 +1,179 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(#333333, #000000);
+}
+
+body section h2 {
+  font-size: 8rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+body section .set {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+body section .set div {
+  position: absolute;
+  display: block;
+}
+
+body section .set div:nth-child(1) {
+  left: 20%;
+  -webkit-animation: animate 15s linear infinite;
+          animation: animate 15s linear infinite;
+  -webkit-animation-delay: -7s;
+          animation-delay: -7s;
+}
+
+body section .set div:nth-child(2) {
+  left: 50%;
+  -webkit-animation: animate 20s linear infinite;
+          animation: animate 20s linear infinite;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+}
+
+body section .set div:nth-child(3) {
+  left: 70%;
+  -webkit-animation: animate 20s linear infinite;
+          animation: animate 20s linear infinite;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+body section .set div:nth-child(4) {
+  left: 0%;
+  -webkit-animation: animate 15s linear infinite;
+          animation: animate 15s linear infinite;
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+}
+
+body section .set div:nth-child(5) {
+  left: 85%;
+  -webkit-animation: animate 18s linear infinite;
+          animation: animate 18s linear infinite;
+  -webkit-animation-delay: -10s;
+          animation-delay: -10s;
+}
+
+body section .set div:nth-child(6) {
+  left: 0%;
+  -webkit-animation: animate 12s linear infinite;
+          animation: animate 12s linear infinite;
+}
+
+body section .set div:nth-child(7) {
+  left: 15%;
+  -webkit-animation: animate 14s linear infinite;
+          animation: animate 14s linear infinite;
+}
+
+body section .set div:nth-child(8) {
+  left: 60%;
+  -webkit-animation: animate 18s linear infinite;
+          animation: animate 18s linear infinite;
+}
+
+body section .set-2 {
+  -webkit-transform: scale(2) rotateY(180deg);
+          transform: scale(2) rotateY(180deg);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+body section .set-3 {
+  -webkit-transform: scale(0.8) rotateY(180deg);
+          transform: scale(0.8) rotateY(180deg);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    top: -10%;
+    -webkit-transform: translateX(20px) rotate(0deg);
+            transform: translateX(20px) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: translateX(-20px) rotate(45deg);
+            transform: translateX(-20px) rotate(45deg);
+  }
+  40% {
+    -webkit-transform: translateX(-20px) rotate(90deg);
+            transform: translateX(-20px) rotate(90deg);
+  }
+  60% {
+    -webkit-transform: translateX(20px) rotate(180deg);
+            transform: translateX(20px) rotate(180deg);
+  }
+  80% {
+    -webkit-transform: translateX(-20px) rotate(180deg);
+            transform: translateX(-20px) rotate(180deg);
+  }
+  100% {
+    top: 110%;
+    -webkit-transform: translateX(-20px) rotate(225deg);
+            transform: translateX(-20px) rotate(225deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    top: -10%;
+    -webkit-transform: translateX(20px) rotate(0deg);
+            transform: translateX(20px) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    -webkit-transform: translateX(-20px) rotate(45deg);
+            transform: translateX(-20px) rotate(45deg);
+  }
+  40% {
+    -webkit-transform: translateX(-20px) rotate(90deg);
+            transform: translateX(-20px) rotate(90deg);
+  }
+  60% {
+    -webkit-transform: translateX(20px) rotate(180deg);
+            transform: translateX(20px) rotate(180deg);
+  }
+  80% {
+    -webkit-transform: translateX(-20px) rotate(180deg);
+            transform: translateX(-20px) rotate(180deg);
+  }
+  100% {
+    top: 110%;
+    -webkit-transform: translateX(-20px) rotate(225deg);
+            transform: translateX(-20px) rotate(225deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

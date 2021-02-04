@@ -1,0 +1,56 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+body section {
+  height: 100vh;
+}
+
+body section span {
+  position: absolute;
+  background-color: #ffffff;
+  pointer-events: none;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scale(0) translateY(0) rotate(0deg);
+            transform: scale(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-500px) rotate(360deg);
+            transform: scale(1) translateY(-500px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(0) translateY(0) rotate(0deg);
+            transform: scale(0) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(-500px) rotate(360deg);
+            transform: scale(1) translateY(-500px) rotate(360deg);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

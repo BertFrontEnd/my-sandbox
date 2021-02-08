@@ -5,9 +5,11 @@
 
 function t1() {
   let numbers = '';
+
   for (let i = 1; i <= 50; i++) {
     numbers = numbers + i + ' ';
   }
+
   document.querySelector('.out-1').textContent = numbers;
 }
 
@@ -20,9 +22,11 @@ document.querySelector('.b-1').addEventListener('click', t1);
 
 function t2() {
   let numbers = '';
+
   for (let i = 2; i <= 122; i = i + 2) {
     numbers = numbers + i + ' ';
   }
+
   document.querySelector('.out-2').textContent = numbers;
 }
 
@@ -35,9 +39,11 @@ document.querySelector('.b-2').addEventListener('click', t2);
 
 function t3() {
   let numbers = '';
+
   for (let i = 25; i >= 7; i--) {
     numbers = numbers + i + ' ';
   }
+
   document.querySelector('.out-3').textContent = numbers;
 }
 
@@ -50,9 +56,11 @@ document.querySelector('.b-3').addEventListener('click', t3);
 
 function t4() {
   let numbers = '';
+
   for (let i = 77; i >= 35; i--) {
     numbers = numbers + i + '_';
   }
+
   document.querySelector('.out-4').textContent = numbers;
 }
 
@@ -65,6 +73,7 @@ document.querySelector('.b-4').addEventListener('click', t4);
 
 function t5() {
   let numbers = '';
+
   for (let i = 1; i <= 17; i++) {
     if (i % 2 === 0) {
       numbers = numbers + i + '_**';
@@ -72,6 +81,7 @@ function t5() {
       numbers = numbers + i + '_*';
     }
   }
+
   document.querySelector('.out-5').textContent = numbers;
 }
 
@@ -90,9 +100,11 @@ document.querySelector('.b-5').addEventListener('click', t5);
 function t6() {
   const num6 = document.querySelector('.i-6').value;
   let numbers = '';
+
   for (let i = 1; i <= num6; i++) {
     numbers += `******</br>`;
   }
+
   document.querySelector('.out-6').innerHTML = numbers;
 }
 
@@ -105,7 +117,16 @@ document.querySelector('.b-6').addEventListener('click', t6);
 // 4 3 2 1 0
 // Задача решается с помощью цикла.
 
-function t7() {}
+function t7() {
+  const num7 = document.querySelector('.i-7').value;
+  let numbers = '';
+
+  for (let i = num7; i >= 0; i--) {
+    numbers += i + ' ';
+  }
+
+  document.querySelector('.out-7').textContent = numbers;
+}
 
 document.querySelector('.b-7').addEventListener('click', t7);
 
@@ -117,7 +138,17 @@ document.querySelector('.b-7').addEventListener('click', t7);
 // 4 5 6 7 8
 // Задача решается с помощью цикла.
 
-function t8() {}
+function t8() {
+  const num81 = document.querySelector('.i-81').value;
+  const num82 = document.querySelector('.i-82').value;
+  let numbers = '';
+
+  for (let i = num81; i <= num82; i++) {
+    numbers += i + ' ';
+  }
+
+  document.querySelector('.out-8').textContent = numbers;
+}
 
 document.querySelector('.b-8').addEventListener('click', t8);
 
@@ -131,7 +162,25 @@ document.querySelector('.b-8').addEventListener('click', t8);
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл.
 // цикл - один
 
-function t9() {}
+function t9() {
+  const num91 = document.querySelector('.i-91').value;
+  const num92 = document.querySelector('.i-92').value;
+  let numbers = '';
+
+  if (num91 > num92) {
+    for (let i = num92; i <= num91; i++) {
+      numbers += i + ' ';
+    }
+
+    document.querySelector('.out-9').textContent = numbers;
+  } else {
+    for (let i = num91; i <= num92; i++) {
+      numbers += i + ' ';
+    }
+
+    document.querySelector('.out-9').textContent = numbers;
+  }
+}
 
 document.querySelector('.b-9').addEventListener('click', t9);
 
@@ -139,7 +188,15 @@ document.querySelector('.b-9').addEventListener('click', t9);
 // Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно.
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
-function t10() {}
+function t10() {
+  let numbers = '';
+
+  for (i = 1950; i <= 2000; i = i + 2) {
+    numbers += i + ' ';
+  }
+
+  document.querySelector('.out-10').textContent = numbers;
+}
 
 document.querySelector('.b-10').addEventListener('click', t10);
 
@@ -151,7 +208,16 @@ document.querySelector('.b-10').addEventListener('click', t10);
 // В результате должно получиться так:
 // one 3 4 two
 
-function t11() {}
+function t11() {
+  const elem = document.querySelectorAll('.div-11');
+  elementsContent = '';
+
+  for (i = 0; i <= elem.length - 1; i++) {
+    elementsContent = elementsContent + elem[i].innerText + ' ';
+  }
+
+  document.querySelector('.out-11').textContent = elementsContent;
+}
 
 document.querySelector('.b-11').addEventListener('click', t11);
 
@@ -161,7 +227,13 @@ document.querySelector('.b-11').addEventListener('click', t11);
 // перебрать их с помощью цикла. Обращение к div выглядит так elem[i]
 // применить к каждому elem[i].style.background = ‘orange’
 
-function t12() {}
+function t12() {
+  const elem = document.querySelectorAll('.div-12');
+
+  for (i = 0; i <= elem.length - 1; i++) {
+    elem[i].style.background = 'orange';
+  }
+}
 
 document.querySelector('.b-12').addEventListener('click', t12);
 
@@ -171,7 +243,14 @@ document.querySelector('.b-12').addEventListener('click', t12);
 // перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
-function t13() {}
+function t13() {
+  const elem = document.querySelectorAll('.i-13');
+
+  for (i = 0; i <= elem.length - 1; i++) {
+    console.log(elem[i]);
+    elem[i].value = `${i + 1}`;
+  }
+}
 
 document.querySelector('.b-13').addEventListener('click', t13);
 
@@ -181,7 +260,16 @@ document.querySelector('.b-13').addEventListener('click', t13);
 // перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
 // вывести в out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
-function t14() {}
+function t14() {
+  const elem = document.querySelectorAll('.i-14');
+  console.log(elem);
+
+  for (i = 0; i <= elem.length - 1; i++) {
+    if (elem[i].checked) {
+      document.querySelector('.out-14').textContent = elem[i].value;
+    }
+  }
+}
 
 document.querySelector('.b-14').addEventListener('click', t14);
 
@@ -191,6 +279,14 @@ document.querySelector('.b-14').addEventListener('click', t14);
 // Для вывода использовать цикл. Разделитель пробел.
 // Подсказка (10 - i) + ' ' + i
 
-function t15() {}
+function t15() {
+  let numbers = '';
+
+  for (let i = 0; i <= 10; i++) {
+    numbers += 10 - i + ' ' + i + ' ';
+  }
+
+  document.querySelector('.out-15').textContent = numbers;
+}
 
 document.querySelector('.b-15').addEventListener('click', t15);

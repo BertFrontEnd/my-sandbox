@@ -1,0 +1,99 @@
+body {
+  background-color: #000000;
+}
+
+body .glowing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 260px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .glowing span {
+  position: absolute;
+  border-radius: 50%;
+}
+
+body .glowing span::before {
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  content: '';
+  border-radius: 50%;
+  background-color: #ff0;
+}
+
+body .glowing span:nth-child(1) {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* border: 1px solid rgba(255, 255, 255, 0.05); */
+  -webkit-animation: animate 3s linear infinite;
+          animation: animate 3s linear infinite;
+}
+
+body .glowing span:nth-child(1)::before {
+  background-color: #86ff00;
+  -webkit-box-shadow: 0 0 20px #86ff00, 0 0 40px #86ff00, 0 0 60px #86ff00, 0 0 80px #86ff00, 0 0 0 4px rgba(134, 255, 0, 0.1);
+          box-shadow: 0 0 20px #86ff00, 0 0 40px #86ff00, 0 0 60px #86ff00, 0 0 80px #86ff00, 0 0 0 4px rgba(134, 255, 0, 0.1);
+}
+
+body .glowing span:nth-child(2) {
+  top: 40px;
+  left: 40px;
+  bottom: 40px;
+  right: 40px;
+  /* border: 1px solid rgba(255, 255, 255, 0.05); */
+  animation: animate 3s linear reverse infinite;
+}
+
+body .glowing span:nth-child(2)::before {
+  background-color: #ffd600;
+  -webkit-box-shadow: 0 0 20px #ffd600, 0 0 40px #ffd600, 0 0 60px #ffd600, 0 0 80px #ffd600, 0 0 0 4px rgba(255, 214, 0, 0.1);
+          box-shadow: 0 0 20px #ffd600, 0 0 40px #ffd600, 0 0 60px #ffd600, 0 0 80px #ffd600, 0 0 0 4px rgba(255, 214, 0, 0.1);
+}
+
+body .glowing span:nth-child(3) {
+  top: 80px;
+  left: 80px;
+  bottom: 80px;
+  right: 80px;
+  /* border: 1px solid rgba(255, 255, 255, 0.05); */
+  -webkit-animation: animate 2s linear infinite;
+          animation: animate 2s linear infinite;
+}
+
+body .glowing span:nth-child(3)::before {
+  background-color: #00e2ff;
+  -webkit-box-shadow: 0 0 20px #00e2ff, 0 0 40px #00e2ff, 0 0 60px #00e2ff, 0 0 80px #00e2ff, 0 0 0 4px rgba(0, 226, 255, 0.1);
+          box-shadow: 0 0 20px #00e2ff, 0 0 40px #00e2ff, 0 0 60px #00e2ff, 0 0 80px #00e2ff, 0 0 0 4px rgba(0, 226, 255, 0.1);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

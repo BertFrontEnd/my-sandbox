@@ -1,0 +1,109 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #2196f3;
+  overflow: hidden;
+}
+
+body .container .mac {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 606px;
+  height: 489px;
+  cursor: pointer;
+}
+
+body .container .mac:hover .img-box {
+  background-position: bottom;
+}
+
+body .container .mac .img-box {
+  position: absolute;
+  top: 24px;
+  left: 25px;
+  width: 555px;
+  height: 313px;
+  background: url(./assets/img/desktopWebsite.jpg);
+  background-position: top;
+  background-size: 100%;
+  -webkit-transition: 5s linear;
+  transition: 5s linear;
+}
+
+body .container .mac-book {
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  z-index: 1;
+  width: 609px;
+  height: 362px;
+  cursor: pointer;
+}
+
+body .container .mac-book:hover .img-box {
+  background-position: bottom;
+}
+
+body .container .mac-book .img-box {
+  position: absolute;
+  top: 19px;
+  left: 71px;
+  width: 466px;
+  height: 292px;
+  background: url(./assets/img/desktopWebsite.jpg);
+  background-position: top;
+  background-size: 100%;
+  -webkit-transition: 5s linear;
+  transition: 5s linear;
+}
+
+body .container .iphone {
+  position: absolute;
+  top: 40%;
+  left: 22%;
+  z-index: 2;
+  width: 245px;
+  height: 383px;
+  cursor: pointer;
+}
+
+body .container .iphone:hover .img-box {
+  background-position: bottom;
+}
+
+body .container .iphone .img-box {
+  position: absolute;
+  top: 45px;
+  left: 43px;
+  width: 159px;
+  height: 284px;
+  background: url(./assets/img/mobileWebsite.jpg);
+  background-position: top;
+  background-size: 100%;
+  -webkit-transition: 7s linear;
+  transition: 7s linear;
+}
+/*# sourceMappingURL=style.css.map */

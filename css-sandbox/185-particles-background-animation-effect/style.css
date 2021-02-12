@@ -1,0 +1,158 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+body .glowing {
+  position: relative;
+  min-width: 750px;
+  height: 750px;
+  margin: -150px;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: color-change 5s linear infinite;
+          animation: color-change 5s linear infinite;
+}
+
+body .glowing:nth-child(even) {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+body .glowing span {
+  position: absolute;
+  top: calc(80px * var(--i));
+  left: calc(80px * var(--i));
+  bottom: calc(80px * var(--i));
+  right: calc(80px * var(--i));
+}
+
+body .glowing span::before {
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  content: '';
+  border-radius: 50%;
+  background-color: #f00;
+}
+
+body .glowing span:nth-child(3n + 1) {
+  -webkit-animation: animate 10s alternate infinite;
+          animation: animate 10s alternate infinite;
+}
+
+body .glowing span:nth-child(3n + 1)::before {
+  background-color: #86ff00;
+  -webkit-box-shadow: 0 0 20px #86ff00, 0 0 40px #86ff00, 0 0 60px #86ff00, 0 0 80px #86ff00, 0 0 0 8px rgba(134, 255, 0, 0.1);
+          box-shadow: 0 0 20px #86ff00, 0 0 40px #86ff00, 0 0 60px #86ff00, 0 0 80px #86ff00, 0 0 0 8px rgba(134, 255, 0, 0.1);
+}
+
+body .glowing span:nth-child(3n + 2) {
+  -webkit-animation: animate-reverse 3s alternate infinite;
+          animation: animate-reverse 3s alternate infinite;
+}
+
+body .glowing span:nth-child(3n + 2)::before {
+  background-color: #ffd600;
+  -webkit-box-shadow: 0 0 20px #ffd600, 0 0 40px #ffd600, 0 0 60px #ffd600, 0 0 80px #ffd600, 0 0 0 8px rgba(255, 214, 0, 0.1);
+          box-shadow: 0 0 20px #ffd600, 0 0 40px #ffd600, 0 0 60px #ffd600, 0 0 80px #ffd600, 0 0 0 8px rgba(255, 214, 0, 0.1);
+}
+
+body .glowing span:nth-child(3n + 3) {
+  -webkit-animation: animate 8s alternate infinite;
+          animation: animate 8s alternate infinite;
+}
+
+body .glowing span:nth-child(3n + 3)::before {
+  background-color: #00e2ff;
+  -webkit-box-shadow: 0 0 20px #00e2ff, 0 0 40px #00e2ff, 0 0 60px #00e2ff, 0 0 80px #00e2ff, 0 0 0 8px rgba(0, 226, 255, 0.1);
+          box-shadow: 0 0 20px #00e2ff, 0 0 40px #00e2ff, 0 0 60px #00e2ff, 0 0 80px #00e2ff, 0 0 0 8px rgba(0, 226, 255, 0.1);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes animate-reverse {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes color-change {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=style.css.map */

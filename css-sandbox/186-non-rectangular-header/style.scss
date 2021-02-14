@@ -1,0 +1,27 @@
+body {
+  min-height: 150vh;
+  font-family: 'Quicksand Regular', sans-serif;
+
+  section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url('./assets/img/space-09.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    clip-path: circle(180vh at 50% -80vh);
+
+    .content {
+      max-width: 1000px;
+      text-align: center;
+
+      h2 {
+        font-size: 5rem;
+        color: #fff;
+      }
+    }
+  }
+}

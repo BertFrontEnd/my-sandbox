@@ -1,0 +1,43 @@
+body {
+  font-family: 'Quicksand Regular', sans-serif;
+  background-color: #111;
+
+  .banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #e91e63;
+    clip-path: circle(1200px at center center);
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .container {
+    position: relative;
+    margin-top: 200vh;
+    padding: 100px;
+    background-color: #111;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 3rem;
+      color: #fff;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 1.25rem;
+      line-height: 2rem;
+      color: #fff;
+    }
+  }
+}

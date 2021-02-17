@@ -184,16 +184,15 @@ document.querySelector('.b-7').addEventListener('click', t7);
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует звездочки. </p>
 
 function t8() {
-  /*   let out8 = document.querySelector('.out-8');
+  let out8 = document.querySelector('.out-8');
   out8.innerHTML = '';
 
-  for (let i = 4; i >= 1; i--) {
-    out8.innerHTML -= `****`;
+  for (let i = 1; i <= 4; i++) {
     for (let k = 4; k >= i; k--) {
-      out8.innerHTML -= `*`;
+      out8.innerHTML += '*';
     }
-    out8.innerHTML -= `</br>`;
-  } */
+    out8.innerHTML += `</br>`;
+  }
 }
 
 document.querySelector('.b-8').addEventListener('click', t8);

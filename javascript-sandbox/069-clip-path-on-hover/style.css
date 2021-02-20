@@ -1,0 +1,114 @@
+:root {
+  --posX: left;
+  --posY: center;
+  --size: 0;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.stats {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 3rem;
+}
+
+.stats__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.stats__item h3,
+.stats__item p {
+  z-index: 1;
+  -webkit-transition: 0.25s linear;
+  transition: 0.25s linear;
+}
+
+.stats__item h3 {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+.stats__item p {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.stats__item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7777e9;
+  -webkit-clip-path: circle(var(--size) at var(--posX) var(--posY));
+          clip-path: circle(var(--size) at var(--posX) var(--posY));
+  -webkit-transition: 0.6s linear;
+  transition: 0.6s linear;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.stats__item:hover h3,
+.stats__item:hover p {
+  color: #fff;
+}
+
+.stats__item:hover:before {
+  --size: 300px;
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 680px) {
+  form {
+    margin-bottom: 3rem;
+  }
+}
+
+.demo {
+  margin-top: 2rem;
+  font-size: 14px;
+}
+
+body {
+  font-family: 'system-ui';
+  line-height: 1.4;
+  padding: 1rem;
+  background-color: #f7f7f7;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=style.css.map */

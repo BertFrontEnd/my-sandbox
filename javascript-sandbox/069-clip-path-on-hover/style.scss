@@ -1,0 +1,95 @@
+:root {
+  --posX: left;
+  --posY: center;
+  --size: 0;
+}
+
+.wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 3rem;
+}
+
+.stats__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px 0 rgba(#000, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+
+  h3,
+  p {
+    z-index: 1;
+    transition: 0.25s linear;
+  }
+
+  h3 {
+    color: grey;
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #7777e9;
+    clip-path: circle(var(--size) at var(--posX) var(--posY));
+    transition: 0.6s linear;
+    transition-duration: 0.2s;
+  }
+
+  &:hover {
+    h3,
+    p {
+      color: #fff;
+    }
+
+    &:before {
+      --size: 300px;
+    }
+  }
+}
+
+form {
+  margin-bottom: 1rem;
+
+  @media (min-width: 680px) {
+    margin-bottom: 3rem;
+  }
+}
+
+.demo {
+  margin-top: 2rem;
+  font-size: 14px;
+}
+
+body {
+  font-family: 'system-ui';
+  line-height: 1.4;
+  padding: 1rem;
+  background-color: #f7f7f7;
+}
+
+* {
+  box-sizing: border-box;
+}

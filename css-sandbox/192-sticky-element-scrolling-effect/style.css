@@ -1,0 +1,71 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body .container {
+  position: relative;
+  padding: 50px;
+  background-color: #111;
+}
+
+body .container section {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+body .container section .sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60px;
+  padding: 0 20px;
+  font-family: 'Poppins Bold', sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+body .container section .content {
+  padding-top: 20px;
+}
+
+body .container section .content p {
+  margin-bottom: 20px;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+body .container section .content p:last-child {
+  margin-bottom: 0;
+}
+
+body .container section:nth-child(1) .sticky {
+  background-color: #ff1f6b;
+}
+
+body .container section:nth-child(2) .sticky {
+  background-color: #03a9f4;
+}
+
+body .container section:nth-child(3) .sticky {
+  background-color: #2dea3c;
+}
+
+body .container section:nth-child(4) {
+  margin-bottom: 0;
+}
+
+body .container section:nth-child(4) .sticky {
+  background-color: #cb2ee6;
+}
+/*# sourceMappingURL=style.css.map */

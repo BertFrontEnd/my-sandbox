@@ -1,0 +1,101 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1f242d;
+
+  a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #262c37;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+
+      span {
+        &:nth-child(1) {
+          transform: scaleY(1);
+          transform-origin: bottom;
+          transition: transform 0.5s;
+        }
+
+        &:nth-child(2) {
+          transform: scaleX(1);
+          transform-origin: left;
+          transition: transform 0.5s;
+        }
+
+        &:nth-child(3) {
+          transform: scaleY(1);
+          transform-origin: bottom;
+          transition: transform 0.5s;
+          transition-delay: 0.5s;
+        }
+
+        &:nth-child(4) {
+          transform: scaleX(1);
+          transform-origin: left;
+          transition: transform 0.5s;
+          transition-delay: 0.5s;
+        }
+      }
+    }
+
+    span {
+      position: absolute;
+      display: flex;
+      background-color: #2894ff;
+
+      &:nth-child(1) {
+        left: 0;
+        bottom: 0;
+        width: 1px;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s;
+      }
+
+      &:nth-child(2) {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+      }
+
+      &:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        width: 1px;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+      }
+
+      &:nth-child(4) {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #111;
+
+  a {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    margin: 20px;
+    letter-spacing: 2px;
+    line-height: 60px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+
+    &:hover {
+      background: #ec0b36 url(./assets/img/pixel1.png);
+      transition-delay: 0.8s;
+      background-size: 180px;
+      animation: animate 0.8s steps(8) forwards;
+    }
+
+    &:nth-child(2) {
+      &:hover {
+        background: #730bec url(./assets/img/pixel2.png);
+        transition-delay: 0.8s;
+        background-size: 180px;
+        animation: animate 0.8s steps(8) forwards;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-y: 0;
+  }
+
+  100% {
+    background-position-y: -480px;
+  }
+}

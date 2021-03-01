@@ -53,3 +53,10 @@
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'Bilbo Swash Caps';
+  src: url('./font/BilboSwashCaps-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

@@ -60,3 +60,17 @@
   font-style: normal;
   font-weight: normal;
 }
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('./font/OpenSans-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('./font/Roboto-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}

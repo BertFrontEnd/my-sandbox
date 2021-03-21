@@ -239,16 +239,10 @@ function t10() {
   out10.innerHTML = '';
 
   for (let i = 0; i < 5; i++) {
-    /*     if (i <= 1) {
-      out10.innerHTML += `0`;
-    } */
     for (let k = 1; k <= 9; k++) {
       out10.innerHTML += `${i}${k} `;
     }
-    /*     if (i > 1) {
-      out10.innerHTML += `${i}0`;
-    } */
-    out10.innerHTML += `${i}0`;
+    out10.innerHTML += `${i + 1}0`;
     out10.innerHTML += `</br>`;
   }
 }

@@ -62,7 +62,7 @@ console.log(
 
 /* console.log('02-common-character-count:'); */
 
-function getCommonCharacterCount(s1, s2) {
+/* function getCommonCharacterCount(s1, s2) {
   let arr1 = [...s1];
   let arr2 = [...s2];
 
@@ -74,7 +74,7 @@ console.log(getCommonCharacterCount('aabcc', 'adcaa')); // 3)
 console.log(getCommonCharacterCount('zzzz', 'zzzzzzz')); // 4)
 console.log(getCommonCharacterCount('abca', 'xyzbac')); // 3)
 console.log(getCommonCharacterCount('', 'abc')); // 0)
-console.log(getCommonCharacterCount('a', 'b')); // 0)
+console.log(getCommonCharacterCount('a', 'b')); // 0) */
 
 /* console.log('03-sort-by-height:'); */
 
@@ -129,3 +129,26 @@ console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])); // [-1, 150, 1
 
 console.log(isMAC48Address('00-1B-63-84-45-E6')); // true
 console.log(isMAC48Address('Z1-1B-63-84-45-E6')); // false */
+
+console.log('07-file-names:');
+
+function renameFiles(names) {
+  const resultArr = [];
+  const counterFileName = {};
+
+  names.forEach((fileName) => {
+    if (resultArr.includes(fileName)) {
+      counterFileName[fileName] = (counterFileName[fileName] || 0) + 1;
+      const newFileName = `${fileName}(${counterFileName[fileName]})`;
+      resultArr.push(newFileName);
+    } else {
+      resultArr.push(fileName);
+    }
+  });
+
+  return resultArr;
+}
+
+console.log(renameFiles(['doc', 'doc', 'image', 'doc(1)', 'doc'])); //  ['doc', 'doc(1)', 'image', 'doc(1)(1)', 'doc(2)']
+console.log(renameFiles(['a', 'b', 'cd', 'b ', 'a(3)'])); //  ['a', 'b', 'cd', 'b ', 'a(3)']
+console.log(renameFiles([])); //  []

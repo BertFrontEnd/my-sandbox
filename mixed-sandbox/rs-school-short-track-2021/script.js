@@ -95,11 +95,10 @@ console.log(getCommonCharacterCount('a', 'b')); // 0) */
 
 console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])); // [-1, 150, 160, 170, -1, -1, 180, 190] */
 
-/* console.log('06-mac-address:'); */
+console.log('06-mac-address:');
 
-/* function isMAC48Address(n) {
+function isMAC48Address(n) {
   const macArr = [...n];
-  console.log(macArr);
   const arrSymbol = [
     '0',
     '1',
@@ -119,16 +118,17 @@ console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])); // [-1, 150, 1
     'F',
     '-',
   ];
-  console.log(arrSymbol);
 
   const resultArr = macArr.filter((elem) => arrSymbol.includes(elem));
-  console.log(resultArr);
 
-  return macArr.length === resultArr.length ? true : false;
+  if (macArr.length === resultArr.length) {
+    return true;
+  }
+  return false;
 }
 
 console.log(isMAC48Address('00-1B-63-84-45-E6')); // true
-console.log(isMAC48Address('Z1-1B-63-84-45-E6')); // false */
+console.log(isMAC48Address('Z1-1B-63-84-45-E6')); // false
 
 /* console.log('07-file-names:');
 
@@ -159,15 +159,8 @@ function getSumOfDigits(n) {
   let result = '';
   const arr = String(n).split('').map(Number);
 
-  result = arr.reduce((acc, el) => {
-    return (acc = acc + el);
-  });
-
-  if (String(result).length > 1) {
-    return getSumOfDigits(result);
-  } else {
-    return result;
-  }
+  result = arr.reduce((acc, el) => (acc += el), 0);
+  return String(result).length > 1 ? getSumOfDigits(result) : result;
 }
 
 console.log(getSumOfDigits(91)); // 1
@@ -180,7 +173,7 @@ console.log(getSumOfDigits(99)); // 9
 console.log('---');
 console.log(getSumOfDigits(123)); // 6 */
 
-console.log('11-encode-line:');
+/* console.log('11-encode-line:');
 
 function encodeLine(str) {
   let res = '';
@@ -200,11 +193,7 @@ function encodeLine(str) {
     }
   }
 
-  arr = Array.from(res).filter((elem) => {
-    if (elem !== '1') {
-      return elem;
-    }
-  });
+  arr = Array.from(res).filter((elem) => (elem !== '1' ? elem : null));
 
   return arr.join('');
 }
@@ -213,4 +202,4 @@ console.log(encodeLine('aaaatttt')); // '4a4t'
 console.log(encodeLine('aabbccc')); // '2a2b3c'
 console.log(encodeLine('abbcca')); // 'a2b2ca'
 console.log(encodeLine('xyz')); // 'xyz'
-console.log(encodeLine('')); // ''
+console.log(encodeLine('')); // '' */

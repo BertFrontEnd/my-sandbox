@@ -130,7 +130,7 @@ console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])); // [-1, 150, 1
 console.log(isMAC48Address('00-1B-63-84-45-E6')); // true
 console.log(isMAC48Address('Z1-1B-63-84-45-E6')); // false */
 
-console.log('07-file-names:');
+/* console.log('07-file-names:');
 
 function renameFiles(names) {
   const resultArr = [];
@@ -151,4 +151,66 @@ function renameFiles(names) {
 
 console.log(renameFiles(['doc', 'doc', 'image', 'doc(1)', 'doc'])); //  ['doc', 'doc(1)', 'image', 'doc(1)(1)', 'doc(2)']
 console.log(renameFiles(['a', 'b', 'cd', 'b ', 'a(3)'])); //  ['a', 'b', 'cd', 'b ', 'a(3)']
-console.log(renameFiles([])); //  []
+console.log(renameFiles([])); //  [] */
+
+/* console.log('09-sum-digits:');
+
+function getSumOfDigits(n) {
+  let result = '';
+  const arr = String(n).split('').map(Number);
+
+  result = arr.reduce((acc, el) => {
+    return (acc = acc + el);
+  });
+
+  if (String(result).length > 1) {
+    return getSumOfDigits(result);
+  } else {
+    return result;
+  }
+}
+
+console.log(getSumOfDigits(91)); // 1
+console.log('---');
+console.log(getSumOfDigits(100)); // 1
+console.log('---');
+console.log(getSumOfDigits(35)); // 8
+console.log('---');
+console.log(getSumOfDigits(99)); // 9
+console.log('---');
+console.log(getSumOfDigits(123)); // 6 */
+
+console.log('11-encode-line:');
+
+function encodeLine(str) {
+  let res = '';
+  let count = 1;
+  let arr = [];
+
+  if (str.length === 0) {
+    return '';
+  }
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1]) {
+      count += 1;
+    } else {
+      res += count + str[i];
+      count = 1;
+    }
+  }
+
+  arr = Array.from(res).filter((elem) => {
+    if (elem !== '1') {
+      return elem;
+    }
+  });
+
+  return arr.join('');
+}
+
+console.log(encodeLine('aaaatttt')); // '4a4t'
+console.log(encodeLine('aabbccc')); // '2a2b3c'
+console.log(encodeLine('abbcca')); // 'a2b2ca'
+console.log(encodeLine('xyz')); // 'xyz'
+console.log(encodeLine('')); // ''

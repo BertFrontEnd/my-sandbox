@@ -203,3 +203,5 @@ console.log(encodeLine('aabbccc')); // '2a2b3c'
 console.log(encodeLine('abbcca')); // 'a2b2ca'
 console.log(encodeLine('xyz')); // 'xyz'
 console.log(encodeLine('')); // '' */
+
+console.log('05-delete-digit:');

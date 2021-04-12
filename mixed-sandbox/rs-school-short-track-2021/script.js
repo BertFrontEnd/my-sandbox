@@ -60,14 +60,22 @@ console.log(
   ]),
 ); // 18 */
 
-/* console.log('02-common-character-count:'); */
+/* console.log('02-common-character-count:');
 
-/* function getCommonCharacterCount(s1, s2) {
-  let arr1 = [...s1];
-  let arr2 = [...s2];
+function getCommonCharacterCount(s1, s2) {
+  let res = 0;
+  const arrS1 = [...s1];
+  const arrS2 = [...s2];
 
-  console.log(arr1);
-  console.log(arr2);
+  for (let i = 0; i < arrS1.length; i++) {
+    const index = arrS2.indexOf(arrS1[i]);
+
+    if (index !== -1) {
+      res += 1;
+      arrS2.splice(index, 1);
+    }
+  }
+  return res;
 }
 
 console.log(getCommonCharacterCount('aabcc', 'adcaa')); // 3)
@@ -76,9 +84,9 @@ console.log(getCommonCharacterCount('abca', 'xyzbac')); // 3)
 console.log(getCommonCharacterCount('', 'abc')); // 0)
 console.log(getCommonCharacterCount('a', 'b')); // 0) */
 
-/* console.log('03-sort-by-height:'); */
+/* console.log('03-sort-by-height:');
 
-/* function sortByHeight(arr) {
+function sortByHeight(arr) {
   const resArr = [];
 
   const positiveArr = arr.filter((elem) => elem !== -1).sort((a, b) => a - b);
@@ -95,7 +103,7 @@ console.log(getCommonCharacterCount('a', 'b')); // 0) */
 
 console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])); // [-1, 150, 160, 170, -1, -1, 180, 190] */
 
-console.log('06-mac-address:');
+/* console.log('06-mac-address:');
 
 function isMAC48Address(n) {
   const macArr = [...n];
@@ -128,7 +136,7 @@ function isMAC48Address(n) {
 }
 
 console.log(isMAC48Address('00-1B-63-84-45-E6')); // true
-console.log(isMAC48Address('Z1-1B-63-84-45-E6')); // false
+console.log(isMAC48Address('Z1-1B-63-84-45-E6')); // false */
 
 /* console.log('07-file-names:');
 
@@ -156,11 +164,14 @@ console.log(renameFiles([])); //  [] */
 /* console.log('09-sum-digits:');
 
 function getSumOfDigits(n) {
-  let result = '';
   const arr = String(n).split('').map(Number);
 
-  result = arr.reduce((acc, el) => (acc += el), 0);
-  return String(result).length > 1 ? getSumOfDigits(result) : result;
+  const result = arr.reduce((acc, el) => {
+    acc += el;
+    return acc;
+  }, 0);
+
+  return result.toString().length > 1 ? getSumOfDigits(result) : result;
 }
 
 console.log(getSumOfDigits(91)); // 1
@@ -204,4 +215,15 @@ console.log(encodeLine('abbcca')); // 'a2b2ca'
 console.log(encodeLine('xyz')); // 'xyz'
 console.log(encodeLine('')); // '' */
 
-console.log('05-delete-digit:');
+/* console.log('05-delete-digit:');
+
+function deleteDigit(n) {
+  const minNumber = n.toString().split('').sort()[0];
+  return Number(n.toString().replace(minNumber, ''));
+}
+
+console.log(deleteDigit(152)); // 52
+console.log(deleteDigit(1001)); // 101
+console.log(deleteDigit(10)); // 1
+console.log(deleteDigit(222219)); // 22229
+console.log(deleteDigit(109)); // 19 */

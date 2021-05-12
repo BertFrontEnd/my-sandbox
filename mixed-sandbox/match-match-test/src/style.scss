@@ -1,0 +1,8 @@
+$bodyColor: chocolate;
+$textColor: white;
+
+body {
+  background-color: $bodyColor;
+  background: url("./assets/images/image.jpg");
+  color: $textColor;
+}

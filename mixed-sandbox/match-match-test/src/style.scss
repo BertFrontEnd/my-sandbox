@@ -1,8 +1,28 @@
-$bodyColor: chocolate;
-$textColor: white;
+html {
+  font-size: 20px;
+}
 
 body {
-  background-color: $bodyColor;
-  background: url("./assets/images/image.jpg");
-  color: $textColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: darkslategrey;
+
+  header,
+  main,
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+  }
+
+  main {
+    min-height: calc(100vh - 4rem);
+    width: 100%;
+  }
 }

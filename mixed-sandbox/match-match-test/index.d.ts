@@ -24,8 +24,8 @@ declare module '*.jpeg' {
 }
 
 declare module '*.svg' {
-  const src: string;
-  export default src;
+  const content: string;
+  export default content;
 }
 
 declare module '*.json' {

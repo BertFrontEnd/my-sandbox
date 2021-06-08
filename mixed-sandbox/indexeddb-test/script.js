@@ -70,6 +70,7 @@ const getAndDisplayNotes = (db) => {
     } else {
       // Если курсор нулевой (заметок больше нет), передаем массив заметок в обрабатывающую функцию для отрисовки на странице
       displayNotes(allNotes);
+      console.log(typeof allNotes);
     }
   });
 
@@ -83,6 +84,7 @@ const getAndDisplayNotes = (db) => {
 const addStickyNote = (db, message) => {
   // Запускаем транзакцию базы данных для записи данных в хранилище объектов notes
   let tx = db.transaction(['notes'], 'readwrite');
+  console.log(db);
   // Получаем хранилище объектов notes из транзакции
   let store = tx.objectStore('notes');
 
@@ -152,7 +154,7 @@ const buttonAdd = document.querySelector('#button-add');
 const buttonReverse = document.querySelector('#button-reverse');
 const notesList = document.querySelector('#notes');
 
-// Создаем функцию добавления заметки в базу данных по ссылке db дл DOM
+// Создаем функцию добавления заметки в базу данных по ссылке db для DOM
 const submitNote = (message) => {
   addStickyNote(db, message.value);
   message.value = '';
@@ -163,6 +165,8 @@ buttonAdd.addEventListener('click', () => {
   submitNote(message);
   getAndDisplayNotes(db);
 });
+
+// ----------------------------------------------
 
 // Создаем функцию для выбора порядка отображения заметок в DOM
 const flipNoteOrder = () => {
@@ -212,7 +216,7 @@ const deleteNote = (event) => {
   });
 };
 
-// Обрабатываем конку удаления заметки
+// Обрабатываем кнопку удаления заметки
 notesList.addEventListener('click', (event) => {
   if (event.target.classList.contains('button-delete')) {
     deleteNote(event);

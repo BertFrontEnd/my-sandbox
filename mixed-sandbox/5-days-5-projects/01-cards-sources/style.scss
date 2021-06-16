@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+  background-color: #30336b;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    width: 100%;
+    padding: 0 50px;
+
+    .slide {
+      position: relative;
+      flex: 1;
+      height: 80vh;
+      margin: 10px;
+      color: #ffffff;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 5px 5px 30px #00000080;
+      cursor: pointer;
+      transition: all 500ms ease-in-out;
+
+      &.active {
+        flex: 10;
+
+        h3 {
+          opacity: 1;
+          transition: opacity 0.3s ease-in 0.4s;
+        }
+      }
+
+      h3 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        margin: 0;
+        font-size: 24px;
+        opacity: 0;
+      }
+    }
+  }
+}

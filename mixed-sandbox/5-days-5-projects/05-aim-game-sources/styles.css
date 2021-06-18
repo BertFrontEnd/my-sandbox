@@ -39,6 +39,10 @@ body .screen.up {
   margin-top: -100vh;
 }
 
+body .screen.down {
+  margin-top: 100vh;
+}
+
 body .screen h1 {
   line-height: 1.4;
   font-size: 4rem;

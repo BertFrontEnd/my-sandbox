@@ -13,7 +13,14 @@ const setTime = (value) => {
 
 const finishGame = () => {
   timeEl.parentNode.classList.add('hide');
-  board.innerHTML = `<h1>Score: <span class="primary">${score}<span></h1>`;
+  board.innerHTML = `<h1 id="message">Score: <span class="primary">${score}<span></h1>`;
+
+  const message = document.querySelector('#message');
+  message.style.cursor = 'pointer';
+
+  message.addEventListener('click', () => {
+    document.location.reload();
+  });
 };
 
 const decreaseTime = () => {

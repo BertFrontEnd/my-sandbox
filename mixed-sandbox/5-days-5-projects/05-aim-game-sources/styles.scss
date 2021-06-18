@@ -26,6 +26,10 @@ body {
       margin-top: -100vh;
     }
 
+    &.down {
+      margin-top: 100vh;
+    }
+
     h1 {
       line-height: 1.4;
       font-size: 4rem;

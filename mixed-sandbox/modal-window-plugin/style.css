@@ -22,12 +22,103 @@ body .container h1 {
   margin-bottom: 10px;
 }
 
+body .modal.open .modal-overlay {
+  opacity: 1;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body .modal.open .modal-overlay .modal-window {
+  opacity: 1;
+  z-index: 1000;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+}
+
+body .modal.hide .modal-overlay {
+  opacity: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0);
+}
+
+body .modal.hide .modal-overlay .modal-window {
+  opacity: 0;
+  z-index: -1;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+}
+
 body .modal .modal-overlay {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  width: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+body .modal .modal-overlay .modal-window {
+  z-index: -1;
+  width: 600px;
+  margin: auto;
+  border-radius: 5px;
+  opacity: 0;
+  background-color: #fff;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+body .modal .modal-overlay .modal-window .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+body .modal .modal-overlay .modal-window .modal-header .modal-title {
+  font-size: 1.5rem;
+}
+
+body .modal .modal-overlay .modal-window .modal-header .modal-close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+body .modal .modal-overlay .modal-window .modal-body {
+  padding: 10px;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer {
+  padding: 5px 10px;
+  text-align: right;
+  border-top: 1px solid #eee;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #eee;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer button:hover {
+  background-color: #e0e0e0;
 }
 /*# sourceMappingURL=style.css.map */

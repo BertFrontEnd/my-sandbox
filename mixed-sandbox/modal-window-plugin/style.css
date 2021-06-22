@@ -109,16 +109,36 @@ body .modal .modal-overlay .modal-window .modal-footer {
 }
 
 body .modal .modal-overlay .modal-window .modal-footer button {
-  padding: 5px 10px;
+  padding: 5px 12px;
   border: none;
   border-radius: 5px;
-  background-color: #eee;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   cursor: pointer;
 }
 
-body .modal .modal-overlay .modal-window .modal-footer button:hover {
-  background-color: #e0e0e0;
+body .modal .modal-overlay .modal-window .modal-footer button:not(:last-child) {
+  margin: 0 5px;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .primary {
+  background-color: #3498db;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .primary:hover {
+  background-color: #2980b9;
+  -webkit-box-shadow: 1px 1px 5px #3498db, inset -1px -1px 5px #3498db;
+          box-shadow: 1px 1px 5px #3498db, inset -1px -1px 5px #3498db;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .danger {
+  background-color: #e74c3c;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .danger:hover {
+  background-color: #c0392b;
+  -webkit-box-shadow: 1px 1px 5px #e74c3c, inset -1px -1px 5px #e74c3c;
+          box-shadow: 1px 1px 5px #e74c3c, inset -1px -1px 5px #e74c3c;
 }
 /*# sourceMappingURL=style.css.map */

@@ -93,15 +93,33 @@ body {
           border-top: 1px solid #eee;
 
           button {
-            padding: 5px 10px;
+            padding: 5px 12px;
             border: none;
             border-radius: 5px;
-            background-color: #eee;
-            transition: background-color 0.3s ease;
+            color: #ffffff;
+            transition: all 0.3s;
             cursor: pointer;
 
+            &:not(:last-child) {
+              margin: 0 5px;
+            }
+          }
+
+          .primary {
+            background-color: #3498db;
+
             &:hover {
-              background-color: #e0e0e0;
+              background-color: #2980b9;
+              box-shadow: 1px 1px 5px #3498db, inset -1px -1px 5px #3498db;
+            }
+          }
+
+          .danger {
+            background-color: #e74c3c;
+
+            &:hover {
+              background-color: #c0392b;
+              box-shadow: 1px 1px 5px #e74c3c, inset -1px -1px 5px #e74c3c;
             }
           }
         }

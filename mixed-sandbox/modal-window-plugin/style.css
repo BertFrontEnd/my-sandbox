@@ -11,7 +11,6 @@ body {
           align-items: center;
   font-family: 'Muli', sans-serif;
   text-align: center;
-  background-color: #cecece;
 }
 
 body .container {
@@ -20,6 +19,115 @@ body .container {
 
 body .container h1 {
   margin-bottom: 10px;
+}
+
+body .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .row .col {
+  margin: 20px;
+}
+
+body .container .row .col .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 325px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 30px #cecece;
+          box-shadow: 5px 5px 30px #cecece;
+}
+
+body .container .row .col .card .card-img-top {
+  margin-bottom: 10px;
+  width: 250px;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body .container .row .col .card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+body .container .row .col .card .card-body .card-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+body .container .row .col .card .card-body .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .container .row .col .card .card-body .buttons .btn {
+  margin-right: 10px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+body .container .row .col .card .card-body .buttons .btn-primary {
+  background-color: #3498db;
+}
+
+body .container .row .col .card .card-body .buttons .btn-primary:hover {
+  background-color: #0984e3;
+}
+
+body .container .row .col .card .card-body .buttons .btn-danger {
+  background-color: #e74c3c;
+}
+
+body .container .row .col .card .card-body .buttons .btn-danger:hover {
+  background-color: #d63031;
 }
 
 body .modal.open .modal-overlay {
@@ -127,9 +235,7 @@ body .modal .modal-overlay .modal-window .modal-footer .primary {
 }
 
 body .modal .modal-overlay .modal-window .modal-footer .primary:hover {
-  background-color: #2980b9;
-  -webkit-box-shadow: 1px 1px 5px #3498db, inset -1px -1px 5px #3498db;
-          box-shadow: 1px 1px 5px #3498db, inset -1px -1px 5px #3498db;
+  background-color: #0984e3;
 }
 
 body .modal .modal-overlay .modal-window .modal-footer .danger {
@@ -137,8 +243,6 @@ body .modal .modal-overlay .modal-window .modal-footer .danger {
 }
 
 body .modal .modal-overlay .modal-window .modal-footer .danger:hover {
-  background-color: #c0392b;
-  -webkit-box-shadow: 1px 1px 5px #e74c3c, inset -1px -1px 5px #e74c3c;
-          box-shadow: 1px 1px 5px #e74c3c, inset -1px -1px 5px #e74c3c;
+  background-color: #d63031;
 }
 /*# sourceMappingURL=style.css.map */

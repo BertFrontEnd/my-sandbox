@@ -6,13 +6,87 @@ body {
   align-items: center;
   font-family: 'Muli', sans-serif;
   text-align: center;
-  background-color: #cecece;
 
   .container {
     width: 500px;
 
     h1 {
       margin-bottom: 10px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .col {
+        margin: 20px;
+
+        .card {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          width: 325px;
+          padding: 15px;
+          border: 1px solid #eee;
+          border-radius: 5px;
+          background-color: #fff;
+          box-shadow: 5px 5px 30px #cecece;
+
+          .card-img-top {
+            margin-bottom: 10px;
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+          }
+
+          .card-body {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 100%;
+
+            .card-title {
+              margin-bottom: 10px;
+              font-size: 18px;
+            }
+
+            .buttons {
+              display: flex;
+              justify-content: flex-start;
+              align-items: flex-start;
+
+              .btn {
+                margin-right: 10px;
+                padding: 8px 12px;
+                text-decoration: none;
+                color: #ffffff;
+                border-radius: 5px;
+                transition: background-color 0.5s;
+              }
+
+              .btn-primary {
+                background-color: #3498db;
+
+                &:hover {
+                  background-color: #0984e3;
+                }
+              }
+
+              .btn-danger {
+                background-color: #e74c3c;
+
+                &:hover {
+                  background-color: #d63031;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -109,8 +183,7 @@ body {
             background-color: #3498db;
 
             &:hover {
-              background-color: #2980b9;
-              box-shadow: 1px 1px 5px #3498db, inset -1px -1px 5px #3498db;
+              background-color: #0984e3;
             }
           }
 
@@ -118,8 +191,7 @@ body {
             background-color: #e74c3c;
 
             &:hover {
-              background-color: #c0392b;
-              box-shadow: 1px 1px 5px #e74c3c, inset -1px -1px 5px #e74c3c;
+              background-color: #d63031;
             }
           }
         }

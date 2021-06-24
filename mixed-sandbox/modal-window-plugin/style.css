@@ -238,6 +238,14 @@ body .modal .modal-overlay .modal-window .modal-footer .primary:hover {
   background-color: #0984e3;
 }
 
+body .modal .modal-overlay .modal-window .modal-footer .secondary {
+  background-color: #c8d6e5;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .secondary:hover {
+  background-color: #8395a7;
+}
+
 body .modal .modal-overlay .modal-window .modal-footer .danger {
   background-color: #e74c3c;
 }

@@ -1,49 +1,94 @@
 let fruits = [
   {
     id: 1,
-    title: 'Яблоки',
+    title: 'Apple',
     price: 20,
-    img: 'https://e1.edimdoma.ru/data/ingredients/0000/2374/2374-ed4_wide.jpg?1487746348',
+    img: './assets/img/apple.jpg',
   },
   {
     id: 2,
-    title: 'Апельсины',
+    title: 'Orange',
     price: 30,
-    img: 'https://fashion-stil.ru/wp-content/uploads/2019/04/apelsin-ispaniya-kg-92383155888981_small6.jpg',
+    img: './assets/img/orange.jpg',
   },
   {
     id: 3,
-    title: 'Манго',
+    title: 'Mango',
     price: 40,
-    img: 'https://itsfresh.ru/upload/iblock/178/178d8253202ef1c7af13bdbd67ce65cd.jpg',
+    img: './assets/img/mango.jpg',
   },
 ];
 
-const modal = $.modal({
-  title: 'BertFrontEnd Modal',
+const toHTML = (fruit) => {
+  return `      
+    <div class="col">
+      <div class="card">
+        <img src="${fruit.img}" alt="" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title">${fruit.title}</h5>
+          <div class="buttons">
+            <a href="#" class="btn btn-primary" data-btn="price" data-id="${fruit.id}">View price</a>
+            <a href="#" class="btn btn-danger" data-btn="remove" data-id="${fruit.id}">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+};
+
+function render() {
+  const html = fruits
+    .map((fruit) => {
+      return toHTML(fruit);
+    })
+    .join('');
+
+  document.querySelector('#fruits').innerHTML = html;
+}
+
+render();
+
+const priceModal = $.modal({
+  title: 'Product price',
   closable: true,
-  content: `
-		<p>Lorem ipsum dolor sit.</p>
-		<p>Lorem ipsum dolor sit.</p>
-	`,
   width: '400px',
   footerButtons: [
     {
-      text: 'Ok',
+      text: 'Close',
       type: 'primary',
       handler() {
-        console.log('Primary button clicked');
-        modal.close();
-      },
-    },
-
-    {
-      text: 'Cancel',
-      type: 'danger',
-      handler() {
-        console.log('Danger button clicked');
-        modal.close();
+        priceModal.close();
       },
     },
   ],
+});
+
+document.addEventListener('click', (e) => {
+  e.preventDefault();
+  const btnType = e.target.dataset.btn;
+  const id = Number(e.target.dataset.id);
+  const fruit = fruits.find((f) => {
+    return f.id === id;
+  });
+
+  if (btnType === 'price') {
+    priceModal.setContent(`
+      <p>Price of ${fruit.title}: <strong>$${fruit.price}</strong></p>
+    `);
+    priceModal.open();
+    console.log(fruit);
+  } else if (btnType === 'remove') {
+    $.confirm({
+      title: 'Are you sure?',
+      content: `<p>You remove the fruit: <strong>${fruit.title}</strong></p>`,
+    })
+      .then(() => {
+        fruits = fruits.filter((f) => f.id !== id);
+        render();
+        console.log('Remove');
+      })
+      .catch(() => {
+        console.log('Cancel');
+      });
+  }
 });

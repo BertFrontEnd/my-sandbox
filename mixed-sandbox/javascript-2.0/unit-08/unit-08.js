@@ -144,7 +144,17 @@ document.querySelector('.b-7').onclick = t7;
 //     4 5 6 7 8
 // Задача решается с помощью цикла  while.
 
-function t8() {}
+function t8() {
+  let out8 = document.querySelector('.out-8');
+  out8.innerHTML = '';
+  let num1 = Number(document.querySelector('.i-81').value);
+  let num2 = Number(document.querySelector('.i-82').value);
+
+  while (num1 <= num2) {
+    out8.innerHTML += `${num1} `;
+    num1++;
+  }
+}
 
 document.querySelector('.b-8').onclick = t8;
 
@@ -157,7 +167,28 @@ document.querySelector('.b-8').onclick = t8;
 // 6 7 8
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл  while.
 
-function t9() {}
+function t9() {
+  let out9 = document.querySelector('.out-9');
+  out9.innerHTML = '';
+  let num1 = Number(document.querySelector('.i-91').value);
+  let num2 = Number(document.querySelector('.i-92').value);
+
+  if (num1 < num2) {
+    while (num1 <= num2) {
+      out9.innerHTML += `${num1} `;
+      num1++;
+    }
+    return;
+  }
+
+  if (num1 > num2) {
+    while (num2 <= num1) {
+      out9.innerHTML += `${num2} `;
+      num2++;
+    }
+    return;
+  }
+}
 
 document.querySelector('.b-9').onclick = t9;
 

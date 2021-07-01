@@ -196,49 +196,92 @@ document.querySelector('.b-9').onclick = t9;
 // Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно.
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
-function t10() {}
+function t10() {
+  let out10 = document.querySelector('.out-10');
+  out10.innerHTML = '';
+  let count = 1950;
+  while (count <= 2000) {
+    out10.innerHTML += `${count} `;
+    count += 2;
+  }
+}
 
 document.querySelector('.b-10').onclick = t10;
 
 //  Task 11
 // Кнопка b-11 запускает функцию t11.  Функция должна:
-//     получить все div.div-11
+// получить все div.div-11
 // перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
 // вывести в out-11 содержимое каждого блока. Разделитель - пробел.
-//     В результате должно получиться так:
-//     one 3 4 two
+// В результате должно получиться так:
+// one 3 4 two
 
-function t11() {}
+function t11() {
+  let div11 = document.querySelectorAll('.div-11');
+  let out11 = document.querySelector('.out-11');
+  out11.innerHTML = '';
+  let count = 0;
+  while (count <= div11.length) {
+    out11.innerHTML += `${div11[count].textContent} `;
+    count++;
+  }
+}
 
 document.querySelector('.b-11').onclick = t11;
 
 //  Task 12
 // Кнопка b-12 запускает функцию t12.  Функция должна:
-//     получить все div.div-12
+// получить все div.div-12
 // перебрать их с помощью цикла  while. Обращение к div выглядит так elem[i]
 // применить к каждому elem[i].style.background = ‘orange’
 
-function t12() {}
+function t12() {
+  let div12 = document.querySelectorAll('.div-12');
+  let count = 0;
+  while (count <= div12.length) {
+    `${(div12[count].style.background = 'orange')} `;
+    count++;
+  }
+}
 
 document.querySelector('.b-12').onclick = t12;
 
 //  Task 13
 // Кнопка b-13 запускает функцию t13.  Функция должна:
-//     получить все input.i-13
+// получить все input.i-13
 // перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
-function t13() {}
+function t13() {
+  let label13 = document.querySelectorAll('.i-13');
+  let count = 0;
+  while (count < label13.length) {
+    label13[count].value = count + 1;
+    count++;
+  }
+}
 
 document.querySelector('.b-13').onclick = t13;
 
 //  Task 14
 // Кнопка b-14 запускает функцию t14  Функция должна:
-//     получить все input.i-14
+// получить все input.i-14
 // перебрать их с помощью цикла  while. Обращение к элементу выглядит так elem[i]
 // вывести в out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
-function t14() {}
+function t14() {
+  let radio14 = document.querySelectorAll('.i-14');
+  console.log(radio14);
+  let out14 = document.querySelector('.out-14');
+  console.log(out14);
+  let count = 0;
+  while (count < radio14.length) {
+    if (radio14[count].checked) {
+      out14.innerHTML = radio14[count].value;
+    }
+    count++;
+  }
+}
 
 document.querySelector('.b-14').onclick = t14;
 

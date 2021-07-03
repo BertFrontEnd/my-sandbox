@@ -290,6 +290,16 @@ document.querySelector('.b-14').onclick = t14;
 // 10 0 9 1 8 2 7 3 6 4 5 5 4 6 3 7 2 8 1 9 0 10
 // Для вывода использовать цикл  while. Разделитель пробел.
 
-function t15() {}
+function t15() {
+  let out15 = document.querySelector('.out-15');
+  out15.innerHTML = '';
+  let countDown = 10;
+  let countUp = 0;
+  while (countDown >= 0 && countUp <= 10) {
+    out15.innerHTML += `${countDown} ${countUp} `;
+    countDown--;
+    countUp++;
+  }
+}
 
 document.querySelector('.b-15').onclick = t15;

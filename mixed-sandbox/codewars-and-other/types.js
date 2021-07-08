@@ -124,3 +124,102 @@ console.log(DNAStrand('ATTGC')); // 'TAACG', 'String ATTGC is'
 console.log('===');
 console.log(DNAStrand('GTAT')); // 'CATA', 'String GTAT is'
 console.log('===');
+
+// Make a function that does arithmetic!
+
+console.log('Make a function that does arithmetic!:');
+
+function arithmetic(a, b, operator) {
+  let result = '';
+
+  switch (true) {
+    case operator === 'add':
+      result = a + b;
+      break;
+    case operator === 'subtract':
+      result = a - b;
+      break;
+    case operator === 'multiply':
+      result = a * b;
+      break;
+    case operator === 'divide':
+      result = a / b;
+      break;
+  }
+
+  return result;
+}
+
+console.log(arithmetic(1, 2, 'add')); // 3, "'add' should return the two numbers added together!"
+console.log(arithmetic(8, 2, 'subtract')); // 6, "'subtract' should return a minus b!"
+console.log(arithmetic(5, 2, 'multiply')); // 10, "'multiply' should return a multiplied by b!"
+console.log(arithmetic(8, 2, 'divide')); // 4, "'divide' should return a divided by b!"
+
+// Basic JS - Calculating averages
+
+console.log('Basic JS - Calculating averages:');
+
+function calc(...arguments) {
+  if (arguments.length === 0) {
+    return 0;
+  } else {
+    let arr = [...arguments];
+    let sum = arr.reduce((acc, elem) => acc + elem);
+    let res = sum / arr.length;
+    return res;
+  }
+}
+
+console.log(calc(1, 1)); // 1
+console.log(calc()); // 0
+
+// Whose bicycle?
+
+console.log('Whose bicycle?:');
+
+function whoseBicycle(diary1, diary2, diary3) {
+  let firstSunArr = Object.values(diary1);
+  let first = firstSunArr.reduce((acc, elem) => acc + elem);
+  let secondSunArr = Object.values(diary2);
+  let second = secondSunArr.reduce((acc, elem) => acc + elem);
+  let thirdSunArr = Object.values(diary3);
+  let third = thirdSunArr.reduce((acc, elem) => acc + elem);
+
+  if (first > second && first > third) {
+    return 'I need to buy a bicycle for my first son.';
+  }
+
+  if (second > first && second > third) {
+    return 'I need to buy a bicycle for my second son.';
+  }
+
+  if (third > first && third > second) {
+    return 'I need to buy a bicycle for my third son.';
+  }
+
+  if ((first === second || second === third || first === third) || (first === second && first === third && second === third)) {
+    return 'I need to buy a bicycle for my third son.';
+  }
+}
+
+console.log(whoseBicycle({
+  'algebra': 6,
+  'history': 7,
+  'physics': 8,
+  'geography': 9,
+  'chemistry': 10,
+},
+{
+  'algebra': 8,
+  'history': 7,
+  'physics': 8,
+  'geography': 9,
+  'chemistry': 10,
+},
+{
+  'algebra': 6,
+  'history': 5,
+  'physics': 5,
+  'geography': 9,
+  'chemistry': 10,
+})); //  'I need to buy a bicycle for my second son.'

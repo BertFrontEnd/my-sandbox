@@ -1,0 +1,84 @@
+body {
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #cccccc;
+}
+
+body h1,
+body h2,
+body p {
+  margin-bottom: 15px;
+}
+
+body .stained-glass {
+  position: relative;
+  width: 900px;
+  height: 600px;
+  margin: 30px auto;
+}
+
+body .stained-glass .stained-glass__part {
+  position: absolute;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  background-image: var(--image);
+  background-size: 900px 600px;
+  background-color: #cccccc;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body .stained-glass .stained-glass__part:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+body .stained-glass .stained-glass__part:nth-child(1) {
+  z-index: 2;
+  top: 150px;
+  left: 0;
+  width: 200px;
+  height: 300px;
+  background-position: 0 -150px;
+}
+
+body .stained-glass .stained-glass__part:nth-child(2) {
+  z-index: 1;
+  top: 80px;
+  left: 100px;
+  width: 400px;
+  height: 450px;
+  background-position: -100px -80px;
+}
+
+body .stained-glass .stained-glass__part:nth-child(3) {
+  z-index: 3;
+  top: 0;
+  left: 375px;
+  width: 400px;
+  height: 600px;
+  background-position: -375px 0;
+}
+
+body .stained-glass .stained-glass__part:nth-child(4) {
+  z-index: 1;
+  top: 30px;
+  left: 500px;
+  width: 400px;
+  height: 500px;
+  background-position: -500px -30px;
+}
+
+body .stained-glass-first {
+  --image: url('./assets/img/other-01.jpg');
+}
+
+body .stained-glass-second {
+  --image: url('./assets/img/other-02.jpg');
+}
+
+body .stained-glass-third {
+  --image: url('./assets/img/other-03.jpg');
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/mustard-ui.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Unit 07</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Unit 07. Функции</h1>
+      <h2>
+        <a href="https://itgid.info/course/javascript-2" target="_blank"
+          >JavaScript v.2.0</a
+        >
+      </h2>
+      <section>
+        <p><b>Task 1.</b></p>
+        <p>
+          Напишите функцию t1, которая при нажатии кнопки выводит в out-1
+          переменную a1.
+        </p>
+        <pre>
+                let a1 = 8;<br>
+                function t1() {<br>
+                
+                }<br>
+                document.querySelector(‘.b-1’).onclick = t1;  <br>              
+            </pre>
+        <button class="button-primary b-1">Task-1</button>
+        <div class="out-1"></div>
+      </section>
+
+      <section>
+        <p><b>Task 2.</b></p>
+        <p>
+          Изменим задачу 1. Сейчас она только выводит переменную в заранее
+          заданный блок. Давайте сделаем так, чтобы функция, была более гибкой.
+          Пусть теперь функция t2 возвращает переменную a2. Поскольку функция
+          возвращает переменную, то имя функции со скобками (вызов функции)
+          можно встраивать в выражения. Обратите внимание, как изменяется вызов
+          функции теперь.
+        </p>
+        <pre>
+                let a2 = 8;<br>
+                function t2() {<br>
+                
+                }<br>
+                document.querySelector(‘.b-2’).onclick = function() {<br>
+                document.querySelector(‘.out-2’).textContent = f2();<br>
+                }<br>
+                          
+            </pre>
+        <button class="button-primary b-2">Task-2</button>
+        <div class="out-2"></div>
+      </section>
+
+      <section>
+        <p><b>Task 3.</b></p>
+        <p>
+          Наша предыдущая функция, сильно все еще зависима от внешних
+          переменных. Давайте сделаем ее более универсальной. Пусть функция t3
+          принимает 2 параметра и выводит их произведение. Допишите код функции
+          так, чтобы она возвращала произведение двух чисел, переданных ей в
+          качестве параметра a, b. Протестируем функцию на двух примерах, с
+          помощью кнопок b-3-1 и b-3-2.
+        </p>
+        <pre>
+                function t3(a,b) {<br>
+
+                }<br>
+                document.querySelector(‘.b-3-1’).onclick =  function(){<br>
+                document.querySelector(‘.out-3-1’).textContent = t3(3,4);<br>
+                }<br>
+                document.querySelector(‘.b-3-2’).onclick =  function(){<br>
+                document.querySelector(‘.out-3-2’).textContent = t3(5,6);<br>
+                }<br>
+                
+                          
+            </pre>
+        <button class="button-primary b-3-1">button 3-1</button>
+        <button class="button-primary b-3-2">button 3-2</button>
+        <div class="out-3-1"></div>
+        <div class="out-3-2"></div>
+      </section>
+
+      <section>
+        <p><b>Task 4.</b></p>
+        <p>
+          Напишите функцию t4 которая принимает ваш год рождения и вычисляет ваш
+          возраст.
+        </p>
+        <button class="button-primary b-4">Task-4</button>
+        <div class="out-4"></div>
+      </section>
+
+      <section>
+        <p><b>Task 5.</b></p>
+        <p>
+          Напишите функцию t5, которая принимает ваше имя в качестве параметра и
+          возвращает строку Hello name, где name - принятое в качестве параметра
+          имя.
+        </p>
+        <button class="button-primary b-5">Task-5</button>
+        <div class="out-5"></div>
+      </section>
+
+      <section>
+        <p><b>Task 6.</b></p>
+        <p>
+          Напишите функцию t6, которая принимает 2 числа и возвращает случайное
+          целое число от первого до второго принятого параметра.
+        </p>
+        <button class="button-primary b-6">Task-6</button>
+        <div class="out-6"></div>
+      </section>
+
+      <section>
+        <p><b>Task 7.</b></p>
+        <p>
+          Напишите функцию t7, которая возвращает случайный цвет в формате
+          rgb(x,y,z) (строка). Где x,y,z - случайные числа в диапазоне [0, 255].
+        </p>
+        <button class="button-primary b-7">Task-7</button>
+        <div class="out-7">
+          Потому, что блок должен иметь высоту, чтобы увидеть background!!!
+        </div>
+      </section>
+
+      <section>
+        <p><b>Task 8.</b></p>
+        <p>
+          Напишите функцию t8, которая принимает строку в качестве параметра и
+          возвращает результат с очищенными пробелами в начале и вконце строки.
+          Т.е. принимает _hello_ (где знак _ символизирует пробел), а возвращает
+          hello. Для удаления пробелов - используйте trim.
+        </p>
+        <button class="button-primary b-8">Task-8</button>
+        <div class="out-8"></div>
+      </section>
+
+      <section>
+        <p><b>Task 9.</b></p>
+        <p>
+          Напишите функцию t9, которая принимает число и возвращает true, если
+          число четное, и false если не четное.
+        </p>
+        <button class="button-primary b-9">Task-9</button>
+        <div class="out-9"></div>
+      </section>
+
+      <section>
+        <p><b>Task 10.</b></p>
+        <p>
+          Создайте функцию t10, которая принимает 2 числа и возвращает большее
+          из них. В случае равенства - любое из чисел.
+        </p>
+        <button class="button-primary b-10">Task-10</button>
+        <div class="out-10"></div>
+      </section>
+    </div>
+
+    <script src="unit-07.js"></script>
+  </body>
+</html>

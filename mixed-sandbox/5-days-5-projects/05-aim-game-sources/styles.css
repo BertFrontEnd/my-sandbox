@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Khula&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: #fff;
+  font-family: 'Khula', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+body .screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  -webkit-transition: margin 0.5s ease-out;
+  transition: margin 0.5s ease-out;
+  background: -webkit-gradient(linear, left top, right top, from(#29323c), to(#485563));
+  background: linear-gradient(90deg, #29323c 0%, #485563 100%);
+}
+
+body .screen.up {
+  margin-top: -100vh;
+}
+
+body .screen.down {
+  margin-top: 100vh;
+}
+
+body .screen h1 {
+  line-height: 1.4;
+  font-size: 4rem;
+}
+
+body .screen a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body .screen a:hover {
+  color: #16d9e3;
+}
+
+body .screen .start {
+  font-size: 1.5rem;
+}
+
+body .screen .time-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+body .screen .time-list li {
+  margin: 10px;
+}
+
+body .screen .time-list li .time-btn {
+  background-color: transparent;
+  border: 2px solid #c0c0c0;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+}
+
+body .screen .time-list li .time-btn:hover {
+  border: 2px solid #16d9e3;
+  color: #16d9e3;
+}
+
+body .screen .hide {
+  opacity: 0;
+}
+
+body .screen .board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
+  -webkit-box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+          box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+body .screen .board .circle {
+  background: -webkit-gradient(linear, left top, right top, from(#16d9e3), color-stop(47%, #30c7ec), to(#46aef7));
+  background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body .screen .board .primary {
+  color: #16d9e3;
+}
+/*# sourceMappingURL=styles.css.map */

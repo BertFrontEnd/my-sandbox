@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Muli', sans-serif;
+  text-align: center;
+}
+
+body .container {
+  width: 500px;
+}
+
+body .container h1 {
+  margin-bottom: 10px;
+}
+
+body .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .row .col {
+  margin: 20px;
+}
+
+body .container .row .col .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 325px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 5px 5px 30px #cecece;
+          box-shadow: 5px 5px 30px #cecece;
+}
+
+body .container .row .col .card .card-img-top {
+  margin-bottom: 10px;
+  width: 250px;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body .container .row .col .card .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+body .container .row .col .card .card-body .card-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+body .container .row .col .card .card-body .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .container .row .col .card .card-body .buttons .btn {
+  margin-right: 10px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 5px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+body .container .row .col .card .card-body .buttons .btn-primary {
+  background-color: #3498db;
+}
+
+body .container .row .col .card .card-body .buttons .btn-primary:hover {
+  background-color: #0984e3;
+}
+
+body .container .row .col .card .card-body .buttons .btn-danger {
+  background-color: #e74c3c;
+}
+
+body .container .row .col .card .card-body .buttons .btn-danger:hover {
+  background-color: #d63031;
+}
+
+body .modal.open .modal-overlay {
+  opacity: 1;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body .modal.open .modal-overlay .modal-window {
+  opacity: 1;
+  z-index: 1000;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+}
+
+body .modal.hide .modal-overlay {
+  opacity: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0);
+}
+
+body .modal.hide .modal-overlay .modal-window {
+  opacity: 0;
+  z-index: -1;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+}
+
+body .modal .modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+body .modal .modal-overlay .modal-window {
+  z-index: -1;
+  width: 600px;
+  margin: auto;
+  border-radius: 5px;
+  opacity: 0;
+  background-color: #fff;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+body .modal .modal-overlay .modal-window .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+body .modal .modal-overlay .modal-window .modal-header .modal-title {
+  font-size: 1.5rem;
+}
+
+body .modal .modal-overlay .modal-window .modal-header .modal-close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+body .modal .modal-overlay .modal-window .modal-body {
+  padding: 10px;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer {
+  padding: 5px 10px;
+  text-align: right;
+  border-top: 1px solid #eee;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer button {
+  padding: 5px 12px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer button:not(:last-child) {
+  margin: 0 5px;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .primary {
+  background-color: #3498db;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .primary:hover {
+  background-color: #0984e3;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .secondary {
+  background-color: #c8d6e5;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .secondary:hover {
+  background-color: #8395a7;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .danger {
+  background-color: #e74c3c;
+}
+
+body .modal .modal-overlay .modal-window .modal-footer .danger:hover {
+  background-color: #d63031;
+}
+/*# sourceMappingURL=style.css.map */

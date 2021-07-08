@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  background-image: linear-gradient(
+      -90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 2rem;
+
+    .col-header {
+      width: 150px;
+      padding: 0.8rem 1rem;
+      text-align: center;
+      color: #fff;
+      font-weight: 700;
+      text-shadow: 1px 1px #000000;
+      box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+      border-radius: 10px;
+      user-select: none;
+    }
+
+    .border {
+      border: 1px dashed rgba(198, 198, 198, 0.36);
+    }
+
+    .placeholder {
+      width: 150px;
+      height: 66px;
+    }
+  }
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 66px;
+  border: 1px solid #eee;
+  text-align: center;
+  color: #828282;
+  border-radius: 10px;
+  background: #f7f6f7;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  cursor: grab;
+  transition: all 0.3s;
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.start,
+.progress,
+.done {
+  background-color: gray;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(255, 255, 255, 0.5) 35px,
+    rgba(255, 255, 255, 0.5) 70px
+  );
+}
+
+.hold {
+  box-shadow: inset 4px 4px 4px rgba(198, 198, 198, 0.36),
+    inset -4px -4px 4px rgba(198, 198, 198, 0.36);
+}
+
+.hide {
+  opacity: 0.3;
+}
+
+.entered {
+  opacity: 0.1;
+  border-radius: 10px;
+  background: radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px;
+  transform: scale(1.1);
+  transition: background-color 0.3s;
+}

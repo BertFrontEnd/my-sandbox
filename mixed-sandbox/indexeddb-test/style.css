@@ -1,0 +1,48 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+#app,
+#text-box,
+#notes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+}
+
+#text-box,
+#new-message {
+  margin-bottom: 10px;
+}
+
+#notes {
+  width: 900px;
+  margin-bottom: 10px;
+}
+
+#notes ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#notes li {
+  margin-bottom: 10px;
+}
+
+#notes button {
+  margin-left: 5px;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}

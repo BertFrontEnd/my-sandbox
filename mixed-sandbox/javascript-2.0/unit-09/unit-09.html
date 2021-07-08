@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/mustard-ui.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Unit 09</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Unit 09. РАБОТАЕМ С DOM</h1>
+      <h2>
+        <a href="https://itgid.info/course/javascript-2" target="_blank"
+          >JavaScript v.2.0 - курс Лущенко Александра</a
+        >
+      </h2>
+
+      <section>
+        <p><b>Task 1.</b></p>
+        <p>
+          Добавьте кнопку .b-1, которая запускает функцию f1. Функция
+          присваивает блоку .out-1 ширину 200px, высоту 40px.
+        </p>
+
+        <button class="button-primary b-1">Task-1</button>
+        <div class="out-1 bg-red">out-1</div>
+      </section>
+
+      <section>
+        <p><b>Task 2.</b></p>
+        <p>
+          По нажатию кнопки b-2 запускайте функцию f2, которая присваивает блоку
+          out-2 класс .bg-2.
+        </p>
+        <button class="button-primary b-2">Task-2</button>
+        <div class="out-2">out-2</div>
+      </section>
+
+      <section>
+        <p><b>Task 3.</b></p>
+        <p>
+          По нажатию кнопки b-3 запускайте функцию f3, которая удаляет у блока
+          out-3 класс .bg-3.
+        </p>
+        <button class="button-primary b-3">Task-3</button>
+        <div class="out-3 bg-3">out-3</div>
+      </section>
+
+      <section>
+        <p><b>Task 4.</b></p>
+        <p>
+          По нажатию кнопки b-4 запускайте функцию f4, которая делает toggle
+          класса bg-4 для блока out-4.
+        </p>
+        <button class="button-primary b-4">Task-4</button>
+        <div class="out-4">out-4</div>
+      </section>
+
+      <section>
+        <p><b>Task 5.</b></p>
+        <p>
+          По нажатию b-5 запускайте функцию f5, которая проверяет наличие класса
+          bg-4 у блока out-4 (да, именно bg-4 у out-4 ). Результат - true или
+          false, выводите в out-5.
+        </p>
+        <button class="button-primary b-5">Task-5</button>
+        <div class="out-5"></div>
+      </section>
+
+      <section>
+        <p><b>Task 6.</b></p>
+        <p>
+          По нажатию b-6 запускайте функцию f6, которая выводит в out-6
+          количество параграфов с классом p-6.
+        </p>
+        <p class="p-6">p-6</p>
+        <p class="p-6">p-6</p>
+        <p class="p-6">p-6</p>
+        <p class="p-6">p-6</p>
+        <button class="button-primary b-6">Task-6</button>
+        <div class="out-6"></div>
+      </section>
+
+      <section>
+        <p><b>Task 7.</b></p>
+        <p>
+          По нажатию кнопки b-7 запускайте функцию f7, которая присваивает
+          блокам out-7 класс .bg-7. Обратите внимание, что данных блоков больше
+          одного, следовательно нужен цикл.
+        </p>
+
+        <button class="button-primary b-7">Task-7</button>
+        <div class="out-7">out-7</div>
+        <div class="out-7">out-7</div>
+        <div class="out-7">out-7</div>
+      </section>
+
+      <section>
+        <p><b>Task 8.</b></p>
+        <p>
+          По нажатию кнопки b-8 запускайте функцию f8, которая делает toggle
+          блокам out-8 класс .bg-8. Обратите внимание, что данных блоков больше
+          одного, следовательно нужен цикл.
+        </p>
+
+        <button class="button-primary b-8">Task-8</button>
+        <div class="out-8 bg-8">out-8</div>
+        <div class="out-8">out-8</div>
+        <div class="out-8 bg-8">out-8</div>
+        <div class="out-8">out-8</div>
+      </section>
+
+      <section>
+        <p><b>Task 9.</b></p>
+        <p>
+          Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-9
+          событие клик. По клику должна выполняться функция f9. Функция, должна
+          добавлять класс bg-9 тому out-9 на котором кликнули.
+        </p>
+        <div class="out-9">out-9</div>
+        <div class="out-9">out-9</div>
+        <div class="out-9">out-9</div>
+      </section>
+
+      <section>
+        <p><b>Task 10</b></p>
+        <p>
+          Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-10
+          событие клик. По клику должна выполняться функция f10. Функция, должна
+          делать toggle класса bg-10 тому out-10 на котором кликнули.
+        </p>
+        <div class="out-10 bg-10">out-10</div>
+        <div class="out-10">out-10</div>
+        <div class="out-10 bg-10">out-10</div>
+        <div class="out-10">out-10</div>
+      </section>
+
+      <section>
+        <p><b>Task 11</b></p>
+        <p>
+          Добавьте кнопку .b-11, которая запускает функцию f11. Функция создает
+          через createElement div c текстом 25 и добавляет его через append в
+          out-11.
+        </p>
+
+        <button class="button-primary b-11">Task-11</button>
+        <div class="out-11"></div>
+      </section>
+
+      <section>
+        <p><b>Task 12</b></p>
+        <p>
+          Добавьте кнопку .b-12, которая запускает функцию f12. Функция создает
+          через createElement div c текстом 12 и добавляет ему класс bg-12.
+          Созданный div добавляется в out-12.
+        </p>
+
+        <button class="button-primary b-12">Task-12</button>
+        <div class="out-12"></div>
+      </section>
+
+      <section>
+        <p><b>Task 13</b></p>
+        <p>
+          Добавьте кнопку .b-13, которая запускает функцию f13. Функция создает
+          через createElement div c текстом pushMe и добавляет ему класс bg-13.
+          Также, созданному div добавляется событие onclick, по которому
+          выполняется функция f13_1. Созданный div добавляется в out-13.
+        </p>
+
+        <button class="button-primary b-13">Task-13</button>
+        <div class="out-13"></div>
+        <div class="out-13-1"></div>
+      </section>
+
+      <section>
+        <p><b>Task 14</b></p>
+        <p>
+          Добавьте кнопку .b-14, которая запускает функцию f14. Функция создает
+          через createElement div c текстом 14 и добавляет ему класс bg-14.
+          Созданный div добавляется в out-14 с помощью prepend.
+        </p>
+
+        <button class="button-primary b-14">Task-14</button>
+        <div class="out-14 bg-13">This is out-14</div>
+      </section>
+
+      <section>
+        <p><b>Task 15</b></p>
+        <p>
+          Добавьте кнопку .b-15, которая запускает функцию f15. Функция создает
+          через createElement div c текстом 15 и добавляет ему класс bg-15.
+          Созданный div добавляется в out-15 с помощью before.
+        </p>
+
+        <button class="button-primary b-15">Task-15</button>
+        <div class="out-15 bg-9">This is out-15</div>
+      </section>
+
+      <section>
+        <p><b>Task 16</b></p>
+        <p>
+          Добавьте кнопку .b-16, которая запускает функцию f16. Функция создает
+          через createElement div c текстом 16 и добавляет ему класс bg-16.
+          Созданный div добавляется в out-16 с помощью after.
+        </p>
+
+        <button class="button-primary b-16">Task-16</button>
+        <div class="out-16 bg-4">This is out-16</div>
+      </section>
+
+      <section>
+        <p><b>Task 17</b></p>
+        <p>
+          Добавьте кнопку .b-17, которая запускает функцию f17. Функция создает
+          через createElement div c текстом 17 и добавляет ему класс bg-17.
+          Созданный div заменяет out-17 с помощью replaceWith.
+        </p>
+
+        <button class="button-primary b-17">Task-17</button>
+        <div class="out-17 bg-13">This is out-17</div>
+      </section>
+
+      <section>
+        <p><b>Task 18</b></p>
+        <p>
+          Добавьте кнопку .b-18, которая запускает функцию f18. Функция с
+          помощью getAttribute получает data-b атрибут с параграф p-18 и выводит
+          в out-18.
+        </p>
+        <p class="p-18" data-b="hello">This is p-18</p>
+        <button class="button-primary b-18">Task-18</button>
+        <div class="out-18"></div>
+      </section>
+
+      <section>
+        <p><b>Task 19</b></p>
+        <p>
+          Добавьте кнопку .b-19, которая запускает функцию f19. Функция с
+          помощью getAttribute получает data-b атрибут с параграфов p-19 и
+          выводит в out-19 через пробел. Обратите внимание, что элементов p-19
+          больше одного.
+        </p>
+
+        <p class="p-19" data-b="3">This is p-19</p>
+        <p class="p-19" data-b="14">This is p-19</p>
+        <p class="p-19" data-b="15">This is p-19</p>
+        <p class="p-19" data-b="92">This is p-19</p>
+
+        <button class="button-primary b-19">Task-19</button>
+        <div class="out-19"></div>
+      </section>
+
+      <section>
+        <p><b>Task 20</b></p>
+        <p>
+          Добавьте кнопку .b-20, которая запускает функцию f20. Функция с
+          помощью setAttribute присваивает атрибут title="go" в div.out-20.
+        </p>
+        <button class="button-primary b-20">Task-20</button>
+        <div class="out-20"></div>
+      </section>
+    </div>
+
+    <script src="unit-09.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+console.log('isNumber: ' + Validate.isNumber('5'));
+console.log('isNumber: ' + Validate.isNumber(5));
+console.log('isInt: ' + Validate.isInt(5));
+console.log('isInt: ' + Validate.isInt(5.5));
+console.log('isFloat: ' + Validate.isFloat(5));
+console.log('isFloat: ' + Validate.isFloat(5.5));
+console.log('isChar: ' + Validate.isChar('H'));
+console.log('isChar: ' + Validate.isChar('Home'));
+console.log('isString: ' + Validate.isString('Home'));
+console.log('isString: ' + Validate.isString(777));
+console.log('isBoolean: ' + Validate.isBoolean(false));
+console.log('isBoolean: ' + Validate.isBoolean(777));
+console.log('isArray: ' + Validate.isArray([7, 7, 7]));
+console.log('isArray: ' + Validate.isArray(777));
+console.log('toMoney: ' + Validate.toMoney(1000));
+console.log('toMoney: ' + Validate.toMoney(200000));

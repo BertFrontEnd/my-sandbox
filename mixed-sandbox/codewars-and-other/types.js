@@ -159,11 +159,11 @@ console.log(arithmetic(8, 2, 'divide')); // 4, "'divide' should return a divided
 
 console.log('Basic JS - Calculating averages:');
 
-function calc(...arguments) {
+function calc(...arg) {
   if (arguments.length === 0) {
     return 0;
   } else {
-    let arr = [...arguments];
+    let arr = [...arg];
     let sum = arr.reduce((acc, elem) => acc + elem);
     let res = sum / arr.length;
     return res;
@@ -197,29 +197,176 @@ function whoseBicycle(diary1, diary2, diary3) {
     return 'I need to buy a bicycle for my third son.';
   }
 
-  if ((first === second || second === third || first === third) || (first === second && first === third && second === third)) {
+  if (
+    first === second ||
+    second === third ||
+    first === third ||
+    (first === second && first === third && second === third)
+  ) {
     return 'I need to buy a bicycle for my third son.';
   }
 }
 
-console.log(whoseBicycle({
-  'algebra': 6,
-  'history': 7,
-  'physics': 8,
-  'geography': 9,
-  'chemistry': 10,
-},
-{
-  'algebra': 8,
-  'history': 7,
-  'physics': 8,
-  'geography': 9,
-  'chemistry': 10,
-},
-{
-  'algebra': 6,
-  'history': 5,
-  'physics': 5,
-  'geography': 9,
-  'chemistry': 10,
-})); //  'I need to buy a bicycle for my second son.'
+console.log(
+  whoseBicycle(
+    {
+      algebra: 6,
+      history: 7,
+      physics: 8,
+      geography: 9,
+      chemistry: 10,
+    },
+    {
+      algebra: 8,
+      history: 7,
+      physics: 8,
+      geography: 9,
+      chemistry: 10,
+    },
+    {
+      algebra: 6,
+      history: 5,
+      physics: 5,
+      geography: 9,
+      chemistry: 10,
+    },
+  ),
+); //  'I need to buy a bicycle for my second son.'
+
+// Are arrow functions odd?
+
+console.log('Are arrow functions odd?:');
+
+function odds(values) {
+  return values.filter((elem) => elem % 2 !== 0);
+}
+
+console.log(odds([])); // []
+console.log(odds([2, 4, 6])); // []
+console.log(odds([1, 3, 5])); // [1, 3, 5]
+console.log(odds([1, 2, 3, 4, 5, 6])); // [1, 3, 5]
+
+// Test Your Knowledge Of Function Scope
+
+console.log('Test Your Knowledge Of Function Scope:');
+
+function curry(f) {
+  return function (a) {
+    return function (b) {
+      return f(a, b);
+    };
+  };
+}
+
+function curriedAdd(a, b) {
+  return a + b;
+}
+
+let add = curry(curriedAdd);
+
+console.log(add(2)(5)); // 7,    'Should return the addition of these invocations!'
+console.log(add(14)(25)); // 39, 'Should return the addition of these invocations!'
+
+// Run your String
+
+console.log('Run your String:');
+
+function runYourString(arg, obj) {
+  let newFunc = new Function(obj.param, obj.func);
+  return newFunc(arg);
+}
+
+console.log(runYourString(true, { param: 'val', func: 'return val' })); // true
+
+// Factorial Factory
+
+console.log('Factorial Factory:');
+
+function factorial(n) {
+  let num = 1;
+
+  if (n > 0) {
+    for (let i = 1; i <= n; i++) {
+      num = num * i;
+    }
+    return num;
+  } else if (n === 0) {
+    return 1;
+  } else {
+    return null;
+  }
+}
+
+console.log(factorial(2)); //  2, 'Your math may be incorrect'
+console.log(factorial(5)); //  120, 'Your math may be incorrect'
+console.log(factorial(-1)); //  null, "Don't forget to check for negatives!"
+
+// Recursion 101
+
+console.log('Recursion 101:');
+
+function solve(a, b) {
+  while (a >= 2 * b || b >= 2 * a) {
+    if (a === 0 || b === 0) {
+      return [a, b];
+    } else if (a >= 2 * b) {
+      a = a - 2 * b;
+    } else if (b >= 2 * a) {
+      b = b - 2 * a;
+    }
+  }
+  return [a, b];
+}
+
+console.log(solve(6, 19)); // [6, 7]
+console.log(solve(2, 1)); // [0, 1]
+console.log(solve(22, 5)); // [0, 1]
+console.log(solve(2, 10)); // [2, 2]
+
+// Decimal to binary converter
+
+console.log('Decimal to binary converter:');
+
+function decToBin(d) {
+  let binary = '';
+
+  if (d > 0) {
+    while (Math.ceil(d / 2) > 0) {
+      binary = (d % 2) + binary;
+      d = Math.floor(d / 2);
+    }
+
+    return binary;
+  }
+
+  if (d === 0) {
+    return String(d);
+  }
+}
+
+console.log(decToBin(0)); // '0'
+console.log(decToBin(1)); // '1'
+console.log(decToBin(2)); // '10'
+console.log(decToBin(3)); // '11'
+console.log(decToBin(21)); // '10101'
+console.log(decToBin(31)); // '11111'
+
+// Find the stray number
+
+console.log('Find the stray number:');
+
+function stray(numbers) {
+  let obj = {};
+  numbers.filter((item) => {
+    obj[item] = obj[item] + 1 || 1;
+    return obj[item];
+  });
+
+  let targetNumberArr = Object.values(obj);
+  console.log(targetNumberArr);
+
+  /*   return obj; */
+}
+
+console.log(stray([1, 1, 2])); // 2
+console.log(stray([(17, 17, 3, 17, 17, 17, 17)])); // 3

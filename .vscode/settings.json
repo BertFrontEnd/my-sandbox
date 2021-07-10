@@ -24,10 +24,5 @@
     "вьюпорта",
     "инстанс",
     "инстанса"
-  ],
-<<<<<<< HEAD
-  "terminal.integrated.shell.windows": "c:\\Users\\bsk\\AppData\\Local\\Programs\\Git\\bin\\bash.exe"
-=======
-  "liveServer.settings.port": 5501
->>>>>>> f62174e2ed58caffdfb7e93deb91a6aeb6d1a83d
+  ]
 }

@@ -73,7 +73,11 @@ document.querySelector('.b-6').onclick = f6;
 let blocks7 = document.querySelectorAll('.out-7');
 
 function f7() {
-  //внутри цикла blocks7[i].classList....
+  let out7 = document.querySelectorAll('.out-7');
+
+  for (let el of out7) {
+    el.classList.add('bg-7');
+  }
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -84,7 +88,11 @@ document.querySelector('.b-7').onclick = f7;
 let blocks8 = document.querySelectorAll('.out-8');
 
 function f8() {
-  //внутри цикла blocks8[i].classList....
+  let out8 = document.querySelectorAll('.out-8');
+
+  for (let el of out8) {
+    el.classList.toggle('bg-8');
+  }
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -93,7 +101,7 @@ document.querySelector('.b-8').onclick = f8;
 // Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-9 событие клик. По клику должна выполняться функция f9. Функция, должна добавлять класс bg-9 тому out-9 на котором кликнули.
 
 function f9() {
-  //this.classList...  // все решается одной строкой
+  this.classList.add('bg-9');
 }
 
 let div9 = document.querySelectorAll('.out-9');
@@ -107,28 +115,52 @@ for (let i = 0; i < div9.length; i++) {
 
 //let div10 = тут получите все out-10
 
-function f10() {}
+function f10() {
+  this.classList.toggle('bg-10');
+}
 
-// а тут цикл, похожий на предыдущее задание
+let div10 = document.querySelectorAll('.out-10');
+
+for (let i = 0; i < div10.length; i++) {
+  div10[i].onclick = f10;
+}
 
 //  Task 11
 // Добавьте кнопку .b-11, которая запускает функцию f11. Функция создает через createElement div c текстом 25 и добавляет его через append в out-11.
 
-function f11() {}
+function f11() {
+  let out11 = document.querySelector('.out-11');
+  let divEl = document.createElement('div');
+  divEl.textContent = '25';
+  out11.append(divEl);
+}
 
 document.querySelector('.b-11').onclick = f11;
 
 //  Task 12
 // Добавьте кнопку .b-12, которая запускает функцию f12. Функция создает через createElement div c текстом 12 и добавляет ему класс bg-12. Созданный div добавляется в out-12.
 
-function f12() {}
+function f12() {
+  let out12 = document.querySelector('.out-12');
+  let divEl = document.createElement('div');
+  divEl.textContent = '12';
+  divEl.classList.add('bg-12');
+  out12.append(divEl);
+}
 
 document.querySelector('.b-12').onclick = f12;
 
 //  Task 13
 // Добавьте кнопку .b-13, которая запускает функцию f13. Функция создает через createElement div c текстом pushMe и добавляет ему класс bg-13. Также, созданному div добавляется событие onclick, по которому выполняется функция f13_1. Созданный div добавляется в out-13.
 
-function f13() {}
+function f13() {
+  let out13 = document.querySelector('.out-13');
+  let divEl = document.createElement('div');
+  divEl.textContent = 'pushMe';
+  divEl.classList.add('bg-13');
+  out13.append(divEl);
+  divEl.onclick = f13_1;
+}
 
 function f13_1() {
   document.querySelector('.out-13-1').innerHTML += this.innerHTML;
@@ -139,21 +171,39 @@ document.querySelector('.b-13').onclick = f13;
 //  Task 14
 // Добавьте кнопку .b-14, которая запускает функцию f14. Функция создает через createElement div c текстом 14 и добавляет ему класс bg-14. Созданный div добавляется в out-14 с помощью prepend.
 
-function f14() {}
+function f14() {
+  let out14 = document.querySelector('.out-14');
+  let divEl = document.createElement('div');
+  divEl.textContent = '14';
+  divEl.classList.add('bg-14');
+  out14.prepend(divEl);
+}
 
 document.querySelector('.b-14').onclick = f14;
 
 //  Task 15
 // Добавьте кнопку .b-15, которая запускает функцию f15. Функция создает через createElement div c текстом 15 и добавляет ему класс bg-15. Созданный div добавляется в out-15 с помощью before.
 
-function f15() {}
+function f15() {
+  let out15 = document.querySelector('.out-15');
+  let divEl = document.createElement('div');
+  divEl.textContent = '15';
+  divEl.classList.add('bg-15');
+  out15.before(divEl);
+}
 
 document.querySelector('.b-15').onclick = f15;
 
 //  Task 16
 // Добавьте кнопку .b-16, которая запускает функцию f16. Функция создает через createElement div c текстом 16 и добавляет ему класс bg-16. Созданный div добавляется в out-16 с помощью after.
 
-function f16() {}
+function f16() {
+  let out16 = document.querySelector('.out-16');
+  let divEl = document.createElement('div');
+  divEl.textContent = '16';
+  divEl.classList.add('bg-16');
+  out16.after(divEl);
+}
 
 document.querySelector('.b-16').onclick = f16;
 

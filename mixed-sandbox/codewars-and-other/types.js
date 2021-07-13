@@ -356,9 +356,16 @@ console.log(decToBin(31)); // '11111'
 console.log('Find the stray number:');
 
 function stray(numbers) {
+  for (let i = 0; i <= numbers.length; i++) {
+    console.log(numbers[i]);
+  }
+}
+
+/* 
+function stray(numbers) {
   unique = numbers.filter((a) => numbers.filter((b) => b === a).length == 1)[0];
   return unique;
-}
+} */
 
 /* 
 function stray(numbers) {
@@ -374,6 +381,6 @@ function stray(numbers) {
     return obj;
 } */
 
-console.log(stray([1, 1, 2])); // 2
+/* console.log(stray([1, 1, 2])); // 2 */
 console.log(stray([(17, 17, 3, 17, 17, 17, 17)])); // 3
 /* console.log(stray([(3, 18, 18, 18, 18)])); // 3 */

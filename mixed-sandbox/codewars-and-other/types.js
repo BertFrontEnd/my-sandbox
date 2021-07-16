@@ -356,31 +356,44 @@ console.log(decToBin(31)); // '11111'
 console.log('Find the stray number:');
 
 function stray(numbers) {
-  for (let i = 0; i <= numbers.length; i++) {
-    console.log(numbers[i]);
-  }
+  return numbers.find(
+    (number) => numbers.indexOf(number) === numbers.lastIndexOf(number),
+  );
 }
 
-/* 
-function stray(numbers) {
-  unique = numbers.filter((a) => numbers.filter((b) => b === a).length == 1)[0];
-  return unique;
-} */
-
-/* 
-function stray(numbers) {
-  let obj = {};
-  numbers.filter((item) => {
-    obj[item] = obj[item] + 1 || 1;
-    return obj[item];
-  });
-
-  let targetNumberArr = Object.values(obj);
-  console.log(targetNumberArr);
-
-    return obj;
-} */
-
-/* console.log(stray([1, 1, 2])); // 2 */
+console.log(stray([1, 1, 2])); // 2
 console.log(stray([(17, 17, 3, 17, 17, 17, 17)])); // 3
-/* console.log(stray([(3, 18, 18, 18, 18)])); // 3 */
+
+// Euclidean distance in n dimensions
+
+console.log('Euclidean distance in n dimensions:');
+
+function euclideanDistance(point1, point2) {
+  let dist = 0;
+
+  if (point1.length !== point2.length) {
+    return -1;
+  } else {
+    for (let i = 0; i < point1.length; i++) {
+      dist += Math.pow(point1[i] - point2[i], 2);
+    }
+  }
+
+  return Math.round(Math.sqrt(dist) * 100) / 100;
+}
+
+let p1 = [-1],
+  p2 = [2];
+console.log(euclideanDistance(p1, p2)); // 3
+
+[p1, p2] = [
+  [-1, 2],
+  [2, 4],
+];
+console.log(euclideanDistance(p1, p2)); // 3.61
+
+[p1, p2] = [
+  [-1, 2, 5],
+  [2, 4, 9],
+];
+console.log(euclideanDistance(p1, p2)); // 5.39

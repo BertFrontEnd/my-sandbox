@@ -397,3 +397,108 @@ console.log(euclideanDistance(p1, p2)); // 3.61
   [2, 4, 9],
 ];
 console.log(euclideanDistance(p1, p2)); // 5.39
+
+// Find the stray number
+
+console.log('Find the stray number:');
+
+function createPhoneNumber(numbers) {
+  return `(${numbers.slice(0, 3).join('')}) ${numbers
+    .slice(3, 6)
+    .join('')}-${numbers.slice(6).join('')}`;
+}
+
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // '(123) 456-7890'
+console.log(createPhoneNumber([1, 1, 1, 1, 1, 1, 1, 1, 1, 1])); // '(111) 111-1111'
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // '(123) 456-7890'
+
+// Find the stray number
+
+console.log('Find the stray number:');
+
+function bubblesortOnce(a) {
+  let sortedArr = [...a];
+  let n = sortedArr.length;
+  for (let i = 0; i < n - 1; i++) {
+    if (sortedArr[i + 1] < sortedArr[i]) {
+      let t = sortedArr[i + 1];
+      sortedArr[i + 1] = sortedArr[i];
+      sortedArr[i] = t;
+    }
+  }
+  return sortedArr;
+}
+
+console.log(bubblesortOnce([9, 7, 5, 3, 1, 2, 4, 6, 8])); // [7, 5, 3, 1, 2, 4, 6, 8, 9]
+
+// Sort with Arrow Functions
+
+console.log('Find the stray number:');
+
+let OrderPeople = function (people) {
+  return people.sort((a, b) => a.age - b.age);
+};
+
+console.log(
+  OrderPeople([
+    { age: 83, name: 'joel' },
+    { age: 46, name: 'roger' },
+    { age: 99, name: 'vinny' },
+    { age: 26, name: 'don' },
+    { age: 74, name: 'brendan' },
+  ]),
+); // [{age:26,name:"don"},{age:46,name:"roger"},{age:74,name:"brendan"},{age:83,name:"joel"},{age:99,name:"vinny"}]
+
+// Who's Online?
+
+console.log("Who's Online?:");
+
+const whosOnline = (friends) => {
+  // Your code here...
+};
+
+console.log(
+  (friends = [
+    {
+      username: 'David',
+      status: 'online',
+      lastActivity: 10,
+    },
+    {
+      username: 'Lucy',
+      status: 'offline',
+      lastActivity: 22,
+    },
+    {
+      username: 'Bob',
+      status: 'online',
+      lastActivity: 104,
+    },
+  ]),
+);
+
+/* 
+online: ['David'],
+offline: ['Lucy'],
+away: ['Bob']
+*/
+
+console.log(
+  (friends = [
+    {
+      username: 'Lucy',
+      status: 'offline',
+      lastActivity: 22,
+    },
+    {
+      username: 'Bob',
+      status: 'online',
+      lastActivity: 104,
+    },
+  ]),
+);
+
+/* 
+offline: ['Lucy'],
+away: ['Bob']
+*/

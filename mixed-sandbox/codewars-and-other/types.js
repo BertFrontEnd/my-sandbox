@@ -454,51 +454,112 @@ console.log(
 console.log("Who's Online?:");
 
 const whosOnline = (friends) => {
-  // Your code here...
+  let online = [];
+  let offline = [];
+  let away = [];
+  let result = {};
+
+  friends.map((friend) =>
+    friend.status === 'online' && friend.lastActivity < 11
+      ? online.push(friend.username)
+      : friend.status === 'offline'
+      ? offline.push(friend.username)
+      : away.push(friend.username),
+  );
+
+  if (online.length > 0) {
+    result.online = online;
+  }
+
+  if (offline.length > 0) {
+    result.offline = offline;
+  }
+
+  if (offline.length > 0) {
+    result.away = away;
+  }
+
+  return result;
 };
 
 console.log(
-  (friends = [
-    {
-      username: 'David',
-      status: 'online',
-      lastActivity: 10,
-    },
-    {
-      username: 'Lucy',
-      status: 'offline',
-      lastActivity: 22,
-    },
-    {
-      username: 'Bob',
-      status: 'online',
-      lastActivity: 104,
-    },
-  ]),
+  whosOnline(
+    (friends = [
+      {
+        username: 'David',
+        status: 'online',
+        lastActivity: 10,
+      },
+      {
+        username: 'Lucy',
+        status: 'offline',
+        lastActivity: 22,
+      },
+      {
+        username: 'Bob',
+        status: 'online',
+        lastActivity: 104,
+      },
+    ]),
+  ),
 );
 
-/* 
+/*
+} 
 online: ['David'],
 offline: ['Lucy'],
 away: ['Bob']
+}
 */
 
 console.log(
-  (friends = [
-    {
-      username: 'Lucy',
-      status: 'offline',
-      lastActivity: 22,
-    },
-    {
-      username: 'Bob',
-      status: 'online',
-      lastActivity: 104,
-    },
-  ]),
+  whosOnline(
+    (friends = [
+      {
+        username: 'Lucy',
+        status: 'offline',
+        lastActivity: 22,
+      },
+      {
+        username: 'Bob',
+        status: 'online',
+        lastActivity: 104,
+      },
+    ]),
+  ),
 );
 
-/* 
-offline: ['Lucy'],
-away: ['Bob']
-*/
+// Homogenous arrays
+
+console.log('Homogenous arrays:');
+
+function filterHomogenous(arrays) {
+  let newArrays = [];
+
+  arrays.forEach((array) => {
+    if (array.length > 0) {
+      if (array.every((elem) => typeof elem === 'number')) {
+        newArrays.push(array);
+      }
+      if (array.every((elem) => typeof elem === 'string')) {
+        newArrays.push(array);
+      }
+    }
+  });
+
+  return newArrays;
+}
+
+console.log(
+  filterHomogenous([[1, 5, 4], ['a', 3, 5], ['b'], [], ['1', 2, 3]]), // [[1, 5, 4], ['b']]
+);
+console.log(
+  filterHomogenous([
+    [123, 234, 432],
+    ['', 'abc'],
+    [''],
+    ['', 1],
+    ['', '1'],
+    [],
+  ]), // [[123, 234, 432], ['', 'abc'], [''], ['', '1']]
+);

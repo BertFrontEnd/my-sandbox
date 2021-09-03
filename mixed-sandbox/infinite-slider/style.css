@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+  background-color: #e5e5e5;
+}
+
+body h1 {
+  margin: 70px 0;
+  font-size: 38px;
+  line-height: 46px;
+  color: #474747;
+}
+
+body .flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+body .flex-wrapper .slider-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  height: 490px;
+  -webkit-box-shadow: 10px 10px 44px -10px rgba(0, 0, 0, 0.75);
+          box-shadow: 10px 10px 44px -10px rgba(0, 0, 0, 0.75);
+}
+
+body .flex-wrapper .slider-wrapper .slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  /* opacity: 0;
+        transition: opacity 0.2s ease-in-out; */
+}
+
+body .flex-wrapper .slider-wrapper .slide.active {
+  display: block;
+  /* opacity: 1;
+          transition: opacity 0.2s ease-in-out; */
+}
+
+body .flex-wrapper .slider-wrapper .slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+body .flex-wrapper #btn-prev,
+body .flex-wrapper #btn-next {
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  background-color: #808080;
+  opacity: 0.4;
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+body .flex-wrapper #btn-prev:hover,
+body .flex-wrapper #btn-next:hover {
+  opacity: 0.6;
+}
+
+body .flex-wrapper #btn-prev {
+  left: 0;
+  top: 0;
+}
+
+body .flex-wrapper #btn-next {
+  top: 0;
+  right: 0;
+}
+
+body .flex-wrapper .dots-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+body .flex-wrapper .dots-wrapper .dot {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #808080;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+body .flex-wrapper .dots-wrapper .dot.active {
+  background-color: #474747;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */

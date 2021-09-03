@@ -6,7 +6,6 @@ const dots = document.querySelectorAll('.dot');
 let index = 0;
 
 const activeSlide = (n) => {
-  console.log(n);
   for (let slide of slides) {
     slide.classList.remove('active');
   }
@@ -14,7 +13,6 @@ const activeSlide = (n) => {
 };
 
 const activeDot = (n) => {
-  console.log(n);
   for (let dot of dots) {
     dot.classList.remove('active');
   }

@@ -54,4 +54,13 @@ dots.forEach((item, indexDot) => {
   });
 });
 
+document.addEventListener('keydown', (e) => {
+  if (e.keyCode === 39) {
+    nextSlide();
+  }
+  if (e.keyCode === 37) {
+    prevSlide();
+  }
+});
+
 setInterval(nextSlide, 2500);

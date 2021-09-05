@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+  background-color: #e5e5e5;
+
+  h1 {
+    margin: 70px 0;
+    font-size: 38px;
+    line-height: 46px;
+    color: #474747;
+  }
+}
+ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Muli', sans-serif;
+  background-color: #e5e5e5;
+}
+
+body .carousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .carousel .items-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+body .carousel .items-container .item {
+  position: relative;
+  display: none;
+  -webkit-animation: 0.5s ease-in-out;
+          animation: 0.5s ease-in-out;
+}
+
+body .carousel .items-container .item .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 650px;
+  margin: 0 auto;
+  font-size: 22px;
+  border: 1px solid #5f5f5f;
+}
+
+body .carousel .items-container .item .description .project-name {
+  padding: 10px;
+  width: 100%;
+}
+
+body .carousel .items-container .item .description .project-image {
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: auto;
+}
+
+body .carousel .items-container .active,
+body .carousel .items-container .next {
+  display: block;
+}
+
+body .carousel .items-container .next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+body .control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+  background-color: #dadada;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+body .control:hover {
+  background-color: #cccccc;
+}
+
+body .control.left {
+  left: 0;
+  right: auto;
+}
+
+body .control.right {
+  right: 0;
+  left: auto;
+}
+
+body .control .arrow {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  font-size: 84px;
+  color: #5e5e5e;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+@media (max-width: 960px) {
+  body .carousel .items-container .item .description {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 400px;
+  }
+}
+
+.to-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+}
+
+.from-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+}
+
+.to-right {
+  -webkit-animation-name: right;
+          animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  -webkit-animation-name: left;
+          animation-name: left;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  body .carousel .items-container .item .description {
+    border: 0;
+  }
+  body .carousel .items-container .item .description .project-name {
+    display: none;
+  }
+  body .control {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

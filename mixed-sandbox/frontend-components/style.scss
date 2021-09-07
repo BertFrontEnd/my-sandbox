@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+li {
+  display: list;
+  margin-bottom: 5px;
+
+  &:not(.default) {
+    display: none;
+  }
+}
+
+.show-more-link {
+  position: relative;
+  color: blue;
+
+  &::after {
+    content: '\25BC';
+    position: absolute;
+    bottom: 3px;
+    right: -15px;
+    font-size: 10px;
+  }
+}
+
+.collapsible-list.open {
+  a::after {
+    content: '\25B2';
+    bottom: 3px;
+  }
+
+  li:not(.default) {
+    display: list-item;
+  }
+}

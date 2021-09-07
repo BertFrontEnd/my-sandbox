@@ -37,50 +37,29 @@ const MORSE_TABLE = {
   '-----': '0',
 };
 
-const key = {
-  10: '.',
-  11: '-',
-  '**********': ' ',
-};
-
 function decode(expr) {
-  let exprArr = Array.from(expr);
-  let sizeArr1 = 10;
-  let sizeArr2 = 10;
-  let decArr1 = [];
-  let decArr2 = [];
-  let decMessage = '';
-  let message = [];
+  let array = expr.match(/.{10}/g);
 
-  for (let i = 0; i < exprArr.length; i += sizeArr1) {
-    decArr1.push([exprArr.slice(i, i + sizeArr1).join('')]);
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i].replace(/10/g, '.');
+    array[i] = array[i].replace(/11/g, '-');
+    array[i] = array[i].replace(/0/g, '');
   }
-  console.log(decArr1);
 
-  decArr1.map((elem, index) => {
-    decArr2.push([elem.slice(index, index + sizeArr2).join('')]);
-  });
+  let string = '';
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === '**********') {
+      string += ' ';
+    }
 
-  for (let i = 0; i < decArr1.length; i += sizeArr2) {
-    decArr2.push(decArr1.slice(i, i + sizeArr2).join(''));
+    for (element in MORSE_TABLE) {
+      if (array[i] === element) {
+        string += MORSE_TABLE[element];
+      }
+    }
   }
-  console.log(decArr2);
 
-  decArr2.forEach((elem) => {
-    if (elem === '10') {
-      message.push('.');
-    }
-    if (elem === '11') {
-      message.push('-');
-    }
-    if (elem === '00') {
-      return;
-    }
-  });
-
-  console.log(message);
-  decMessage = message.join('');
-  console.log(decMessage);
+  return string;
 }
 
 console.log(decode('00000011110000000010')); // me

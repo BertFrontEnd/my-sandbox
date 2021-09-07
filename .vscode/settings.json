@@ -1,32 +1,4 @@
 {
-  "editor.tabSize": 2,
-  "cSpell.words": [
-    "ATTGC",
-    "Berton",
-    "CATA",
-    "GTAT",
-    "Linkedin",
-    "Pinterest",
-    "Promis'",
-    "Promis'ов",
-    "Redigit",
-    "TAACG",
-    "asynchrony",
-    "bubblesort",
-    "codepen",
-    "covid",
-    "figma",
-    "lightgreen",
-    "maskify",
-    "mygcd",
-    "photoshop",
-    "vinny",
-    "whos",
-    "yandex",
-    "Типографика",
-    "вьюпорта",
-    "инстанс",
-    "инстанса"
-  ]
-  /* "terminal.integrated.shell.windows": "C:\\Users\\bsk\\AppData\\Local\\Programs\\Git\\bin\\bash.exe" */
+  "terminal.integrated.shell.windows": "c:\\Users\\bsk\\AppData\\Local\\Programs\\Git\\bin\\bash.exe",
+  "cSpell.words": ["Denon", "mixins"]
 }

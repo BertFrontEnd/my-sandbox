@@ -1,24 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  font-family: 'Muli', sans-serif;
-  background-color: #e5e5e5;
-
-  h1 {
-    margin: 70px 0;
-    font-size: 38px;
-    line-height: 46px;
-    color: #474747;
-  }
-}
- */
-
 body {
   margin: 0;
   padding: 0;
@@ -78,6 +59,24 @@ body {
         top: 0;
         width: 100%;
       }
+
+      .to-left {
+        animation-name: left;
+      }
+
+      .from-right {
+        animation-name: right;
+      }
+
+      .to-right {
+        animation-name: right;
+        animation-direction: reverse;
+      }
+
+      .from-left {
+        animation-name: left;
+        animation-direction: reverse;
+      }
     }
   }
 
@@ -89,7 +88,6 @@ body {
     justify-content: center;
     align-items: center;
     width: 15%;
-
     background-color: #dadada;
     transition: background-color 0.2s ease-in-out;
     cursor: pointer;
@@ -119,40 +117,6 @@ body {
   }
 }
 
-@media (max-width: 960px) {
-  body {
-    .carousel {
-      .items-container {
-        .item {
-          .description {
-            flex-direction: column;
-            align-items: center;
-            width: 400px;
-          }
-        }
-      }
-    }
-  }
-}
-
-.to-left {
-  animation-name: left;
-}
-
-.from-right {
-  animation-name: right;
-}
-
-.to-right {
-  animation-name: right;
-  animation-direction: reverse;
-}
-
-.from-left {
-  animation-name: left;
-  animation-direction: reverse;
-}
-
 @keyframes left {
   from {
     left: 0;
@@ -168,6 +132,22 @@ body {
   }
   to {
     left: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  body {
+    .carousel {
+      .items-container {
+        .item {
+          .description {
+            flex-direction: column;
+            align-items: center;
+            width: 400px;
+          }
+        }
+      }
+    }
   }
 }
 

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/mustard-ui.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Unit 13</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>UNIT 13. АССОЦИАТИВНЫЙ МАССИВ (ОБЪЕКТ) В JAVASCRIPT</h1>
+
+      <section>
+        <p><b>Task 1.</b></p>
+        <p>
+          При нажатии b-1 выполняете функцию f1. Функция должна вывести в out-1
+          значение сохраненное под ключом two из массива a1. Возвратите это
+          значение.
+        </p>
+        <pre>
+let a1 = {
+"one" : 15,
+"two" : 16,
+"five" : 20
+};
+</pre
+        >
+        <button class="button-primary b-1">Task-1</button>
+        <div class="out-1"></div>
+      </section>
+
+      <section>
+        <p><b>Task 2.</b></p>
+        <p>
+          При нажатии b-2 выполняете функцию f2. Функция должна вывести в out-2
+          значение hi из массива a2. Возвратите это значение.
+        </p>
+        <pre>
+    let a2 = {
+"one" : "hello",
+"two" : "mahai",
+"five" : "hi"
+};
+</pre
+        >
+        <button class="button-primary b-2">Task-2</button>
+        <div class="out-2"></div>
+      </section>
+
+      <section>
+        <p><b>Task 3.</b></p>
+        <p>
+          При нажатии b-3 выполняете функцию f3. Функция должна вывести в out-3
+          значение hi из массива a3. Возвратите это значение. Вывод - через
+          пробел.
+        </p>
+        <button class="button-primary b-3">Task-3</button>
+        <div class="out-3"></div>
+      </section>
+
+      <section>
+        <p><b>Task 4.</b></p>
+        <p>
+          Давайте напишем функцию f4, которая будет выводить массив a4 в out-4
+          при нажатии кнопки b-4. Формат вывода - ключ пробел значение перенос
+          строки +'&#x27; &#x3C;br&#x3E;'. Функция должна возвращать строку в
+          указанном формате вывода.
+        </p>
+        <p>Обратите внимание на пробел перед br!!!!!!!!</p>
+        <button class="button-primary b-4">Task-4</button>
+        <div class="out-4"></div>
+      </section>
+
+      <section>
+        <p><b>Task 5.</b></p>
+        <p>
+          Функция f4 жестко привязана к массиву a4. Это не удобно. Давайте
+          напишем функцию f5, которая принимает массив как параметр и выводит
+          его в формате указанном в функции в указанный блок (как второй
+          параметр).
+        </p>
+        <button class="button-primary b-5">Task-5</button>
+        <div class="out-5"></div>
+      </section>
+
+      <section>
+        <p><b>Task 6.</b></p>
+        <p>
+          Добавьте input .i-61 и i-62. При нажатии b-6 выполняете функцию f6.
+          Функция должна получать из i-61 ключ, а из i-62 значение и добавлять
+          его в массив a6. После этого, с помощью функции f5 выводите массив a6
+          в out-6.
+        </p>
+        <div class="form-control">
+          Input i-61 <input type="text" class="i-61" />
+        </div>
+        <div class="form-control">
+          Input i-62 <input type="text" class="i-62" />
+        </div>
+        <button class="button-primary b-6">Task-6</button>
+        <div class="out-6"></div>
+      </section>
+
+      <section>
+        <p><b>Task 7.</b></p>
+        <p>
+          Добавьте input .i-7. При нажатии b-7 выполняете функцию f7. Функция
+          должна получать из i-7 ключ. Если такой ключ есть в a7 то выводить 1 в
+          out-7, если нет - 0.
+        </p>
+        <div class="form-control">
+          Input i-7 <input type="text" class="i-7" />
+        </div>
+        <button class="button-primary b-7">Task-7</button>
+        <div class="out-7"></div>
+      </section>
+
+      <section>
+        <p><b>Task 8.</b></p>
+        <p>
+          Добавьте input .i-8. При нажатии b-8 выполняете функцию f8. Функция
+          должна выводить значение в out-8, если ключ введенный в i-8 есть в
+          массиве, если нет - 0.
+        </p>
+        <div class="form-control">
+          Input i-8 <input type="text" class="i-8" />
+        </div>
+        <button class="button-primary b-8">Task-8</button>
+        <div class="out-8"></div>
+      </section>
+
+      <section>
+        <p><b>Task 9.</b></p>
+        <p>
+          Добавьте input .i-9. При нажатии b-9 выполняете функцию f9. Функция
+          должна вывести в out-9 все ключи массива a9, которые содержат
+          значение, равное значению в input.i-9. Вывод через пробел. Если
+          значений - нет то выводить пустую строку.
+        </p>
+        <div class="form-control">
+          Input i-9 <input type="text" class="i-9" />
+        </div>
+        <button class="button-primary b-9">Task-9</button>
+        <div class="out-9"></div>
+      </section>
+
+      <section>
+        <p><b>Task 10.</b></p>
+        <p>
+          Давайте напишем полезную функцию f10, которая проверяет есть ли
+          значение в ассоциативном массиве. Фукнция должна возвращать true если
+          есть, и false если нет. Массив и значение передавать функции в
+          качестве параметров.
+        </p>
+        <button class="button-primary b-10">Task-10</button>
+        <div class="out-10">out-10</div>
+      </section>
+
+      <section>
+        <p><b>Task 11.</b></p>
+        <p>
+          При нажатии b-11 выполняете функцию f11. Функция должна получить ключ
+          из i-11 и удалить запись из массива a11 с таким ключем. После этого
+          вывести массив в out-11. Для вывода используйте функцию f5.
+        </p>
+        <div class="form-control">
+          Input i-11 <input type="text" class="i-11" />
+        </div>
+        <button class="button-primary b-11">Task-11</button>
+        <div class="out-11">out-11</div>
+      </section>
+
+      <section>
+        <p><b>Task 12.</b></p>
+        <p>
+          При нажатии b-12 выполняете функцию f12. Функция должна получить
+          значение из i-12 и удалить запись из массива a12 с таким значением.
+          После этого вывести массив в out-12. Для вывода используйте функцию
+          f5.
+        </p>
+        <div class="form-control">
+          Input i-12 <input type="text" class="i-12" />
+        </div>
+
+        <button class="button-primary b-12">Task-12</button>
+        <div class="out-12"></div>
+      </section>
+
+      <section>
+        <p><b>Task 13.</b></p>
+        <p>
+          При нажатии b-13 выполняете функцию f13. Функция должна в out-13
+          выводить сумму значений массива a13 (только числа).
+        </p>
+        <button class="button-primary b-13">Task-14</button>
+        <div class="out-13"></div>
+      </section>
+
+      <section>
+        <p><b>Task 14.</b></p>
+        <p>
+          При нажатии b-14 выполняете функцию f14. Функция должна в out-14
+          выводить нулевые (по индексу) элементы вложенных массивов в a14. Вывод
+          через пробел.
+        </p>
+        <button class="button-primary b-14">Task-14</button>
+        <div class="out-14"></div>
+      </section>
+
+      <section>
+        <p><b>Task 15.</b></p>
+        <p>
+          При нажатии b-15 выполняете функцию f15. Функция должна в out-15
+          выводить элементы вложенных массивов в a15. Вывод через пробел.
+        </p>
+        <button class="button-primary b-15">Task-15</button>
+        <div class="out-15"></div>
+      </section>
+
+      <section>
+        <p><b>Task 16.</b></p>
+        <p>
+          При нажатии b-16 выполняете функцию f16. Функция должна в out-16
+          выводить элементы name вложенных массивов в a16. Вывод через пробел.
+        </p>
+        <button class="button-primary b-16">Task-16</button>
+        <div class="out-16"></div>
+      </section>
+
+      <section>
+        <p><b>Task 17.</b></p>
+        <p>
+          При нажатии b-17 выполняете функцию f17. Функция должна в out-17
+          выводить элементы name вложенных массивов в a17 для который age > 30.
+          Вывод через пробел.
+        </p>
+        <button class="button-primary b-17">Task-17</button>
+        <div class="out-17"></div>
+      </section>
+
+      <section>
+        <p><b>Task 18.</b></p>
+        <p>
+          При нажатии b-18 выполняете функцию f18. Функция должна в out-18
+          вывести станции метро из массива a18 той ветки, которую пользователь
+          ввел в i-18. Вывод станций - через пробел. Если ветка не найдена
+          выводите пустую строку.
+        </p>
+        <div class="form-control">
+          Input i-18 <input type="text" class="i-18" />
+        </div>
+        <button class="button-primary b-18">Task-15</button>
+        <div class="out-18"></div>
+      </section>
+
+      <section>
+        <p><b>Task 19.</b></p>
+        <p>
+          При нажатии b-19 выполняете функцию f19. Функция должна в out-19
+          вывести цвет ветки станции которую пользователь ввел в i-19.
+          Пользователь может вводить текст как с большой, так и с маленькой
+          буквы. Если ветка не найдена - выводите пустую строку.
+        </p>
+        <div class="form-control">
+          Input i-19 <input type="text" class="i-19" />
+        </div>
+        <button class="button-primary b-19">Task-19</button>
+        <div class="out-19"></div>
+      </section>
+
+      <section>
+        <p><b>Task 20.</b></p>
+        <p>
+          При нажатии b-20 выполняете функцию f20. Функция должна в out-20
+          вывести название станции которые содержат переход на другую ветку.
+          Такие станции маркируются 2. Вывод через пробел.
+        </p>
+        <button class="button-primary b-20">Task-20</button>
+        <div class="out-20"></div>
+      </section>
+    </div>
+
+    <script src="unit-13.js"></script>
+  </body>
+</html>

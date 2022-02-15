@@ -147,7 +147,21 @@ let a7 = {
   e: 22,
 };
 
-function f7() {}
+function f7() {
+  let i7 = document.querySelector('.i-7').value;
+  let out7 = document.querySelector('.out-7');
+
+  let arr = Object.keys(a7);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === i7) {
+      out7.innerHTML = 1;
+      return;
+    } else {
+      out7.innerHTML = 0;
+    }
+  }
+}
 
 document.querySelector('.b-7').onclick = f7;
 
@@ -159,7 +173,21 @@ let a8 = {
   e: 22,
 };
 
-function f8() {}
+function f8() {
+  let i8 = document.querySelector('.i-8').value;
+  let out8 = document.querySelector('.out-8');
+
+  let arr = Object.keys(a8);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === i8) {
+      out8.innerHTML = i8;
+      return;
+    } else {
+      out8.innerHTML = 0;
+    }
+  }
+}
 
 document.querySelector('.b-8').onclick = f8;
 
@@ -174,16 +202,36 @@ let a9 = {
   d: 54,
 };
 
-function f9() {}
+function f9() {
+  let i9 = document.querySelector('.i-9').value;
+  let out9 = document.querySelector('.out-9');
+  let arr = Object.keys(a9);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == i9) {
+      out9.innerHTML += i9 + ' ';
+    } else {
+      out9.innerHTML += '';
+    }
+  }
+}
 
 document.querySelector('.b-9').onclick = f9;
 
 // Task 10
-// Давайте напишем полезную функцию f10, которая проверяет есть ли значение в ассоциативном массиве. Фукнция должна возвращать true если есть, и false если нет. Массив и значение передавать функции в качестве параметров.
+// Давайте напишем полезную функцию f10, которая проверяет есть ли значение в ассоциативном массиве. Функция должна возвращать true если есть, и false если нет. Массив и значение передавать функции в качестве параметров.
 
 function f10(arr, val) {
-  //return true;
-  //return false;
+  let myArr = Object.keys(arr);
+  console.log(myArr);
+
+  for (let i = 0; i < myArr.length; i++) {
+    if (arr[myArr[i]] === val) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 document.querySelector('.b-10').onclick = () => {
@@ -196,7 +244,7 @@ document.querySelector('.b-10').onclick = () => {
 };
 
 // Task 11
-// При нажатии b-11 выполняете функцию f11. Функция должна получить ключ из i-11 и удалить запись из массива a11 с таким ключем. После этого вывести массив в out-11. Для вывода используйте функцию f5.
+// При нажатии b-11 выполняете функцию f11. Функция должна получить ключ из i-11 и удалить запись из массива a11 с таким ключом. После этого вывести массив в out-11. Для вывода используйте функцию f5.
 
 let a11 = {
   b: 17,
@@ -206,7 +254,19 @@ let a11 = {
   d: 54,
 };
 
-function f11() {}
+function f11() {
+  let out11 = document.querySelector('.out-11');
+  out11.innerHTML = '';
+  let i11 = document.querySelector('.i-11').value;
+
+  for (let key in a11) {
+    if (key === i11) {
+      delete a11[key];
+    } else {
+      out11.innerHTML += `${key}: ${a11[key]}, <br>`;
+    }
+  }
+}
 
 document.querySelector('.b-11').onclick = f11;
 

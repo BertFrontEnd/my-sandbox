@@ -281,7 +281,19 @@ let a12 = {
   d: 17,
 };
 
-function f12() {}
+function f12() {
+  let out12 = document.querySelector('.out-12');
+  out12.innerHTML = '';
+  let i12 = +document.querySelector('.i-12').value;
+
+  for (let key in a12) {
+    if (a12[key] === i12) {
+      delete a12[key];
+    } else {
+      out12.innerHTML += `${key}: ${a12[key]}, <br>`;
+    }
+  }
+}
 
 document.querySelector('.b-12').onclick = f12;
 
@@ -295,7 +307,18 @@ let a13 = {
   ivan: 6,
 };
 
-function f13() {}
+function f13() {
+  let out13 = document.querySelector('.out-13');
+  let sum = 0;
+
+  for (let key in a13) {
+    if (typeof a13[key] === 'number') {
+      sum += a13[key];
+    }
+  }
+
+  out13.innerHTML = sum;
+}
 
 document.querySelector('.b-13').onclick = f13;
 
@@ -310,7 +333,13 @@ let a14 = {
   ivan: [9, 10],
 };
 
-function f14() {}
+function f14() {
+  let out14 = document.querySelector('.out-14');
+
+  for (let key in a14) {
+    out14.innerHTML += `${a14[key][0]} `;
+  }
+}
 
 document.querySelector('.b-14').onclick = f14;
 
@@ -326,7 +355,18 @@ let a15 = {
   ivan: [9, 10],
 };
 
-function f15() {}
+function f15() {
+  let out15 = document.querySelector('.out-15');
+  let out = '';
+
+  for (let key in a15) {
+    for (let i = 0; i < a15[key].length; i++) {
+      out += `${a15[key][i]} `;
+    }
+  }
+
+  out15.innerHTML = out;
+}
 
 document.querySelector('.b-15').onclick = f15;
 
@@ -348,7 +388,13 @@ let a16 = {
   },
 };
 
-function f16() {}
+function f16() {
+  let out16 = document.querySelector('.out-16');
+
+  for (let key in a16) {
+    out16.innerHTML += `${a16[key].name} `;
+  }
+}
 
 document.querySelector('.b-16').onclick = f16;
 
@@ -370,7 +416,13 @@ let a17 = {
   },
 };
 
-function f17() {}
+function f17() {
+  let out17 = document.querySelector('.out-17');
+
+  for (let key in a16) {
+    if (a17[key].age > 30) out17.innerHTML += `${a17[key].name} `;
+  }
+}
 
 document.querySelector('.b-17').onclick = f17;
 
@@ -383,7 +435,23 @@ let a18 = {
   green: ['Syrets', 'Zoloti Vorota', 'Klovska', 'Vidubichi'],
 };
 
-function f18() {}
+function f18() {
+  let out18 = document.querySelector('.out-18');
+  let i18 = document.querySelector('.i-18').value;
+  let out = '';
+
+  for (let key in a18) {
+    console.log(a18[key], '&', i18);
+    for (let i = 0; i < a18[key].length; i++) {
+      if (key == i18) out += `${a18[key][i]} `;
+      if (key != i18) out += `Not found`;
+    }
+  }
+
+  out18.innerHTML = out;
+}
+
+document.querySelector('.b-18').onclick = f18;
 
 // Task 19
 // При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести цвет ветки станции которую пользователь ввел в i-19. Пользователь может вводить текст как с большой, так и с маленькой буквы. Если ветка не найдена - выводите пустую строку.

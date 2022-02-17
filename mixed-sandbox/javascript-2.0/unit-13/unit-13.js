@@ -303,7 +303,7 @@ document.querySelector('.b-12').onclick = f12;
 let a13 = {
   prim: 'hello',
   one: 4,
-  testt: 'vodoley',
+  test: 'vodoley',
   ivan: 6,
 };
 
@@ -329,7 +329,7 @@ document.querySelector('.b-13').onclick = f13;
 let a14 = {
   prim: [1, 2, 23],
   one: [3, 4, 5],
-  testt: [6, 7, 8],
+  test: [6, 7, 8],
   ivan: [9, 10],
 };
 
@@ -351,7 +351,7 @@ document.querySelector('.b-14').onclick = f14;
 let a15 = {
   prim: [1, 2, 23],
   one: [3, 5],
-  testt: [6, 7, 8],
+  test: [6, 7, 8],
   ivan: [9, 10],
 };
 
@@ -441,20 +441,23 @@ function f18() {
   let out = '';
 
   for (let key in a18) {
-    console.log(a18[key], '&', i18);
     for (let i = 0; i < a18[key].length; i++) {
-      if (key == i18) out += `${a18[key][i]} `;
-      if (key != i18) out += `Not found`;
+      console.log(a18[key], '&', i18);
+      if (key === i18) {
+        console.log(a18[key][i]);
+        out18 += `${a18[key][i]} `;
+        console.log(out18);
+      }
+      if (key !== i18) out18 += `Not found `;
     }
   }
-
-  out18.innerHTML = out;
+  out18.innerHTML += out;
 }
 
 document.querySelector('.b-18').onclick = f18;
 
 // Task 19
-// При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести цвет ветки станции которую пользователь ввел в i-19. Пользователь может вводить текст как с большой, так и с маленькой буквы. Если ветка не найдена - выводите пустую строку.
+// При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести цвет ветки станцию которой пользователь ввел в i-19. Пользователь может вводить текст как с большой, так и с маленькой буквы. Если ветка не найдена - выводите пустую строку.
 // Пользователь ввел Lisova - вывод red, ввел Obolon - вывод blue.
 
 let a19 = {
@@ -463,7 +466,21 @@ let a19 = {
   green: ['Syrets', 'Zoloti Vorota', 'Klovska', 'Vidubichi'],
 };
 
-function f19() {}
+function f19() {
+  let out19 = document.querySelector('.out-19');
+  let i19 = document.querySelector('.i-19').value;
+  let out = '';
+
+  for (let key in a19) {
+    console.log(a19[key], '&', i19);
+    for (let i = 0; i < a19[key].length; i++) {
+      if (a19[key][i] == i19) out = key;
+      if (a19[key][i] != i19) out = 'Not found';
+    }
+  }
+
+  /* out19.innerHTML = out; */
+}
 
 document.querySelector('.b-19').onclick = f19;
 

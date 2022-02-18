@@ -438,20 +438,25 @@ let a18 = {
 function f18() {
   let out18 = document.querySelector('.out-18');
   let i18 = document.querySelector('.i-18').value;
-  let out = '';
+  let arr = [];
 
-  for (let key in a18) {
-    for (let i = 0; i < a18[key].length; i++) {
-      console.log(a18[key], '&', i18);
-      if (key === i18) {
-        console.log(a18[key][i]);
-        out18 += `${a18[key][i]} `;
-        console.log(out18);
+  for (const key in a18) {
+    arr.push(key);
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == i18) {
+      let out = '';
+      for (let k = 0; k < a18[arr[i]].length; k++) {
+        out += `${a18[arr[i]][k]} `;
+        out18.innerHTML = out;
       }
-      if (key !== i18) out18 += `Not found `;
+      return;
+    } else {
+      out18.innerHTML = `Not found`;
     }
   }
-  out18.innerHTML += out;
+  return;
 }
 
 document.querySelector('.b-18').onclick = f18;
@@ -469,16 +474,33 @@ let a19 = {
 function f19() {
   let out19 = document.querySelector('.out-19');
   let i19 = document.querySelector('.i-19').value;
-  let out = '';
+  let arr = [];
+  let outArr = [];
 
   for (let key in a19) {
-    console.log(a19[key], '&', i19);
-    for (let i = 0; i < a19[key].length; i++) {
-      if (a19[key][i] == i19) out = key;
-      if (a19[key][i] != i19) out = 'Not found';
+    arr.push(a19[key]);
+  }
+
+  for (let innerKey in a19) {
+    outArr.push(innerKey);
+  }
+
+  console.log(arr);
+  console.log(outArr);
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let k = 0; k < arr[i].length; k++) {
+      if (arr[i][k].toLowerCase() == i19.toLowerCase()) {
+        out19.innerHTML = outArr[i];
+      }
     }
   }
 
+  /*   for (let i = 0; i < a19[key].length; i++) {
+    if (a19[key][i] == i19) out = key;
+    if (a19[key][i] != i19) out = 'Not found';
+  }
+ */
   /* out19.innerHTML = out; */
 }
 

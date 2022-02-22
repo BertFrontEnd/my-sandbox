@@ -495,13 +495,6 @@ function f19() {
       }
     }
   }
-
-  /*   for (let i = 0; i < a19[key].length; i++) {
-    if (a19[key][i] == i19) out = key;
-    if (a19[key][i] != i19) out = 'Not found';
-  }
- */
-  /* out19.innerHTML = out; */
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -530,6 +523,34 @@ let a20 = {
   ],
 };
 
-function f20() {}
+function f20() {
+  let out20 = document.querySelector('.out-20');
+  let arrOfLine = [];
+  let out = '';
+
+  for (let key in a20) {
+    arrOfLine.push(a20[key]);
+  }
+
+  console.log(arrOfLine);
+
+  for (let i = 0; i < arrOfLine.length; i++) {
+    console.log(arrOfLine[i]);
+
+    for (let k = 0; k < arrOfLine[i].length; k++) {
+      console.log(arrOfLine[i][k]);
+
+      for (let b = 0; b <= arrOfLine[i][k][b].length; b++) {
+        console.log(arrOfLine[i][k][b]);
+
+        if (arrOfLine[i][k][1] === 2) {
+          out += `${arrOfLine[i][k][0]} `;
+        }
+      }
+    }
+  }
+
+  out20.innerHTML = out;
+}
 
 document.querySelector('.b-20').onclick = f20;

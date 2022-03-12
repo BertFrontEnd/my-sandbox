@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/mustard-ui.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>OOP JS. Unit 08</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>
+        Unit 08. UNIT 8. ЯВНОЕ УКАЗАНИЕ КОНТЕКСТА С ИСПОЛЬЗОВАНИЕМ CALL И APPLY.
+        МЕТОД BIND
+      </h1>
+
+      <section>
+        <p><b>Task 1.</b></p>
+        <p>
+          Изучите вывод в консоль this при запуске стрелочной функции и обычной
+          (см. шаблон).
+        </p>
+        <button class="button-primary b-1">Обычная функция</button>
+        <button class="button-primary b-1-2">Обычная функция c call</button>
+        <button class="button-primary b-1-3">Стрелочная функция c call</button>
+      </section>
+
+      <section>
+        <p><b>Task 2.</b></p>
+        <p>
+          Дана функция f2, которая к элементу this применяет background.
+          Запустите данную функцию с помощью call и в качестве контекста задайте
+          блок div-2-1, div-2-2. (см. шаблон).
+        </p>
+        <div class="div-2-1"></div>
+        <div class="div-2-2"></div>
+      </section>
+
+      <section>
+        <p><b>Task 3.</b></p>
+        <p>
+          Модифицируем предыдущую задачу и добавим аргументы функции. Напомню в
+          call мы передаем их через запятую. При этом блок div-3-1 задаем цвет
+          red, div-3-2 - orangered.
+        </p>
+        <div class="div-3-1"></div>
+        <div class="div-3-2"></div>
+      </section>
+
+      <section>
+        <p><b>Task 4.</b></p>
+        <p>
+          Отличия call и apply только в том, что первый аргументы передает через
+          запятую, а второй - массивом. Запустим функцию f4 с помощью apply, и
+          передадим цвет в массиве, для блока div-4-1 это будет ['red'], для
+          блока div-4-2 это будет ['orange'];
+        </p>
+        <div class="div-4-1"></div>
+        <div class="div-4-2"></div>
+      </section>
+
+      <section>
+        <p><b>Task 5.</b></p>
+        <p>
+          В остальном, отличий call и apply нет. Запустите функцию f5 с помощью
+          apply и в качестве контекста задайте блок div-5-1, div-5-2.
+        </p>
+        <div class="div-5-1"></div>
+        <div class="div-5-2"></div>
+      </section>
+      <section>
+        <p><b>Task 6.</b></p>
+        <p>
+          Научимся применять bind. Создадим новые функции bindF61, bindF62 куда
+          мы добавим функцию f6 с контекстом div-6-1, div-6-2. Запустим эти
+          функции для проверки.
+        </p>
+        <div class="div-6-1"></div>
+        <div class="div-6-2"></div>
+      </section>
+      <section>
+        <p><b>Task 7.</b></p>
+        <p>
+          Научимся применять bind. Создадим новые функции bindF71, bindF72 куда
+          мы добавим функцию f7 с контекстом div-7-1, div-7-2. Запустим эти
+          функции для проверки, в первую передадим параметр orange, а во вторую
+          blue.
+        </p>
+        <div class="div-7-1"></div>
+        <div class="div-7-2"></div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

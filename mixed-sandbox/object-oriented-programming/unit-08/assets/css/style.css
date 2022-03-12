@@ -1,0 +1,58 @@
+.container  {
+    width: 100%;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 36px;
+}
+
+h2  {
+    font-size: 24px;
+}
+
+section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #444;
+}
+
+.block {
+    width: 75px;
+    height: 75px;
+    margin: 25px;
+    border: 2px solid #333;
+}
+
+.active {
+    background: orange;
+}
+
+.hide {
+    display: none;
+}
+
+.img-12-min {
+    width: 64px;
+}
+
+.img-12-max {
+    width: 128px;    border: 3px solid #fff;
+
+}
+
+.active-img {
+    border: 3px solid black;
+}
+
+.div-2-1, .div-2-2,
+.div-3-1, .div-3-2,
+.div-4-1, .div-4-2,
+.div-5-1, .div-5-2,
+.div-6-1, .div-6-2 ,
+.div-7-1, .div-7-2  {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+    margin: 10px;
+}

@@ -1,0 +1,429 @@
+html {
+  font-size: 10px;
+}
+
+html body {
+  width: 100vw;
+  height: auto;
+  background-image: url("./assets/img/main-background.jpg");
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #000;
+  color: #fff;
+  background-color: #000000;
+  -webkit-backdrop-filter: opacity(60%);
+          backdrop-filter: opacity(60%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-x: hidden;
+}
+
+html body main {
+  width: 100%;
+  max-width: 1440px;
+  padding: 50px 90px 0px 90px;
+  margin: 0 auto;
+}
+
+html body main .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+  font-size: 0;
+}
+
+html body main .menu .menu-search {
+  margin-bottom: 5px;
+  font-size: 0;
+}
+
+html body main .menu .menu-search form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  font-size: 0;
+}
+
+html body main .menu .menu-search form .search-area {
+  height: 44px;
+  width: 300px;
+  padding: 0 15px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #e4e3e320;
+  outline: none;
+  background-color: #4c525590;
+  font-family: 'Montserrat Regular', sans-serif;
+  font-size: 1.4rem;
+  color: inherit;
+}
+
+html body main .menu .menu-search form .search-area::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+html body main .menu .menu-search form .search-area:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+html body main .menu .menu-search form .search-area::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+html body main .menu .menu-search form .search-area::placeholder {
+  color: #ffffff;
+}
+
+html body main .menu .menu-search form .btn-search {
+  width: 100px;
+  height: 44px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  outline: none;
+  background-color: #b4b8bb80;
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+html body main .menu .menu-search form .btn-search:active {
+  outline: none;
+  border: none;
+  background-color: #4c525590;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+html body main .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body main .info .info-left {
+  margin-bottom: 0px;
+}
+
+html body main .info .info-left .place-time {
+  margin-bottom: 50px;
+}
+
+html body main .info .info-left .place-time .place {
+  font-family: 'Montserrat SemiBold', sans-serif;
+  font-weight: 900;
+  font-size: 4.4rem;
+  text-transform: uppercase;
+}
+
+html body main .info .info-left .place-time .place .city:after {
+  content: ', ';
+}
+
+html body main .info .info-left .place-time .day-calendar,
+html body main .info .info-left .place-time .time {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-weight: 900;
+  font-size: 2.4rem;
+}
+
+html body main .info .info-left .place-time .day-calendar .day,
+html body main .info .info-left .place-time .time .day {
+  margin-right: 5px;
+}
+
+html body main .info .info-left .place-time .day-calendar .day:after,
+html body main .info .info-left .place-time .time .day:after {
+  content: ', ';
+}
+
+html body main .info .info-left .place-time .day-calendar .date-str,
+html body main .info .info-left .place-time .time .date-str {
+  margin-right: 5px;
+}
+
+html body main .info .info-left .place-time .day-calendar .date-str:after,
+html body main .info .info-left .place-time .time .date-str:after {
+  content: ', ';
+}
+
+html body main .info .info-left .current-weather {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 55px;
+}
+
+html body main .info .info-left .current-weather .temperature {
+  margin-right: 90px;
+  font-family: 'Montserrat SemiBold', sans-serif;
+  font-weight: 900;
+  font-size: 30rem;
+  line-height: 30rem;
+}
+
+html body main .info .info-left .current-weather .temperature:after {
+  content: '\00B0';
+  font-family: 'Montserrat Bold', sans-serif;
+  font-weight: 300;
+}
+
+html body main .info .info-left .current-weather .current-weather-icon {
+  position: absolute;
+  display: block;
+  right: -20px;
+  top: -170px;
+}
+
+html body main .info .info-left .current-weather .description:not(.speed) {
+  font-family: 'Montserrat SemiBold', sans-serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+html body main .info .info-left .current-weather .description:not(.speed) li {
+  margin-bottom: 5px;
+}
+
+html body main .info .info-left .current-weather .description:not(.speed) .feels:after {
+  content: '\00B0';
+}
+
+html body main .info .info-left .current-weather .description:not(.speed) .speed {
+  text-transform: none;
+}
+
+html body main .info .info-left .current-weather .description:not(.speed) .humidity:after {
+  content: '\0025';
+}
+
+html body main .info .info-left .current-weather .speed {
+  font-family: 'Montserrat SemiBold', sans-serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+
+html body main .info .info-left .forecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+html body main .info .info-left .forecast .day-info {
+  margin-bottom: 50px;
+  font-size: 0;
+  line-height: 0;
+}
+
+html body main .info .info-left .forecast .day-info .day {
+  margin-bottom: 30px;
+  font-family: 'Montserrat SemiBold', sans-serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+
+html body main .info .info-left .forecast .day-info .icon {
+  position: relative;
+}
+
+html body main .info .info-left .forecast .day-info .icon span {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-weight: 900;
+  font-size: 8rem;
+  line-height: 8rem;
+}
+
+html body main .info .info-left .forecast .day-info .icon:after {
+  content: '\00B0';
+  font-size: 8rem;
+}
+
+html body main .info .info-left .forecast .day-info .icon-weather {
+  position: absolute;
+  display: block;
+  left: 100px;
+  top: -30px;
+}
+
+@media screen and (max-width: 1350px) {
+  html body main .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+  }
+  html body main .menu .menu-list {
+    margin: 0 auto 10px auto;
+  }
+  html body main .menu .menu-search input.search-area {
+    margin-bottom: 10px;
+    border-radius: 5px 0 0 5px;
+  }
+  html body main .menu .menu-search .voice {
+    margin-bottom: 10px;
+  }
+  html body main .menu .menu-search button.btn-search {
+    margin-bottom: 10px;
+    border-radius: 0 5px 5px 0;
+  }
+  html body .info {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body .info .info-left .current-weather span.temperature {
+    font-size: 20rem;
+    line-height: 20rem;
+  }
+  html body .info .info-left .current-weather img.current-weather-icon {
+    display: none;
+  }
+  html body .info section.info-right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  html body .info section.info-right .map-screen {
+    margin: 0 auto 20px auto;
+  }
+  html body .info section.info-right .map-location li {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html body main {
+    padding: 40px;
+  }
+  html body main .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+  }
+  html body main .menu .menu-list {
+    margin: 0 auto 10px auto;
+  }
+  html body main .menu .menu-search form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body main .menu .menu-search form .search-area {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 250px;
+  }
+  html body main .menu .menu-search form .voice {
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+  html body main .menu .menu-search form .btn-search {
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  html body main .info .info-left .place-time {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  html body main .info .info-left .current-weather {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body main .info .info-left .current-weather span.temperature {
+    font-size: 15rem;
+    line-height: 15rem;
+  }
+  html body main .info .info-left .current-weather .temperature {
+    margin-right: 0;
+  }
+  html body main .info .info-left .current-weather .current-weather-icon {
+    display: none;
+  }
+  html body main .info .info-left .forecast {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  html body main .info section.info-right {
+    margin-bottom: 0px;
+  }
+  html body main .info section.info-right div.map-screen #map .ymaps-2-1-76-map {
+    width: 240px !important;
+    height: 240px !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -11,14 +11,14 @@ const getLocation = () => {
   return requestApi;
 };
 
-const location = await getLocation();
-
-const setLocation = () => {
+async function setLocation() {
   const domCity = document.querySelector('.city');
   const domCountry = document.querySelector('.country');
 
+  const location = await getLocation();
+
   domCity.textContent = location.city;
   domCountry.textContent = location.country;
-};
+}
 
 export { setLocation };

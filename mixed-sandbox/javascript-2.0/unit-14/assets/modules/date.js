@@ -1,5 +1,5 @@
 const setCurrentDay = () => {
-  let domDay = document.querySelector('.day');
+  const domDay = document.querySelector('.day');
   let day = new Date().getDay();
 
   switch (day) {
@@ -31,15 +31,108 @@ const setCurrentDay = () => {
   domDay.textContent = `${day}`;
 };
 
+const setForecastDay = () => {
+  const domFirstDay = document.querySelector('.first-day');
+  let firstDay = new Date().getDay();
+
+  const domSecondDay = document.querySelector('.second-day');
+  let secondDay = new Date().getDay();
+
+  const domThirdDay = document.querySelector('.third-day');
+  let thirdDay = new Date().getDay();
+
+  switch (firstDay + 1) {
+    case 0:
+      firstDay = 'Sunday';
+      break;
+    case 1:
+      firstDay = 'Monday';
+      break;
+    case 2:
+      firstDay = 'Tuesday';
+      break;
+    case 3:
+      firstDay = 'Wednesday';
+      break;
+    case 4:
+      firstDay = 'Thursday';
+      break;
+    case 5:
+      firstDay = 'Friday';
+      break;
+    case 6:
+      firstDay = 'Saturday';
+      break;
+    default:
+      throw new Error('Something went wrong!');
+  }
+
+  switch (secondDay + 2) {
+    case 0:
+      secondDay = 'Sunday';
+      break;
+    case 1:
+      secondDay = 'Monday';
+      break;
+    case 2:
+      secondDay = 'Tuesday';
+      break;
+    case 3:
+      secondDay = 'Wednesday';
+      break;
+    case 4:
+      secondDay = 'Thursday';
+      break;
+    case 5:
+      secondDay = 'Friday';
+      break;
+    case 6:
+      secondDay = 'Saturday';
+      break;
+    default:
+      throw new Error('Something went wrong!');
+  }
+
+  switch (thirdDay + 3) {
+    case 0:
+      thirdDay = 'Sunday';
+      break;
+    case 1:
+      thirdDay = 'Monday';
+      break;
+    case 2:
+      thirdDay = 'Tuesday';
+      break;
+    case 3:
+      thirdDay = 'Wednesday';
+      break;
+    case 4:
+      thirdDay = 'Thursday';
+      break;
+    case 5:
+      thirdDay = 'Friday';
+      break;
+    case 6:
+      thirdDay = 'Saturday';
+      break;
+    default:
+      throw new Error('Something went wrong!');
+  }
+
+  domFirstDay.textContent = `${firstDay}`;
+  domSecondDay.textContent = `${secondDay}`;
+  domThirdDay.textContent = `${thirdDay}`;
+};
+
 const setCurrentDate = () => {
-  let domDate = document.querySelector('.date-num');
+  const domDate = document.querySelector('.date-num');
   let date = new Date().getDate();
 
   domDate.textContent = `${date}`;
 };
 
 const setCurrentMonth = () => {
-  let domMonth = document.querySelector('.date-str');
+  const domMonth = document.querySelector('.date-str');
   let month = new Date().getMonth();
 
   switch (month) {
@@ -87,10 +180,16 @@ const setCurrentMonth = () => {
 };
 
 let setCurrentYear = () => {
-  let domYear = document.querySelector('.year');
+  const domYear = document.querySelector('.year');
   let year = new Date().getFullYear();
 
   domYear.textContent = `${year}`;
 };
 
-export { setCurrentDay, setCurrentDate, setCurrentMonth, setCurrentYear };
+export {
+  setCurrentDay,
+  setForecastDay,
+  setCurrentDate,
+  setCurrentMonth,
+  setCurrentYear,
+};

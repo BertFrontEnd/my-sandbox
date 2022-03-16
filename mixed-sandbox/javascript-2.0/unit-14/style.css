@@ -184,57 +184,39 @@ html body main .info .info-left .current-weather {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 55px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  margin-bottom: 85px;
 }
 
 html body main .info .info-left .current-weather .temperature {
-  margin-right: 90px;
   font-family: 'Montserrat SemiBold', sans-serif;
   font-weight: 900;
   font-size: 30rem;
   line-height: 30rem;
 }
 
-html body main .info .info-left .current-weather .temperature:after {
-  content: '\00B0';
-  font-family: 'Montserrat Bold', sans-serif;
-  font-weight: 300;
-}
-
 html body main .info .info-left .current-weather .current-weather-icon {
-  position: absolute;
+  position: relative;
   display: block;
-  right: -20px;
-  top: -170px;
+  width: 250px;
+  height: 250px;
+  top: -80px;
 }
 
-html body main .info .info-left .current-weather .description:not(.speed) {
+html body main .info .info-left .current-weather .description {
   font-family: 'Montserrat SemiBold', sans-serif;
   font-weight: 900;
   font-size: 2.2rem;
+  line-height: 6rem;
+}
+
+html body main .info .info-left .current-weather .description .weather {
   text-transform: uppercase;
 }
 
-html body main .info .info-left .current-weather .description:not(.speed) li {
+html body main .info .info-left .current-weather .description li {
   margin-bottom: 5px;
-}
-
-html body main .info .info-left .current-weather .description:not(.speed) .feels:after {
-  content: '\00B0';
-}
-
-html body main .info .info-left .current-weather .description:not(.speed) .speed {
-  text-transform: none;
-}
-
-html body main .info .info-left .current-weather .description:not(.speed) .humidity:after {
-  content: '\0025';
-}
-
-html body main .info .info-left .current-weather .speed {
-  font-family: 'Montserrat SemiBold', sans-serif;
-  font-weight: 900;
-  font-size: 2.2rem;
 }
 
 html body main .info .info-left .forecast {
@@ -254,6 +236,8 @@ html body main .info .info-left .forecast .day-info {
   margin-bottom: 50px;
   font-size: 0;
   line-height: 0;
+  width: 185px;
+  height: 80px;
 }
 
 html body main .info .info-left .forecast .day-info .day {
@@ -264,7 +248,16 @@ html body main .info .info-left .forecast .day-info .day {
 }
 
 html body main .info .info-left .forecast .day-info .icon {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
 }
 
 html body main .info .info-left .forecast .day-info .icon span {
@@ -274,16 +267,10 @@ html body main .info .info-left .forecast .day-info .icon span {
   line-height: 8rem;
 }
 
-html body main .info .info-left .forecast .day-info .icon:after {
-  content: '\00B0';
-  font-size: 8rem;
-}
-
 html body main .info .info-left .forecast .day-info .icon-weather {
-  position: absolute;
-  display: block;
-  left: 100px;
-  top: -30px;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1350px) {

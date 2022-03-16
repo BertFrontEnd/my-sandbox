@@ -136,60 +136,37 @@ html {
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 55px;
+            column-gap: 20px;
+            margin-bottom: 85px;
 
             .temperature {
-              margin-right: 90px;
               font-family: 'Montserrat SemiBold', sans-serif;
               font-weight: 900;
               font-size: 30rem;
               line-height: 30rem;
-
-              &:after {
-                content: '\00B0';
-                font-family: 'Montserrat Bold', sans-serif;
-                font-weight: 300;
-              }
             }
 
             .current-weather-icon {
-              position: absolute;
+              position: relative;
               display: block;
-              right: -20px;
-              top: -170px;
+              width: 250px;
+              height: 250px;
+              top: -80px;
             }
 
-            .description:not(.speed) {
+            .description {
               font-family: 'Montserrat SemiBold', sans-serif;
               font-weight: 900;
               font-size: 2.2rem;
-              text-transform: uppercase;
+              line-height: 6rem;
+
+              .weather {
+                text-transform: uppercase;
+              }
 
               li {
                 margin-bottom: 5px;
               }
-
-              .feels {
-                &:after {
-                  content: '\00B0';
-                }
-              }
-
-              .speed {
-                text-transform: none;
-              }
-
-              .humidity {
-                &:after {
-                  content: '\0025';
-                }
-              }
-            }
-
-            .speed {
-              font-family: 'Montserrat SemiBold', sans-serif;
-              font-weight: 900;
-              font-size: 2.2rem;
             }
           }
 
@@ -203,6 +180,8 @@ html {
               margin-bottom: 50px;
               font-size: 0;
               line-height: 0;
+              width: 185px;
+              height: 80px;
 
               .day {
                 margin-bottom: 30px;
@@ -212,7 +191,10 @@ html {
               }
 
               .icon {
-                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
 
                 span {
                   font-family: 'Montserrat Bold', sans-serif;
@@ -220,18 +202,12 @@ html {
                   font-size: 8rem;
                   line-height: 8rem;
                 }
-
-                &:after {
-                  content: '\00B0';
-                  font-size: 8rem;
-                }
               }
 
               .icon-weather {
-                position: absolute;
-                display: block;
-                left: 100px;
-                top: -30px;
+                width: 60px;
+                height: 60px;
+                background-repeat: no-repeat;
               }
             }
           }

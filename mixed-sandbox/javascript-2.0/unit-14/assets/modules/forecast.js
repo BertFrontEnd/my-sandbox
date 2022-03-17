@@ -1,4 +1,4 @@
-export default async function getForecast() {
+export function getForecast() {
   const currentCity = document.querySelector('.city');
 
   const idApi = `1b6b5070efbf756fbf0bba5241bcc2db`;

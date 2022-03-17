@@ -41,7 +41,9 @@ const setForecastDay = () => {
   const domThirdDay = document.querySelector('.third-day');
   let thirdDay = new Date().getDay();
 
-  switch (firstDay + 1) {
+  firstDay = firstDay + 1 > 6 ? 0 : firstDay + 1;
+
+  switch (firstDay) {
     case 0:
       firstDay = 'Sunday';
       break;
@@ -67,7 +69,9 @@ const setForecastDay = () => {
       throw new Error('Something went wrong!');
   }
 
-  switch (secondDay + 2) {
+  secondDay = secondDay + 2 > 6 ? 0 : secondDay + 2;
+
+  switch (secondDay) {
     case 0:
       secondDay = 'Sunday';
       break;
@@ -93,7 +97,9 @@ const setForecastDay = () => {
       throw new Error('Something went wrong!');
   }
 
-  switch (thirdDay + 3) {
+  thirdDay = thirdDay + 3 > 6 ? 0 : thirdDay + 3;
+
+  switch (thirdDay) {
     case 0:
       thirdDay = 'Sunday';
       break;

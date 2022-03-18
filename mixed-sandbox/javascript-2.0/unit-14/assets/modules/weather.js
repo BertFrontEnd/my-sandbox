@@ -27,7 +27,7 @@ async function setWeather() {
   domCurrentWeatherIcon.style.backgroundImage = `url('./assets/img/${weather.weather[0].icon}.svg`;
   domFeels.textContent = `${Math.round(weather.main.feels_like - 273.15)}°`;
   domWind.textContent = `${Math.round(weather.wind.speed)} m/s`;
-  domHumidity.textContent = `${Math.round(weather.wind.speed)}%`;
+  domHumidity.textContent = `${Math.round(weather.main.humidity)}%`;
 }
 
 export { setWeather };

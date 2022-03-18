@@ -2,7 +2,7 @@ export function getForecast() {
   const currentCity = document.querySelector('.city');
 
   const idApi = `1b6b5070efbf756fbf0bba5241bcc2db`;
-  const urlApi = `https://api.openweathermap.org/data/2.5/forecast?q=${currentCity.textContent},by&APPID=${idApi}`;
+  const urlApi = `https://api.openweathermap.org/data/2.5/forecast?q=${currentCity.textContent}&APPID=${idApi}`;
 
   const requestApi = fetch(urlApi)
     .then((res) => res.json())

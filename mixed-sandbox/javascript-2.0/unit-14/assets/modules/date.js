@@ -12,7 +12,6 @@ const days = [
 const setCurrentDay = () => {
   const domDay = document.querySelector('.day');
   domDay.textContent = `${days[day]}`;
-  console.log('current: ', day);
 };
 
 const setForecastDay = () => {

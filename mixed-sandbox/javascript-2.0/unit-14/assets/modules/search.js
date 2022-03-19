@@ -1,6 +1,5 @@
 const getSearchCity = () => {
   const searchCity = document.querySelector('.search-area');
-  console.log(searchCity);
 
   const idApi = `1b6b5070efbf756fbf0bba5241bcc2db`;
   const urlApi = `https://api.openweathermap.org/data/2.5/forecast?q=${searchCity.value}&APPID=${idApi}`;

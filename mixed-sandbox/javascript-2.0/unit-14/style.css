@@ -291,9 +291,6 @@ html body main .info .info-left .forecast .day-info .icon-weather {
     margin-bottom: 10px;
     border-radius: 5px 0 0 5px;
   }
-  html body main .menu .menu-search .voice {
-    margin-bottom: 10px;
-  }
   html body main .menu .menu-search button.btn-search {
     margin-bottom: 10px;
     border-radius: 0 5px 5px 0;
@@ -313,19 +310,6 @@ html body main .info .info-left .forecast .day-info .icon-weather {
   }
   html body .info .info-left .current-weather img.current-weather-icon {
     display: none;
-  }
-  html body .info section.info-right {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  html body .info section.info-right .map-screen {
-    margin: 0 auto 20px auto;
-  }
-  html body .info section.info-right .map-location li {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -359,10 +343,6 @@ html body main .info .info-left .forecast .day-info .icon-weather {
     margin-bottom: 10px;
     border-radius: 5px;
     width: 250px;
-  }
-  html body main .menu .menu-search form .voice {
-    margin-left: 0px;
-    margin-bottom: 10px;
   }
   html body main .menu .menu-search form .btn-search {
     margin-bottom: 10px;
@@ -404,13 +384,6 @@ html body main .info .info-left .forecast .day-info .icon-weather {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  html body main .info section.info-right {
-    margin-bottom: 0px;
-  }
-  html body main .info section.info-right div.map-screen #map .ymaps-2-1-76-map {
-    width: 240px !important;
-    height: 240px !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

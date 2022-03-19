@@ -236,10 +236,6 @@ html {
               border-radius: 5px 0 0 5px;
             }
 
-            .voice {
-              margin-bottom: 10px;
-            }
-
             button.btn-search {
               margin-bottom: 10px;
               border-radius: 0 5px 5px 0;
@@ -261,20 +257,6 @@ html {
 
             img.current-weather-icon {
               display: none;
-            }
-          }
-        }
-
-        section.info-right {
-          justify-content: center;
-
-          .map-screen {
-            margin: 0 auto 20px auto;
-          }
-
-          .map-location {
-            li {
-              justify-content: center;
             }
           }
         }
@@ -306,11 +288,6 @@ html {
                 margin-bottom: 10px;
                 border-radius: 5px;
                 width: 250px;
-              }
-
-              .voice {
-                margin-left: 0px;
-                margin-bottom: 10px;
               }
 
               .btn-search {
@@ -348,18 +325,6 @@ html {
             .forecast {
               justify-content: center;
               flex-direction: column;
-            }
-          }
-
-          section.info-right {
-            margin-bottom: 0px;
-            div.map-screen {
-              #map {
-                .ymaps-2-1-76-map {
-                  width: 240px !important;
-                  height: 240px !important;
-                }
-              }
             }
           }
         }

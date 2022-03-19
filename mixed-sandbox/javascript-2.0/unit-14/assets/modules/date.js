@@ -1,5 +1,4 @@
-/* let day = new Date().getDay(); */
-let day = 5;
+let day = new Date().getDay();
 const days = [
   'Sunday',
   'Monday',
@@ -21,33 +20,17 @@ const setForecastDay = () => {
   const domSecondDay = document.querySelector('.second-day');
   const domThirdDay = document.querySelector('.third-day');
 
-  let forecastDayFirst = day + 1;
-  if (forecastDayFirst > 6) {
-    forecastDayFirst = 0;
-  } else {
-    forecastDayFirst;
-  }
+  const forecastDay = (day) => {
+    return day > 6 ? day - 7 : day;
+  };
 
-  let forecastDaySecond = day + 2;
-  if (forecastDaySecond > 6) {
-    forecastDaySecond = 1;
-  } else {
-    forecastDaySecond;
-  }
-
-  let forecastDayThird = day + 3;
-  if (forecastDayThird > 6) {
-    forecastDayThird = 2;
-  } else {
-    forecastDayThird;
-  }
+  let forecastDayFirst = forecastDay(day + 1);
+  let forecastDaySecond = forecastDay(day + 2);
+  let forecastDayThird = forecastDay(day + 3);
 
   domFirstDay.textContent = `${days[forecastDayFirst]}`;
-  console.log(forecastDayFirst);
   domSecondDay.textContent = `${days[forecastDaySecond]}`;
-  console.log(forecastDaySecond);
   domThirdDay.textContent = `${days[forecastDayThird]}`;
-  console.log(forecastDayThird);
 };
 
 const setCurrentDate = () => {
@@ -61,48 +44,22 @@ const setCurrentMonth = () => {
   const domMonth = document.querySelector('.date-str');
   let month = new Date().getMonth();
 
-  switch (month) {
-    case 0:
-      month = 'January';
-      break;
-    case 1:
-      month = 'February';
-      break;
-    case 2:
-      month = 'March';
-      break;
-    case 3:
-      month = 'April';
-      break;
-    case 4:
-      month = 'May';
-      break;
-    case 5:
-      month = 'June';
-      break;
-    case 6:
-      month = 'July';
-      break;
-    case 7:
-      month = 'August';
-      break;
-    case 8:
-      month = 'September';
-      break;
-    case 9:
-      month = 'October';
-      break;
-    case 10:
-      month = 'November';
-      break;
-    case 11:
-      month = 'November';
-      break;
-    default:
-      throw new Error('Something went wrong!');
-  }
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
 
-  domMonth.textContent = `${month}`;
+  domMonth.textContent = `${months[month]}`;
 };
 
 let setCurrentYear = () => {

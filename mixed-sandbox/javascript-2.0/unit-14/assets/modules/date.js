@@ -1,133 +1,53 @@
+/* let day = new Date().getDay(); */
+let day = 5;
+const days = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
+
 const setCurrentDay = () => {
   const domDay = document.querySelector('.day');
-  let day = new Date().getDay();
-
-  switch (day) {
-    case 0:
-      day = 'Sunday';
-      break;
-    case 1:
-      day = 'Monday';
-      break;
-    case 2:
-      day = 'Tuesday';
-      break;
-    case 3:
-      day = 'Wednesday';
-      break;
-    case 4:
-      day = 'Thursday';
-      break;
-    case 5:
-      day = 'Friday';
-      break;
-    case 6:
-      day = 'Saturday';
-      break;
-    default:
-      throw new Error('Something went wrong!');
-  }
-
-  domDay.textContent = `${day}`;
+  domDay.textContent = `${days[day]}`;
+  console.log('current: ', day);
 };
 
 const setForecastDay = () => {
   const domFirstDay = document.querySelector('.first-day');
-  let firstDay = new Date().getDay();
-
   const domSecondDay = document.querySelector('.second-day');
-  let secondDay = new Date().getDay();
-
   const domThirdDay = document.querySelector('.third-day');
-  let thirdDay = new Date().getDay();
 
-  firstDay = firstDay + 1 > 6 ? 0 : firstDay + 1;
-
-  switch (firstDay) {
-    case 0:
-      firstDay = 'Sunday';
-      break;
-    case 1:
-      firstDay = 'Monday';
-      break;
-    case 2:
-      firstDay = 'Tuesday';
-      break;
-    case 3:
-      firstDay = 'Wednesday';
-      break;
-    case 4:
-      firstDay = 'Thursday';
-      break;
-    case 5:
-      firstDay = 'Friday';
-      break;
-    case 6:
-      firstDay = 'Saturday';
-      break;
-    default:
-      throw new Error('Something went wrong!');
+  let forecastDayFirst = day + 1;
+  if (forecastDayFirst > 6) {
+    forecastDayFirst = 0;
+  } else {
+    forecastDayFirst;
   }
 
-  secondDay = secondDay + 2 > 6 ? 0 : secondDay + 2;
-
-  switch (secondDay) {
-    case 0:
-      secondDay = 'Sunday';
-      break;
-    case 1:
-      secondDay = 'Monday';
-      break;
-    case 2:
-      secondDay = 'Tuesday';
-      break;
-    case 3:
-      secondDay = 'Wednesday';
-      break;
-    case 4:
-      secondDay = 'Thursday';
-      break;
-    case 5:
-      secondDay = 'Friday';
-      break;
-    case 6:
-      secondDay = 'Saturday';
-      break;
-    default:
-      throw new Error('Something went wrong!');
+  let forecastDaySecond = day + 2;
+  if (forecastDaySecond > 6) {
+    forecastDaySecond = 1;
+  } else {
+    forecastDaySecond;
   }
 
-  thirdDay = thirdDay + 3 > 6 ? 0 : thirdDay + 3;
-
-  switch (thirdDay) {
-    case 0:
-      thirdDay = 'Sunday';
-      break;
-    case 1:
-      thirdDay = 'Monday';
-      break;
-    case 2:
-      thirdDay = 'Tuesday';
-      break;
-    case 3:
-      thirdDay = 'Wednesday';
-      break;
-    case 4:
-      thirdDay = 'Thursday';
-      break;
-    case 5:
-      thirdDay = 'Friday';
-      break;
-    case 6:
-      thirdDay = 'Saturday';
-      break;
-    default:
-      throw new Error('Something went wrong!');
+  let forecastDayThird = day + 3;
+  if (forecastDayThird > 6) {
+    forecastDayThird = 2;
+  } else {
+    forecastDayThird;
   }
 
-  domFirstDay.textContent = `${firstDay}`;
-  domSecondDay.textContent = `${secondDay}`;
-  domThirdDay.textContent = `${thirdDay}`;
+  domFirstDay.textContent = `${days[forecastDayFirst]}`;
+  console.log(forecastDayFirst);
+  domSecondDay.textContent = `${days[forecastDaySecond]}`;
+  console.log(forecastDaySecond);
+  domThirdDay.textContent = `${days[forecastDayThird]}`;
+  console.log(forecastDayThird);
 };
 
 const setCurrentDate = () => {

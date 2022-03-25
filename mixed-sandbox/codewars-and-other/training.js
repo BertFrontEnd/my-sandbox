@@ -852,14 +852,14 @@ console.log(friend(['Ryan', 'Kieran', 'Mark'])); */
 
 /* sumNumber */
 
-const sumNumber = (arr, number) => {
+/* const sumNumber = (arr, number) => {
   for (let i = 0; i < arr.length; i++) {
     for (let k = i + 1; k < arr.length; k++) {
-      /* let sum = arr[i] + arr[k]; */
-      /* console.log(sum); */
-      /* console.log('arr[i]:', arr[i], 'arr[k]:', arr[k]); */
+      // let sum = arr[i] + arr[k];
+      // console.log(sum);
+      // console.log('arr[i]:', arr[i], 'arr[k]:', arr[k]);
       if (arr[i] + arr[k] == number) {
-        /* console.log([arr[i], arr[k]]); */
+        // console.log([arr[i], arr[k]]);
         return [arr[i], arr[k]];
       }
     }
@@ -870,3 +870,27 @@ const sumNumber = (arr, number) => {
 console.log(sumNumber([-1, 2, 3, 7, 10], 9));
 console.log(sumNumber([7, 3, 2, -9, 5], 4));
 console.log(sumNumber([-3, 0, 2, 4, 5], 6));
+ */
+
+/* sumNumber */
+
+const sumNumber = (arr, number) => {
+  let set = new Set();
+
+  for (let i = 0; i < arr.length; i++) {
+    let foundNumber = number - arr[i];
+    /* console.log(foundNumber); */
+    if (set.has(foundNumber)) {
+      /* console.log([(foundNumber, arr[i])]); */
+      return [(foundNumber, arr[i])];
+    } else {
+      set.add(arr[i]);
+    }
+    console.log(set);
+  }
+  return ['not found sum of numbers'];
+};
+
+console.log(sumNumber([-1, 2, 3, 7, 10], 9));
+/* console.log(sumNumber([7, 3, 2, -9, 5], 4));
+console.log(sumNumber([-3, 0, 2, 4, 5], 6)); */

@@ -89,85 +89,146 @@ document.querySelector('.ch-8').addEventListener('change', t8);
 // Task 9 ============================================
 /*  Дан блок .div-9. Внутри блока - изображение 1.png. При клике правой кнопкой мыши  - меняйте изображение на 2.png. Надеюсь вы догадаетесь изменить только src изображения? */
 
-function t9() {}
+let counter = 1;
 
-// ваше событие здесь!!!
+function t9() {
+  let imgSrc = document.querySelector('.div-9 img');
+
+  if (counter % 2 == 0) {
+    imgSrc.src = 'assets/1.png';
+    counter++;
+  } else {
+    imgSrc.src = 'assets/2.png';
+    counter++;
+  }
+}
+
+document.querySelector('.div-9').addEventListener('contextmenu', t9);
 
 // Task 10 ============================================
 /*  Дан блок .div-10. Внутри блока - изображение 1.png. При наведении мыши (mouseenter)  - меняйте изображение на 2.png. */
 
-function t10() {}
+function t10() {
+  let imgSrc = document.querySelector('.div-10 img');
+  imgSrc.src = 'assets/2.png';
+}
 
-// ваше событие здесь!!!
+document.querySelector('.div-10').addEventListener('mouseenter', t10);
 
 // Task 11 ============================================
 /*  Дан блок .div-11. Внутри блока - изображение 1.png. При наведении мыши (mouseenter)  - меняйте изображение на 2.png. При уведении мыши - mouseleave - возвращайте исходное изображение. */
 
-function t11() {}
+function t11() {
+  let imgSrc = document.querySelector('.div-11 img');
 
-// ваше событие здесь!!!
+  document.querySelector('.div-11').addEventListener('mouseenter', () => {
+    imgSrc.src = 'assets/2.png';
+  });
+  document.querySelector('.div-11').addEventListener('mouseleave', () => {
+    imgSrc.src = 'assets/1.png';
+  });
+}
+
+window.addEventListener('load', t11);
 
 // Task 12 ============================================
 /*  Дан блок .div-12. Добавьте на него событие mousedown - при нажатии кнопки мыши - добавляйте ему класс active. */
 
-// () => {
+function t12() {
+  document.querySelector('.div-12').classList.add('active');
+}
 
-// }
-
-// ваше событие здесь!!!
+document.querySelector('.div-12').addEventListener('mousedown', t12);
 
 // Task 13 ============================================
 /*  Дан блок .div-13. Добавьте на него событие mousedown - при нажатии кнопки мыши - добавляйте ему класс active. Добавьте ему событие mouseup - при отпускании мыши - удаляйте класс active. */
 
-// () =>  {
+function t13() {
+  let divElement = document.querySelector('.div-13');
 
-// }
+  document.querySelector('.div-13').addEventListener('mousedown', () => {
+    divElement.classList.add('active');
+  });
+  document.querySelector('.div-13').addEventListener('mouseup', () => {
+    divElement.classList.remove('active');
+  });
+}
 
-// () =>  {
-
-// }
-// ваше событие здесь!!!
+window.addEventListener('load', t13);
 
 // Task 14 ============================================
 /*  Дан блок .div-14. При нажатии кнопки b-14 добавляйте к нему событие onclick - которое, при клике добавляем блоку div-14 класс active. */
 
-function t14() {}
-/* document.querySelector('t-14').onclick = t14; */
+function t14() {
+  document.querySelector('.div-14').classList.add('active');
+}
+
+document.querySelector('.b-14').onclick = t14;
 
 // Task 15 ============================================
 /*  Дан блок .div-15. Добавьте на него событие move. При каждом движении мыши увеличивайте число внутри на 1. */
 
-function t15() {}
-// ваше событие здесь!!!
+let num = +document.querySelector('.div-15').innerHTML;
+
+function t15() {
+  document.querySelector('.div-15').innerHTML = ++num;
+}
+
+document.querySelector('.div-15').addEventListener('mousemove', t15);
 
 // Task 16 ============================================
 /*  Дан блок .div-16. Добавьте на него событие move. При каждом движении мыши увеличивайте ширину блока на 1px. */
 
-function t16() {}
-// ваше событие здесь!!!
+let widthElement = document
+  .querySelector('.div-16')
+  .getBoundingClientRect().width;
+
+function t16() {
+  document.querySelector('.div-16').style.width = `${widthElement++}px`;
+}
+
+document.querySelector('.div-16').addEventListener('mousemove', t16);
 
 // Task 17 ============================================
-/*  Дано две кнопки - b-17_on и b-17_off. Напишите фукнции t17On и t17Off которые включают и отключают событие move в задании 16. */
+/*  Дано две кнопки - b-17_on и b-17_off. Напишите функции t17On и t17Off которые включают и отключают событие move в задании 16. */
 
-function t17On() {}
-function t17Off() {}
-// ваше событие здесь!!!
-// ваше событие здесь!!!
+function t17On() {
+  document.querySelector('.div-16').addEventListener('mousemove', t16);
+}
+function t17Off() {
+  document.querySelector('.div-16').removeEventListener('mousemove', t16);
+}
+
+document.querySelector('.b-17_on').addEventListener('click', t17On);
+document.querySelector('.b-17_off').addEventListener('click', t17Off);
 
 // Task 18 ============================================
-/*  Дан блок div-18. Напишите фукнцию t18 которая выводит в данный блок его ширину при событии onmouseenter. */
+/*  Дан блок div-18. Напишите функцию t18 которая выводит в данный блок его ширину при событии onmouseenter. */
 
-function t18() {}
-// ваше событие здесь!!!
+function t18() {
+  let div18 = document.querySelector('.div-18');
+  let div18Width = div18.getBoundingClientRect().width;
+  div18.textContent = `${div18Width}px`;
+}
+
+document.querySelector('.div-18').addEventListener('mouseenter', t18);
 
 // Task 19 ============================================
-/*  Дан блок div-19. Напишите фукнцию t19 которая выводит в данный блок его классы при событии onmouseout. */
+/*  Дан блок div-19. Напишите функцию t19 которая выводит в данный блок его классы при событии onmouseout. */
 
-function t19() {}
-// ваше событие здесь!!!
+function t19() {
+  let div19 = document.querySelector('.div-19');
+  div19.textContent = div19.classList;
+}
+
+document.querySelector('.div-19').addEventListener('mouseout', t19);
 
 // Task 20 ============================================
-/*  Дан элемент progress. Напишите фукнцию t20 которая увеличивает его value на 1 при каждом событии mousemove внутри progress. */
+/*  Дан элемент progress. Напишите функцию t20 которая увеличивает его value на 1 при каждом событии mousemove внутри progress. */
 
-function t20() {}
-// ваше событие здесь!!!
+function t20() {
+  let progressLine = document.querySelector('progress');
+  progressLine.value = progressLine.value + 1;
+}
+
+document.querySelector('progress').addEventListener('mousemove', t20);

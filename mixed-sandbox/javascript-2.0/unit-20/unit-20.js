@@ -2,8 +2,7 @@
 /* Дан input .i-1. Напишите функцию t1, которая выводит в .out-1 символ и возвращает его. Во всех последующих задачах - работаем с латиницей и цифрами.*/
 
 function t1(e) {
-  let out1 = document.querySelector('.out-1');
-  out1.textContent = e.key;
+  document.querySelector('.out-1').textContent = e.key;
 }
 
 document.querySelector('.i-1').addEventListener('keypress', (e) => {
@@ -13,25 +12,45 @@ document.querySelector('.i-1').addEventListener('keypress', (e) => {
 // Task 2 ============================================
 /*  Дан input .i-2. Напишите функцию t2, которая выводит в .out-2 код символа и возвращает его. */
 
-function t2() {}
+function t2(e) {
+  document.querySelector('.out-2').textContent = e.code;
+}
 
-// ваше событие здесь!!!
+document.querySelector('.i-2').addEventListener('keypress', (e) => {
+  t2(e);
+});
 
 // Task 3 ============================================
 /*  Дан input .i-3. Напишите функцию t3, которая выводит на страницу true если введен символ и false если цифра. Для определения - используйте код клавиши. */
 
-let w3 = 75;
+function t3(e) {
+  let charCodeOfKeyboard = e.charCode;
+  let out3 = document.querySelector('.out-3');
 
-function t3() {}
+  if (charCodeOfKeyboard >= 48 && charCodeOfKeyboard <= 57) {
+    out3.textContent = false;
+  } else {
+    out3.textContent = true;
+  }
+}
 
-// ваше событие здесь!!!
+document.querySelector('.i-3').addEventListener('keypress', (e) => {
+  t3(e);
+});
 
 // Task 4 ============================================
 /*  Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы в нижнем регистре. Т.е. ввели ab4Bci в out получаем ab4bci. */
 
-function t4() {}
+function t4() {
+  let i4 = document.querySelector('.i-4');
+  let out4 = document.querySelector('.out-4');
 
-// ваше событие здесь!!!
+  out4.textContent = i4.value.toLowerCase();
+}
+
+document.querySelector('.i-4').addEventListener('keypress', (e) => {
+  t4(e);
+});
 
 // Task 5 ============================================
 /*  Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре. Т.е. пользователь ввел AbCd и функция выведет ABCD. */

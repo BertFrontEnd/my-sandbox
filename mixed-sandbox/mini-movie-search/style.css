@@ -71,6 +71,8 @@ body .movies .movie__cover--darkened {
   max-width: 100%;
   height: 100%;
   z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 body .movies .movie__cover--darkened:hover {

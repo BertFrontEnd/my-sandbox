@@ -48,26 +48,37 @@ function t4() {
   out4.textContent = i4.value.toLowerCase();
 }
 
-document.querySelector('.i-4').addEventListener('keypress', (e) => {
-  t4(e);
-});
+document.querySelector('.i-4').addEventListener('keypress', t4);
 
 // Task 5 ============================================
 /*  Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре. Т.е. пользователь ввел AbCd и функция выведет ABCD. */
 
-function t5() {}
+function t5() {
+  let i5 = document.querySelector('.i-5');
+  let out5 = document.querySelector('.out-5');
 
-// ваше событие здесь!!!
+  out5.textContent = i5.value.toUpperCase();
+}
+
+document.querySelector('.i-5').addEventListener('keypress', t5);
 
 // Task 6 ============================================
 /*  Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем регистре.  */
 
-function t6() {}
+function t6(e) {
+  let out6 = document.querySelector('.out-6');
 
-// ваше событие здесь!!!
+  if (e.key === e.key.toUpperCase()) {
+    out6.textContent = e.key;
+  }
+}
+
+document.querySelector('.i-6').addEventListener('keypress', (e) => {
+  t6(e);
+});
 
 // Task 7 ============================================
-/*  Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случаный символ из массива a7 при каждом вводе символа. */
+/*  Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случайный символ из массива a7 при каждом вводе символа. */
 
 function t7() {
   const a7 = [];

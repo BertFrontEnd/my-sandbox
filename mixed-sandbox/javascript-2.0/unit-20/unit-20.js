@@ -81,17 +81,73 @@ document.querySelector('.i-6').addEventListener('keypress', (e) => {
 /*  Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случайный символ из массива a7 при каждом вводе символа. */
 
 function t7() {
-  const a7 = [];
+  const a7 = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z',
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+  ];
+
+  function randomInteger(min, max) {
+    let rand = min - 0.5 + Math.random() * (max - min + 1);
+    return Math.round(rand);
+  }
+
+  let number = randomInteger(0, a7.length - 1);
+
+  let out7 = document.querySelector('.out-7');
+  out7.textContent = a7[number];
 }
 
-// ваше событие здесь!!!
+document.querySelector('.i-7').addEventListener('keypress', t7);
 
 // Task 8 ============================================
 /*  Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1, o на 0, l на 7. */
 
-function t8() {}
+function t8(e) {
+  console.log(e);
+  let out8 = document.querySelector('.out-8');
+  out8.textContent = e.key;
+  if (e.key === 'i') out8.textContent = 1;
+  if (e.key === 'o') out8.textContent = 0;
+  if (e.key === 'l') out8.textContent = 7;
+}
 
-// ваше событие здесь!!!
+document.querySelector('.i-8').addEventListener('keypress', (e) => {
+  t8(e);
+});
 
 // Task 9 ============================================
 /* Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых клавиш стрелка вниз. */

@@ -137,7 +137,6 @@ document.querySelector('.i-7').addEventListener('keypress', t7);
 /*  Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1, o на 0, l на 7. */
 
 function t8(e) {
-  console.log(e);
   let out8 = document.querySelector('.out-8');
   out8.textContent = e.key;
   if (e.key === 'i') out8.textContent = 1;
@@ -152,9 +151,23 @@ document.querySelector('.i-8').addEventListener('keypress', (e) => {
 // Task 9 ============================================
 /* Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых клавиш стрелка вниз. */
 
-function t9() {}
+let keyCounter = 0;
 
-// ваше событие здесь!!!
+function t9(e) {
+  console.log(e.keyCode);
+  let out9 = document.querySelector('.out-9');
+  console.log(out9);
+
+  if (e.keyCode === 40) {
+    console.log('click');
+    out9.textContent = keyCounter;
+    keyCounter++;
+  }
+}
+
+document.querySelector('.i-9').addEventListener('keypress', (e) => {
+  t9(e);
+});
 
 // Task 10 ============================================
 /*  Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту изображения. Одно нажатие клавиши - 1px. */

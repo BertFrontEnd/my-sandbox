@@ -154,27 +154,38 @@ document.querySelector('.i-8').addEventListener('keypress', (e) => {
 let keyCounter = 0;
 
 function t9(e) {
-  console.log(e.keyCode);
   let out9 = document.querySelector('.out-9');
-  console.log(out9);
 
   if (e.keyCode === 40) {
-    console.log('click');
     out9.textContent = keyCounter;
     keyCounter++;
   }
 }
 
-document.querySelector('.i-9').addEventListener('keypress', (e) => {
+document.querySelector('.i-9').addEventListener('keydown', (e) => {
   t9(e);
 });
 
 // Task 10 ============================================
 /*  Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту изображения. Одно нажатие клавиши - 1px. */
 
-function t10() {}
+function t10(e) {
+  let div10 = document.querySelector('.div-10');
+  let div10Height = div10.getBoundingClientRect().height;
+  let div10Width = div10.getBoundingClientRect().width;
 
-// ваше событие здесь!!!
+  if (e.keyCode === 40 || e.keyCode === 38) {
+    div10.style.height = div10Height + 1 + 'px';
+  }
+
+  if (e.keyCode === 37 || e.keyCode === 39) {
+    div10.style.width = div10Width + 1 + 'px';
+  }
+}
+
+document.querySelector('.i-10').addEventListener('keydown', (e) => {
+  t10(e);
+});
 
 // Task 11 ============================================
 /*  Проект. 
@@ -184,6 +195,19 @@ function t10() {}
 4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не тестируются. Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.
 */
 
-function t11() {}
+function t11(e) {
+  let arrOfKey = document.querySelectorAll('.key');
+  let currentKey = e.which;
 
-// ваше событие здесь!!!
+  arrOfKey.forEach((key) => {
+    key.classList.remove('active');
+    if (+key.dataset.number === currentKey) {
+      console.log('click');
+      key.classList.add('active');
+    }
+  });
+}
+
+document.querySelector('.i-11').addEventListener('keydown', (e) => {
+  t11(e);
+});

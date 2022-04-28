@@ -53,7 +53,6 @@ const addTouchStart = () => {
 
 function t4() {
   const out4 = document.querySelector('.out-4');
-
   out4.textContent = `touch: ${countNumber}. Working`;
 
   document
@@ -78,9 +77,16 @@ document.querySelector('.b-5').addEventListener('touchstart', t5);
 // Task 6 ============================================
 /*  Добавьте событие ontouchend на div-4. При его срабатывании выведите в out-6 слово touchend. */
 
-function t6() {}
+let countNumberButton = 0;
 
-// ваше событие здесь!!!
+function t6() {
+  countNumberButton++;
+  document.querySelector(
+    '.out-6',
+  ).textContent = `touchend: ${countNumberButton}`;
+}
+
+document.querySelector('.b-4').addEventListener('touchend', t6);
 
 // Task 7 ============================================
 /*  Дан блок div-7. Добавьте событие touch, при срабатывании которого окрашивайте блок в красный цвет. */

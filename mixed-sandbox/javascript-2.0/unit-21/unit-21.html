@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 20</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Unit 21. Основы touch событий</h1>
+
+        <section>
+            <p><b>Task 1.</b></p>
+            <p>Создайте блок div-1. Добавьте на него событие touchstart. Выведите в out-1 слово touch если событие
+                сработает. </p>
+            <div class="div-1 block"></div>
+            <div class="out-1">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 2.</b></p>
+            <p>Создайте блок div-2. Добавьте на него событие touchstart. Выведите в out-2 число срабатываний события.
+            </p>
+            <div class="div-2 block"></div>
+            <div class="out-2">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 3.</b></p>
+            <p>Создайте блок div-3_1 и div-3_2. Добавьте на них событие touchstart. Выведите в out-3 номер блока 1 или 2
+                на котором сработало событие.</p>
+            <div class="div-3_1 block">3-1</div>
+            <div class="div-3_2 block">3-2</div>
+            <div class="out-3">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 4.</b></p>
+            <p>Создайте блок div-4. И кнопку b-4. При нажатии кнопки - добавляйте событие ontouchstart на блок div-4.
+                При событии происходит вывод текста touch в out-4. </p>
+            <div class="div-4 block">4</div>
+            <button class="button-primary b-4">Task-4</button>
+            <div class="out-4">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 5.</b></p>
+            <p> Дана кнопка b-5. При ее нажатии очищайте событие ontouchstart на блоке div-4.</p>
+            <button class="button-primary b-5">Task-5</button>
+            <div class="out-5">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 6.</b></p>
+            <p> Добавьте событие ontouchend на div-4. При его срабатывании выведите в out-6 слово touchend.</p>
+            <div class="out-6">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 7.</b></p>
+            <p> Дан блок div-7. Добавьте событие touch, при срабатывании которого окрашивайте блок в красный цвет.</p>
+            <div class="div-7 block">7</div>
+
+            <div class="out-7">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 8.</b></p>
+            <p>Дан блок div-8. Добавьте на него событие touch, которое при срабатывании окрашивает блок случаным цветом
+                из массива a8=[red, green, blue, orange, pink, yellow] </p>
+
+            <div class="div-8 block">
+            </div>
+            <div class="out-8">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 9.</b></p>
+            <p>Дан блок div-9. Добавьте событие ontouch. Выводите количество одновременных касаний в out-9.</p>
+            <div class="div-9 block">
+            </div>
+            <div class="out-9">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 10.</b></p>
+            <p>Дан блок div-10. Добавьте на него событие touchmove. При срабатывании события - увеличивайте его ширину
+                на 1.</p>
+            <div class="div-10 block">10</div>
+            <div class="out-10">
+            </div>
+        </section>
+
+
+        <section>
+            <p><b>Task 11.</b></p>
+            <p> Дан блок div-11. Добавьте на него событие touch. При срабатывании выводите радиус события radiusX,
+                radiusY.</p>
+            <div class="div-11 block">11</div>
+            <div class="out-11">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 12.</b></p>
+            <p>Изучите html код внутри div-12-wrapper.</p>
+            <p>1. Добавьте на кнопку nex событие click, touch так, чтобы при событии запускалась функция nextFunction и
+                активным становилось изображение следующее за выделенным классом active-img (рамкой). Соответственно, на
+                активном изображении появляется рамка, а остальные - лишаются рамки.</p>
+            <p>2. Добавьте на кнопку prev событие click, touch так, чтобы при событии запускалась функция prevFunction и
+                активным становилось изображение до выделенного классом active-img (рамкой). Соответственно, на активном
+                изображении появляется рамка, а остальные - лишаются рамки.</p>
+            <p>3. Учтите краевые эффекты - когда мы доходим до конца или начала, то нажатие кнопки должно приводить к
+                перемещению рамки в начало или конец изображений.</p>
+            <p>4. Добавьте кнопку reset (функция resetFunction), нажатие которой сбрасывает активное изображение на
+                нулевое. </p>
+            <p>5. Добавьте во все действия следующее - в изображении img-12-max заменяется src на активную. Т.е.
+                произошло событие - заменилась главная картинка.</p>
+            <div>
+
+                <div class="div-12-wrapper">
+                    <img src="img/1.png" alt="" class="img-12-min active-img">
+                    <img src="img/2.png" alt="" class="img-12-min">
+                    <img src="img/3.png" alt="" class="img-12-min">
+                    <img src="img/4.png" alt="" class="img-12-min">
+                    <img src="img/5.png" alt="" class="img-12-min">
+                    <img src="img/6.png" alt="" class="img-12-min">
+                </div>
+                <div class="div-12-max">
+                    <img src="img/1.png" alt="" class="img-12-max">
+                </div>
+                <p class="img-12-text"></p>
+                <button class="button-primary prev">Prev</button>
+                <button class="button-primary next">Next</button>
+                <div class="out-11">
+                </div>
+        </section>
+
+
+
+    </div>
+
+    <script src="unit-21.js"></script>
+</body>
+
+</html>

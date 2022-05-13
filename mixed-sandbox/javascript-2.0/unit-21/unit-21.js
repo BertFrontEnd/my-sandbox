@@ -166,14 +166,35 @@ document.querySelector('.div-11').addEventListener('touchstart', (e) => {
 const images = document.querySelectorAll('.img-12-min');
 let count = 0; // переменная, которая указывает на номер активного изображения в images
 
-const next = document.querySelectorAll('.next');
-next.onclick = nextFunction;
+const next = document.querySelector('.next');
+next.addEventListener('click', nextFunction);
+next.addEventListener('touchstart', nextFunction);
 
-const prev = document.querySelectorAll('.prev');
-prev.onclick = prevFunction;
+const prev = document.querySelector('.prev');
+prev.addEventListener('click', prevFunction);
+prev.addEventListener('touchstart', prevFunction);
 
-function nextFunction() {}
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', resetFunction);
+reset.addEventListener('touchstart', resetFunction);
 
-function prevFunction() {}
+function nextFunction() {
+  for (let image of images) image.classList.remove('active-img');
+  count++;
+  if (count === images.length) count = 0;
+  images[count].classList.add('active-img');
+}
 
+function prevFunction() {
+  for (let image of images) image.classList.remove('active-img');
+  count--;
+  if (count < 0) count = images.length - 1;
+  images[count].classList.add('active-img');
+}
+
+function resetFunction() {
+  for (let image of images) image.classList.remove('active-img');
+  count = 0;
+  images[0].classList.add('active-img');
+}
 // ваше событие здесь!!!

@@ -218,8 +218,7 @@ function setActiveImage(e) {
   maxImage.setAttribute('src', currentSrc);
   for (let image of images) {
     image.classList.remove('active-img');
-    console.log(e.target);
-    count = images.indexOf(e.target);
+    count = Array.from(images).indexOf(e.target);
   }
 
   e.target.classList.add('active-img');

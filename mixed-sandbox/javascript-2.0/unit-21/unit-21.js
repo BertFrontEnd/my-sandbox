@@ -164,6 +164,7 @@ document.querySelector('.div-11').addEventListener('touchstart', (e) => {
 */
 
 const images = document.querySelectorAll('.img-12-min');
+<<<<<<< HEAD
 let count = 0; // переменная, которая указывает на номер активного изображения в images
 
 const next = document.querySelectorAll('.next');
@@ -177,3 +178,64 @@ function nextFunction() {}
 function prevFunction() {}
 
 // ваше событие здесь!!!
+=======
+const maxImage = document.querySelector('.img-12-max');
+let count = 0; // переменная, которая указывает на номер активного изображения в images
+
+const next = document.querySelector('.next');
+next.addEventListener('click', nextFunction);
+next.addEventListener('touchstart', nextFunction);
+
+const prev = document.querySelector('.prev');
+prev.addEventListener('click', prevFunction);
+prev.addEventListener('touchstart', prevFunction);
+
+const reset = document.querySelector('.reset');
+reset.addEventListener('click', resetFunction);
+reset.addEventListener('touchstart', resetFunction);
+
+function nextFunction() {
+  for (let image of images) image.classList.remove('active-img');
+  count++;
+  if (count === images.length) count = 0;
+  images[count].classList.add('active-img');
+  const currentSrc = images[count].getAttribute('src');
+  maxImage.setAttribute('src', currentSrc);
+}
+
+function prevFunction() {
+  for (let image of images) image.classList.remove('active-img');
+  count--;
+  if (count < 0) count = images.length - 1;
+  images[count].classList.add('active-img');
+  const currentSrc = images[count].getAttribute('src');
+  maxImage.setAttribute('src', currentSrc);
+}
+
+function resetFunction() {
+  for (let image of images) image.classList.remove('active-img');
+  count = 0;
+  images[0].classList.add('active-img');
+  maxImage.setAttribute('src', images[0].getAttribute('src'));
+}
+
+for (let image of images) {
+  image.addEventListener('click', (e) => {
+    setActiveImage(e);
+  });
+  image.addEventListener('touchstart', (e) => {
+    setActiveImage(e);
+  });
+}
+
+function setActiveImage(e) {
+  const currentSrc = e.target.getAttribute('src');
+  maxImage.setAttribute('src', currentSrc);
+  for (let image of images) {
+    image.classList.remove('active-img');
+    count = Array.from(images).indexOf(e.target);
+  }
+
+  e.target.classList.add('active-img');
+}
+>>>>>>> 6cecbf015c4b9fa3924b312f1bb439f985471b41

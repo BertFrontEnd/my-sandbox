@@ -1,4 +1,4 @@
-const getLocation = () => {
+export default function getLocation() {
   const urlApi = 'https://ipinfo.io?token=5f652187a3f894';
 
   const requestApi = fetch(urlApi)
@@ -9,16 +9,4 @@ const getLocation = () => {
     });
 
   return requestApi;
-};
-
-async function setLocation() {
-  const domCity = document.querySelector('.city');
-  const domCountry = document.querySelector('.country');
-
-  const location = await getLocation();
-
-  domCity.textContent = location.city;
-  domCountry.textContent = location.country;
 }
-
-export { setLocation };

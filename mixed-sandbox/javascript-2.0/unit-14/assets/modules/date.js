@@ -1,77 +1,202 @@
-let day = new Date().getDay();
-const days = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-];
+export function currentDate() {
+  let d = new Date().getDay();
 
-const setCurrentDay = () => {
-  const domDay = document.querySelector('.day');
-  domDay.textContent = `${days[day]}`;
-};
+  switch (d) {
+    case 0:
+      d = 'Sunday';
+      break;
+    case 1:
+      d = 'Monday';
+      break;
+    case 2:
+      d = 'Tuesday';
+      break;
+    case 3:
+      d = 'Wednesday';
+      break;
+    case 4:
+      d = 'Thursday';
+      break;
+    case 5:
+      d = 'Friday';
+      break;
+    case 6:
+      d = 'Saturday';
+      break;
 
-const setForecastDay = () => {
-  const domFirstDay = document.querySelector('.first-day');
-  const domSecondDay = document.querySelector('.second-day');
-  const domThirdDay = document.querySelector('.third-day');
+    default:
+      throw new Error('Something went wrong!');
+  }
 
-  const forecastDay = (day) => {
-    return day > 6 ? day - 7 : day;
+  const dn = new Date().getDate();
+
+  let ds = new Date().getMonth();
+
+  switch (ds) {
+    case 0:
+      ds = 'January';
+      break;
+    case 1:
+      ds = 'February';
+      break;
+    case 2:
+      ds = 'March';
+      break;
+    case 3:
+      ds = 'April';
+      break;
+    case 4:
+      ds = 'May';
+      break;
+    case 5:
+      ds = 'June';
+      break;
+    case 6:
+      ds = 'July';
+      break;
+    case 7:
+      ds = 'August';
+      break;
+    case 8:
+      ds = 'September';
+      break;
+    case 9:
+      ds = 'October';
+      break;
+    case 10:
+      ds = 'November';
+      break;
+    case 11:
+      ds = 'November';
+      break;
+
+    default:
+      throw new Error('Something went wrong!');
+  }
+
+  const y = new Date().getFullYear();
+
+  const h =
+    new Date().getHours() < 10
+      ? `0${new Date().getHours()}`
+      : new Date().getHours();
+
+  const m =
+    new Date().getMinutes() < 10
+      ? `0${new Date().getMinutes()}`
+      : new Date().getMinutes();
+
+  const s =
+    new Date().getSeconds() < 10
+      ? `0${new Date().getSeconds()}`
+      : new Date().getSeconds();
+
+  const obj = {
+    day: d,
+    dateNum: dn,
+    dateStr: ds,
+    year: y,
+    hour: h,
+    minute: m,
+    second: s,
   };
 
-  let forecastDayFirst = forecastDay(day + 1);
-  let forecastDaySecond = forecastDay(day + 2);
-  let forecastDayThird = forecastDay(day + 3);
+  return obj;
+}
 
-  domFirstDay.textContent = `${days[forecastDayFirst]}`;
-  domSecondDay.textContent = `${days[forecastDaySecond]}`;
-  domThirdDay.textContent = `${days[forecastDayThird]}`;
-};
+export function forecastDate() {
+  let fd = new Date().getDay();
 
-const setCurrentDate = () => {
-  const domDate = document.querySelector('.date-num');
-  let date = new Date().getDate();
+  switch (fd + 1) {
+    case 0:
+      fd = 'Sunday';
+      break;
+    case 1:
+      fd = 'Monday';
+      break;
+    case 2:
+      fd = 'Tuesday';
+      break;
+    case 3:
+      fd = 'Wednesday';
+      break;
+    case 4:
+      fd = 'Thursday';
+      break;
+    case 5:
+      fd = 'Friday';
+      break;
+    case 6:
+      fd = 'Saturday';
+      break;
 
-  domDate.textContent = `${date}`;
-};
+    default:
+      throw new Error('Something went wrong!');
+  }
 
-const setCurrentMonth = () => {
-  const domMonth = document.querySelector('.date-str');
-  let month = new Date().getMonth();
+  let sd = new Date().getDay();
 
-  const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
+  switch (sd + 2) {
+    case 0:
+      sd = 'Sunday';
+      break;
+    case 1:
+      sd = 'Monday';
+      break;
+    case 2:
+      sd = 'Tuesday';
+      break;
+    case 3:
+      sd = 'Wednesday';
+      break;
+    case 4:
+      sd = 'Thursday';
+      break;
+    case 5:
+      sd = 'Friday';
+      break;
+    case 6:
+      sd = 'Saturday';
+      break;
 
-  domMonth.textContent = `${months[month]}`;
-};
+    default:
+      throw new Error('Something went wrong!');
+  }
 
-let setCurrentYear = () => {
-  const domYear = document.querySelector('.year');
-  let year = new Date().getFullYear();
+  let thd = new Date().getDay();
 
-  domYear.textContent = `${year}`;
-};
+  switch (thd) {
+    case 0:
+      thd = 'Sunday';
+      break;
+    case 1:
+      thd = 'Monday';
+      break;
+    case 2:
+      thd = 'Tuesday';
+      break;
+    case 3:
+      thd = 'Wednesday';
+      break;
+    case 4:
+      thd = 'Thursday';
+      break;
+    case 5:
+      thd = 'Friday';
+      break;
+    case 6:
+      thd = 'Saturday';
+      break;
 
-export {
-  setCurrentDay,
-  setForecastDay,
-  setCurrentDate,
-  setCurrentMonth,
-  setCurrentYear,
-};
+    default:
+      throw new Error('Something went wrong!');
+  }
+
+  const obj = {
+    firstDay: fd,
+    secondDay: sd,
+    thirdDay: thd,
+  };
+
+  return obj;
+}

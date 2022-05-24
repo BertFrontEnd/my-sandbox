@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://itgid.info/css/mustard-ui.min.css" />
+    <link rel="stylesheet" href="https://itgid.info/css/js_2_0.css" />
+    <title>Unit 17</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Unit 17. Методы массивов: map, filter</h1>
+
+      <section>
+        <p><b>Task 01</b></p>
+        <p>
+          Дан массив a1 = [4, 5, 6, 7, 12, 34, 56, 78, 90, 11] - с помощью map
+          переберите массив и создайте новый массив a1_res куда добавьте
+          элементы данного массива умноженные на 2. Возвратите массив a1_res.
+        </p>
+        <button class="b-1 button-primary">task 1</button>
+      </section>
+
+      <section>
+        <p><b>Task 02.</b></p>
+        <p>
+          Дан массив a2 = [2,3,4,5,10,11,12] - с помощью map переберите массив и
+          создайте массив a2_res куда добавьте элементы данного массива
+          возведенные во вторую степень. Возвратите массив a2_res. Действия
+          должны запускаться при вызове функции t2.
+        </p>
+        <button class="b-2 button-primary">task 2</button>
+      </section>
+
+      <section>
+        <p><b>Task 03.</b></p>
+        <p>
+          Дан массив a3 = [4,"3",6,7,"12",34,"56",78,90,11] - с помощью map
+          переберите массив и создайте массив a3_res куда добавьте все элементы
+          приведенные к числу. Возвратите a3_res. Действия должны запускаться
+          при вызове функции t3.
+        </p>
+        <button class="b-3 button-primary">task 3</button>
+      </section>
+
+      <section>
+        <p><b>Task 04.</b></p>
+        <p>
+          Следующая задача проще будет решаться через метод forEach, который мы
+          изучим во второй части урока! Сейчас мы делаем костыль, для отработки
+          навыков работы с map. Дан массив a4 =
+          [4,"3",6,7,"12",34,"56",78,90,11] - с помощью map переберите массив и
+          создайте массив a4_res куда добавьте ТОЛЬКО числа из массива a4.
+          Возвратите a4_res. Действия должны запускаться при вызове функции t4.
+        </p>
+        <button class="b-4 button-primary">task 4</button>
+      </section>
+
+      <section>
+        <p><b>Task 05.</b></p>
+        <p>
+          Дан массив b1 = [3, 14, 15, 92]. C помощью filter переберите массив и
+          создайте b1_res, который содержит только четные числа из b1.
+          Возвратите b1_res. Действия должны запускаться при вызове функции t5.
+        </p>
+        <button class="b-5 button-primary">task 5</button>
+      </section>
+
+      <section>
+        <p><b>Task 06.</b></p>
+        <p>
+          Дан массив b6 = [3, 14, 15, 92, "6", "5", "hello", 32]. C помощью
+          filter переберите массив b6 и создайте массив b6_res, который содержит
+          только числа из b6. Возвратите b6_res. Действия должны запускаться при
+          вызове функции t6.
+        </p>
+        <button class="b-6 button-primary">task 6</button>
+      </section>
+
+      <section>
+        <p><b>Task 07.</b></p>
+        <p>
+          Дан массив b7 = ["php-7", "html", "css", 92, "6", "5", "hello", 32]. C
+          помощью filter переберите массив b7 и создайте b7_res, который
+          содержит только строки из b7, длина которых больше 3. Возвратите
+          b7_res. Действия должны запускаться при вызове функции t7.
+        </p>
+        <button class="b-7 button-primary">task 7</button>
+      </section>
+
+      <section>
+        <p><b>Task 08.</b></p>
+        <p>
+          Дан массив b8 = [3, 14, 15, 92, "6", "5", "hello", 32]. С помощью
+          filter, переберите массив b8 и создайте массив b8_res, который
+          содержит индексы четных элементов. Возвратите b8_res. Действия должны
+          запускаться при вызове функции t8
+        </p>
+        <button class="b-8 button-primary">task 8</button>
+      </section>
+
+      <section>
+        <p><b>Task 09.</b></p>
+        <p>
+          Дан массив b9 = [3, "hello", 4, "world", 5, "hi"]. С помощью filter,
+          переберите массив b9 и создайте массив b9_num и b9_string, которые
+          содержат первый - числа из b9, второй - строки. Задачу решите с
+          помощью filter. Действия должны запускаться при вызове функции t9.
+        </p>
+        <button class="b-9 button-primary">task 9</button>
+      </section>
+
+      <section>
+        <p><b>Task 10.</b></p>
+        <p>
+          Дан массив b10 = [ [1,2,3], [3,4,6], [4,5,7], [8,9,3]]. С помощью
+          filter переберите массив и создайте b10_res, в который входят
+          вложенные массивы содержащие цифру 3. Возвратите b10_res. Действия
+          должны запускаться при вызове функции t10.
+        </p>
+        <button class="b-10 button-primary">task 10</button>
+      </section>
+    </div>
+
+    <script src="unit-17.js"></script>
+  </body>
+</html>

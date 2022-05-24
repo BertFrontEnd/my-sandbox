@@ -1,0 +1,130 @@
+body {
+  background-color: #1a191f;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body .header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px;
+  height: 60px;
+}
+
+body .header__content .header__logo {
+  font-size: 32px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+body .header__content .header__search {
+  padding: 8px;
+  border: 2px solid #1a191f;
+  border-radius: 5px;
+  outline: none;
+}
+
+body .movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .movies .movie {
+  width: 240px;
+  margin: 10px;
+  position: relative;
+}
+
+body .movies .movie__cover-inner {
+  position: relative;
+  height: 360px;
+}
+
+body .movies .movie__cover {
+  max-width: 100%;
+  height: 100%;
+}
+
+body .movies .movie__cover--darkened {
+  background-color: #000000;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .movies .movie__cover--darkened:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+
+body .movies .movie__info {
+  padding: 10px 0px;
+}
+
+body .movies .movie__title {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+body .movies .movie__category {
+  font-size: 14px;
+  color: #ffd80e;
+}
+
+body .movies .movie__average {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 0;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1a191f;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+body .movies .movie__average--green {
+  border: 1px solid green;
+}
+
+body .movies .movie__average--orange {
+  border: 1px solid orange;
+}
+
+body .movies .movie__average--red {
+  border: 1px solid red;
+}
+/*# sourceMappingURL=style.css.map */

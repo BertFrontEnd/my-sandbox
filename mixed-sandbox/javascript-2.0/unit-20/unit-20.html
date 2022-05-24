@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 20</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Unit 20. События клавиатуры</h1>
+
+        <section>
+            <p><b>Task 1.</b></p>
+            <p>Дан input .i-1. Напишите функцию t1, которая выводит в .out-1 символ и возвращает его. Во всех
+                последующих задачах - работаем с латиницей и цифрами. </p>
+            <input type="text" class="i-1">
+            <div class="out-1">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 2.</b></p>
+            <p>Дан input .i-2. Напишите функцию t2, которая выводит в .out-2 код символа и возвращает его. </p>
+            <input type="text" class="i-2">
+            <div class="out-2">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 3.</b></p>
+            <p>Дан input .i-3. Напишите функцию t3, которая выводит на страницу true если введен символ и false если
+                цифра. Для определения - используйте код клавиши. </p>
+            <input type="text" class="i-3">
+            <div class="out-3">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 4.</b></p>
+            <p>Дан input .i-4. Напишите функцию t4, которая выводит в .out-4 только символы в нижнем регистре. Т.е.
+                ввели ab4Bci в out получаем ab4bci. </p>
+            <input type="text" class="i-4">
+            <div class="out-4">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 5.</b></p>
+            <p>Дан input .i-5. Напишите функцию t5, которая выводит в .out-5 все вводимые символы в верхнем регистре.
+                Т.е. пользователь ввел AbCd и функция выведет ABCD. </p>
+            <input type="text" class="i-5">
+            <div class="out-5">
+            </div>
+        </section>
+
+        <section>
+            <p><b>Task 6.</b></p>
+            <p> Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем регистре. </p>
+            <div>
+                <input type="text" class="i-6">
+
+                <div class="out-6">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 7.</b></p>
+            <p>Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случайный символ из массива a7 при каждом
+                вводе символа.</p>
+            <div>
+
+                <input type="text" class="i-7">
+
+                <div class="out-7">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 8.</b></p>
+            <p>Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1,
+                o на 0, l на 7.</p>
+            <div>
+
+                <input type="text" class="i-8">
+                <div class="out-8">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 9.</b></p>
+            <p>Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых клавиш стрелка вниз.</p>
+            <div>
+
+                <input type="text" class="i-9">
+                <div class="out-9">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 10.</b></p>
+            <p>Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и
+                стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту
+                изображения. Одно нажатие клавиши - 1px.</p>
+            <div>
+                <input type="text" class="i-10">
+                <div class="div-10 block">
+                    <img src="assets/1.png" alt="">
+                </div>
+                <div class="out-10">
+                </div>
+        </section>
+
+        <section>
+            <p><b>Task 11.</b></p>
+            <p> 1. Выполните в html верстку клавиш клавиатуры. Сверстайте – блок цифровых клавиш от 1 до 0. И ряд клавиш q – p. Добавьте
+            клавишу левый shift, левый alt, левый ctrl, пробел, enter.</p>
+            <p>2. Добавьте на input .i-11 событие onkeyess или onkey или onkeywn ( по вашему выбору). Когда событие происходит (
+            ввод символа в input) необходимо подсветить ( добавить класс active) клавише с таким символом. Со всех остальных клавиш
+            – удалить класс active.</p>
+            <p>3. Если вводится следующий символ – повторить удаление active и подсветить клавишу с введенным символом.</p>
+            <p>4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не тестируются.
+            Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.</p>
+
+            <div>
+
+                <input type="text" class="i-11">
+                <div class="out-11">
+                  <div class="key" data-number="48">0</div>
+                  <div class="key" data-number="49">1</div>
+                  <div class="key" data-number="50">2</div>
+                  <div class="key" data-number="51">3</div>
+                  <div class="key" data-number="52">4</div>
+                  <div class="key" data-number="53">5</div>
+                  <div class="key" data-number="54">6</div>
+                  <div class="key" data-number="55">7</div>
+                  <div class="key" data-number="56">8</div>
+                  <div class="key" data-number="57">9</div>
+                  <div class="key" data-number="81">Q</div>
+                  <div class="key" data-number="87">W</div>
+                  <div class="key" data-number="69">E</div>
+                  <div class="key" data-number="82">R</div>
+                  <div class="key" data-number="84">T</div>
+                  <div class="key" data-number="89">Y</div>
+                  <div class="key" data-number="85">U</div>
+                  <div class="key" data-number="73">I</div>
+                  <div class="key" data-number="79">O</div>
+                  <div class="key" data-number="80">P</div>
+                  <div class="key" data-number="16">ShiftLeft</div>
+                  <div class="key" data-number="17">CtrlLeft</div>
+                  <div class="key" data-number="18">AltLeft</div>
+                  <div class="key" data-number="32">Space</div>
+                  <div class="key" data-number="13">Enter</div>
+                </div>
+        </section>
+
+    </div>
+
+    <script src="unit-20.js"></script>
+</body>
+
+</html>

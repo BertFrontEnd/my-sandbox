@@ -1,0 +1,334 @@
+html {
+  font-size: 10px;
+
+  body {
+    width: 100vw;
+    height: auto;
+    background-image: url('./assets/img/main-background.jpg');
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Montserrat Regular', sans-serif;
+    font-size: 2rem;
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+    background-color: #000000;
+    backdrop-filter: opacity(60%);
+    user-select: none;
+    overflow-x: hidden;
+
+    main {
+      width: 100%;
+      max-width: 1440px;
+      padding: 50px 90px 0px 90px;
+      margin: 0 auto;
+
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 40px;
+        font-size: 0;
+
+        .menu-search {
+          margin-bottom: 5px;
+          font-size: 0;
+
+          form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            font-size: 0;
+
+            .search-area {
+              height: 44px;
+              width: 300px;
+              padding: 0 15px;
+              border-radius: 5px 0 0 5px;
+              border: 1px solid #e4e3e320;
+              outline: none;
+              background-color: #4c525590;
+              font-family: 'Montserrat Regular', sans-serif;
+              font-size: 1.4rem;
+              color: inherit;
+
+              &::placeholder {
+                color: #ffffff;
+              }
+            }
+
+            .btn-search {
+              width: 100px;
+              height: 44px;
+              border: none;
+              border-radius: 0 5px 5px 0;
+              outline: none;
+              background-color: #b4b8bb80;
+              font-family: 'Montserrat Bold', sans-serif;
+              font-size: 1.4rem;
+              color: #ffffff;
+              text-transform: uppercase;
+              cursor: pointer;
+
+              &:active {
+                outline: none;
+                border: none;
+                background-color: #4c525590;
+                transition: all 0.2s linear;
+              }
+            }
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .info-left {
+          margin-bottom: 0px;
+
+          .place-time {
+            margin-bottom: 50px;
+
+            .place {
+              font-family: 'Montserrat SemiBold', sans-serif;
+              font-weight: 900;
+              font-size: 4.4rem;
+              text-transform: uppercase;
+
+              .city {
+                &:after {
+                  content: ', ';
+                }
+              }
+            }
+
+            .day-calendar,
+            .time {
+              font-family: 'Montserrat Bold', sans-serif;
+              font-weight: 900;
+              font-size: 2.4rem;
+
+              .day {
+                margin-right: 5px;
+
+                &:after {
+                  content: ', ';
+                }
+              }
+
+              .date-str {
+                margin-right: 5px;
+
+                &:after {
+                  content: ', ';
+                }
+              }
+            }
+          }
+
+          .current-weather {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 20px;
+            margin-bottom: 85px;
+
+            .temperature {
+              font-family: 'Montserrat SemiBold', sans-serif;
+              font-weight: 900;
+              font-size: 30rem;
+              line-height: 30rem;
+            }
+
+            .current-weather-icon {
+              position: relative;
+              display: block;
+              width: 250px;
+              height: 250px;
+              top: -80px;
+            }
+
+            .description {
+              font-family: 'Montserrat SemiBold', sans-serif;
+              font-weight: 900;
+              font-size: 2.2rem;
+              line-height: 6rem;
+
+              .weather {
+                text-transform: uppercase;
+              }
+
+              li {
+                margin-bottom: 5px;
+              }
+            }
+          }
+
+          .forecast {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+
+            .day-info {
+              margin-bottom: 50px;
+              font-size: 0;
+              line-height: 0;
+              width: 185px;
+              height: 80px;
+
+              .day {
+                margin-bottom: 30px;
+                font-family: 'Montserrat SemiBold', sans-serif;
+                font-weight: 900;
+                font-size: 2.2rem;
+              }
+
+              .icon {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+
+                span {
+                  font-family: 'Montserrat Bold', sans-serif;
+                  font-weight: 900;
+                  font-size: 8rem;
+                  line-height: 8rem;
+                }
+              }
+
+              .icon-weather {
+                width: 60px;
+                height: 60px;
+                background-repeat: no-repeat;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  html {
+    body {
+      main {
+        .menu {
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 40px;
+
+          .menu-list {
+            margin: 0 auto 10px auto;
+          }
+
+          .menu-search {
+            input.search-area {
+              margin-bottom: 10px;
+              border-radius: 5px 0 0 5px;
+            }
+
+            button.btn-search {
+              margin-bottom: 10px;
+              border-radius: 0 5px 5px 0;
+            }
+          }
+        }
+      }
+
+      .info {
+        justify-content: center;
+        flex-direction: column;
+
+        .info-left {
+          .current-weather {
+            span.temperature {
+              font-size: 20rem;
+              line-height: 20rem;
+            }
+
+            img.current-weather-icon {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    body {
+      main {
+        padding: 40px;
+        .menu {
+          flex-direction: column;
+          justify-content: center;
+          margin-bottom: 40px;
+
+          .menu-list {
+            margin: 0 auto 10px auto;
+          }
+
+          .menu-search {
+            form {
+              display: flex;
+              flex-direction: column;
+
+              .search-area {
+                margin-bottom: 10px;
+                border-radius: 5px;
+                width: 250px;
+              }
+
+              .btn-search {
+                margin-bottom: 10px;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+
+        .info {
+          .info-left {
+            .place-time {
+              flex-direction: column;
+              display: flex;
+            }
+            .current-weather {
+              justify-content: center;
+              flex-direction: column;
+
+              span.temperature {
+                font-size: 15rem;
+                line-height: 15rem;
+              }
+
+              .temperature {
+                margin-right: 0;
+              }
+
+              .current-weather-icon {
+                display: none;
+              }
+            }
+
+            .forecast {
+              justify-content: center;
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}

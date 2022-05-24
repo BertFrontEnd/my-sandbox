@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    <link rel="stylesheet" href="./assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" type="module"></script>
+    <title>Fancy Weather App</title>
+  </head>
+  <body>
+    <main>
+      <ul class="menu">
+        <ul class="menu-search">
+          <form action="" autocomplete="off">
+            <input
+              type="text"
+              name="search"
+              id="search-area"
+              class="search-area"
+              placeholder="Enter city or ZIP for search"
+              required
+            />
+            <button for="search-area" class="btn-search">Search</button>
+          </form>
+        </ul>
+      </ul>
+
+      <section class="info">
+        <section class="info-left">
+          <ul class="place-time">
+            <li class="place">
+              <span class="city"></span>
+              <span class="country"></span>
+            </li>
+            <li class="day-calendar">
+              <span class="day"></span>
+              <span class="date-num"></span>
+              <span class="date-str"></span>
+              <span class="year"></span>
+            </li>
+            <li class="time"></li>
+          </ul>
+
+          <div class="current-weather">
+            <span class="temperature"></span>
+            <span class="current-weather-icon"></span>
+            <ul class="description">
+              <li class="weather">Overcast</li>
+              <li><span>Feels like:</span> <span class="feels"></span></li>
+              <li><span>Wind:</span> <span class="wind"></span></li>
+              <li><span>Humidity:</span> <span class="humidity"></span></li>
+            </ul>
+          </div>
+
+          <ul class="forecast">
+            <ul class="day-info">
+              <li class="day first-day"></li>
+              <li class="icon first-temperature">
+                <span></span>
+                <span class="icon-weather icon-first-weather"></span>
+              </li>
+            </ul>
+            <ul class="day-info">
+              <li class="day second-day"></li>
+              <li class="icon second-temperature">
+                <span></span>
+                <span class="icon-weather icon-second-weather"></span>
+              </li>
+            </ul>
+            <ul class="day-info">
+              <li class="day third-day"></li>
+              <li class="icon third-temperature">
+                <span></span>
+                <span class="icon-weather icon-third-weather"></span>
+              </li>
+            </ul>
+          </ul>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

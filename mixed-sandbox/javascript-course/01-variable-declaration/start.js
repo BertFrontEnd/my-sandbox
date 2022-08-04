@@ -7,7 +7,3 @@
  *
  * 3. Выведите значение переменной в консоль
  */
-
-const myCountry = 'Belarus';
-
-console.log(myCountry);

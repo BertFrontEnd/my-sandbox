@@ -10,3 +10,7 @@
  *
  * 5. Перепишите функцию так, чтобы результат возвращался неявно
  */
+
+const arrowFunction = () => `Hello, World!`;
+
+console.log(arrowFunction());

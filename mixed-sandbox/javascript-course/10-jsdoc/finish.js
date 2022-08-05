@@ -12,3 +12,14 @@
  *
  * 4. Вызовите функцию
  */
+
+/**
+ * Returns the difference of two numbers
+ * @param {number} a
+ * @param {number} b
+ * @returns {number} number difference
+ */
+
+const diff = (a, b) => a - b;
+const result = diff(42, 42);
+console.log(result);

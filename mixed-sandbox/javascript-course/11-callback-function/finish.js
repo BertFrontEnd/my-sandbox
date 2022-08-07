@@ -4,3 +4,9 @@
  *
  * 2. Используйте стрелочную функцию
  */
+
+const fn = () => {
+  setTimeout(() => console.log('Hello, World'), 5000);
+};
+
+fn();

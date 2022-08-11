@@ -7,4 +7,5 @@
 
 const myName = 'My name is Sergey Bry';
 const nameLength = myName.length;
+
 console.log(nameLength);

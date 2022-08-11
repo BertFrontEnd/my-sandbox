@@ -15,6 +15,6 @@ const obj = {
   favoriteNumber: '7',
 };
 
-console.log(
-  `My name is ${obj.name} ${obj.surname} and my favorite number is ${obj.favoriteNumber}`,
-);
+const message = `My name is ${obj.name} ${obj.surname} and my favorite number is ${obj.favoriteNumber}`;
+
+console.log(message);

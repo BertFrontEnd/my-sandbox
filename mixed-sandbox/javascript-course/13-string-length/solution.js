@@ -2,11 +2,11 @@
  *
  * 1. Создайте переменную и присвойте ей любую строку
  *
- * 2. Виведите в консоль длину этой строки
+ * 2. Выведите в консоль длину этой строки
  */
 
-const myFavoriteSport = 'Snowboarding'
+const myFavoriteSport = 'Snowboarding';
 
-const stringLength = myFavoriteSport.length
+const stringLength = myFavoriteSport.length;
 
-console.log(stringLength)
+console.log(stringLength);

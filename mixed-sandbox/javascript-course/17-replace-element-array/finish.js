@@ -8,3 +8,8 @@
  *
  * 4. Выведите в консоль измененный массив
  */
+
+const arrOfType = [true, 42, 'Berton', undefined];
+console.log(arrOfType);
+arrOfType[1] = 24;
+console.log(arrOfType);

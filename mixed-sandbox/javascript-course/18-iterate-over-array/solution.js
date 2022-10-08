@@ -6,6 +6,6 @@
  * и выведите каждый элемент в консоль
  */
 
-const myArray = ['abc', true, null, undefined, 200]
+const myArray = ['abc', true, null, undefined, 200];
 
-myArray.forEach((element) => console.log(element))
+myArray.forEach((element) => console.log(element));

@@ -4,3 +4,6 @@
  *
  * 2. Выведите значение в консоль
  */
+
+const ms = new Date().getTime();
+console.log(ms);

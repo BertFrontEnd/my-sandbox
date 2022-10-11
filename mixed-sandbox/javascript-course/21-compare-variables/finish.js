@@ -6,12 +6,12 @@
  * 2. Преобразуйте обе переменные в числа перед сравнением.
  */
 
-let myVariable1 = 10
-let myVariable2 = '5'
+let myVariable1 = 10;
+let myVariable2 = '5';
 
-// Напишите код здесь
+console.log(+myVariable1 <= +myVariable2);
 
-myVariable1 = '20'
-myVariable2 = 100
+myVariable1 = '20';
+myVariable2 = 100;
 
-// Напишите код здесь
+console.log(+myVariable1 <= +myVariable2);

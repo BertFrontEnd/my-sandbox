@@ -18,6 +18,8 @@ console.log(myNumber1 % myNumber2);
  * Ассоциативность оператора % - left-to-right
  *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+ * https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators
  */
 
 console.log((3 + 3 + 3 + 1) % 3);

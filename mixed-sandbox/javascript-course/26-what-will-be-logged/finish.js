@@ -5,11 +5,14 @@
  */
 
 function fn() {
-  console.log('Привет из функции fn')
+  console.log('Привет из функции fn');
 
   return function (a) {
-    console.log(a)
-  }
+    console.log(a);
+  };
 }
 
-fn()(true)
+fn()(true);
+
+// Привет из функции fn
+// true

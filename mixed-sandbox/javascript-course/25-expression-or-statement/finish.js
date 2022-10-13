@@ -6,23 +6,57 @@
  *  - выражение-инструкция (expression statement)
  */
 
-15
+// выражение/expression
+15;
 
+// инструкция/statement
 const myObject = {
+  // Литерал объекта это выражение / Object literal is expression
   x: 10,
   y: true,
-}
+};
 
-myObject.z = 'abc'
+// выражение-инструкция/expression-statement
+myObject.z = 'abc';
+/**         ________
+ *             ^
+ *     выражение/expression
+ */
 
-delete myObject.x
+// выражение-инструкция/expression-statement
+delete myObject.x;
 
-let newVariable
+// инструкция/statement
+let newVariable;
 
-newVariable = 30 + 5
+// выражение-инструкция/expression-statement
+newVariable = 30 + 5;
+/**          ________
+ *              ^
+ *     выражение/expression
+ */
 
-console.log(newVariable)
+// выражение-инструкция/expression-statement
+console.log(newVariable);
+/**        _____________
+ *               ^
+ *      выражение/expression
+ */
 
+// инструкция/statement
 if (newVariable > 10) {
-  console.log(`${newVariable} больше 10`)
+  /**________________
+   *        ^
+   *выражение/expression
+   */
+  // выражение-инструкция/expression-statement
+  console.log(`${newVariable} больше 10`);
+  /**          ______________
+   *                 ^
+   *        выражение/expression
+   */
+  /**        ____________________________
+   *                      ^
+   *             выражение/expression
+   */
 }

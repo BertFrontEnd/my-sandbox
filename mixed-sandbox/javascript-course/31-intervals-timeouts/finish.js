@@ -12,3 +12,13 @@
  * "Сообщение номер 4"
  * "Сообщение номер 5"
  */
+
+let counter = 1;
+
+let id = setInterval(() => {
+  if (counter < 5) {
+    console.log(`Сообщение номер ${counter++}`);
+  } else {
+    clearInterval(id);
+  }
+}, 2000);

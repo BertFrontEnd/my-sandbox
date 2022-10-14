@@ -7,7 +7,7 @@
  */
 
 setTimeout(function myFn() {
-  console.log('Привет из функции myFn')
-}, 2000)
+  console.log('Привет из функции myFn');
+}, 2000);
 
-myFn()
+myFn(); // ReferenceError: myFn is not defined

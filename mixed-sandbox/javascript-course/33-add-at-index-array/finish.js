@@ -7,4 +7,10 @@
  * 3. Какова длина конечного массива?
  */
 
-const myArray = [1, 2]
+const myArray = [1, 2];
+
+myArray[10] = 10;
+
+console.log(myArray);
+console.log(myArray.findIndex((el) => el == 10));
+console.log(myArray.length);

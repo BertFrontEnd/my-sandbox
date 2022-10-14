@@ -11,3 +11,32 @@
  *
  * 4. Выведите результирующий массив в консоль
  */
+
+const carsArray = [
+  {
+    carBrand: 'Peugeot',
+    price: 3000,
+    isAvailableForSale: false,
+  },
+  {
+    carBrand: 'Volkswagen',
+    price: 7000,
+    isAvailableForSale: true,
+  },
+  {
+    carBrand: 'Ford',
+    price: 10000,
+    isAvailableForSale: true,
+  },
+];
+
+const newCar = {
+  carBrand: 'Citroen',
+  price: 5000,
+  isAvailableForSale: false,
+};
+
+carsArray.push(newCar);
+
+console.log(carsArray);
+34-array-of-objects/solution.js

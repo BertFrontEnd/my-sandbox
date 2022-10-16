@@ -12,4 +12,12 @@ const myObject = {
   key3: 'abc',
   key4: null,
   key10: NaN,
-}
+};
+
+let ownProperties = Object.keys(myObject);
+
+ownProperties.forEach((el) => {
+  if (el === 'key1' || el === 'key3') {
+    console.log(myObject[el]);
+  }
+});

@@ -39,4 +39,3 @@ const newCar = {
 carsArray.push(newCar);
 
 console.log(carsArray);
-34-array-of-objects/solution.js

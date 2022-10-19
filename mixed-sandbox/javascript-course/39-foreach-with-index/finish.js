@@ -9,4 +9,10 @@
  * и выведите в консоль результат вызова функции
  */
 
-const myCities = ['London', 'New York', 'Singapore']
+const myCities = ['London', 'New York', 'Singapore'];
+
+const cityInfo = (city, idx) => {
+  return `${city} is at the index ${idx} in the myCities array`;
+};
+
+myCities.forEach((element, index) => console.log(cityInfo(element, index)));

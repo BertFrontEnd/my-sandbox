@@ -14,4 +14,9 @@ const postsJSON = [
   '{"postId":5131,"commentsQuantity":13}',
   '{"postId":6134,"commentsQuantity":2}',
   '{"postId":2351,"commentsQuantity":8}',
-]
+];
+
+const arrJSON = postsJSON.map((el) => JSON.parse(el));
+console.log(arrJSON);
+console.log(arrJSON[1].postId);
+console.log(arrJSON[arrJSON.length - 1].commentsQuantity);

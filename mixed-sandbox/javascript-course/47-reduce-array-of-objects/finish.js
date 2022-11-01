@@ -22,10 +22,18 @@ const inputPosts = [
     postId: 8135,
     comments: 12,
   },
-]
+];
 
-console.log(popularPostsIds(inputPosts, 10)) // [3421, 8135]
+const popularPostsIds = (posts, minimalComentsQty) => {
+  const arrOfPostId = [];
+  posts.map((el) => {
+    if (el.comments >= minimalComentsQty) {
+      return arrOfPostId.push(el.postId);
+    }
+  });
+  return arrOfPostId;
+};
 
-console.log(popularPostsIds(inputPosts, 15)) // [3421]
-
-console.log(popularPostsIds(inputPosts, 50)) // []
+console.log(popularPostsIds(inputPosts, 10)); // [3421, 8135]
+console.log(popularPostsIds(inputPosts, 15)); // [3421]
+console.log(popularPostsIds(inputPosts, 50)); // []

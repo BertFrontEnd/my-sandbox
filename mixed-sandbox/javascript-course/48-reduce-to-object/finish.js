@@ -32,9 +32,17 @@ const inputProducts = [
     quantity: 2,
     category: 'Watches',
   },
-]
+];
 
-console.log(quantitiesByCategories(inputProducts))
+const quantitiesByCategories = (products) => {
+  const obj = {};
+  products.forEach((el) => {
+    obj[el.category] = obj[el.quantity] + 1 || 1;
+  });
+  return obj;
+};
+
+console.log(quantitiesByCategories(inputProducts));
 /* {
   Accessories: 3,
   Phones: 1,

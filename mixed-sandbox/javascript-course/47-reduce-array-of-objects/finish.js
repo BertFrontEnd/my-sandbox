@@ -24,7 +24,7 @@ const inputPosts = [
   },
 ];
 
-const popularPostsIds = (posts, minimalComentsQty) => {
+/* const popularPostsIds = (posts, minimalComentsQty) => {
   const arrOfPostId = [];
   posts.map((el) => {
     if (el.comments >= minimalComentsQty) {
@@ -33,6 +33,14 @@ const popularPostsIds = (posts, minimalComentsQty) => {
   });
   return arrOfPostId;
 };
+ */
+
+const popularPostsIds = (posts, minimalComentsQty) =>
+  posts.reduce(
+    (acc, el) =>
+      el.comments >= minimalComentsQty ? acc.concat(el.postId) : acc,
+    [],
+  );
 
 console.log(popularPostsIds(inputPosts, 10)); // [3421, 8135]
 console.log(popularPostsIds(inputPosts, 15)); // [3421]

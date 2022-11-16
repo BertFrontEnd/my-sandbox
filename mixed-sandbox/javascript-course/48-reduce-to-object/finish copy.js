@@ -34,15 +34,28 @@ const inputProducts = [
   },
 ];
 
-const quantitiesByCategories = (products) => {
-  const obj = {};
-  for (const { quantity, category } of products) {
-    obj[category] = quantity || obj.category + quantity;
+// Solution I
 
-    /* products.reduce((acc, el) => (acc.category += el.quantity), {}); */
-    console.log(obj[category]);
-  }
-  return obj;
+/* const quantitiesByCategories = (products) => {
+  return products.reduce((acc, el) => {
+    if (!acc.hasOwnProperty(el.category)) {
+      acc[el.category] = el.quantity;
+    } else {
+      acc[el.category] = acc[el.category] + el.quantity;
+    }
+    return acc;
+  }, {});
+}; */
+
+// Solution II
+
+const quantitiesByCategories = (products) => {
+  return products.reduce((acc, el) => {
+    !acc.hasOwnProperty(el.category)
+      ? (acc[el.category] = el.quantity)
+      : (acc[el.category] = acc[el.category] + el.quantity);
+    return acc;
+  }, {});
 };
 
 console.log(quantitiesByCategories(inputProducts));

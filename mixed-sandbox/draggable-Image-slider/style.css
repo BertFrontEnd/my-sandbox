@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  padding: 0 35px;
+  background: #343f4f;
+}
+
+body .wrapper {
+  position: relative;
+  max-width: 1200px;
+}
+
+body .wrapper i {
+  position: absolute;
+  top: 50%;
+  height: 46px;
+  width: 46px;
+  font-size: 1.2rem;
+  line-height: 46px;
+  text-align: center;
+  border-radius: 50%;
+  background: #ffffff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+body .wrapper i:first-child {
+  left: -23px;
+}
+
+body .wrapper i:last-child {
+  right: -23px;
+}
+
+body .wrapper .carousel {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  cursor: pointer;
+}
+
+body .wrapper .carousel img {
+  height: 340px;
+  margin-left: 14px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: calc(100% / 3);
+}
+
+body .wrapper .carousel img:first-child {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 900px) {
+  body .wrapper .carousel img {
+    width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  body .wrapper .carousel img {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

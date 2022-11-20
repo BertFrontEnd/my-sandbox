@@ -43,6 +43,7 @@ body .wrapper i {
 }
 
 body .wrapper i:first-child {
+  display: none;
   left: -23px;
 }
 
@@ -54,6 +55,7 @@ body .wrapper .carousel {
   overflow: hidden;
   white-space: nowrap;
   font-size: 0;
+  scroll-behavior: smooth;
   cursor: pointer;
 }
 
@@ -67,6 +69,16 @@ body .wrapper .carousel img {
 
 body .wrapper .carousel img:first-child {
   margin-left: 0;
+}
+
+body .wrapper .dragging {
+  scroll-behavior: auto;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+body .wrapper .dragging img {
+  pointer-events: none;
 }
 
 @media screen and (max-width: 900px) {

@@ -33,6 +33,7 @@ body {
       cursor: pointer;
 
       &:first-child {
+        display: none;
         left: -23px;
       }
 
@@ -45,6 +46,7 @@ body {
       overflow: hidden;
       white-space: nowrap;
       font-size: 0;
+      scroll-behavior: smooth;
       cursor: pointer;
 
       img {
@@ -56,6 +58,15 @@ body {
         &:first-child {
           margin-left: 0;
         }
+      }
+    }
+
+    .dragging {
+      scroll-behavior: auto;
+      cursor: grab;
+
+      img {
+        pointer-events: none;
       }
     }
   }

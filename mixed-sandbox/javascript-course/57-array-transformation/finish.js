@@ -24,10 +24,21 @@ const testPosts = [
     author: 'merryl',
     commentsQty: 8,
   },
-]
+];
 
-const processedPosts = processPosts(testPosts)
-console.log(processedPosts)
+const processPosts = (arr) => {
+  const innerArr = arr.map((el) => {
+    return {
+      postId: el.postId + 1000,
+      author: el.author,
+      commentsQty: el.commentsQty || 0,
+    };
+  });
+  return innerArr;
+};
+
+const processedPosts = processPosts(testPosts);
+console.log(processedPosts);
 /*
 [
   {
@@ -48,5 +59,5 @@ console.log(processedPosts)
 ]
 */
 
-console.log(testPosts)
+console.log(testPosts);
 // оригинальный массив должен остаться без изменений

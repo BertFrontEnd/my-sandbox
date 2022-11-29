@@ -30,14 +30,15 @@ const processPosts = (arr) => {
   const innerArr = arr.map((el) => {
     return {
       postId: el.postId + 1000,
-      author: el.author,
-      commentsQty: el.commentsQty || 0,
+      postAuthor: el.author,
+      postCommentsQty: el.commentsQty || 0,
     };
   });
   return innerArr;
 };
 
 const processedPosts = processPosts(testPosts);
+
 console.log(processedPosts);
 /*
 [

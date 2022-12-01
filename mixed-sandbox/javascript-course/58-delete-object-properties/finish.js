@@ -1,6 +1,6 @@
 /** ЗАДАЧА 58 - Удаление свойств объекта
  *
- * 1. Используйте деструктуризацию объекта вместе с rest опертором,
+ * 1. Используйте деструктуризацию объекта вместе с rest оператором,
  * чтобы быстро удалить определенные свойства из объекта.
  *
  * 2. Убедитесь, что переменные, которые будут использоваться для деструктуризации удаленных свойств,
@@ -15,9 +15,15 @@ let person = {
   email: 'slarsen@test.com',
   name: 'Samanta Larsen',
   cartId: 435,
+};
+
+{
+  let _id, processed, cart;
+  ({ _id, processed, cart, ...person } = person);
+  console.log(_id, processed, cart);
 }
 
-console.log(person)
+console.log(person);
 /*
 {
   index: 4,

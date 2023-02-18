@@ -8,11 +8,17 @@
  * 3. Также верните эту сумму как результат функции
  */
 
-sumNumbers(1, 3)
+function sumNumbers(a, b) {
+  const sum = [...arguments].reduce((sum, el) => sum + el);
+  console.log('Sum is', sum);
+  return sum;
+}
+
+sumNumbers(1, 3);
 // 4
 
-sumNumbers(10, 20, 5)
+sumNumbers(10, 20, 5);
 // 35
 
-sumNumbers(2, 5, 80, 1, 10, 12)
+sumNumbers(2, 5, 80, 1, 10, 12);
 // 110

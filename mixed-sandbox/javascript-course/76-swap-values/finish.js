@@ -4,13 +4,18 @@
  * Не используйте для этого какие-либо новые переменные.
  */
 
-let a = 'first'
-let b = 'second'
+let a = 'first';
+let b = 'second';
 
-console.log(a, b)
+console.log(a, b);
 // first second
 
-// Напишите код здесь
+const swapValues = (a1, b1) => {
+  a = b1;
+  b = a1;
+};
 
-console.log(a, b)
+swapValues(a, b);
+
+console.log(a, b);
 // second first

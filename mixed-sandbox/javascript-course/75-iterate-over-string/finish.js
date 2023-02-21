@@ -4,12 +4,16 @@
  * Гласные буквы - a, e, i, o, u
  */
 
-let vowelsCount = 0
-const vowels = ['a', 'e', 'i', 'o', 'u']
+let vowelsCount = 0;
+const vowels = ['a', 'e', 'i', 'o', 'u'];
 
-const str = 'Today is the best day of my life'
+const str = 'Today is the best day of my life';
 
-// Напишите код здесь
+Array.from(str.toLowerCase()).map((el) => {
+  if (vowels.includes(el)) {
+    vowelsCount++;
+  }
+});
 
-console.log(vowelsCount)
+console.log(vowelsCount);
 // 9

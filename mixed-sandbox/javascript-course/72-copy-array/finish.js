@@ -4,14 +4,14 @@
  * При изменении копии массива оригинальный массив не должен изменяться
  */
 
-const a = [1, 2, 3]
+const a = [1, 2, 3];
 
-// Напишите код здесь
+const b = [...a];
 
-b.push('newElement')
+b.push('newElement');
 
-console.log(a)
+console.log(a);
 // [1, 2, 3]
 
-console.log(b)
+console.log(b);
 // [1, 2, 3, "newElement"]

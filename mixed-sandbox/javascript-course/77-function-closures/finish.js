@@ -9,24 +9,24 @@
  *  - функцию "changeGreeting" с одним параметром, которая должна
  *    изменять значение переменной "greetingString"
  *
- * 2. Функция "createGreeting" должа вернуть объект с двумя методами:
+ * 2. Функция "createGreeting" должна вернуть объект с двумя методами:
  *  - greet
  *  - changeGreeting
  */
 
-const greeting1 = createGreeting()
+const greeting1 = createGreeting();
 
-console.log(greeting1.greet('Bob'))
+console.log(greeting1.greet('Bob'));
 // Hey, this is Bob
 
-greeting1.changeGreeting('Good Morning from')
+greeting1.changeGreeting('Good Morning from');
 
-console.log(greeting1.greet('Emily'))
+console.log(greeting1.greet('Emily'));
 // Good Morning from Emily
 
 /* ____________  */
 
-const greeting2 = createGreeting()
+const greeting2 = createGreeting();
 
-console.log(greeting2.greet('Emily'))
+console.log(greeting2.greet('Emily'));
 // Hey, this is Emily

@@ -13,10 +13,21 @@
  * 4. Выводы в консоли должны совпасть
  */
 
-const apple = new Fruit('Apple', 2)
-console.log(apple.priceInfo())
+class Fruit {
+  constructor(fruit, price) {
+    this.fruit = fruit;
+    this.price = price;
+  }
+
+  priceInfo() {
+    return `Price of the ${this.fruit} is ${this.price}$`;
+  }
+}
+
+const apple = new Fruit('Apple', 2);
+console.log(apple.priceInfo());
 // Price of the Apple is 2$
 
-const orange = new Fruit('Orange', 3)
-console.log(orange.priceInfo())
+const orange = new Fruit('Orange', 3);
+console.log(orange.priceInfo());
 // Price of the Orange is 3$

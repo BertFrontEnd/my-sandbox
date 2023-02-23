@@ -1,6 +1,6 @@
 /** ЗАДАЧА 79 - Перебор свойств объекта
  *
- * 1. Создайте функцию "sumObjectValues", которая будет суммировть
+ * 1. Создайте функцию "sumObjectValues", которая будет суммировать
  * все значения свойств, которые являются числами.
  *
  * 2. Сумму чисел необходимо вернуть из функции
@@ -14,10 +14,20 @@ const objectWithNumbers = {
   b: 20,
   c: 'string',
   d: 12,
-}
+};
 
-// Создайте функцию здесь
+const sumObjectValues = (obj) => {
+  const arr = [];
 
-const result = sumObjectValues(objectWithNumbers)
-console.log(result)
+  for (let el in obj) {
+    if (typeof obj[el] === 'number') {
+      arr.push(obj[el]);
+    }
+  }
+
+  return arr.reduce((acc, el) => acc + el);
+};
+
+const result = sumObjectValues(objectWithNumbers);
+console.log(result);
 //42

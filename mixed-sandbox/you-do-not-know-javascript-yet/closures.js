@@ -7,8 +7,37 @@
 const dayStart = '07:30';
 const dayEnd = '17:45';
 
+function getNumber(string) {
+  [hours, mins] = string.split(':').map(parseFloat);
+  const fullSeconds = hours * 3600 + mins * 60;
+  return fullSeconds;
+}
+
 function scheduleMeeting(startTime, durationMinutes) {
-  // ...TODO...
+  const fullSecondsDayStart = getNumber(dayStart);
+  const fullSecondsDayEnd = getNumber(dayEnd);
+  const fullSecondsStartTime = getNumber(startTime);
+  const fullDurationTime = Number(durationMinutes * 60);
+
+  // console.log('fullSecondsDayStart:', fullSecondsDayStart);
+  // console.log('fullSecondsDayEnd:', fullSecondsDayEnd);
+  // console.log('fullSecondsStartTime:', fullSecondsStartTime);
+  // console.log('fullSecondsStartTime:', fullDurationTime);
+
+  if (
+    fullSecondsStartTime == fullSecondsDayStart ||
+    fullSecondsStartTime + fullDurationTime == fullSecondsDayEnd
+  )
+    return true;
+    
+  if (
+    fullSecondsStartTime < fullSecondsDayStart ||
+    fullSecondsStartTime > fullSecondsDayEnd ||
+    fullSecondsStartTime + fullDurationTime > fullSecondsDayEnd
+  )
+    return false;
+
+  return true;
 }
 
 console.log(scheduleMeeting('7:00', 15)); // false

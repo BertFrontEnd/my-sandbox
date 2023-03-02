@@ -1,45 +1,46 @@
 // Mine
-const accum = (string) =>
+const accumMine = (string) =>
   string
     .split('')
     .map((el) => el.toLowerCase())
     .map((el, idx) => el[0].toUpperCase().concat(el.repeat(idx)))
     .join('-');
 
-console.log('Mine:', accum('abcd'));
-console.log('Mine:', accum('cwAt'));
+console.log('Mine:', accumMine('abcd'));
+console.log('Mine:', accumMine('cwAt'));
 
 // Base
-const minMaxBase = (string) => {
+const accumBase = (string) => {
   const arr = string.toUpperCase().split('');
-  const repeatArr = arr.map((el, i) => el.repeat(i).toLowerCase());
+  const repeatArr = arr.map((el, i) => (el += el.repeat(i).toLowerCase()));
   const resSting = repeatArr.join('-');
   return resSting;
 };
 
-console.log('Base:', accum('abcd'));
-console.log('Base:', accum('cwAt'));
+console.log('Base:', accumBase('abcd'));
+console.log('Base:', accumBase('cwAt'));
 
 // Advanced
-const minMaxAdvanced = (string) => {
+const accumAdvanced = (string) => {
   return string
     .toUpperCase()
     .split('')
     .map((el, i) => {
-      return el.repeat(i).toLowerCase();
+      return (el += el.repeat(i).toLowerCase());
     })
     .join('-');
 };
 
-console.log('Advanced:', accum('abcd'));
-console.log('Advanced:', accum('cwAt'));
+console.log('Advanced:', accumAdvanced('abcd'));
+console.log('Advanced:', accumAdvanced('cwAt'));
 
 // ES6
-const minMaxES6 = (arr) =>
+const accumES6 = (string) =>
   string
     .toUpperCase()
     .split('')
-    .map((el, i) => `${el.repeat(i).toLowerCase()}`)
+    .map((el, i) => `${el}${el.repeat(i).toLowerCase()}`)
     .join('-');
-console.log('ES6:', accum('abcd'));
-console.log('ES6:', accum('cwAt'));
+
+console.log('ES6:', accumES6('abcd'));
+console.log('ES6:', accumES6('cwAt'));

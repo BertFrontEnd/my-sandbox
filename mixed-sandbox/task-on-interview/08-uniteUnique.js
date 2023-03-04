@@ -38,9 +38,3 @@ console.log(
   'Advanced:',
   uniteUniqueAdvanced([1], [2], [3, 2, 2], [4, 1, 1, 2]),
 );
-
-// ES6
-/* const uniteUniqueES6 = (array) =>
-
-console.log('ES6:', uniteUniqueES6([1,2,3],[4,1,5],[6,7,8,5]));
-console.log('ES6:', uniteUniqueES6([1],[2],[3,2,2],[4,1,1,2]')) */

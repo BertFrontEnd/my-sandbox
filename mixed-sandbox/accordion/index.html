@@ -2,52 +2,64 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Accordion</title>
-  <link rel="stylesheet" href="./style.css" />
-  <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spoiler and Accordion</title>
 </head>
 
 <body>
-  <div id="accordion" class="accordion" style="max-width: 30rem; margin: 1rem auto;">
-    <div class="accordion__item">
-      <div class="accordion__header">
-        Заголовок 1
+  <section class="wrapper">
+    <div data-spoilers data-one-spoiler class="block block-1">
+      <div class="block__item">
+        <button tabindex="-1" type="button" data-spoiler class="block__title">Regular spoiler #1</button>
+        <div class="block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga illo optio. Vero
+          consequuntur saepe ab perspiciatis sequi magnam? Error mollitia velit pariatur et numquam. Maiores eligendi
+          aspernatur eius reprehenderit sapiente ab enim minima nostrum, atque deleniti qui veritatis. Natus atque at
+          minima distinctio ipsum nisi praesentium ducimus voluptatum ut!</div>
       </div>
-      <div class="accordion__body">
-        <div class="accordion__content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consequuntur autem, mollitia rem aperiam
-          fugit eos officia vel quidem quis officiis dolores porro beatae veritatis tenetur. Culpa ex libero a!
+
+      <div data-spoilers data-one-spoiler class="block block-1">
+        <div class="block__item">
+          <button tabindex="-1" type="button" data-spoiler class="block__title">Regular spoiler #2</button>
+          <div class="block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga illo optio. Vero
+            consequuntur saepe ab perspiciatis sequi magnam? Error mollitia velit pariatur et numquam. Maiores eligendi
+            aspernatur eius reprehenderit sapiente ab enim minima nostrum, atque deleniti qui veritatis. Natus atque at
+            minima distinctio ipsum nisi praesentium ducimus voluptatum ut!</div>
+        </div>
+      </div>
+      <div data-spoilers data-one-spoiler class="block block-1">
+        <div class="block__item">
+          <button tabindex="-1" type="button" data-spoiler class="block__title">Regular spoiler #3</button>
+          <div class="block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga illo optio. Vero
+            consequuntur saepe ab perspiciatis sequi magnam? Error mollitia velit pariatur et numquam. Maiores eligendi
+            aspernatur eius reprehenderit sapiente ab enim minima nostrum, atque deleniti qui veritatis. Natus atque at
+            minima distinctio ipsum nisi praesentium ducimus voluptatum ut!</div>
         </div>
       </div>
     </div>
-    <div class="accordion__item">
-      <div class="accordion__header">
-        Заголовок 2
-      </div>
-      <div class="accordion__body">
-        <div class="accordion__content">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dignissimos a autem perspiciatis sit eum
-          exercitationem expedita omnis ipsam voluptate veritatis dolores similique eligendi, earum quasi officia in
-          facilis dolorum!
-        </div>
+    <div data-spoilers="650&min" class="block block-2">
+      <div class="block__item">
+        <button tabindex="-1" type="button" data-spoiler class="block__title">Spoiler for screen width over
+          640px (min-width: 640pх)</button>
+        <div class="block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga illo optio. Vero
+          consequuntur saepe ab perspiciatis sequi magnam? Error mollitia velit pariatur et numquam. Maiores eligendi
+          aspernatur eius reprehenderit sapiente ab enim minima nostrum, atque deleniti qui veritatis. Natus atque at
+          minima distinctio ipsum nisi praesentium ducimus voluptatum ut!</div>
       </div>
     </div>
-    <div class="accordion__item">
-      <div class="accordion__header">
-        Заголовок 3
-      </div>
-      <div class="accordion__body">
-        <div class="accordion__content">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta pariatur dolore consectetur perferendis libero
-          nam sit magni voluptatibus voluptates autem nesciunt, praesentium quidem deserunt ipsa totam esse ullam? Quod,
-          maiores!
-        </div>
+    </div>
+    <div data-spoilers="800&max" class="block block-3">
+      <div class="block__item">
+        <button tabindex="-1" type="button" data-spoiler class="block__title">Spoiler for screen width less than
+          720px (max-width: 720pх)</button>
+        <div class="block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga illo optio. Vero
+          consequuntur saepe ab perspiciatis sequi magnam? Error mollitia velit pariatur et numquam. Maiores eligendi
+          aspernatur eius reprehenderit sapiente ab enim minima nostrum, atque deleniti qui veritatis. Natus atque at
+          minima distinctio ipsum nisi praesentium ducimus voluptatum ut!</div>
       </div>
     </div>
-  </div>
+  </section>
 </body>
 
 </html>
